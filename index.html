@@ -4,11 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    * {
+  -webkit-tap-highlight-color: transparent;
+}
     body {
       font-family: Arial, sans-serif;
       display: flex;
       flex-wrap: wrap;
-      
+      background-color: #252525;
       /* align-items: center;
       justify-content: center;
       height: 100vh; */
@@ -17,10 +20,8 @@
 
 
     }
-    * {
-  -webkit-tap-highlight-color: transparent;
-}
     .flashcard {
+      background-color: #fff;
       border: 1px solid #ccc;
       padding: 20px;
       text-align: center;
@@ -42,24 +43,26 @@
     @media (max-width: 430px){
       .flashcard {
         width: 150px;
-
       }
+      .flashcard img {
+      max-width: 150px;
+    }
     }
 
     @media (max-width: 425px){
-      .flashcard {
+      .flashcard, .flashcard img {
         width: 140px;
 
       }
     }
     @media (max-width: 405px){
-      .flashcard {
+      .flashcard, .flashcard img {
         width: 130px;
 
       }
     }
     @media (max-width: 385px){
-      .flashcard {
+      .flashcard, .flashcard img {
         width: 100%;
 
       }
