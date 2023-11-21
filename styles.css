@@ -1,0 +1,148 @@
+    * {
+  -webkit-tap-highlight-color: transparent;
+}
+
+#logo {
+    color: #fff;
+    padding-left: 20px;
+}
+header {
+    background-color: #ffffff3c;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+    body {
+        
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #252525;
+      /* align-items: center;
+      justify-content: center;
+      height: 100vh; */
+      margin: 0;
+      transition: all 2s;
+    }
+
+    .card-title, .card-content {
+      font-size: 20px;
+    }
+    .cardsfield {
+        padding-top: 70px;
+      margin-top: 45px;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      /* align-items: center;
+      justify-content: center;
+      height: 100vh; */
+      margin: 0;
+      transition: all 2s; 
+    }
+    .flashcard {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.5s;
+      margin: 10px;
+      width: 160px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .flashcard img {
+      max-width: 200px;
+      transition: all 2s;
+
+    }
+    @media (max-width: 445px){
+      .flashcard {
+        width: 140px;
+      }
+      .flashcard img {
+      max-width: 143px;
+    }
+    }
+    @media (max-width: 430px){
+      .flashcard {
+        width: 143px;
+      }
+      .flashcard img {
+      max-width: 143px;
+    }
+    }
+
+    @media (max-width: 425px){
+      .flashcard, .flashcard img {
+        width: 140px;
+
+      }
+    }
+    @media (max-width: 405px){
+      .flashcard, .flashcard img {
+        width: 130px;
+      }
+      .card-title, .card-content {
+      font-size: 15px;
+    }
+    }
+    @media (max-width: 385px){
+      .flashcard {
+        width: 122px;
+        
+      }
+    }
+    @media (max-width: 370px){
+      .flashcard {
+        width: 30%;        
+      }
+    }
+    @media (max-width: 310px){
+      .flashcard {
+        width: 27%;
+      }
+      .flashcard img {
+        width: 122%;
+      }
+      .card-title, .card-content {
+      font-size: 12px;
+    }
+    }
+    @media (max-width: 285px){
+      .flashcard {
+        width: 100%;
+      }
+      .card-title, .card-content {
+      font-size: 18px;
+    }
+    }
+    /* @media (max-width: 405px){
+      .flashcard, .flashcard img {
+        width: 130px;
+
+      }
+    }
+    @media (max-width: 325px){
+      .flashcard, .flashcard img {
+        width: 100%;
+      }
+    } */
+
+
+    .flashcard .card-content {
+      display: none;
+    }
+    .flashcard.flipped .card-title {
+      display: none;
+    }
+    .flashcard.flipped .card-content {
+      display: block;
+    }
+    
