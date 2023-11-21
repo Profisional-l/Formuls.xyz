@@ -3,11 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
+  <link rel="stylesheet" href="/seelkphysics/styles.css">
   <title>Физика Flashcards</title>
 </head>
+<header>
+  <h3 id="logo">SeelkFis</h3>
+</header>
 <body>
 <!-- <h2>Кинематика</h2> -->
+<div class="cardsfield">
+
 <div class="flashcard" onclick="flipCard(this)">
   <div class="card-title">Путь</div>
   <div class="card-content"><img src="images/путь.png" alt="" srcset=""></div>
@@ -78,86 +83,7 @@
 
 
 <!-- Добавь больше карточек по аналогии -->
-
- <style>
-    * {
-  -webkit-tap-highlight-color: transparent;
-}
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-wrap: wrap;
-      background-color: #252525;
-      /* align-items: center;
-      justify-content: center;
-      height: 100vh; */
-      margin: 0;
-      transition: all 2s;
-
-
-    }
-    .flashcard {
-      background-color: #fff;
-      border: 1px solid #ccc;
-      padding: 20px;
-      text-align: center;
-      cursor: pointer;
-      transition: transform 0.5s;
-      margin: 10px;
-      width: 160px;
-      height: 100px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .flashcard img {
-      max-width: 200px;
-      transition: all 2s;
-
-    }
-    @media (max-width: 430px){
-      .flashcard {
-        width: 150px;
-      }
-      .flashcard img {
-      max-width: 150px;
-    }
-    }
-
-    @media (max-width: 425px){
-      .flashcard, .flashcard img {
-        width: 140px;
-
-      }
-    }
-    @media (max-width: 405px){
-      .flashcard, .flashcard img {
-        width: 130px;
-
-      }
-    }
-    @media (max-width: 385px){
-      .flashcard, .flashcard img {
-        width: 100%;
-
-      }
-    }
-
-
-    .flashcard .card-content {
-      display: none;
-    }
-    .flashcard.flipped .card-title {
-      display: none;
-    }
-    .flashcard.flipped .card-content {
-      display: block;
-    }
-    .card-title, .card-content {
-      font-size: 20px;
-    }
-  </style>
+</div>
 
 <script>
   let cards = document.querySelectorAll('.flashcard');
@@ -171,6 +97,7 @@
     });
   }
 </script>
+
 
 </body>
 </html>
