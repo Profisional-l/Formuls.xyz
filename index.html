@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-wrap: wrap;
+      
+      /* align-items: center;
+      justify-content: center;
+      height: 100vh; */
+      margin: 0;
+      transition: all 2s;
+
+
+    }
+    .flashcard {
+      border: 1px solid #ccc;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.5s;
+      margin: 10px;
+      width: 160px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .flashcard img {
+      max-width: 200px;
+      transition: all 2s;
+
+    }
+    @media (max-width: 430px){
+      .flashcard {
+        width: 150px;
+
+      }
+    }
+
+    @media (max-width: 425px){
+      .flashcard {
+        width: 140px;
+
+      }
+    }
+    @media (max-width: 405px){
+      .flashcard {
+        width: 130px;
+
+      }
+    }
+    @media (max-width: 385px){
+      .flashcard {
+        width: 100%;
+
+      }
+    }
+
+
+    .flashcard .card-content {
+      display: none;
+    }
+    .flashcard.flipped .card-title {
+      display: none;
+    }
+    .flashcard.flipped .card-content {
+      display: block;
+    }
+    .card-title, .card-content {
+      font-size: 20px;
+    }
+  </style>
+  <title>Физика Flashcards</title>
+</head>
+<body>
+<!-- <h2>Кинематика</h2> -->
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title">Путь</div>
+  <div class="card-content"><img src="images/путь.png" alt="" srcset=""></div>
+</div>
+
+<!-- <div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title">Сила тяжести</div>
+  <div class="card-content"><img src="images/силатяжести.png" alt=""></div>
+</div> -->
+
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title">Уравнение равномерного движения</div>
+  <div class="card-content"><img width="200px" src="images/урравндвиж.png" alt="" srcset=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title"><b>Ускорение</b> при равноускоренном движении</div>
+  <div class="card-content"><img src="images/ускорение.png" alt=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title"><b>Скорость</b> при равноускоренном движении</div>
+  <div class="card-content"><img src="images/скоростьравнускр.png" alt=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title"><b>Путь</b> при равноускоренном движении <b>(с временем)</b></div>
+  <div class="card-content"><img src="images/путьравнускр.png" alt=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title"><b>Путь</b> при равноускоренном движении <b>(без времени)</b></div>
+  <div class="card-content"><img src="images/путьравнускрбезвремени.png" alt=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title"><b>Уравнение </b>равномерного движения</div>
+  <div class="card-content"><img src="images/уравнравнускрдвиж.png" alt=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title"><b>Ускорение</b> при равноускоренном движении</div>
+  <div class="card-content"><img src="images/ускорение.png" alt=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title"><b>Ускорение</b> при равноускоренном движении</div>
+  <div class="card-content"><img src="images/ускорение.png" alt=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title"><b>Ускорение</b> при равноускоренном движении</div>
+  <div class="card-content"><img src="images/ускорение.png" alt=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title"><b>Ускорение</b> при равноускоренном движении</div>
+  <div class="card-content"><img src="images/ускорение.png" alt=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title"><b>Ускорение</b> при равноускоренном движении</div>
+  <div class="card-content"><img src="images/ускорение.png" alt=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title"><b>Ускорение</b> при равноускоренном движении</div>
+  <div class="card-content"><img src="images/ускорение.png" alt=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title"><b>Ускорение</b> при равноускоренном движении</div>
+  <div class="card-content"><img src="images/ускорение.png" alt=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title"><b>Ускорение</b> при равноускоренном движении</div>
+  <div class="card-content"><img src="images/ускорение.png" alt=""></div>
+</div>
+
+
+<!-- Добавь больше карточек по аналогии -->
+
+<script>
+  let cards = document.querySelectorAll('.flashcard');
+
+  function flipCard(card) {
+    card.classList.toggle('flipped');
+    cards.forEach(function (element) {
+      if (element !== card && element.classList.contains('flipped')) {
+        element.classList.remove('flipped');
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
+
