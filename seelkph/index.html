@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Физика Flashcards</title>
+</head>
+<header>
+  <h3 id="logo"><a href="/index.html">SeelkPh</a></h3>
+</header>
+<body>
+  <div class="mainscreenhi">
+  <h2 id="mainscreenh2">Добро пожаловать на Seelk Physics</h2> 
+  <h3>Seelk Ph - это проект для эффективного заучивания формул из школьного курса Физики</h3>
+</div>
+<div id="categoriesfield">
+    			
+			
+  <div class="menuMain">
+    <h3 id="sortblockh3">Категории</h3>
+    <ul class="categories">
+        <li class="category"><div class="nameC"> Механика <div class="rotated"><img src="https://seelk.by/wp-content/uploads/2023/11/CaretDown.png" alt="CaretDown"></div> </div>
+            <ul class="subcategories">
+
+                <li><a href="/kinimatica.html"> <button class="menu-button"> Кинематика </button></li></a>
+                <li><a href="/dinamica.html"><button class="menu-button"> Динамика. Законы Ньютона</button></li></a>
+                <li><a href="/rabota.html"><button class="menu-button"> Работа и механическая энергия </button></li></a>
+            </ul>
+        </li>
+        <li class="category"><div class="nameC">МКТ и Термодинамика<div class="rotated"><img src="https://seelk.by/wp-content/uploads/2023/11/CaretDown.png" alt="CaretDown"></div></div>
+            <ul class="subcategories">
+                <li><button onclick="window.location.href='https://seelk.by/listing-category/ipad-air'" class="menu-button">iPad Air </button></li>        
+                <li><button onclick="window.location.href='https://seelk.by/listing-category/ipad-mini'" class="menu-button">iPad Mini</button></li>
+                <li><button onclick="window.location.href='https://seelk.by/listing-category/ipad-pro'" class="menu-button">iPad Pro</button></li>
+            </ul>
+        </li>
+      </li>
+      <li class="category"><div class="nameC">Токи<div class="rotated"><img src="https://seelk.by/wp-content/uploads/2023/11/CaretDown.png" alt="CaretDown"></div></div>
+          <ul class="subcategories">
+              <li><button onclick="window.location.href='https://seelk.by/listing-category/ipad-air'" class="menu-button">iPad Air </button></li>        
+              <li><button onclick="window.location.href='https://seelk.by/listing-category/ipad-mini'" class="menu-button">iPad Mini</button></li>
+              <li><button onclick="window.location.href='https://seelk.by/listing-category/ipad-pro'" class="menu-button">iPad Pro</button></li>
+          </ul>
+      </li>
+        <li class="category"><div class="nameC"> Оптика <div class="rotated"><img src="https://seelk.by/wp-content/uploads/2023/11/CaretDown.png" alt="CaretDown"></div> </div>
+            <ul class="subcategories">
+                <li><button onclick="window.location.href='https://seelk.by/listing-category/macbook-air'" class="menu-button">MacBook Air</button></li>        
+                <li><button onclick="window.location.href='https://seelk.by/listing-category/macboobk-pro'" class="menu-button">MacBook Pro</button></li>
+            </ul>
+        </li>
+        <li class="category"><div class="nameC"> Атомная и ядерная физика <div class="rotated"><img src="https://seelk.by/wp-content/uploads/2023/11/CaretDown.png" alt="CaretDown"></div> </div>
+            <ul class="subcategories">
+                <li><button onclick="window.location.href='https://seelk.by/listing-category/airpods-1'" class="menu-button">AirPods 1</button></li>        
+                <li><button onclick="window.location.href='https://seelk.by/listing-category/airpods-2'" class="menu-button">AirPods 2</button></li>
+                <li><button onclick="window.location.href='https://seelk.by/listing-category/airpods-3'" class="menu-button">AirPods 3</button></li>
+                <li><button onclick="window.location.href='https://seelk.by/listing-category/airpods-pro'" class="menu-button">AirPods Pro</button></li>
+                <li><button onclick="window.location.href='https://seelk.by/listing-category/airpods-max'" class="menu-button">AirPods Max</button></li>
+                
+            </ul>
+        </li>
+
+    </ul>
+</div>
+  
+  
+  
+<style>
+
+#categoriesfield {
+  margin-top: 200px;
+  position: relative;
+  width: 100%;
+}
+
+    *{
+font-family: Inter, sans-serif;
+}
+
+#sortblockh3{
+margin-bottom: 5px;
+}
+
+.categories {
+list-style-type: none;
+padding: 0px;
+margin-bottom: 2px;
+}
+.rotated {
+transform: rotate(0deg);
+width: max-content;
+margin-left: 235px;
+z-index: 999999;
+margin-top: -19px;
+font-size: 11px;
+}
+
+.nameC {
+height: 20px;
+}
+
+.caret {
+/* width: 0;
+height: 0;
+border-left: 5px solid transparent;
+border-right: 5px solid transparent;
+border-top: 6px solid #fff;
+transition: 0.3s;
+position: absolute; */
+transform: rotate(90deg);
+}
+
+.category {
+/*     font-size: 17px; */
+margin: 10px 5px;
+padding: 10px 20px;
+background-color: #ffffff12;
+color: white;
+border: solid 1px #ffffff00;
+border-radius: 7px;
+backdrop-filter: blur(30px);
+cursor: pointer;
+transition:  background-color 0.4s  ease;
+letter-spacing: 1px;
+}
+.category:hover {
+transition: 0.5s;
+/*     background-color: #3131319e; */
+border: solid 1px #ffffff20;
+}
+/* 
+.hp-form__button.button-primary.alt.button.hp-field.hp-field--submit {
+background-color: #ffffff12;
+backdrop-filter: blur(34px);
+border: solid 1px #ffffff30;
+}
+.hp-form__button.button-primary.alt.button.hp-field.hp-field--submit:hover {
+border: solid 1px #ffffff;
+transition: 0.7s;
+}
+*/
+
+
+.subcategories {
+list-style-type: none;
+padding: 0;
+display: none;
+flex-direction: column;
+margin-top: 10px;
+width: 100%;
+}
+
+.subcategories li {
+padding-top: 0px;
+padding-left: 10px;
+}
+.menu-button {
+font-size: 13px;
+text-align: left;
+margin: 5px;
+margin-left: -20px;
+padding: 10px 20px 10px 10px;
+background-color: #00000026;
+color: white;
+border-radius: 7px;
+backdrop-filter: blur(34px);
+cursor: pointer;
+transition:  background-color 0.4s  ease;
+letter-spacing: 1px;
+width: 100%;
+border: solid 1px #ffffff00;
+}
+
+  
+.menu-button:hover {
+transition: 0.4s;
+/*     background-color: #4848487d; */
+border: solid 1px #ffffff40;
+}
+
+.menuMain {
+  z-index: -99;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -200px;
+width: 300px;
+/* opacity: 0; 
+
+position: absolute;
+z-index: 99;
+margin-left: 10%;
+margin-right: 15%;
+margin-top: 150px;
+display: flex;
+flex-direction: column;
+align-items: left;
+width: 275px;
+background-color: #252525;
+object-fit: cover;
+border-radius: 15px;
+padding: 10 20 10 20;
+padding: 10px 20px 10px 20px;
+max-width: 290px; */
+
+}
+
+
+#sortblockh3 {
+margin-top: 8px;
+margin-bottom: 35px;
+font-size: 21px;
+color: white;
+padding-left: 8px;
+letter-spacing: 0.6px;
+font-weight: 100;
+height: 0px;
+}
+</style>
+
+<script>
+    const categories = document.querySelectorAll(".category");
+const subcategories = document.querySelectorAll(".subcategories");
+const arrow = document.querySelectorAll(".rotated")
+
+categories.forEach((category, index) => {
+subcategories[index].style.display = "none"; // Закрыть подкатегории изначально
+arrow[index].style.transform = "rotate(180deg)";
+arrow[index].style.transition = "0.35s";
+category.addEventListener("click", () => {
+    if (subcategories[index].style.display === "none") {
+        subcategories.forEach((sub) => (sub.style.display = "none"));
+        subcategories[index].style.display = "flex";
+        categories.forEach((cat) => cat.classList.remove("active"));
+        category.classList.add("active");
+        arrow[index].style.transform = "rotate(0deg)";
+
+    } else {
+        subcategories[index].style.display = "none";
+        category.classList.remove("active");
+        arrow[index].style.transform = "rotate(180deg)";
+    }
+    
+});
+});
+
+</script>
+</div>
+
+<script>
+  let cards = document.querySelectorAll('.flashcard');
+
+  function flipCard(card) {
+    card.classList.toggle('flipped');
+    cards.forEach(function (element) {
+      if (element !== card && element.classList.contains('flipped')) {
+        element.classList.remove('flipped');
+      }
+    });
+  }
+</script>
+
+
+</body>
+</html>
+
