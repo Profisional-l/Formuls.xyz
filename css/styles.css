@@ -7,8 +7,15 @@
     color: #000000;
     padding-left: 20px;
 }
+#logo a::before {
+  color: #000000;
+}
 #logo a {
   color: #000000;
+  transition: 0.3s;
+}
+#logo a:hover {
+  color: #707070;
 }
 header {
     background-color: #ffffffc8;
@@ -36,7 +43,7 @@ header {
       font-size: 20px;
     }
     .cardsfield {
-        padding-top: 70px;
+        /* padding-top: 70px; */
       margin-top: 45px;
       width: 100%;
       display: flex;
@@ -181,3 +188,37 @@ background-color: #2F2F2F
 	border: 3px solid #2f2f2f
 		
 }
+
+.namecategoriesonit {
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  margin-top: 70px;
+  padding-top: 15px;
+  font-size: 30px;
+}
+
+/* ---------------- */
+@keyframes fadein {
+
+  0% {opacity: 0;};
+  100% {opacity: 2;}
+  
+}
+.card-content {
+  transform: rotateX(180deg);
+  animation: fadein 0.2s ease-in-out;
+}
+
+.flashcard {
+  perspective: 1000px;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.flashcard.flipped {
+  transform: rotateX(180deg);
+}
+
+
+/* ------------------- */
