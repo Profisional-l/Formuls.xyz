@@ -197,6 +197,13 @@ background-color: #2F2F2F
   padding-top: 15px;
   font-size: 30px;
 }
+.namepodcat {
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  padding-top: 15px;
+  font-size: 20px;
+}
 
 /* ---------------- */
 @keyframes fadein {
@@ -209,6 +216,10 @@ background-color: #2F2F2F
   transform: rotateX(180deg);
   animation: fadein 0.2s ease-in-out;
 }
+.card-title {
+  animation: fadein 0.2s ease-in-out;
+}
+
 
 .flashcard {
   perspective: 1000px;
@@ -220,5 +231,8 @@ background-color: #2F2F2F
   transform: rotateX(180deg);
 }
 
-
 /* ------------------- */
+
+/* .bigformuls {
+  width: 190px;
+} */
