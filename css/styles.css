@@ -118,7 +118,7 @@ header {
     }
     @media (max-width: 310px){
       .flashcard {
-        width: 27%;
+        width: 29%;
       }
       .flashcard img {
         width: 122%;
