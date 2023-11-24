@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="./css/styles.css">
   <title>Кинематика</title>
 </head>
+<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');</style>
 <header>
     <h3 id="logo"><a href="./index.html">SeelkPh</a></h3>
 </header>
@@ -20,8 +21,11 @@ display: flex;
 justify-content: center;
 ">
 <style>
+    /* .flashcard {
+        height: 1700px;
+    } */
     .flashcard img {
-        max-height: 130px;
+        max-height: 95px;
     }
     .flashcard {
         position: relative;
@@ -153,40 +157,17 @@ justify-content: center;
 });
 </script> -->
 
-<script>
-      let cards = document.querySelectorAll('.flashcard');
-      let but = document.querySelector('.but');
-      let cardsfield = document.querySelector('.cardsfield');
+<script src="./flip.js">
+    //   let cards = document.querySelectorAll('.flashcard');
       
-    but.addEventListener('click', function() {
-        
-        but.textContent = "Cледуюшая карточка";
-        var randomNumber = Math.floor(Math.random() * cards.length);
-        for (var i = 0; i < cards.length; i++) {
-        if (i === randomNumber) {
-            cards[i].style.display = 'block';
-            cards[i].style.textalign ='center';
-            cards[i].style.cursor='pointer';
-            cards[i].style.margin='10px';
-            cards[i].style.height='100px';
-            cards[i].style.display='flex';
-            cards[i].style.flexdirection='column';
-            cards[i].style.alignitems='center';
-            cards[i].style.justifycontent='center';
-        
-        } else {
-            cards[i].style.display = 'none';
-        }
-  }
-});
-     function flipCard(card) {
-    card.classList.toggle('flipped');
-    cards.forEach(function (element) {
-      if (element !== card && element.classList.contains('flipped')) {
-        element.classList.remove('flipped');
-      }
-    });
-  }
+//      function flipCard(card) {
+//     card.classList.toggle('flipped');
+//     cards.forEach(function (element) {
+//       if (element !== card && element.classList.contains('flipped')) {
+//         element.classList.remove('flipped');
+//       }
+//     });
+//   }
   
 </script>
 

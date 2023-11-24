@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="./css/styles.css">
   <title>Кинематика</title>
 </head>
+<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');</style>
 <header>
     <h3 id="logo"><a href="./index.html">SeelkPh</a></h3>
 </header>
@@ -18,10 +19,6 @@
   <div class="card-content"><img src="images/путь.png" alt="" srcset=""></div>
 </div>
 
-<!-- <div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Сила тяжести</div>
-  <div class="card-content"><img src="images/силатяжести.png" alt=""></div>
-</div> -->
 <div class="flashcard" onclick="flipCard(this)">
   <div class="card-title">Уравнение равномерного движения</div>
   <div class="card-content"><img width="200px" src="images/урравндвиж.png" alt="" srcset=""></div>
@@ -90,28 +87,19 @@
   <div class="card-content bigformuls"><img src="images/максвысота.png" alt=""></div>
 </div> 
 <div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Кордината X</div>
+  <div class="card-title"><b>Кордината по X</b> <br>(Брошенное тело под углом)</div>
   <div class="card-content bigformuls"><img src="images/кординатапох.png" alt=""></div>
 </div> 
 <div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Кордината Y</div>
+  <div class="card-title"><b>Кордината по Y</b> <br> (Брошенное тело под углом)</div>
   <div class="card-content bigformuls"><img src="images/кординатапохy.png" alt=""></div>
 </div> 
 
 
 </div>
 
-<script>
-  let cards = document.querySelectorAll('.flashcard');
-
-  function flipCard(card) {
-    card.classList.toggle('flipped');
-    cards.forEach(function (element) {
-      if (element !== card && element.classList.contains('flipped')) {
-        element.classList.remove('flipped');
-      }
-    });
-  }
+<script src="./flip.js">
+  
 </script>
 
 

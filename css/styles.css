@@ -3,19 +3,24 @@
       text-decoration: none;
 }
 
+
 #logo {
     color: #000000;
-    padding-left: 20px;
+    padding-left: 18px;
+    font-size: 21px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.5px;
+    margin-top: 15px;
 }
 #logo a::before {
   color: #000000;
 }
 #logo a {
   color: #000000;
-  transition: 0.3s;
+  transition: color 0.3s;
 }
 #logo a:hover {
-  color: #707070;
+  color: #a0a0a0;
 }
 header {
     background-color: #ffffffc8;
@@ -24,6 +29,7 @@ header {
     width: 100%;
     padding: 0;
     margin: 0;
+    height: 57px;
     z-index: 999999999;
 }
     body {
@@ -55,96 +61,88 @@ header {
       /* transition: all 2s;  */
     }
     .flashcard {
-      background-color: #fff;
+      background-color: #ffffff12;
+      color: #fff;
       border: 1px solid #ccc;
-      padding: 20px;
+      border-radius: 9px;
+      /* padding: 20px; */
+      padding: 0 10px 0 10px;
       text-align: center;
       cursor: pointer;
       /* transition: transform 0.5s; */
       margin: 10px;
-      width: 165px;
-      height: 100px;
+      width: 170px;
+      height: 140px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      position: relative;
     }
     .flashcard img {
       max-width: 100%;
+      height: auto;
+      max-height: 137px;
 
     }
+   
+    @media (max-width: 645px){
+      .flashcard {
+        width: 43%;
+      }
+    }
+    @media (max-width: 600px){
+      .flashcard {
+        width: 42%;
+      }
+    }
+    @media (max-width: 525px){
+      .flashcard {
+        width: 41.7%;
+      }
+    }
+    @media (max-width: 500px){
+      .flashcard {
+        width: 41%;
+      }
+    }
+    @media (max-width: 465px){
+      .flashcard {
+        width: 40%;
+      }
+    }
+    
     @media (max-width: 445px){
       .flashcard {
-        width: 140px;
+        width: 40%;
       }
-      /* .flashcard img {
-      max-width: 143px;
-    } */
     }
-    @media (max-width: 430px){
-      .flashcard {
-        width: 143px;
-      }
-      /* .flashcard img {
-      max-width: 143px;
-    } */
-    }
-
     @media (max-width: 425px){
-      .flashcard{
-        width: 140px;
+      .flashcard {
+        width: 39%;
+      }
+
+    }
+    @media (max-width: 380px){
+      .flashcard {
+        width: 38%;
+      }
+      .card-title {
+        font-size: 18px;
 
       }
+
     }
-    @media (max-width: 405px){
-      .flashcard {
-        width: 130px;
-      }
-      .card-title, .card-content {
-      font-size: 15px;
-    }
-    }
-    @media (max-width: 385px){
-      .flashcard {
-        width: 122px;
-        
-      }
-    }
-    @media (max-width: 370px){
-      .flashcard {
-        width: 30%;        
-      }
-    }
-    @media (max-width: 310px){
-      .flashcard {
-        width: 29%;
-      }
-      .flashcard img {
-        width: 122%;
-      }
-      .card-title, .card-content {
-      font-size: 12px;
-    }
-    }
-    @media (max-width: 285px){
+    
+    @media (max-width: 365px){
       .flashcard {
         width: 100%;
       }
-      .card-title, .card-content {
-      font-size: 18px;
-    }
-    }
-    /* @media (max-width: 405px){
-      .flashcard, .flashcard img {
-        width: 130px;
+      .card-title {
+        font-size: 21px;
 
       }
     }
-    @media (max-width: 325px){
-      .flashcard, .flashcard img {
-        width: 100%;
-      }
-    } */
 
 
     .flashcard .card-content {
@@ -168,7 +166,8 @@ header {
       text-align: center;
       color: #fff;
       font-weight: 900;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: 'Inter', sans-serif;
+      /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
       /* align-items: center;
       justify-content: center;
       height: 100vh; */
@@ -235,3 +234,40 @@ background-color: #2F2F2F
 /* .bigformuls {
   width: 190px;
 } */
+.buttogamecont {
+  margin-left: auto;
+  margin-right: auto;
+ padding-bottom: 40px;
+}
+@keyframes animQsa4 {
+	0% {
+		background-position: 0% 0%;
+	}
+	50% {
+		background-position: 100% 100%;
+	}
+	100% {
+		background-position: 0% 0%;
+	}
+}
+#buttogame {
+  width: 230px;
+  letter-spacing: 1.7px;
+  position: relative;
+  margin-top: 20px;
+  margin-left: 12%;
+  margin-right: 22%;
+  background-color: #2F2F2F;
+  background-image: url('https://seelk.by/wp-content/uploads/2023/10/form1background.webp');
+  color: #fff;
+  height: 40px;
+  border-radius: 13px;
+  border: solid 2px #707070;
+  animation: animQsa4 70s infinite;
+  font-size: 18px;
+  transition: border 0.5s;
+}
+#buttogame:hover {
+  border: solid 2px rgb(162, 0, 255);
+
+}
