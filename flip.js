@@ -21,6 +21,9 @@ function flipCard(card) {
   });
 }
 
+//---------------------------------------------------------------game scripr--------------------------------------------------
+
+
 if (document.location.pathname.includes('gamepage.html')) {
 let but = document.querySelector('.but');
 // let cardsfield = document.querySelector('.cardsfield');
@@ -55,3 +58,5 @@ let texttogame = document.querySelector(".texttogame");
   }
 });
 }
+
+//-----------------------------------------------------------------------------------------------------------------------------
