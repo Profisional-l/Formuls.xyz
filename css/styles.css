@@ -32,6 +32,9 @@ header {
     height: 57px;
     z-index: 999999999;
 }
+header {
+  -webkit-backdrop-filter: blur(20px);
+}
     body {
         
       font-family: Arial, sans-serif;
@@ -275,10 +278,10 @@ background-color: #2F2F2F
 .but {
   width: 280px;
   letter-spacing: 1.7px;
-  position: absolute;
-  /* margin-bottom: 70px; */
-  position: fixed;
-  top: 850%;
+  /* position: absolute; */
+  margin-bottom: 70px;
+  /* position: fixed;
+  top: 850%; */
   background-color: #2F2F2F;
   color: #fff;
   height: 60px;
@@ -305,6 +308,9 @@ background-color: #2F2F2F
   color: #fff;
   text-align: justify; 
   width: 300px;
+  background-color: #343434;
+  padding: 15px;
+  border-radius: 13px;
 }
 
 @media (max-width: 590px){

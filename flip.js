@@ -29,6 +29,13 @@ let texttogame = document.querySelector(".texttogame");
     but.addEventListener('click', function() {
         texttogame.style.display = "none";
         but.textContent = "Cледуюшая карточка";
+
+        // but.classList.remove('margin-bottom');
+        // but.classList.add("position")
+        // but.style.position = "fixed";
+        but.classList.add("top")
+        but.style.top = "410%";
+
         var randomNumber = Math.floor(Math.random() * cards.length);
         for (var i = 0; i < cards.length; i++) {
         if (i === randomNumber) {
