@@ -61,7 +61,7 @@ header {
       /* transition: all 2s;  */
     }
     .flashcard {
-      background-color: #ffffff12;
+      background-color: #343434;
       color: #fff;
       border: 1px solid #ccc;
       border-radius: 9px;
@@ -270,4 +270,44 @@ background-color: #2F2F2F
 #buttogame:hover {
   border: solid 2px rgb(162, 0, 255);
 
+}
+
+.but {
+  width: 280px;
+  letter-spacing: 1.7px;
+  position: absolute;
+  margin-top: 70px;
+  background-color: #2F2F2F;
+  color: #fff;
+  height: 60px;
+  border-radius: 13px;
+  border: solid 2px #707070;
+  font-size: 18px;
+  transition: border 0.5s;
+
+}
+
+.but:hover {
+  border: solid 2px #fff;
+}
+
+.parentexttogame {
+  width: 400px;
+  width: 100%;
+}
+
+.texttogame {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 19px;
+  color: #fff;
+  text-align: justify; 
+  width: 300px;
+}
+
+@media (max-width: 590px){
+  body {
+    background-image: url('https://seelk.by/wp-content/uploads/2023/11/freffaf.png');
+    background-size: 100%;
+  }
 }

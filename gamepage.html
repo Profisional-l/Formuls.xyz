@@ -11,10 +11,11 @@
     <h3 id="logo"><a href="./index.html">SeelkPh</a></h3>
 </header>
 <body>
-<h2 class="namecategoriesonit">Случайная карточка</h2>
-<div class="butcont">
-    <button class="but">Начать</button>
+<h2 style="font-size: 28px;" class="namecategoriesonit">Проверка и закрепление знаний</h2>
+<div class="parentexttogame">
+    <p class="texttogame">В этом режиме вам будут попадаться случайные карточки с формулами из всех разделов. Это отличный способ проверить себя и закрепить знания. </p>
 </div>
+
 <div class="cardsfield" style="
 margin-top: 140px;
 display: flex;
@@ -24,9 +25,9 @@ justify-content: center;
     /* .flashcard {
         height: 1700px;
     } */
-    .flashcard img {
+    /* .flashcard img {
         max-height: 95px;
-    }
+    } */
     .flashcard {
         position: relative;
         width: 30%;
@@ -40,84 +41,84 @@ justify-content: center;
 </style>
 
 <div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Путь</div>
-  <div class="card-content"><img src="images/путь.png" alt="" srcset=""></div>
-</div>
+    <div class="card-title">Путь</div>
+    <div class="card-content"><img src="images/путь.png" alt="" srcset=""></div>
+  </div>
+  
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Уравнение равномерного движения</div>
+    <div class="card-content"><img width="200px" src="images/урравндвиж.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title"><b>Ускорение</b> при равноускоренном движении</div>
+    <div class="card-content"><img src="images/ускорение.png" alt=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title"><b>Скорость</b> при равноускоренном движении</div>
+    <div class="card-content"><img src="images/скоростьравнускр.png" alt=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title"><b>Путь</b> при равноускоренном движении <b>(с временем)</b></div>
+    <div class="card-content"><img src="images/путьравнускр.png" alt=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title"><b>Путь</b> при равноускоренном движении <b>(без времени)</b></div>
+    <div class="card-content"><img src="images/путьравнускрбезвремени.png" alt=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title"><b>Уравнение </b>равномерного движения</div>
+    <div class="card-content"><img src="images/уравнравнускрдвиж.png" alt=""></div>
+  </div>
+    <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Центростремит. ускорение</div>
+    <div class="card-content"><img src="images/центстремитускр.png" alt=""></div>
+  </div>
+   <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Угловая скорость</div>
+    <div class="card-content"><img src="images/углскорость.png" alt=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Линейная <b>скорость</b></div>
+    <div class="card-content"><img height="120px" src="images/линейнаяскоростьпоокруж.png" alt="линейнаяскоростьпоокруж"></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Период обращения</div>
+    <div class="card-content"><img src="images/periodob.png" alt=""></div>
+  </div>  
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Скорость по оси <b>X</b></div>
+    <div class="card-content bigformuls"><img src="images/скоростьпоx.png" alt=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Скорость по оси <b>Y</b></div>
+    <div class="card-content bigformuls"><img src="images/скоростьпоy.png" alt=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Дальность броска тела</div>
+    <div class="card-content bigformuls"><img src="images/дальность.png" alt=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Высота подъема тела</div>
+    <div class="card-content bigformuls"><img src="images/высота.png" alt=""></div>
+  </div> 
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Максимальная высота подъема тела</div>
+    <div class="card-content bigformuls"><img src="images/максвысота.png" alt=""></div>
+  </div> 
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title"><b>Кордината по X</b> <br>(Брошенное тело под углом)</div>
+    <div class="card-content bigformuls"><img src="images/кординатапох.png" alt=""></div>
+  </div> 
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title"><b>Кордината по Y</b> <br> (Брошенное тело под углом)</div>
+    <div class="card-content bigformuls"><img src="images/кординатапохy.png" alt=""></div>
+  </div> 
+  
+  
 
-<!-- <div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Сила тяжести</div>
-  <div class="card-content"><img src="images/силатяжести.png" alt=""></div>
-</div> -->
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Уравнение равномерного движения</div>
-  <div class="card-content"><img width="200px" src="images/урравндвиж.png" alt="" srcset=""></div>
 </div>
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title"><b>Ускорение</b> при равноускоренном движении</div>
-  <div class="card-content"><img src="images/ускорение.png" alt=""></div>
-</div>
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title"><b>Скорость</b> при равноускоренном движении</div>
-  <div class="card-content"><img src="images/скоростьравнускр.png" alt=""></div>
-</div>
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title"><b>Путь</b> при равноускоренном движении <b>(с временем)</b></div>
-  <div class="card-content"><img src="images/путьравнускр.png" alt=""></div>
-</div>
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title"><b>Путь</b> при равноускоренном движении <b>(без времени)</b></div>
-  <div class="card-content"><img src="images/путьравнускрбезвремени.png" alt=""></div>
-</div>
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title"><b>Уравнение </b>равномерного движения</div>
-  <div class="card-content"><img src="images/уравнравнускрдвиж.png" alt=""></div>
-</div>
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Центростремит. ускорение</div>
-  <div class="card-content"><img src="images/центстремитускр.png" alt=""></div>
-</div>
- <div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Угловая скорость</div>
-  <div class="card-content"><img src="images/углскорость.png" alt=""></div>
-</div>
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Линейная <b>скорость</b></div>
-  <div class="card-content"><img height="120px" src="images/линейнаяскоростьпоокруж.png" alt="линейнаяскоростьпоокруж"></div>
-</div>
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Период обращения</div>
-  <div class="card-content"><img src="images/periodob.png" alt=""></div>
-</div>
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Скорость по оси <b>X</b></div>
-  <div class="card-content bigformuls"><img src="images/скоростьпоx.png" alt=""></div>
-</div>
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Скорость по оси <b>Y</b></div>
-  <div class="card-content bigformuls"><img src="images/скоростьпоy.png" alt=""></div>
-</div>
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Дальность броска тела</div>
-  <div class="card-content bigformuls"><img src="images/дальность.png" alt=""></div>
-</div>
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Высота подъема тела</div>
-  <div class="card-content bigformuls"><img src="images/высота.png" alt=""></div>
-</div> 
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Максимальная высота подъема тела</div>
-  <div class="card-content bigformuls"><img src="images/максвысота.png" alt=""></div>
-</div> 
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Кордината X</div>
-  <div class="card-content bigformuls"><img src="images/кординатапох.png" alt=""></div>
-</div> 
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Кордината Y</div>
-  <div class="card-content bigformuls"><img src="images/кординатапохy.png" alt=""></div>
-</div> 
-
-
+<div class="butcont">
+    <button class="but">Начать</button>
 </div>
 <style>
     .flashcard {
@@ -129,7 +130,7 @@ justify-content: center;
        
     }
     .but {
-        width: 200px;
+        width: 260px;
         position: relative;
     }
     @media (max-width: 560px){
