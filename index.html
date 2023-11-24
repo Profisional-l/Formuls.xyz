@@ -224,7 +224,7 @@ const subcategories = document.querySelectorAll(".subcategories");
 const arrow = document.querySelectorAll(".rotated")
 
 categories.forEach((category, index) => {
-subcategories[index].style.display = "none"; // Закрыть подкатегории изначально
+subcategories[index].style.display = "none"; 
 arrow[index].style.transform = "rotate(180deg)";
 arrow[index].style.transition = "0.35s";
 category.addEventListener("click", () => {

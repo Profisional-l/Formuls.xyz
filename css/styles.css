@@ -313,9 +313,9 @@ background-color: #2F2F2F
   border-radius: 13px;
 }
 
-@media (max-width: 590px){
+/* @media (max-width: 590px){
   body {
     background-image: url('https://seelk.by/wp-content/uploads/2023/11/freffaf.png');
     background-size: 100%;
   }
-}
+} */
