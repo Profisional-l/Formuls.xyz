@@ -13,17 +13,17 @@
     margin-top: 15px;
 }
 #logo a::before {
-  color: #000000;
+  color: #ffffff;
 }
 #logo a {
-  color: #000000;
+  color: #ffffff;
   transition: color 0.3s;
 }
 #logo a:hover {
   color: #a0a0a0;
 }
 header {
-    background-color: #ffffffc8;
+    background-color: #ffffff27;
     backdrop-filter: blur(20px);
     position: fixed;
     width: 100%;
