@@ -276,7 +276,9 @@ background-color: #2F2F2F
   width: 280px;
   letter-spacing: 1.7px;
   position: absolute;
-  margin-top: 70px;
+  /* margin-bottom: 70px; */
+  position: fixed;
+  top: 850%;
   background-color: #2F2F2F;
   color: #fff;
   height: 60px;
