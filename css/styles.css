@@ -62,7 +62,7 @@ header {
       cursor: pointer;
       /* transition: transform 0.5s; */
       margin: 10px;
-      width: 160px;
+      width: 165px;
       height: 100px;
       display: flex;
       flex-direction: column;
@@ -70,35 +70,34 @@ header {
       justify-content: center;
     }
     .flashcard img {
-      max-width: 200px;
-      /* transition: all 2s; */
+      max-width: 100%;
 
     }
     @media (max-width: 445px){
       .flashcard {
         width: 140px;
       }
-      .flashcard img {
+      /* .flashcard img {
       max-width: 143px;
-    }
+    } */
     }
     @media (max-width: 430px){
       .flashcard {
         width: 143px;
       }
-      .flashcard img {
+      /* .flashcard img {
       max-width: 143px;
-    }
+    } */
     }
 
     @media (max-width: 425px){
-      .flashcard, .flashcard img {
+      .flashcard{
         width: 140px;
 
       }
     }
     @media (max-width: 405px){
-      .flashcard, .flashcard img {
+      .flashcard {
         width: 130px;
       }
       .card-title, .card-content {
