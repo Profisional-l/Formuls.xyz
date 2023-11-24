@@ -36,8 +36,8 @@ let texttogame = document.querySelector(".texttogame");
         // but.classList.remove('margin-bottom');
         // but.classList.add("position")
         // but.style.position = "fixed";
-        but.classList.add("top")
-        but.style.top = "310%";
+        // but.classList.add("top")
+        // but.style.top = "310%";
 
         var randomNumber = Math.floor(Math.random() * cards.length);
         for (var i = 0; i < cards.length; i++) {
