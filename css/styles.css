@@ -268,6 +268,8 @@ background-color: #2F2F2F
   margin-right: auto;
  padding-bottom: 40px;
 }
+.buttogamecont a {
+display: inline-block;}
 @keyframes animQsa4 {
 	0% {
 		background-position: 0% 0%;
@@ -507,7 +509,7 @@ height: 0px;
   left: 4px;
   bottom: 4px;
   background-color: var(--var-switchcircle);
-  -webkit-transition: .3s;
+  -webkit-transition: .2s;
   transition: .2s;
 }
 
