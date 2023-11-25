@@ -269,7 +269,10 @@ background-color: #2F2F2F
  padding-bottom: 40px;
 }
 .buttogamecont a {
-display: inline-block;}
+display: inline-block;
+}
+
+
 @keyframes animQsa4 {
 	0% {
 		background-position: 0% 0%;
