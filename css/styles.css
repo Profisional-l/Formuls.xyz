@@ -280,7 +280,7 @@ display: inline-block;
 		background-position: 0% 0%;
 	}
 }
-#buttogame {
+#buttogame , .opencards {
   width: 230px;
   letter-spacing: 1.7px;
   position: relative;
@@ -385,7 +385,7 @@ height: 20px;
 transform: rotate(90deg);
 }
 
-.category {
+.category, .categortoall {
 /*     font-size: 17px; */
 margin: 10px 5px;
 padding: 10px 20px;
@@ -536,3 +536,50 @@ input:checked + .slider:before {
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------ */
+
+.butallformcont {
+  width: 290px;
+  height: 42px;
+  margin-left: -21px;
+  z-index: 9999999999999;
+}
+#butallform{
+  width: 290px;
+  height: 44px;
+  padding: 0;
+  margin-top: -26px;
+  border-radius: 7px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #343434;
+  color: #fff;
+  border: solid 2px #ffffff;
+  border: none;
+  transition: border 0.1s;
+  transition: color 2s;
+}
+#butallform:hover {
+  border: solid 2px #9121f3;
+color: #ce97ff;
+}
+.opencardscont {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#opencards {
+  width: 290px;
+  height: 44px;
+  padding: 0;
+  margin-top: -26px;
+  border-radius: 7px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #343434;
+  color: #fff;
+  border: solid 2px #ffffff;
+  border: none;
+  transition: border 0.1s;
+  transition: color 2s;
+}
