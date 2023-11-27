@@ -583,3 +583,33 @@ color: #ce97ff;
   transition: border 0.1s;
   transition: color 2s;
 }
+
+footer {
+  width: 100%;
+  height: 300px;
+  background-color: var(--var-header-bg);
+  margin-top: 200px;
+}
+.qwesttgcont {
+  display: flex;
+  width: 100%;
+  padding-top: 100px;
+  color: #c2c2c2;
+  height: 50px;
+  font-size: 15px;
+  align-items: center;
+}
+
+.qwesttg {
+  height: 55px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+
+}
+
+#tgicon{
+  margin-top: -2px;
+  margin-left: 6px;
+  position: absolute;
+}
