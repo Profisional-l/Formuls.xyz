@@ -613,3 +613,21 @@ footer {
   margin-left: 6px;
   position: absolute;
 }
+
+.textonmaincont {
+  width: 100%;
+  margin-top: 100px;
+}
+
+.textonmain {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 19px;
+  color: #fff;
+  /* text-align: justify;  */
+  /* width: 300px; */
+  background-color: var(--var-but-bg);
+  padding: 15px;
+  border-radius: 13px;
+}
