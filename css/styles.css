@@ -11,7 +11,7 @@
  
  [light] {
   --var-body-bg: #e1e1e1;
-  --var-header-bg: #252525;
+  --var-header-bg: rgba(0, 0, 0, 0.85);
   --var-allcolor: #333;
   --var-but-bg: #343434;
   --var-switch-color: #222222;
@@ -57,7 +57,9 @@ header {
 header {
   -webkit-backdrop-filter: blur(20px);
 }
-    body {
+    
+
+body {
         
       font-family: Arial, sans-serif;
       display: flex;
@@ -68,7 +70,7 @@ header {
       height: 100vh; */
       margin: 0;
       /* transition: all 2s; */
-    }
+}
 
     .card-title, .card-content {
       font-size: 20px;
@@ -285,12 +287,12 @@ display: inline-block;
   letter-spacing: 1.7px;
   position: relative;
   margin-top: 20px;
-  margin-left: 12%;
-  margin-right: 22%;
+  margin-left: 15%;
+  margin-right: auto;
   background-color: #2F2F2F;
   background-image: url('https://seelk.by/wp-content/uploads/2023/10/form1background.webp');
   color: #fff;
-  height: 40px;
+  height: 60px;
   border-radius: 13px;
   border: solid 2px #707070;
   animation: animQsa4 70s infinite;
@@ -591,27 +593,41 @@ footer {
   margin-top: 150px;
 }
 .qwesttgcont {
+  text-align: center;
   display: flex;
+  flex-wrap: wrap;
+
   width: 100%;
   padding-top: 100px;
-  color: #c2c2c2;
+  color: #f3f3f3;
   height: 50px;
   font-size: 15px;
   align-items: center;
 }
 
 .qwesttg {
-  height: 55px;
   margin-left: auto;
   margin-right: auto;
   align-items: center;
-
+  text-align: center;
 }
 
-#tgicon{
-  margin-top: -2px;
-  margin-left: 6px;
+.qwesttgcont a {
+  color: #fff;
+}
+
+/* #tgicon{
+  margin-top: 11px;
+  margin-left: -11px;
   position: absolute;
+  padding-bottom: 30px;
+} */
+
+#tglink {
+  position: absolute;
+  left: 40%;
+  right: 40%;
+  margin-top: -84px;
 }
 
 .textonmaincont {
@@ -631,3 +647,9 @@ footer {
   padding: 15px;
   border-radius: 13px;
 }
+/* 
+#mailicon {
+  margin-top: -8px;
+  margin-left: 100px;
+  position: absolute;
+} */
