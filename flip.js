@@ -29,7 +29,7 @@ function flipCard(card) {
 //---------------------------------------------------------------game scripr--------------------------------------------------
 
 
-if (document.location.pathname.includes('gamepage.html')) {
+if (document.location.pathname.includes('gamepage.html') || document.location.pathname.includes('gasewatergame.html') || document.location.pathname.includes('kinematicagame.html')) {
 let but = document.querySelector('.but');
 // let cardsfield = document.querySelector('.cardsfield');
 let texttogame = document.querySelector(".texttogame");
@@ -63,5 +63,6 @@ let texttogame = document.querySelector(".texttogame");
   }
 });
 }
+
 
 //-----------------------------------------------------------------------------------------------------------------------------

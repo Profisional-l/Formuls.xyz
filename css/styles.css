@@ -84,7 +84,6 @@ body {
       /* align-items: center;
       justify-content: center;
       height: 100vh; */
-      margin: 0;
       /* transition: all 2s;  */
     }
     .flashcard {
@@ -98,6 +97,7 @@ body {
       cursor: pointer;
       /* transition: transform 0.5s; */
       margin: 10px;
+      
       width: 170px;
       height: 140px;
       display: flex;
@@ -265,6 +265,8 @@ background-color: #2F2F2F
   margin-left: auto;
   margin-right: auto;
  padding-bottom: 40px;
+ width: 100%;
+ justify-content: center;
 }
 .buttogamecont a {
 display: inline-block;
@@ -283,12 +285,13 @@ display: inline-block;
 	}
 }
 #buttogame , .opencards {
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
   width: 230px;
   letter-spacing: 1.7px;
-  position: relative;
   margin-top: 20px;
-  margin-left: 15%;
-  margin-right: auto;
   background-color: #2F2F2F;
   background-image: url('https://seelk.by/wp-content/uploads/2023/10/form1background.webp');
   color: #fff;
@@ -299,6 +302,7 @@ display: inline-block;
   font-size: 18px;
   transition: border 0.5s;
 }
+
 #buttogame:hover {
   border: solid 2px rgb(162, 0, 255);
 
@@ -357,7 +361,7 @@ display: inline-block;
   width: 100%;
 }
 
-    *{
+*{
 font-family: Inter, sans-serif;
 }
 
@@ -374,7 +378,7 @@ margin-bottom: 2px;
 transform: rotate(0deg);
 width: max-content;
 margin-left: 235px;
-z-index: 999999;
+z-index: 999;
 margin-top: -19px;
 font-size: 11px;
 }
@@ -450,7 +454,7 @@ border: solid 1px #ffffff40;
   z-index: -99;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -200px;
+  margin-top: -150px;
 width: 300px;
 
 
@@ -653,3 +657,17 @@ footer {
   margin-left: 100px;
   position: absolute;
 } */
+
+@media (min-width: 1000px){
+header {
+  padding-left: 10%;
+}
+.switch {
+  right: 20%
+}
+.cardsfield {
+  width: 86%;
+  margin-left:11%;
+}
+
+}
