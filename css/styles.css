@@ -312,7 +312,7 @@ display: inline-block;
   width: 280px;
   letter-spacing: 1.7px;
   /* position: absolute; */
-  margin-bottom: 70px;
+  /* margin-bottom: 70px; */
   /* position: fixed;
   top: 850%; */
   background-color: #2F2F2F;
@@ -324,6 +324,20 @@ display: inline-block;
   transition: border 0.5s;
 
 }
+
+@media (max-height: 580px){
+  .but {
+      margin-bottom: -70px;
+
+  }
+}
+@media (max-height: 465px){
+  .but {
+      margin-top: 20px;
+  }
+}
+
+
 
 .but:hover {
   border: solid 2px #fff;
@@ -665,9 +679,9 @@ header {
 .switch {
   right: 20%
 }
-.cardsfield {
+/* .cardsfield {
   width: 86%;
   margin-left:11%;
-}
+} */
 
 }
