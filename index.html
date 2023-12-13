@@ -122,15 +122,18 @@ const arrow = document.querySelectorAll(".rotated");
 let timer;
 const gotosec = document.getElementById('gotosec');
 console.log(buttogame);
-gotosec.addEventListener('mousedown', function() {
-  timer = setTimeout(function() {
+gotosec.addEventListener('dblclick', function() {
     window.location.href='https://seelk.by/';
-  }, 3000);
 });
+// gotosec.addEventListener('mousedown', function() {
+//   timer = setTimeout(function() {
+//     window.location.href='https://seelk.by/';
+//   }, 3000);
+// });
 
-gotosec.addEventListener('mouseup', function() {
-  clearTimeout(timer);
-});
+// gotosec.addEventListener('mouseup', function() {
+//   clearTimeout(timer);
+// });
 
 
 categories.forEach((category, index) => {
