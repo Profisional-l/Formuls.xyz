@@ -122,8 +122,10 @@ const arrow = document.querySelectorAll(".rotated");
 let timer;
 const gotosec = document.getElementById('gotosec');
 console.log(buttogame);
-gotosec.addEventListener('dblclick', function() {
+gotosec.addEventListener('click', function(event) {
+  if (event.detail === 3) {
     window.location.href='https://seelk.by/';
+  }
 });
 // gotosec.addEventListener('mousedown', function() {
 //   timer = setTimeout(function() {
