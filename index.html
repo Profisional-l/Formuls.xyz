@@ -21,7 +21,7 @@
 </header>
 <body>
   <div class="mainscreenhi">
-  <h2 class="mainscreenh2">Добро пожаловать на Physics</h2> 
+  <h2 class="mainscreenh2">Добро пожаловать на <t id="gotosec">Physics</t> </h2> 
   <h3>Physics - это проект для эффективного запоминания формул из курса Физики</h3>
 </div>
 <div class="buttogamecont"><a  href="./gamepage.html"><button id="buttogame" type="submit">Проверка знаний</button></a></div>
@@ -120,15 +120,15 @@ const subcategories = document.querySelectorAll(".subcategories");
 const arrow = document.querySelectorAll(".rotated");
 
 let timer;
-const buttogame = document.getElementById('buttogame');
+const gotosec = document.getElementById('gotosec');
 console.log(buttogame);
-buttogame.addEventListener('mousedown', function() {
+gotosec.addEventListener('mousedown', function() {
   timer = setTimeout(function() {
     window.location.href='https://seelk.by/';
-  }, 5000);
+  }, 3000);
 });
 
-buttogame.addEventListener('mouseup', function() {
+gotosec.addEventListener('mouseup', function() {
   clearTimeout(timer);
 });
 
