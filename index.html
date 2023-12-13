@@ -117,7 +117,21 @@
 <script>
     const categories = document.querySelectorAll(".category");
 const subcategories = document.querySelectorAll(".subcategories");
-const arrow = document.querySelectorAll(".rotated")
+const arrow = document.querySelectorAll(".rotated");
+
+let timer;
+const buttogame = document.getElementById('buttogame');
+console.log(buttogame);
+buttogame.addEventListener('mousedown', function() {
+  timer = setTimeout(function() {
+    window.open('https://seelk.by', '_blank');
+  }, 5000);
+});
+
+buttogame.addEventListener('mouseup', function() {
+  clearTimeout(timer);
+});
+
 
 categories.forEach((category, index) => {
 subcategories[index].style.display = "none"; 
