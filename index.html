@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="shortcut icon" href="./images/seelkphlogo.png" type="image/x-icon" />
-  <title>Physics</title>
+  <title>Formuls</title>
 </head>
 <script src="./theme.js"></script>
 <header>
-  <h3 id="logo"><a href="./index.html">Physics</a></h3>
+  <h3 id="logo"><a href="./index.html">Formuls</a></h3>
   <!-- Rounded switch -->
   <div class="switche rparent">
     <label class="switch">
@@ -21,8 +21,8 @@
 </header>
 <body>
   <div class="mainscreenhi">
-  <h2 class="mainscreenh2">Добро пожаловать на <t id="gotosec">Physics</t> </h2> 
-  <h3>Physics - это проект для эффективного запоминания формул из курса Физики</h3>
+  <h2 class="mainscreenh2">Добро пожаловать на <t id="gotosec">Formuls</t> </h2> 
+  <h3>Formuls - это проект для эффективного запоминания формул из курса Физики</h3>
 </div>
 <div class="buttogamecont"><a  href="./gamepage.html"><button id="buttogame" type="submit">Проверка знаний</button></a></div>
 
@@ -79,7 +79,7 @@
 
 <div class="textonmaincont">
 <div class="textonmain">
-  <h3>Как пользовать Physics?</h3>
+  <h3>Как пользовать Formuls?</h3>
   <p>
     Способы работы с карточками: <br>
     <br>
@@ -122,11 +122,19 @@ const arrow = document.querySelectorAll(".rotated");
 let timer;
 const gotosec = document.getElementById('gotosec');
 console.log(buttogame);
-gotosec.addEventListener('click', function(event) {
-  if (event.detail === 3) {
+gotosec.addEventListener('dblclick', function() {
     window.location.href='./secretowenph.html';
-  }
 });
+var isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+console.log(isiOS);
+if (isiOS) {
+    var element = document.getElementById('gotosec');
+    element.addEventListener('touchstart', function(e) {
+        if (e.touches.length > 1) {
+            window.location.href='./secretowenph.html';
+        }
+    });
+}
 // gotosec.addEventListener('mousedown', function() {
 //   timer = setTimeout(function() {
 //     window.location.href='https://seelk.by/';
@@ -188,7 +196,7 @@ category.addEventListener("click", () => {
    
     
   </div>
-  <h4  style="text-align: center; color: rgb(255, 255, 255); padding-top: 40px;">Physics.xyz<br>
+  <h4  style="text-align: center; color: rgb(255, 255, 255); padding-top: 40px;">Formuls<br>
   <a style="color: rgb(115, 115, 115);" href="https://seelk.by/privacy-policy/">Политика конфиденциальности</a> <br>
   <h4 style="color: rgb(115, 115, 115); text-align: center;" > Создано командой  <a style="color: rgb(113, 43, 226);" href="https://seelk.by">Seelk.by</a></h4>
 </h4>
