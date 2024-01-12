@@ -76,6 +76,8 @@ body {
       font-size: 20px;
     }
     .cardsfield {
+      top: 50%;
+      justify-content: center;
         /* padding-top: 70px; */
       margin-top: 45px;
       width: 100%;
@@ -98,7 +100,7 @@ body {
       /* transition: transform 0.5s; */
       margin: 10px;
       
-      width: 170px;
+      width: 240px;
       height: 140px;
       display: flex;
       flex-direction: column;
@@ -123,27 +125,7 @@ body {
         width: 42%;
       }
     }
-    @media (max-width: 525px){
-      .flashcard {
-        width: 41.7%;
-      }
-    }
-    @media (max-width: 500px){
-      .flashcard {
-        width: 41%;
-      }
-    }
-    @media (max-width: 465px){
-      .flashcard {
-        width: 40%;
-      }
-    }
-    
-    @media (max-width: 445px){
-      .flashcard {
-        width: 40%;
-      }
-    }
+
     /* @media (max-width: 425px){
       .flashcard {
         width: 39%;
@@ -160,7 +142,11 @@ body {
       }
 
     } */
-    
+    @media (min-width: 540px){
+      .bigcards {
+        width: 523px;
+      }
+    }
     @media (max-width: 540px){
       .flashcard {
         width: 100%;
@@ -180,6 +166,31 @@ body {
     }
     .flashcard.flipped .card-content {
       display: block;
+    }
+
+
+    .flashcard.allflipped {
+      display: flex;
+      flex-direction: column;
+      height: fit-content;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+    .flashcard.allflipped .card-title {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      order: 2;
+      width: 100%;      
+      color: #000000;
+      font-weight: bold;
+      transform: rotateX(180deg);
+    }
+    .flashcard.allflipped .card-content {
+      order: 1;
+      display: block;
+    }
+    .flashcard.allflipped {
+      transform: rotateX(180deg);
     }
 
     .mainscreenhi {
@@ -220,6 +231,8 @@ background-color: #2F2F2F
   text-align: center;
   margin-top: 70px;
   padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
   font-size: 30px;
 }
 .namepodcat {
@@ -227,6 +240,8 @@ background-color: #2F2F2F
   width: 100%;
   text-align: center;
   padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
   font-size: 20px;
 }
 
@@ -391,11 +406,13 @@ padding: 0px;
 margin-bottom: 2px;
 }
 .rotated {
+  display: inline-block;
+  position: fixed;
 transform: rotate(0deg);
 width: max-content;
-margin-left: 235px;
+top: 10px;
+right: 20px;
 z-index: 999;
-margin-top: -19px;
 font-size: 11px;
 }
 
@@ -471,7 +488,8 @@ border: solid 1px #ffffff40;
   margin-left: auto;
   margin-right: auto;
   margin-top: -150px;
-  max-width: 300px;
+  width: 87%;
+  max-width: 350px;
 
 
 }
@@ -486,6 +504,15 @@ padding-left: 8px;
 letter-spacing: 0.6px;
 font-weight: 100;
 height: 0px;
+}
+
+@media (max-width: 330px){
+  .category {
+    min-height: 43px;
+  }
+  .rotated {
+    top: 21px;
+ }
 }
 
 /* ---------------------------------------------------------------------switch--------------------------------- */
@@ -560,16 +587,19 @@ input:checked + .slider:before {
 /* ------------------------------------------------------------------------------------------------------------------------------------------ */
 
 .butallformcont {
-  width: 290px;
+  /* width: 290px; */
+  display:list-item;
   height: 42px;
-  margin-left: -21px;
+  /* margin-left: -21px; */
   z-index: 9999999999999;
+  max-width: 340px;
+  margin: 10px 5px 0px 5px;
+  padding: 10px 0px;
+  
 }
 #butallform{
-  width: 290px;
+  width: 100%;
   height: 44px;
-  padding: 0;
-  margin-top: -26px;
   border-radius: 7px;
   font-size: 18px;
   font-weight: 500;
@@ -687,3 +717,4 @@ header {
 } */
 
 }
+
