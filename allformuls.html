@@ -425,6 +425,35 @@
   
 
 </div>
+<!-- <script>
+  // Ждем 5 секунд перед началом прокрутки
+  setTimeout(function() {
+    // Прокручиваем страницу до конца с установленной скоростью
+    scrollToSmoothly(document.body.scrollHeight, 66000);
+  }, 3000); // 5000 миллисекунд = 5 секунд
+  
+  // Функция для плавной прокрутки страницы
+  function scrollToSmoothly(pos, duration) {
+    var start = window.scrollY,
+        difference = pos - start,
+        startTime = null;
+  
+    function scrollStep(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var progress = timestamp - startTime;
+      var perTick = difference / duration * progress;
+  
+      window.scrollTo(0, start + perTick);
+  
+      if (progress < duration) {
+        requestAnimationFrame(scrollStep);
+      }
+    }
+  
+    requestAnimationFrame(scrollStep);
+  }
+  
+  </script> -->
 
   
   

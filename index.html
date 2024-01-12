@@ -33,7 +33,7 @@
     
     <h3 id="sortblockh3">Категории</h3>
     <ul class="categories">
-      <li class="categortoall"><div class="nameC"><div class="butallformcont"><a  href="./allformuls.html"><button id="butallform" type="submit">Все формулы</button></a></div> </div>
+      <!-- <li class="categortoall"><div class="nameC"><div class="butallformcont"><a  href="./allformuls.html"><button id="butallform" type="submit">Все формулы</button></a></div> </div> -->
         <li class="category"><div class="nameC"> Механика <div class="rotated"><img src="https://seelk.by/wp-content/uploads/2023/11/CaretDown.png" alt="CaretDown"></div> </div>
             <ul class="subcategories">
 
@@ -115,56 +115,66 @@
 </style>
 
 <script>
-    const categories = document.querySelectorAll(".category");
-const subcategories = document.querySelectorAll(".subcategories");
-const arrow = document.querySelectorAll(".rotated");
+    document.addEventListener("DOMContentLoaded", function() {
+    // Этот код будет выполнен после загрузки всего DOM
 
-let timer;
-const gotosec = document.getElementById('gotosec');
-console.log(buttogame);
-gotosec.addEventListener('dblclick', function() {
-    window.location.href='./secretowenph.html';
-});
-var isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-console.log(isiOS);
-if (isiOS) {
-    var element = document.getElementById('gotosec');
-    element.addEventListener('touchstart', function(e) {
-        if (e.touches.length > 1) {
-            window.location.href='./secretowenph.html';
+    const categoriesContainer = document.querySelector(".categories");
+    const subcategories = document.querySelectorAll(".subcategories");
+    const arrows = document.querySelectorAll(".rotated");
+    const gotosec = document.getElementById('gotosec');
+
+    let timer;
+
+    gotosec.addEventListener('dblclick', function() {
+        window.location.href='./secretowenph.html';
+    });
+
+    var isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    console.log(isiOS);
+
+    if (isiOS) {
+        var element = document.getElementById('gotosec');
+        element.addEventListener('touchstart', function(e) {
+            if (e.touches.length > 1) {
+                window.location.href='./secretowenph.html';
+            }
+        });
+    }
+
+    categoriesContainer.addEventListener("click", function(event) {
+        const category = event.target.closest(".category");
+        if (!category) return;
+
+        const index = Array.from(categoriesContainer.children).indexOf(category);
+
+        if (subcategories[index].style.display === "none") {
+            closeSubcategories();
+            openSubcategory(index);
+        } else {
+            closeSubcategory(index);
         }
     });
-}
-// gotosec.addEventListener('mousedown', function() {
-//   timer = setTimeout(function() {
-//     window.location.href='https://seelk.by/';
-//   }, 3000);
-// });
 
-// gotosec.addEventListener('mouseup', function() {
-//   clearTimeout(timer);
-// });
-
-
-categories.forEach((category, index) => {
-subcategories[index].style.display = "none"; 
-arrow[index].style.transform = "rotate(180deg)";
-arrow[index].style.transition = "0.35s";
-category.addEventListener("click", () => {
-    if (subcategories[index].style.display === "none") {
+    function closeSubcategories() {
         subcategories.forEach((sub) => (sub.style.display = "none"));
-        subcategories[index].style.display = "flex";
-        categories.forEach((cat) => cat.classList.remove("active"));
-        category.classList.add("active");
-        arrow[index].style.transform = "rotate(0deg)";
-
-    } else {
-        subcategories[index].style.display = "none";
-        category.classList.remove("active");
-        arrow[index].style.transform = "rotate(180deg)";
+        categoriesContainer.querySelectorAll(".category").forEach((cat) => cat.classList.remove("active"));
+        arrows.forEach((arrow) => (arrow.style.transform = "rotate(180deg)"));
     }
-    
-});
+
+    function openSubcategory(index) {
+        subcategories[index].style.display = "flex";
+        categoriesContainer.children[index].classList.add("active");
+        arrows[index].style.transform = "rotate(0deg)";
+    }
+
+    function closeSubcategory(index) {
+        subcategories[index].style.display = "none";
+        categoriesContainer.children[index].classList.remove("active");
+        arrows[index].style.transform = "rotate(180deg)";
+    }
+
+    // Закрываем все подкатегории при загрузке страницы
+    closeSubcategories();
 });
 
 </script>
