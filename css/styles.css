@@ -161,7 +161,7 @@ body {
 
     } */
     
-    @media (max-width: 440px){
+    @media (max-width: 540px){
       .flashcard {
         width: 100%;
       }
