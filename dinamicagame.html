@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="shortcut icon" href="./images/seelkphlogo.png" type="image/x-icon" />
+  <title>TestMode</title>
+</head>
+<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');</style>
+<script src="./theme.js"></script>
+<header>
+  <h3 id="logo"><a href="./index.html">Formuls</a></h3>
+  <!-- Rounded switch -->
+<label class="switch">
+  <input id="checkboxswitcher" type="checkbox" onchange="handleChange(this.checked)">
+  <span class="slider round"></span>
+</label>
+</header>
+<body><div class="butcont" style="
+  position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+    display: flex;
+  justify-content: center;
+  width: 100%;
+  ">
+    <button class="but" style="display: inline-block;">Начать</button>
+</div>
+<h2 style="font-size: 28px; " class="namecategoriesonit">Проверка и закрепление знаний по теме "Динамика"</h2>
+<div class="parentexttogame">
+    <p class="texttogame">В этом режиме вам будут попадаться случайны карточки с формулами из раздела <b>"Динамика"</b>. Это отличный способ проверить себя и закрепить знания именно в этой теме. </p>
+</div>
+
+<div class="cardsfield" style="
+position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+justify-content: center;
+">
+<style>
+    /* .flashcard {
+        height: 1700px;
+    } */
+    /* .flashcard img {
+        max-height: 95px;
+    } */
+    .flashcard {
+        position: relative;
+        width: 30%;
+
+    }
+    @media (max-width: 610px){
+      .flashcard {
+        width: 100%;
+    }
+}
+</style>
+
+
+
+<div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Масса однородного тела</div>
+    <div class="card-content"><img src="images/масса.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title"><b>Второй <br></b>закон Ньютона</div>
+    <div class="card-content"><img src="images/2йзакон.png" alt=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title"><b>Третий <br></b> закон Ньютона</div>
+    <div class="card-content"><img src="images/3йзакон.png" alt=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title"><b>Сила упругости</b> <br> Закон Гука</div>
+    <div class="card-content"><img src="images/силаупругости.png" alt=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Сила трения покоя</b></div>
+    <div class="card-content"><img src="images/силатренияпокоя.png" alt=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Сила трения скольжения</div>
+    <div class="card-content"><img src="images/силатренияскольжения.png" alt=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Закон всемирного тяготения</div>
+    <div class="card-content"><img src="images/законвстяг.png" alt=""></div>
+  </div>
+   <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Сила тяжести</div>
+    <div class="card-content"><img src="images/силатяжести.png" alt=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Зависимость <b>g</b> от высоты над поверхностью</b></div>
+    <div class="card-content"><img height="120px" src="images/зависускрсвпотвыстоты.png" alt="линейнаяскоростьпоокруж"></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Первая космическая скорость</div>
+    <div class="card-content"><img src="images/1якосмическая.png" alt=""></div>
+  </div>
+  
+    
+  
+  
+
+</div>
+
+<style>
+    .flashcard {
+        display: none;
+    }
+    .butcont {
+        margin-left: auto;
+        margin-right: auto;
+       
+    }
+    .but {
+        width: 260px;
+        
+     
+    }
+    @media (max-width: 560px){
+      .flashcard {
+        width: 100%;
+      }
+    }
+    .cardsfield {
+        align-items: center;
+    }
+</style>
+
+<!-- <script>
+    let cardsgame = document.querySelectorAll('.flashcard');
+    document.querySelector('.but').addEventListener('click', function() {
+    var randomNumber = Math.floor(Math.random() * cardsgame.length);
+    for (var i = 0; i < cardsgame.length; i++) {
+    if (i === randomNumber) {
+        cardsgame[i].style.display = 'block';
+        cardsgame[i].style.width = '100%';
+    } else {
+        cardsgame[i].style.display = 'none';
+    }
+  }
+});
+</script> -->
+
+<script src="./flip.js">
+    //   let cards = document.querySelectorAll('.flashcard');
+      
+//      function flipCard(card) {
+//     card.classList.toggle('flipped');
+//     cards.forEach(function (element) {
+//       if (element !== card && element.classList.contains('flipped')) {
+//         element.classList.remove('flipped');
+//       }
+//     });
+//   }
+  
+</script>
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="shortcut icon" href="./images/seelkphlogo.png" type="image/x-icon" />
+  <title>TestMode</title>
+</head>
+<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');</style>
+<script src="./theme.js"></script>
+<header>
+  <h3 id="logo"><a href="./index.html">Formuls</a></h3>
+  <!-- Rounded switch -->
+<label class="switch">
+  <input id="checkboxswitcher" type="checkbox" onchange="handleChange(this.checked)">
+  <span class="slider round"></span>
+</label>
+</header>
+<body><div class="butcont" style="
+  position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+    display: flex;
+  justify-content: center;
+  width: 100%;
+  ">
+    <button class="but" style="display: inline-block;">Начать</button>
+</div>
+<h2 style="font-size: 28px; " class="namecategoriesonit">Проверка и закрепление знаний по теме "МКТ"</h2>
+<div class="parentexttogame">
+    <p class="texttogame">В этом режиме вам будут попадаться случайны карточки с формулами из раздела <b>"МКТ"</b>. Это отличный способ проверить себя и закрепить знания именно в этой теме. </p>
+</div>
+
+<div class="cardsfield" style="
+position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+justify-content: center;
+">
+<style>
+    /* .flashcard {
+        height: 1700px;
+    } */
+    /* .flashcard img {
+        max-height: 95px;
+    } */
+    .flashcard {
+        position: relative;
+        width: 30%;
+
+    }
+    @media (max-width: 610px){
+      .flashcard {
+        width: 100%;
+    }
+}
+</style>
+
+
+
+<div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Химическое количество вещества</div>
+    <div class="card-content"><img src="images/химколич.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Масса одной молекулы вещества</div>
+      <div class="card-content"><img src="images/массаодноймолек.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div style="font-size: 16px;" class="card-title">Основное уравнение молекулярно-кинетической теории (МКТ) идеального газа</div>
+      <div class="card-content"><img src="images/гидрстатдав.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Средняя квадратичная скорость молекул</div>
+      <div class="card-content"><img src="images/средскмолек.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div style="font-size: 16px;" class="card-title">Средняя кинетическая энергия поступательного движения одной молекулы</div>
+      <div class="card-content"><img src="images/средкинетэнергия.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Следствия из основного уравнения МКТ</div>
+      <div class="card-content"><img src="images/следствияизмктос.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Давление смеси газов (закон Дальтона)</div>
+      <div class="card-content"><img src="images/давсмесигаз.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Тепловое расширение жидкостей</div>
+      <div class="card-content"><img src="images/тепловоерасширенижидкостей.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">3 формулы расширения твердых тел</div>
+      <div class="card-content"><img src="images/тризаконарасширен.png" alt="" srcset=""></div>
+    </div>
+  
+  
+
+</div>
+
+<style>
+    .flashcard {
+        display: none;
+    }
+    .butcont {
+        margin-left: auto;
+        margin-right: auto;
+       
+    }
+    .but {
+        width: 260px;
+        
+     
+    }
+    @media (max-width: 560px){
+      .flashcard {
+        width: 100%;
+      }
+    }
+    .cardsfield {
+        align-items: center;
+    }
+</style>
+
+<!-- <script>
+    let cardsgame = document.querySelectorAll('.flashcard');
+    document.querySelector('.but').addEventListener('click', function() {
+    var randomNumber = Math.floor(Math.random() * cardsgame.length);
+    for (var i = 0; i < cardsgame.length; i++) {
+    if (i === randomNumber) {
+        cardsgame[i].style.display = 'block';
+        cardsgame[i].style.width = '100%';
+    } else {
+        cardsgame[i].style.display = 'none';
+    }
+  }
+});
+</script> -->
+
+<script src="./flip.js">
+    //   let cards = document.querySelectorAll('.flashcard');
+      
+//      function flipCard(card) {
+//     card.classList.toggle('flipped');
+//     cards.forEach(function (element) {
+//       if (element !== card && element.classList.contains('flipped')) {
+//         element.classList.remove('flipped');
+//       }
+//     });
+//   }
+  
+</script>
+
+
+</body>
+
+</html>
+

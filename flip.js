@@ -28,7 +28,7 @@ function flipCard(card) {
 //---------------------------------------------------------------game scripr--------------------------------------------------
 
 
-if (document.location.pathname.includes('gamepage.html') || document.location.pathname.includes('gasewatergame.html') || document.location.pathname.includes('kinematicagame.html') || document.location.pathname.includes('secretowenph.html')) {
+if (document.location.pathname.includes('gamepage.html') || document.location.pathname.includes('gasewatergame.html') || document.location.pathname.includes('kinematicagame.html') || document.location.pathname.includes('secretowenph.html') || document.location.pathname.includes('dinamicagame.html') || document.location.pathname.includes('zaksochrngame.html') || document.location.pathname.includes('mktgame.html')) {
 let but = document.querySelector('.but');
 // let cardsfield = document.querySelector('.cardsfield');
 let texttogame = document.querySelector(".texttogame");
