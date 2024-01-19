@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="shortcut icon" href="./images/seelkphlogo.png" type="image/x-icon" />
+  <title>TestMode</title>
+</head>
+<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');</style>
+<script src="./theme.js"></script>
+<header>
+  <h3 id="logo"><a href="./index.html">Formuls</a></h3>
+  <!-- Rounded switch -->
+<label class="switch">
+  <input id="checkboxswitcher" type="checkbox" onchange="handleChange(this.checked)">
+  <span class="slider round"></span>
+</label>
+</header>
+<body><div class="butcont" style="
+  position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+    display: flex;
+  justify-content: center;
+  width: 100%;
+  ">
+    <button class="but" style="display: inline-block;">Начать</button>
+</div>
+<h2 style="font-size: 28px; " class="namecategoriesonit">Проверка и закрепление знаний по теме "Магнетизм"</h2>
+<div class="parentexttogame">
+    <p class="texttogame">В этом режиме вам будут попадаться случайны карточки с формулами из раздела <b>"Магнетизм"</b>. Это отличный способ проверить себя и закрепить знания именно в этой теме. </p>
+</div>
+
+<div class="cardsfield" style="
+position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+justify-content: center;
+">
+<style>
+    /* .flashcard {
+        height: 1700px;
+    } */
+    /* .flashcard img {
+        max-height: 95px;
+    } */
+    .flashcard {
+        position: relative;
+        width: 30%;
+
+    }
+    @media (max-width: 610px){
+      .flashcard {
+        width: 100%;
+    }
+}
+</style>
+
+
+<div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Сила Ампера</div>
+    <div class="card-content"><img src="images/СилаАмпера.png" alt="" srcset=""></div>
+  </div>
+  
+  <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Момент сил действующих на рамку с током</div>
+      <div class="card-content"><img src="images/моментсилыстоком.png" alt="" srcset=""></div>
+    </div>
+  
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Сила Лоренца</div>
+    <div class="card-content"><img src="images/СилаЛоренца.png" alt="" srcset=""></div>
+  </div>
+  
+  <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Радиус траектории полета заряженной частицы в магнитном поле</div>
+      <div class="card-content"><img src="images/Радиустраектполчастицы.png" alt="" srcset=""></div>
+    </div>
+  
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title"><t style="font-size: 16px;">Модуль индукции B магнитного поля прямолинейного проводника с током<i><b>ㅤIㅤ</b></i>на расстоянии <i><b>R</b></i></t></div>
+    <div class="card-content"><img src="images/МодульиндукцииBIR.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Концентрация витков на единицу длины катушки</div>
+      <div class="card-content"><img src="images/концентрациявитков.png" alt="" srcset=""></div>
+    </div>
+  <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Индукция поля в центре витка с током радиусом R</div>
+      <div class="card-content"><img src="images/ИндукцияполявценттокомсR.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Индукция магнитного поля на оси соленоида</div>
+      <div class="card-content"><img src="images/индукциянасолиноиде.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Магнитная проницаемость вещества</div>
+      <div class="card-content"><img src="images/магнпроницвещ.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Магнитный потокок <br> (Φ через площадь S контура)</div>
+      <div class="card-content"><img src="images/магнпотоком.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">ЭДС индукции</div>
+      <div class="card-content"><img src="images/эдсиндукции.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">ЭДС индукции в движущемся проводннике</div>
+      <div class="card-content"><img src="images/ИндукцияполявценттокомсR.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Максимальное значение ЭДС</div>
+      <div class="card-content"><img src="images/максэдсинд.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">ЭДС самоиндукции</div>
+      <div class="card-content"><img src="images/эдссамоинд.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Энергия катушки <br> (энергия магнитного поля внутри катушки)</div>
+      <div class="card-content"><img src="images/энергмагполя.png" alt="" srcset=""></div>
+    </div>
+    
+</div>
+
+<style>
+    .flashcard {
+        display: none;
+    }
+    .butcont {
+        margin-left: auto;
+        margin-right: auto;
+       
+    }
+    .but {
+        width: 260px;
+        
+     
+    }
+    @media (max-width: 560px){
+      .flashcard {
+        width: 100%;
+      }
+    }
+    .cardsfield {
+        align-items: center;
+    }
+</style>
+
+<!-- <script>
+    let cardsgame = document.querySelectorAll('.flashcard');
+    document.querySelector('.but').addEventListener('click', function() {
+    var randomNumber = Math.floor(Math.random() * cardsgame.length);
+    for (var i = 0; i < cardsgame.length; i++) {
+    if (i === randomNumber) {
+        cardsgame[i].style.display = 'block';
+        cardsgame[i].style.width = '100%';
+    } else {
+        cardsgame[i].style.display = 'none';
+    }
+  }
+});
+</script> -->
+
+<script src="./flip.js">
+    //   let cards = document.querySelectorAll('.flashcard');
+      
+//      function flipCard(card) {
+//     card.classList.toggle('flipped');
+//     cards.forEach(function (element) {
+//       if (element !== card && element.classList.contains('flipped')) {
+//         element.classList.remove('flipped');
+//       }
+//     });
+//   }
+  
+</script>
+
+
+</body>
+
+</html>
+

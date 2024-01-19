@@ -7,6 +7,7 @@
   --var-logo-c: #fff;
   --var-switchback: #000000;
   --var-switchcircle: #fff;
+  --var-gobackcolor: invert(0%) grayscale(0%);
   --var-nameformul-bg: url('https://seelk.by/wp-content/uploads/2024/01/фильтр0.png');
  }
  
@@ -20,7 +21,7 @@
   --var-switchback: #fff;
   --var-switchcircle: #000000;
   --var-nameformul-bg: url('https://seelk.by/wp-content/uploads/2024/01/фильтр.png');
-
+  --var-gobackcolor: invert(100%) grayscale(100%);
  }
 
  * {
@@ -28,7 +29,20 @@
       text-decoration: none;
 }
 
-
+.gobackbut {
+  z-index: 999999999999;
+  position: fixed;
+  margin-top: 10px;
+  margin-left: 5px;
+  display: none;
+}
+.gobackbut button {
+  background-color: transparent;
+  border: none;
+}
+#gobacksvg {
+  filter: var(--var-gobackcolor)
+}
 #logo {
     padding-left: 18px;
     font-size: 21px;

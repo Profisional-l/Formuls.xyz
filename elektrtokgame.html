@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="shortcut icon" href="./images/seelkphlogo.png" type="image/x-icon" />
-  <title>Электрический ток</title>
+  <title>TestMode</title>
 </head>
 <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');</style>
 <script src="./theme.js"></script>
@@ -17,12 +17,47 @@
   <span class="slider round"></span>
 </label>
 </header>
-<body>
-  
-<h2 class="namecategoriesonit">Электрический ток</h2>
-<div class="buttogamecont"><a  href="./elektrtokgame.html"><button id="buttogame" type="submit">Режим запоминания</button></a></div>
+<body><div class="butcont" style="
+  position: absolute;
+    top: 80%;
+    transform: translateY(-50%);
+    display: flex;
+  justify-content: center;
+  width: 100%;
+  ">
+    <button class="but" style="display: inline-block;">Начать</button>
+</div>
+<h2 style="font-size: 28px; " class="namecategoriesonit">Проверка и закрепление знаний по теме "Законы постоянного тока"</h2>
+<div class="parentexttogame">
+    <p class="texttogame">В этом режиме вам будут попадаться случайны карточки с формулами из раздела <b>"Законы постоянного тока"</b>. Это отличный способ проверить себя и закрепить знания именно в этой теме. </p>
+</div>
 
-<div class="cardsfield">
+<div class="cardsfield" style="
+position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+justify-content: center;
+">
+<style>
+    /* .flashcard {
+        height: 1700px;
+    } */
+    /* .flashcard img {
+        max-height: 95px;
+    } */
+    .flashcard {
+        position: relative;
+        width: 30%;
+
+    }
+    @media (max-width: 610px){
+      .flashcard {
+        width: 100%;
+    }
+}
+</style>
+
 
 <div class="flashcard" onclick="flipCard(this)">
   <div class="card-title">Сила тока</div>
@@ -68,8 +103,6 @@
     <div class="card-title">Мощность электрического тока</div>
     <div class="card-content"><img src="images/Мощностьэлектрическоготока.png" alt="" srcset=""></div>
   </div>
-  <h3 style="font-size: 25px;" class="namecategoriesonit">Последовательное соединение:</h3>
-
   <div class="flashcard" onclick="flipCard(this)">
     <div class="card-title">Сила тока</div>
     <div class="card-content"><img src="images/силатокапоссоед.png" alt="" srcset=""></div>
@@ -90,9 +123,6 @@
     <div class="card-title">Электрическая емкость</div>
     <div class="card-content"><img src="images/электремкостьпоссоед.png" alt="" srcset=""></div>
   </div>
-
-  <h3 style="font-size: 25px;" class="namecategoriesonit">Параллельное соединение:</h3>
-
   <div class="flashcard" onclick="flipCard(this)">
     <div class="card-title">Сила тока</div>
     <div class="card-content"><img src="images/силатокапрсоед.png" alt="" srcset=""></div>
@@ -113,8 +143,6 @@
     <div class="card-title">Электрическая емкость</div>
     <div class="card-content"><img src="images/электремкостьпрсоед.png" alt="" srcset=""></div>
   </div>
-
-  <h2 class="namecategoriesonit">Энергобаланс замкнутой цепи</h2>
   <div class="flashcard bigcards" onclick="flipCard(this)">
     <div  class="card-title">Полезная мощность или мощность, выделяемая во внешней цепи</div>
     <div class="card-content"><img src="images/полезнаямощностьвнешнейцепи.png" alt="" srcset=""></div>
@@ -127,7 +155,6 @@
     <div  class="card-title">КПД источника тока</div>
     <div class="card-content"><img src="images/кпдисточтока.png" alt="" srcset=""></div>
   </div>
-  <h2 class="namecategoriesonit">Электролиз</h2>
   <div  class="flashcard" onclick="flipCard(this)">
     <div  class="card-title">Закон Фарадея</div>
     <div class="card-content"><img src="images/законфарадея.png" alt="" srcset=""></div>
@@ -140,13 +167,64 @@
 
 
 
+
 </div>
 
+<style>
+    .flashcard {
+        display: none;
+    }
+    .butcont {
+        margin-left: auto;
+        margin-right: auto;
+       
+    }
+    .but {
+        width: 260px;
+        
+     
+    }
+    @media (max-width: 560px){
+      .flashcard {
+        width: 100%;
+      }
+    }
+    .cardsfield {
+        align-items: center;
+    }
+</style>
+
+<!-- <script>
+    let cardsgame = document.querySelectorAll('.flashcard');
+    document.querySelector('.but').addEventListener('click', function() {
+    var randomNumber = Math.floor(Math.random() * cardsgame.length);
+    for (var i = 0; i < cardsgame.length; i++) {
+    if (i === randomNumber) {
+        cardsgame[i].style.display = 'block';
+        cardsgame[i].style.width = '100%';
+    } else {
+        cardsgame[i].style.display = 'none';
+    }
+  }
+});
+</script> -->
+
 <script src="./flip.js">
+    //   let cards = document.querySelectorAll('.flashcard');
+      
+//      function flipCard(card) {
+//     card.classList.toggle('flipped');
+//     cards.forEach(function (element) {
+//       if (element !== card && element.classList.contains('flipped')) {
+//         element.classList.remove('flipped');
+//       }
+//     });
+//   }
   
 </script>
 
 
 </body>
+
 </html>
 
