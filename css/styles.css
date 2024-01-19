@@ -1,23 +1,25 @@
  :root {
   --var-body-bg: #252525;
-  --var-header-bg: #ffffff27;
+  --var-header-bg: #5454546b;
   --var-allcolor: #ffffff;
   --var-but-bg: #343434;
   --var-switch-color: #ffffff;
   --var-logo-c: #fff;
   --var-switchback: #000000;
   --var-switchcircle: #fff;
+  --var-nameformul-bg: url('https://seelk.by/wp-content/uploads/2024/01/фильтр0.png');
  }
  
  [light] {
   --var-body-bg: #e1e1e1;
-  --var-header-bg: rgba(0, 0, 0, 0.85);
+  --var-header-bg: rgba(0, 0, 0, 0.821);
   --var-allcolor: #333;
   --var-but-bg: #343434;
   --var-switch-color: #222222;
   --var-logo-c: #000;
   --var-switchback: #fff;
   --var-switchcircle: #000000;
+  --var-nameformul-bg: url('https://seelk.by/wp-content/uploads/2024/01/фильтр.png');
 
  }
 
@@ -33,6 +35,11 @@
     font-family: 'Inter', sans-serif;
     letter-spacing: 0.5px;
     margin-top: 15px;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: var(--var-nameformul-bg);
+  
 }
 #logo a::before {
   color: #fff;
@@ -44,9 +51,16 @@
 #logo a:hover {
   color: #a0a0a0;
 }
+
+#gotosec {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: var(--var-nameformul-bg);
+}
 header {
     background-color: var(--var-header-bg);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(30px);
     position: fixed;
     width: 100%;
     padding: 0;
@@ -718,6 +732,3 @@ header {
 
 }
 
-.rotated {
-  display: none;
-}
