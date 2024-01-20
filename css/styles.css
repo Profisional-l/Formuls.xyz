@@ -546,6 +546,32 @@ height: 0px;
  }
 }
 
+
+
+.menu-button-single {
+  width: 97%;
+  display: list-item;
+  height: 42px;
+  z-index: 9999999999999;
+  max-width: 340px;
+  margin: 10px 5px 0px 5px;
+  padding: 10px 0px;
+  background-color: #343434;
+  color: #fff;
+  border: solid 1px #ffffff00;
+  border-radius: 7px;
+  backdrop-filter: blur(30px);
+  transition:  background-color 0.4s  ease;
+  letter-spacing: 1px;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 16px;
+}
+
+
+
+
+
 /* ---------------------------------------------------------------------switch--------------------------------- */
 
 

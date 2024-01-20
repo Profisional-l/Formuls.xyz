@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="shortcut icon" href="./images/seelkphlogo.png" type="image/x-icon" />
+  <title>Оптика</title>
+</head>
+<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');</style>
+<script src="./theme.js"></script>
+<header>
+  <h3 id="logo"><a href="./index.html">Formuls</a></h3>
+  <!-- Rounded switch -->
+<label class="switch">
+  <input id="checkboxswitcher" type="checkbox" onchange="handleChange(this.checked)">
+  <span class="slider round"></span>
+</label>
+</header>
+<body>
+<h2 class="namecategoriesonit">Оптика</h2>
+<div class="buttogamecont"><a  href="./opticagame.html"><button id="buttogame" type="submit">Режим запоминания</button></a></div>
+
+<div class="cardsfield">
+    <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Закон преломления света на границе двух прозрачных сред</div>
+        <div class="card-content"><img src="images/законпреломления.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Формула дифракционной решетки</div>
+        <div class="card-content"><img src="images/формуладифреш.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Формула тонкой линзы</div>
+        <div class="card-content"><img src="images/формтонклинзы.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Абсолютный показатель преломления среды</div>
+        <div class="card-content"><img src="images/абсолпокпреломл.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Оптическа сила тонкой линзы</div>
+        <div class="card-content"><img src="images/силалинзы.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Линейное увеличение линзы Γ</div>
+        <div class="card-content"><img src="images/линувеллинзы.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Предельный угол полного отражения α<sub>пр</sub></div>
+        <div class="card-content"><img src="images/предуголотр.png" alt="" srcset=""></div>
+      </div>
+
+</div>
+
+
+<script src="./flip.js">
+  
+</script>
+
+
+</body>
+</html>
+
