@@ -32,9 +32,8 @@
 .gobackbut {
   z-index: 999999999999;
   position: fixed;
-  margin-top: 10px;
+  margin-top: 5px;
   margin-left: 5px;
-  display: none;
 }
 .gobackbut button {
   background-color: transparent;
@@ -43,6 +42,13 @@
 #gobacksvg {
   filter: var(--var-gobackcolor)
 }
+
+#gobacksvg:hover {
+  --var-gobackcolor: invert(50%) grayscale(100%);
+  transition: 0.4s;
+  
+}
+
 #logo {
     padding-left: 18px;
     font-size: 21px;
