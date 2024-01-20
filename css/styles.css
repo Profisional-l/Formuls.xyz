@@ -8,6 +8,7 @@
   --var-switchback: #000000;
   --var-switchcircle: #fff;
   --var-gobackcolor: invert(0%) grayscale(0%);
+  --var-goupcolor: invert(100%) grayscale(0%);
   --var-nameformul-bg: url('https://seelk.by/wp-content/uploads/2024/01/фильтр0.png');
  }
  
@@ -20,6 +21,7 @@
   --var-logo-c: #000;
   --var-switchback: #fff;
   --var-switchcircle: #000000;
+  --var-goupcolor: invert(1%) grayscale(0%);
   --var-nameformul-bg: url('https://seelk.by/wp-content/uploads/2024/01/фильтр.png');
   --var-gobackcolor: invert(100%) grayscale(100%);
  }
@@ -775,3 +777,36 @@ header {
 
 }
 
+
+#scrollToTopBtn {
+  z-index: 999999999;
+  display: none;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  background-color: transparent;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 35px;
+  transition: opacity 0.3s;
+}
+
+#scrollupbut {
+  filter: var(--var-goupcolor);
+  margin: auto;
+  padding: -20px;
+  
+}
+#scrollupbut:hover {
+  filter: invert(50%) grayscale(100%);
+  transition: 0.4s;
+}
+/* #backofupbut {
+  background-color: var(--var-switchback) ;
+  border-radius: 333px;
+  background-size: 10px;
+  padding: 2px;
+  width: 32px;
+  height: 32px;
+} */
