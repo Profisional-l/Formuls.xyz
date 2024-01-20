@@ -55,11 +55,7 @@
     font-family: 'Inter', sans-serif;
     letter-spacing: 0.5px;
     margin-top: 15px;
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    background-image: var(--var-nameformul-bg);
-  
+    
 }
 #logo a::before {
   color: #fff;
@@ -77,6 +73,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   background-image: var(--var-nameformul-bg);
+  transition: 0.3s;
 }
 header {
     background-color: var(--var-header-bg);

@@ -28,7 +28,7 @@ function flipCard(card) {
 //---------------------------------------------------------------game scripr--------------------------------------------------
 
 
-if (document.location.pathname.includes('gamepage.html') || document.location.pathname.includes('gasewatergame.html') || document.location.pathname.includes('kinematicagame.html') || document.location.pathname.includes('secretowenph.html') || document.location.pathname.includes('dinamicagame.html') || document.location.pathname.includes('zaksochrngame.html') || document.location.pathname.includes('mktgame.html') || document.location.pathname.includes('termodinamicagame.html') || document.location.pathname.includes('electrostatgame.html') || document.location.pathname.includes('elektrtokgame.html') || document.location.pathname.includes('magnitgame.html')) {
+if (document.location.pathname.includes('gamepage.html') || document.location.pathname.includes('gasewatergame.html') || document.location.pathname.includes('kinematicagame.html') || document.location.pathname.includes('secretowenph.html') || document.location.pathname.includes('dinamicagame.html') || document.location.pathname.includes('zaksochrngame.html') || document.location.pathname.includes('mktgame.html') || document.location.pathname.includes('termodinamicagame.html') || document.location.pathname.includes('electrostatgame.html') || document.location.pathname.includes('elektrtokgame.html') || document.location.pathname.includes('magnitgame.html') || document.location.pathname.includes('volnigame.html')) {
 let but = document.querySelector('.but');
 let categoryname = document.querySelector('.namecategoriesonit');
 let gobackbut = document.getElementById('gobacksvg');

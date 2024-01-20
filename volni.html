@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="shortcut icon" href="./images/seelkphlogo.png" type="image/x-icon" />
+  <title>Волны</title>
+</head>
+<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');</style>
+<script src="./theme.js"></script>
+<header>
+  <h3 id="logo"><a href="./index.html">Formuls</a></h3>
+  <!-- Rounded switch -->
+<label class="switch">
+  <input id="checkboxswitcher" type="checkbox" onchange="handleChange(this.checked)">
+  <span class="slider round"></span>
+</label>
+</header>
+<body>
+<h2 class="namecategoriesonit">Волны</h2>
+<div class="buttogamecont"><a  href="./volnigame.html"><button id="buttogame" type="submit">Режим запоминания</button></a></div>
+
+<div class="cardsfield">
+    <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Длина волны</div>
+        <div class="card-content"><img src="images/длинаволны.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Связь между длиной волны и скорость её распространения и частотой</div>
+        <div class="card-content"><img src="images/связьскоростиволны.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Разность фаз колебаний двух точек волны</div>
+        <div class="card-content"><img src="images/разностьфаз.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard bigcards" onclick="flipCard(this)">
+        <div class="card-title">Скорость электромагнитной волны (в т.ч. света) в некоторой среде</div>
+        <div class="card-content"><img src="images/скоростьволны.png" alt="" srcset=""></div>
+      </div>
+</div>
+
+
+<script src="./flip.js">
+  
+</script>
+
+
+</body>
+</html>
+
