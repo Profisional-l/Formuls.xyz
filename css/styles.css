@@ -21,7 +21,7 @@
   --var-logo-c: #000;
   --var-switchback: #fff;
   --var-switchcircle: #000000;
-  --var-goupcolor: invert(1%) grayscale(0%);
+  --var-goupcolor: invert(40%) grayscale(0%);
   --var-nameformul-bg: url('https://seelk.by/wp-content/uploads/2024/01/фильтр.png');
   --var-gobackcolor: invert(100%) grayscale(100%);
  }
@@ -795,8 +795,6 @@ header {
 #scrollupbut {
   filter: var(--var-goupcolor);
   margin: auto;
-  padding: -20px;
-  
 }
 #scrollupbut:hover {
   filter: invert(50%) grayscale(100%);
