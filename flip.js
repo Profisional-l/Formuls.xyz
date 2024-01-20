@@ -31,6 +31,8 @@ function flipCard(card) {
 if (document.location.pathname.includes('gamepage.html') || document.location.pathname.includes('gasewatergame.html') || document.location.pathname.includes('kinematicagame.html') || document.location.pathname.includes('secretowenph.html') || document.location.pathname.includes('dinamicagame.html') || document.location.pathname.includes('zaksochrngame.html') || document.location.pathname.includes('mktgame.html') || document.location.pathname.includes('termodinamicagame.html') || document.location.pathname.includes('electrostatgame.html') || document.location.pathname.includes('elektrtokgame.html') || document.location.pathname.includes('magnitgame.html')) {
 let but = document.querySelector('.but');
 let categoryname = document.querySelector('.namecategoriesonit');
+let gobackbut = document.getElementById('gobacksvg');
+gobackbut.style.display = "none";
 // let cardsfield = document.querySelector('.cardsfield');
 let texttogame = document.querySelector(".texttogame");
       
@@ -39,6 +41,8 @@ let texttogame = document.querySelector(".texttogame");
         but.textContent = "Cледуюшая карточка";
         categoryname.style.display = "none";
         but.classList.remove('margin-bottom');
+        gobackbut.style.display = "block";
+
         // but.classList.add("position")
         // but.style.position = "fixed";
         // but.classList.add("top")
