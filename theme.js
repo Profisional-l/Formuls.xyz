@@ -1,3 +1,4 @@
+document.querySelector("meta[name='apple-mobile-web-app-status-bar-style']").setAttribute("content", "#252525");
 window.onload = function() {
     const savedTheme = localStorage.getItem('theme');
     const isSwitchOn = localStorage.getItem('theme1');
