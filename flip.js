@@ -22,7 +22,38 @@ function flipCard(card) {
 }
 
 
-//--------------------------------------------------------------allcard-------------------------------------------------
+//--------------------------------------------------------------scrolltoup-------------------------------------------------
+
+document.addEventListener("DOMContentLoaded", function () {
+  var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+      scrollToTopBtn.style.display = "block";
+    } else {
+      scrollToTopBtn.style.display = "none";
+    }
+  }
+
+  scrollToTopBtn.addEventListener("click", function () {
+    scrollToTop();
+  });
+
+  function scrollToTop() {
+    // Получаем текущую прокрутку
+    var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+    if (currentScroll > 0) {
+      // Если мы еще не находимся вверху, прокручиваем страницу вверх с использованием requestAnimationFrame
+      window.requestAnimationFrame(scrollToTop);
+      window.scrollTo(0, currentScroll - currentScroll / 11);
+    }
+  }
+});
 
 //---------------------------------------------------------------game scripr--------------------------------------------------
 
