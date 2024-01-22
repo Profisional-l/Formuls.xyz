@@ -808,3 +808,17 @@ header {
   width: 32px;
   height: 32px;
 } */
+
+#startbut {
+  width: 280px;
+    letter-spacing: 1.7px;
+    /* position: absolute; */
+    /* margin-bottom: 70px; */
+    background-color: #2F2F2F;
+    color: #fff;
+    height: 60px;
+    border-radius: 13px;
+    border: solid 2px #707070;
+    font-size: 18px;
+    transition: border 0.5s;
+}
