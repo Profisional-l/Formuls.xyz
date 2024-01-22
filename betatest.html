@@ -24,7 +24,7 @@
     }
 
     .flashcard.correct {
-      border: 2px solid #28a745;
+      border: 3px solid #009e0d;
       pointer-events: none; /* Запретить взаимодействие с правильной карточкой */
     }
 
@@ -851,19 +851,25 @@
     if (card.dataset.isCorrect === 'true') {
       card.classList.add('correct');
       correctCard = card;
-      showCorrectCard();
+      if (correctCardTitleElement) {
+        showCorrectCard();
+      }
     } else {
       card.classList.add('incorrect');
       setTimeout(function () {
         card.classList.remove('flipped');
         disableInteraction();
-        showCorrectCard();
+        if (correctCardTitleElement) {
+          showCorrectCard();
+        }
       }, 0);
     }
   }
 
   function showCorrectCard() {
-    correctCard.classList.add('correct');
+    if (correctCard) {
+      correctCard.classList.add('correct');
+    }
   }
 
   function resetCards() {
@@ -916,7 +922,9 @@
     }
 
     // Отобразить название правильной карточки
-    correctCardTitleElement.textContent = `Выберите: ${selectedCard.querySelector('.card-title').innerText}`;
+    if (correctCardTitleElement) {
+      correctCardTitleElement.textContent = `Выберите: ${selectedCard.querySelector('.card-title').innerText}`;
+    }
   }
 
   // Start the game when the page loads
