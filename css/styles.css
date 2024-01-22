@@ -799,7 +799,7 @@ header {
 #scrollupbut:hover {
   filter: invert(50%) grayscale(100%);
   transition: 0.4s;
-25}
+}
 /* #backofupbut {
   background-color: var(--var-switchback) ;
   border-radius: 333px;
