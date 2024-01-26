@@ -193,26 +193,31 @@ categories.forEach((category, index) => {
 
 <script>
   if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./service-worker.js')
-    .then((registration) => {
-      console.log('Service Worker registered with scope:', registration.scope);
-    })
-    .catch((error) => {
-      console.error('Service Worker registration failed:', error);
-    });
-}
-</script>
-<script>
+    navigator.serviceWorker.register('./service-worker.js')
+      .then((registration) => {
+        console.log('Service Worker registered with scope:', registration.scope);
+      })
+      .catch((error) => {
+        console.error('Service Worker registration failed:', error);
+      });
+  }
+
   let initialbut = document.querySelector("#initialbut");
-  console.log(initialbut)
-let defaultInstallEvent = null;
-window.addEventListener('beforeinstallprompt', (event) => {
-  defaultInstallEvent = event;
-})
-initialbut.addEventListener('click', () => {
-  defaultInstallEvent.prompt()
-})
+  let defaultInstallEvent = null;
+
+  window.addEventListener('beforeinstallprompt', (event) => {
+    // Сохраняем событие для последующего использования
+    defaultInstallEvent = event;
+  });
+
+  initialbut.addEventListener('click', () => {
+    // Запускаем встроенное уведомление для установки
+    if (defaultInstallEvent) {
+      defaultInstallEvent.prompt();
+    }
+  });
 </script>
+
 
 </body>
 
