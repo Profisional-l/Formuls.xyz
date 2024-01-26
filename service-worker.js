@@ -4,7 +4,7 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(cacheName).then((cache) => {
       return cache.addAll([
-        '/',
+        './',
         './index.html',
         './manifest.json',
         './images/formulslogo.png',
@@ -36,19 +36,22 @@ self.addEventListener('fetch', (event) => {
 });
 
 function fetchAndCache(request) {
-  return fetch(request).then((response) => {
-    // Проверка успешности запроса
-    if (!response || response.status !== 200 || response.type !== 'basic') {
-      return response;
-    }
+  return caches.open(cacheName).then((cache) => {
+    return fetch(request).then((response) => {
+      // Проверка успешности запроса
+      if (!response || response.status !== 200 || response.type !== 'basic') {
+        return response;
+      }
 
-    const responseToCache = response.clone();
+      const responseToCache = response.clone();
 
-    // Кэширование нового ресурса
-    caches.open(cacheName).then((cache) => {
-      cache.put(request, responseToCache);
+      // Кэширование нового ресурса
+      return cache.put(request, responseToCache).then(() => {
+        return response;
+      });
+    }).catch((error) => {
+      console.error('Fetch failed:', error);
+      throw error; // Прокидываем ошибку дальше
     });
-
-    return response;
   });
 }
