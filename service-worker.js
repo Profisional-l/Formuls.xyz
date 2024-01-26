@@ -5,9 +5,9 @@ self.addEventListener('install', (event) => {
     caches.open(cacheName).then((cache) => {
       return cache.addAll([
         '/',
-        '/index.html',
-        '/manifest.json',
-        '/images/formulslogo.png',
+        './index.html',
+        './manifest.json',
+        './images/formulslogo.png',
         // Add other resources to cache
       ]);
     })
