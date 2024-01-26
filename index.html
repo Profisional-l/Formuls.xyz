@@ -42,7 +42,7 @@
   <h3>Formuls - это проект для эффективного запоминания формул из курса Физики</h3>
   <div class="buttogamecont"><a  href="./gamepage.html"><button id="buttogame" type="submit">Режим запоминания</button></a></div>
 <h3><br>Не надо заучивать! Просто запоминай, занимаясь пару минут в день!</h3>
-<button onclick="promptEvent.prompt()">Установить приложение</button>
+<button id="initialbut">Установить приложение</button>
 </div>
 <div id="categoriesfield">
     			
@@ -203,18 +203,14 @@ categories.forEach((category, index) => {
 }
 </script>
 <script>
-  // Проверка поддержки PWA
-  let promptEvent;
-
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  promptEvent = e;
-});
-button.onclick = () => {
-  if (promptEvent) {
-    promptEvent.prompt();
-  }
-};
+  let initialbut = document.querySelector("#initialbut");
+let defaultInstallEvent = null;
+window.addEventListener('beforeinstallprompt', (event) => {
+  defaultInstallEvent = event;
+})
+initialbut.addEventListener('click', () => {
+  defaultInstallEvent.prompt()
+})
 </script>
 
 </body>
