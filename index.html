@@ -42,7 +42,7 @@
   <h3>Formuls - это проект для эффективного запоминания формул из курса Физики</h3>
   <div class="buttogamecont"><a  href="./gamepage.html"><button id="buttogame" type="submit">Режим запоминания</button></a></div>
 <h3><br>Не надо заучивать! Просто запоминай, занимаясь пару минут в день!</h3>
-<button onclick="installPWA()">Установить приложение</button>
+<button onclick="promptEvent.prompt()">Установить приложение</button>
 </div>
 <div id="categoriesfield">
     			
@@ -204,31 +204,17 @@ categories.forEach((category, index) => {
 </script>
 <script>
   // Проверка поддержки PWA
-  if ('serviceWorker' in navigator && 'PushManager' in window) {
-    navigator.serviceWorker.register('/service-worker.js')
-      .then(function(registration) {
-        console.log('Service Worker зарегистрирован с областью видимости:', registration.scope);
-      })
-      .catch(function(error) {
-        console.error('Ошибка при регистрации Service Worker:', error);
-      });
-  }
+  let promptEvent;
 
-  // Функция для установки PWA
-  function installPWA() {
-    if ('beforeinstallprompt' in window) {
-      // Показываем уведомление для установки
-      window.deferredPrompt.prompt();
-      window.deferredPrompt.userChoice.then(function(choiceResult) {
-        if (choiceResult.outcome === 'accepted') {
-          console.log('Пользователь согласился установить PWA');
-        } else {
-          console.log('Пользователь отказался устанавливать PWA');
-        }
-        window.deferredPrompt = null;
-      });
-    }
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  promptEvent = e;
+});
+button.onclick = () => {
+  if (promptEvent) {
+    promptEvent.prompt();
   }
+};
 </script>
 
 </body>
