@@ -2,8 +2,8 @@
     "name": "Formuls.xyz",
     "short_name": "Formuls",
     "description": "Formuls - подготовка к экзамену (ЦТ | ЦЭ | ЕГЭ) по физике. Легко запоминай формулы и сдавай экзамен на 80+!",
-    "start_url": "/index.html",
-    "display": "fullscreen",
+    "start_url": "./index.html",
+    "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#252525",
     "icons": [
