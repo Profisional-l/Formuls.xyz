@@ -42,6 +42,7 @@
   <h3>Formuls - это проект для эффективного запоминания формул из курса Физики</h3>
   <div class="buttogamecont"><a  href="./gamepage.html"><button id="buttogame" type="submit">Режим запоминания</button></a></div>
 <h3><br>Не надо заучивать! Просто запоминай, занимаясь пару минут в день!</h3>
+<button id="installButton" onclick="installPWA()">Установить приложение</button>
 
 </div>
 <div id="categoriesfield">
@@ -202,7 +203,64 @@ categories.forEach((category, index) => {
     });
 }
 </script>
+<script>
+  let deferredPrompt;
 
+  // Проверяем, что мы находимся на главной странице
+  if ('serviceWorker' in navigator && window.location.pathname === '/') {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then((registration) => {
+        console.log('Service Worker registered with scope:', registration.scope);
+
+        // Отображаем кнопку установки приложения
+        if (registration.installing || registration.waiting) {
+          showInstallButton();
+        }
+
+        registration.addEventListener('updatefound', () => {
+          registration.installing.addEventListener('statechange', () => {
+            if (registration.installing.state === 'installed') {
+              showInstallButton();
+            }
+          });
+        });
+      })
+      .catch((error) => {
+        console.error('Service Worker registration failed:', error);
+      });
+  }
+
+  function showInstallButton() {
+    // Показываем кнопку установки приложения
+    const installButton = document.getElementById('installButton');
+    installButton.style.display = 'block';
+
+    // Сохраняем событие установки для последующего использования
+    deferredPrompt = null;
+    navigator.serviceWorker.ready.then((swRegistration) => {
+      deferredPrompt = swRegistration;
+    });
+  }
+
+  function installPWA() {
+    if (deferredPrompt) {
+      // Запускаем процесс установки
+      deferredPrompt.prompt();
+
+      // Ожидаем результата
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('Пользователь согласился на установку');
+        } else {
+          console.log('Пользователь отменил установку');
+        }
+
+        // Очистка переменной
+        deferredPrompt = null;
+      });
+    }
+  }
+</script>
 </body>
 
 <footer>
