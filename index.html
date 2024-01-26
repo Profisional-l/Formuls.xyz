@@ -205,11 +205,9 @@ categories.forEach((category, index) => {
   let installButton = document.querySelector("#initialbut");
 
   installButton.addEventListener('click', () => {
-    // Проверяем наличие метода prompt у события
     if (window.beforeinstallprompt) {
       window.beforeinstallprompt.prompt();
 
-      // Ожидаем результата
       window.beforeinstallprompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
           console.log('Пользователь согласился на установку');
@@ -217,6 +215,18 @@ categories.forEach((category, index) => {
           console.log('Пользователь отменил установку');
         }
       });
+    } else if (navigator.share) {
+      // Если нет beforeinstallprompt, но есть поддержка Web Share API (для браузеров, таких как Yandex)
+      navigator.share({
+        title: 'Название вашего приложения',
+        text: 'Описание вашего приложения',
+        url: window.location.href,
+      })
+        .then(() => console.log('Успешно поделено'))
+        .catch((error) => console.error('Ошибка при попытке поделиться:', error));
+    } else {
+      // Возможно, предоставить инструкции для ручного добавления на домашний экран
+      alert('Чтобы установить приложение, откройте меню браузера и выберите "Добавить на главный экран" или подобное.');
     }
   });
 </script>
