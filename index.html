@@ -202,18 +202,21 @@ categories.forEach((category, index) => {
       });
   }
 
-  let initialbut = document.querySelector("#initialbut");
-  let defaultInstallEvent = null;
+  let installButton = document.querySelector("#initialbut");
 
-  window.addEventListener('beforeinstallprompt', (event) => {
-    // Сохраняем событие для последующего использования
-    defaultInstallEvent = event;
-  });
+  installButton.addEventListener('click', () => {
+    // Проверяем наличие метода prompt у события
+    if (window.beforeinstallprompt) {
+      window.beforeinstallprompt.prompt();
 
-  initialbut.addEventListener('click', () => {
-    // Запускаем встроенное уведомление для установки
-    if (defaultInstallEvent) {
-      defaultInstallEvent.prompt();
+      // Ожидаем результата
+      window.beforeinstallprompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('Пользователь согласился на установку');
+        } else {
+          console.log('Пользователь отменил установку');
+        }
+      });
     }
   });
 </script>
