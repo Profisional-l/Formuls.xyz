@@ -29,25 +29,24 @@ const handleChange = (isChecked) => {
     
     }
   }
-
-   // Проверяем состояние fullscreen при загрузке страницы
-   document.addEventListener('DOMContentLoaded', function () {
-    if (localStorage.getItem('fullscreenState') === 'true') {
+  window.onload = function () {
+    const isFullScreenOn = localStorage.getItem('isFullScreenOn');
+    if (isFullScreenOn === 'true') {
         toggleFullScreen();
     }
-});
+}
 
 function toggleFullScreen() {
     const element = document.documentElement;
     if (!document.webkitIsFullScreen) {
         if (element.webkitRequestFullScreen) {
             element.webkitRequestFullScreen();
-            localStorage.setItem('fullscreenState', 'true');
+            localStorage.setItem('isFullScreenOn', 'true');
         }
     } else {
         if (document.webkitExitFullscreen) {
             document.webkitExitFullscreen();
-            localStorage.setItem('fullscreenState', 'false');
+            localStorage.setItem('isFullScreenOn', 'false');
         }
     }
 }
