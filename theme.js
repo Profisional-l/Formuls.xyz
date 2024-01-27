@@ -37,7 +37,6 @@ const handleChange = (isChecked) => {
     const isFullScreenOn = localStorage.getItem('isFullScreenOn');
     if (isFullScreenOn === 'true') {
         toggleFullScreen();
-        localStorage.setItem('isFullScreenOn', 'true');
     }
 }
 
