@@ -839,3 +839,10 @@ header {
     top: 11px;
     z-index: 999999999;
 }
+
+
+@media (min-width: 1000px){
+  #fullscreenButton {
+    right: 24%
+  }
+}
