@@ -826,3 +826,16 @@ header {
 #initialbut {
   display: none;
 }
+
+#fullscreenBut {
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  position: absolute;
+    padding: 0;
+    right: 68px;
+    top: 11px;
+    z-index: 999999999;
+}

@@ -1,4 +1,5 @@
 document.querySelector("meta[name='apple-mobile-web-app-status-bar-style']").setAttribute("content", "#252525");
+
 window.onload = function() {
     const savedTheme = localStorage.getItem('theme');
     const isSwitchOn = localStorage.getItem('theme1');
@@ -28,6 +29,29 @@ const handleChange = (isChecked) => {
     
     }
   }
- 
 
+  function toggleFullScreen() {
+    const element = document.documentElement;
+    if (!document.webkitIsFullScreen) {
+      if (element.webkitRequestFullScreen) {
+        element.webkitRequestFullScreen();
+      }
+    } else {
+      if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      }
+    }
+
+    // Сохраняем состояние в localStorage
+    const isFullScreen = document.webkitIsFullScreen;
+    localStorage.setItem('fullscreenState', isFullScreen);
+  }
+
+  // Проверяем сохраненное состояние при загрузке страницы
+  window.onload = function () {
+    const savedState = localStorage.getItem('fullscreenState');
+    if (savedState === 'true') {
+      toggleFullScreen();
+    }
+  };
 
