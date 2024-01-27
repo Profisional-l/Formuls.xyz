@@ -37,14 +37,15 @@ const handleChange = (isChecked) => {
     const isFullScreenOn = localStorage.getItem('isFullScreenOn');
     if (isFullScreenOn === 'true') {
         toggleFullScreen();
+        localStorage.setItem('isFullScreenOn', 'true');
     }
 }
 
 function toggleFullScreen() {
-    const element = document.documentElement;
+    const fullbut = document.getElementById('fullscreenBut');
     if (!document.webkitIsFullScreen) {
-        if (element.webkitRequestFullScreen) {
-            element.webkitRequestFullScreen();
+        if (fullbut.webkitRequestFullScreen) {
+            fullbut.webkitRequestFullScreen();
             localStorage.setItem('isFullScreenOn', 'true');
         }
     } else {
