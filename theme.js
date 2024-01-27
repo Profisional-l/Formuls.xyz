@@ -31,26 +31,27 @@ const handleChange = (isChecked) => {
   }
 
 
-
-  window.onload = function () {
-    console.log("eefef")
-    const isFullScreenOn = localStorage.getItem('isFullScreenOn');
-    if (isFullScreenOn === 'true') {
-        toggleFullScreen();
+  window.onload = function() {
+    const isFullscreenOn = localStorage.getItem('fullscreenState');
+    if (isFullscreenOn === 'true') {
+        const element = document.documentElement;
+        if (element.webkitRequestFullScreen) {
+            element.webkitRequestFullScreen();
+        }
     }
 }
 
-function toggleFullScreen() {
-    const fullbut = document.getElementById('fullscreenBut');
+const toggleFullScreen = () => {
+    const element = document.documentElement;
     if (!document.webkitIsFullScreen) {
-        if (document.webkitRequestFullScreen) {
-            document.webkitRequestFullScreen();
-            localStorage.setItem('isFullScreenOn', 'true');
+        if (element.webkitRequestFullScreen) {
+            element.webkitRequestFullScreen();
+            localStorage.setItem('fullscreenState', 'true');
         }
     } else {
         if (document.webkitExitFullscreen) {
             document.webkitExitFullscreen();
-            localStorage.setItem('isFullScreenOn', 'false');
+            localStorage.setItem('fullscreenState', 'false');
         }
     }
 }
