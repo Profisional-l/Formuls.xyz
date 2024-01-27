@@ -26,50 +26,7 @@
 <header>
   <h3 id="logo"><a href="./index.html">Formuls</a></h3>
  
-  <button id="fullscreenButton" onclick="toggleFullscreen()"><img width="32px" src="./images/maximize.png"></button>
-  <script>
-    function toggleFullscreen() {
-    var elem = document.documentElement;
-
-    if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
-      // Включить полноэкранный режим, если не включен
-      if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-      } else if (elem.mozRequestFullScreen) { /* Firefox */
-        elem.mozRequestFullScreen();
-      } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-        elem.webkitRequestFullscreen();
-      } else if (elem.msRequestFullscreen) { /* IE/Edge */
-        elem.msRequestFullscreen();
-      }
-      
-      // Сохранить настройку в Local Storage
-      localStorage.setItem('fullscreenPreference', 'true');
-    } else {
-      // Выключить полноэкранный режим, если включен
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      } else if (document.mozCancelFullScreen) { /* Firefox */
-        document.mozCancelFullScreen();
-      } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
-        document.webkitExitFullscreen();
-      } else if (document.msExitFullscreen) { /* IE/Edge */
-        document.msExitFullscreen();
-      }
-
-      // Сохранить настройку в Local Storage
-      localStorage.setItem('fullscreenPreference', 'false');
-    }
-  }
-
-  // Проверить, был ли полноэкранный режим предпочтителен ранее
-  var fullscreenPreference = localStorage.getItem('fullscreenPreference');
-  if (fullscreenPreference === 'true') {
-    toggleFullscreen();
-  }
-
-  </script>
-  <script src="/fillscreen.js"></script>
+  
   <!-- Rounded switch -->
 <label class="switch">
   <input id="checkboxswitcher" type="checkbox" onchange="handleChange(this.checked)">
