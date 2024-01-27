@@ -822,3 +822,7 @@ header {
     font-size: 18px;
     transition: border 0.5s;
 }
+
+#initialbut {
+  display: none;
+}
