@@ -29,6 +29,9 @@ const handleChange = (isChecked) => {
     
     }
   }
+
+
+  
   window.onload = function () {
     const isFullScreenOn = localStorage.getItem('isFullScreenOn');
     if (isFullScreenOn === 'true') {
