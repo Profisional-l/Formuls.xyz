@@ -827,7 +827,7 @@ header {
   display: none;
 }
 
-#fullscreenBut {
+#fullscreenButton {
   background-color: transparent;
   border: none;
   display: inline-block;
