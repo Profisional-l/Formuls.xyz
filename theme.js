@@ -43,8 +43,8 @@ const handleChange = (isChecked) => {
 function toggleFullScreen() {
     const fullbut = document.getElementById('fullscreenBut');
     if (!document.webkitIsFullScreen) {
-        if (fullbut.webkitRequestFullScreen) {
-            fullbut.webkitRequestFullScreen();
+        if (document.webkitRequestFullScreen) {
+            document.webkitRequestFullScreen();
             localStorage.setItem('isFullScreenOn', 'true');
         }
     } else {
