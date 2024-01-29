@@ -846,3 +846,22 @@ header {
     right: 24%
   }
 }
+
+
+.infobut {
+  z-index: 999999999999;
+  transition: 0.3s;
+  display: none;
+  position: absolute;
+  transform: rotateX(180deg);
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.card-info {
+  display: none;
+  transform: rotateX(180deg);
+
+}
