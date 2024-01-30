@@ -155,30 +155,25 @@
 
 const categories = document.querySelectorAll(".category");
 const subcategories = document.querySelectorAll(".subcategories");
-const arrow = document.querySelectorAll(".rotated");
+const arrows = document.querySelectorAll(".rotated");
 
 categories.forEach((category, index) => {
-  subcategories[index].style.display = "none"; 
-  arrow[index].style.transform = "rotate(180deg)";
-  arrow[index].style.transition = "0.35s";
+  subcategories[index].style.display = "none";
+  arrows[index].style.transform = "rotate(180deg)";
+  arrows[index].style.transition = "0.35s";
 
   category.addEventListener("click", () => {
-    if (subcategories[index].style.display === "none") {
-      subcategories.forEach((sub, i) => {
-        sub.style.display = i === index ? "flex" : "none";
-        arrow[i].style.transform = i === index ? "rotate(0deg)" : "rotate(180deg)";
-      });
+    const isHidden = subcategories[index].style.display === "none";
 
-      categories.forEach((cat) => cat.classList.remove("active"));
-      category.classList.add("active");
-    } else {
-      subcategories[index].style.display = "none";
-      category.classList.remove("active");
-      arrow[index].style.transform = "rotate(180deg)";
-    }
+    subcategories.forEach((sub, i) => {
+      sub.style.display = i === index ? "flex" : "none";
+      arrows[i].style.transform = i === index ? "rotate(0deg)" : "rotate(180deg)";
+    });
+
+    categories.forEach((cat) => cat.classList.toggle("active", false));
+    category.classList.toggle("active", isHidden);
   });
 });
-
 
 </script>
 </div>
