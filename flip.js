@@ -65,8 +65,14 @@ let gobackbut = document.getElementById('gobacksvg');
 gobackbut.style.display = "none";
 // let cardsfield = document.querySelector('.cardsfield');
 let texttogame = document.querySelector(".texttogame");
-      
+let numofclick = -1;
+let numField = document.querySelector('.numofclick');
+numField.style.display = 'none';
     but.addEventListener('click', function() {
+      numField.style.display = 'block';
+        numofclick++;
+        console.log(numofclick);
+        numField.innerHTML = numofclick;
         texttogame.style.display = "none";
         but.textContent = "Cледуюшая карточка";
         categoryname.style.display = "none";
@@ -90,7 +96,13 @@ let texttogame = document.querySelector(".texttogame");
             cards[i].style.flexdirection='column';
             cards[i].style.alignitems='center';
             cards[i].style.justifycontent='center';
-        
+            if (window.innerWidth < 610) {
+              cards[i].style.minWidth = '140px';
+          } if (window.innerWidth > 610) {
+              cards[i].style.minWidth = '440px';
+          }
+            
+          
         } else {
             cards[i].style.display = 'none';
         }

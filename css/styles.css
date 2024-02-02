@@ -914,3 +914,12 @@ header {
   transform: rotateX(180deg);
 
 }
+
+.numofclick {
+  color: var(--var-allcolor);
+  font-size: 50px;
+  position: absolute;
+  top: -36%;
+  margin-left: auto;
+  margin-right: auto;
+}
