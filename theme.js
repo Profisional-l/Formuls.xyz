@@ -2,7 +2,10 @@ let maska = document.querySelector('.mask');
 console.log(maska);
   window.addEventListener("load", () => {
     maska.classList.add('hide');
+    setTimeout(() => {maska.remove()}, 600)
   })
+
+  
 document.querySelector("meta[name='apple-mobile-web-app-status-bar-style']").setAttribute("content", "#252525");
 function toggleFullScreen() {
   var elem = document.documentElement;

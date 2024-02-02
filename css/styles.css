@@ -37,8 +37,8 @@
 .mask {
   width: 100%;
   height: 100%;
-  background-color: #ffffffcc;
-  backdrop-filter: blur(33px);
+  background-color: #00000088;
+  backdrop-filter: blur(25px);
   position: fixed;
   top: 0;
   z-index: 9999999999999;
@@ -53,7 +53,7 @@
   width: 40px;
   border: 4px solid #ffffff00;
   border-radius: 50%;
-  border-left-color: #000000;
+  border-left-color: #ffffff;
   animation: loader 0.77s linear infinite;
 }
 
@@ -63,8 +63,10 @@
 }
 }
 
+
+
 .hide {
-display: none;
+opacity: 0;
 }
 
 
@@ -108,12 +110,22 @@ display: none;
 }
 
 #gotosec {
+  color: rgb(140, 0, 255);
+  opacity: 0;
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
   background-image: var(--var-nameformul-bg);
   transition: 0.3s;
+  animation: fadeIn 0.89s ease-in-out forwards;
 }
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+
 header {
     background-color: var(--var-header-bg);
     backdrop-filter: blur(30px);
@@ -266,8 +278,8 @@ body {
     .mainscreenhi {
       letter-spacing: 1px;
 
-      padding-left: 11px;
-      padding-right: 11px;
+      padding-left: 26px;
+      padding-right: 26px;
       padding-top: 70px;
       margin-top: 45px;
       width: 100%;
