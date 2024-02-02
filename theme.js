@@ -5,16 +5,6 @@ console.log(maska);
     setTimeout(() => {maska.remove()}, 600)
   })
 
-  let links = document.querySelectorAll('a');
-
-  links.forEach(link => {
-      link.addEventListener("click", () => {
-        console.log("go");
-          maska.classList.remove('hide');
-          
-      });
-  });
-
   
 document.querySelector("meta[name='apple-mobile-web-app-status-bar-style']").setAttribute("content", "#252525");
 function toggleFullScreen() {
