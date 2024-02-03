@@ -8,22 +8,22 @@ window.addEventListener('load', () => {
 })
 
 $(document).ready(function () {
-  $(document).on('click', 'a', function (e) {
-    e.preventDefault()
-    var href = $(this).attr('href')
+  $(document).on('click', 'a, .gobackbut', function (e) {
+    e.preventDefault();
+    var href = $(this).attr('href');
 
     // Показываем overlay
     $('.page-transition-overlay').fadeIn(300, function () {
       // После показа overlay, переходим на новую страницу
-      window.location.href = href
-    })
-  })
-})
+      window.location.href = href;
+    });
+  });
+});
 
 // При загрузке новой страницы, скрываем overlay
 $(window).on('load', function () {
-  $('.page-transition-overlay').fadeOut(300)
-})
+  $('.page-transition-overlay').fadeOut(300);
+});
 
 
 document
