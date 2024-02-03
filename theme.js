@@ -16,13 +16,13 @@ $(document).ready(function () {
     "a:not([href^='#']):not([href^='tel']):not([href^='mailto'])",
     function (e) {
       e.preventDefault()
-      body.fadeOut(400)
+      body.fadeOut(600)
       var self = this
       setTimeout(function () {
         body.css('background-color', 'var(--var-body-bg)') // Используйте переменную для цвета фона
-        body.fadeIn(400)
+        body.fadeIn(600)
         window.location.href = $(self).attr('href')
-      }, 400)
+      }, 600)
     },
   )
 })
