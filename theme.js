@@ -8,30 +8,23 @@ window.addEventListener('load', () => {
 })
 
 $(document).ready(function () {
-  var body = $('body')
+  $(document).on('click', 'a', function (e) {
+    e.preventDefault()
+    var href = $(this).attr('href')
 
-  // Используйте промис для ожидания завершения анимации
-  function animateAndRedirect(href) {
-    return new Promise(function (resolve) {
-      body.css('background-color', 'var(--var-body-bg)') // Новый цвет фона
-      body.fadeOut(600, function () {
-        resolve()
-      })
-    }).then(function () {
+    // Показываем overlay
+    $('.page-transition-overlay').fadeIn(300, function () {
+      // После показа overlay, переходим на новую страницу
       window.location.href = href
     })
-  }
-
-  $(document).on(
-    'click',
-    "a:not([href^='#']):not([href^='tel']):not([href^='mailto'])",
-    function (e) {
-      e.preventDefault()
-      var self = this
-      animateAndRedirect($(self).attr('href'))
-    },
-  )
+  })
 })
+
+// При загрузке новой страницы, скрываем overlay
+$(window).on('load', function () {
+  $('.page-transition-overlay').fadeOut(300)
+})
+
 
 document
   .querySelector("meta[name='apple-mobile-web-app-status-bar-style']")
