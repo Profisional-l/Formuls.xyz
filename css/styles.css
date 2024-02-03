@@ -46,7 +46,7 @@ body {
   top: 0;
   z-index: 9999999999999;
   transition: 0.6s;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }

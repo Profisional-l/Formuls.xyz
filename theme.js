@@ -9,23 +9,22 @@ window.addEventListener('load', () => {
 
 $(document).ready(function () {
   var body = $('body')
+  body.fadeIn(600)
 
   $(document).on(
     'click',
     "a:not([href^='#']):not([href^='tel']):not([href^='mailto'])",
     function (e) {
       e.preventDefault()
-      var href = $(this).attr('href')
-
-      body.fadeOut(600, function () {
-        window.location.href = href
-      })
+      body.fadeOut(600)
+      var self = this
+      setTimeout(function () {
+        body.css('background-color', 'var(--var-body-bg)') // Используйте переменную для цвета фона
+        body.fadeIn(600)
+        window.location.href = $(self).attr('href')
+      }, 400)
     },
   )
-
-  $(window).on('beforeunload', function () {
-    body.hide()
-  })
 })
 
 document
