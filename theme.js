@@ -8,24 +8,28 @@ window.addEventListener('load', () => {
 })
 
 $(document).ready(function () {
-  var body = $('body')
-  body.fadeIn(600)
+  var body = $('body');
 
-  $(document).on(
-    'click',
-    "a:not([href^='#']):not([href^='tel']):not([href^='mailto'])",
-    function (e) {
-      e.preventDefault()
-      body.fadeOut(600)
-      var self = this
-      setTimeout(function () {
-        body.css('background-color', 'var(--var-body-bg)') // Используйте переменную для цвета фона
-        body.fadeIn(600)
-        window.location.href = $(self).attr('href')
-      }, 600)
-    },
-  )
-})
+  // Функция для плавного изменения цвета фона
+  function changeBackgroundColor(newColor, callback) {
+    body.animate({ backgroundColor: newColor }, 600, callback);
+  }
+
+  // Первоначальный плавный вход
+  body.hide().fadeIn(600);
+
+  // Обработчик клика по ссылке
+  $(document).on('click', "a:not([href^='#']):not([href^='tel']):not([href^='mailto'])", function (e) {
+    e.preventDefault();
+    var self = this;
+
+    // Плавное изменение цвета перед переходом
+    changeBackgroundColor('var(--var-body-bg)', function () {
+      // Здесь вы можете добавить дополнительные действия, если необходимо
+      window.location.href = $(self).attr('href');
+    });
+  });
+});
 
 document
   .querySelector("meta[name='apple-mobile-web-app-status-bar-style']")
