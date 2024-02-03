@@ -73,6 +73,28 @@ justify-content: center;
 ">
 <div class="numofclick">00</div>
       <style>
+           .flashcard {
+        display: none;
+      }
+
+      .butcont {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .but {
+        width: 260px;
+      }
+
+      @media (max-width: 560px) {
+        .flashcard {
+          width: 100%;
+        }
+      }
+
+      .cardsfield {
+        align-items: center;
+      }
         /* .flashcard {
         height: 1700px;
     } */
@@ -954,30 +976,7 @@ justify-content: center;
 
     </div>
 
-    <style>
-      .flashcard {
-        display: none;
-      }
 
-      .butcont {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .but {
-        width: 260px;
-      }
-
-      @media (max-width: 560px) {
-        .flashcard {
-          width: 100%;
-        }
-      }
-
-      .cardsfield {
-        align-items: center;
-      }
-    </style>
     <!-- <script>
     let cardsgame = document.querySelectorAll('.flashcard');
     document.querySelector('.but').addEventListener('click', function() {
