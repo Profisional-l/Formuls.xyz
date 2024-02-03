@@ -22,7 +22,7 @@ $(document).ready(function () {
 
 // При загрузке новой страницы, скрываем overlay
 $(window).on('load', function () {
-  $('.page-transition-overlay').fadeOut(200);
+  $('.page-transition-overlay').fadeOut(600);
 });
 
 
