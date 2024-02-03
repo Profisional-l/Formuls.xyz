@@ -53,9 +53,9 @@
   backdrop-filter: blur(25px);
   position: fixed;
   top: 0;
-  z-index: 9999999999999;
+  z-index: 999999999999;
   transition: 0.6s;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
