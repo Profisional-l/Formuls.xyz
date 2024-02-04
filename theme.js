@@ -6,23 +6,31 @@ window.addEventListener('load', () => {
     maska.remove()
   }, 600)
 })
-
 $(document).ready(function () {
+  // Проверяем флаг в LocalStorage
+  const isNewPageLoaded = localStorage.getItem('isNewPageLoaded')
+
+  if (isNewPageLoaded === 'true') {
+    // Удаляем флаг
+    localStorage.removeItem('isNewPageLoaded')
+  } else {
+    // Скрытие слоя маски на предыдущей странице
+    $('.page-transition-overlay').css('display', 'none')
+  }
+
   $(document).on('click', 'a, .gobackbut', function (e) {
     e.preventDefault()
     var href = $(this).attr('href')
 
     // Показываем overlay
-    $('.page-transition-overlay').fadeIn(300, function () {
+    $('.page-transition-overlay').fadeIn(260, function () {
       // После показа overlay, переходим на новую страницу
       window.location.href = href
+
+      // Устанавливаем флаг, что новая страница загружена
+      localStorage.setItem('isNewPageLoaded', 'true')
     })
   })
-})
-
-// При загрузке новой страницы, скрываем overlay
-$(window).on('load', function () {
-  $('.page-transition-overlay').fadeOut(300)
 })
 
 document
