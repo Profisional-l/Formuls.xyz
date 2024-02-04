@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
   maska.classList.add('hide')
   setTimeout(() => {
     maska.remove()
-  }, 600)
+  }, 200)
 })
 
 $(document).ready(function () {
