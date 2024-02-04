@@ -6,6 +6,8 @@ window.addEventListener('load', () => {
     maska.remove()
   }, 600)
 })
+
+
 $(document).ready(function () {
   // Проверяем флаг в LocalStorage
   const isNewPageLoaded = localStorage.getItem('isNewPageLoaded')
