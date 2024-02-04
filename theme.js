@@ -14,7 +14,7 @@ $(document).ready(function () {
 
   if (isNewPageLoaded === 'true') {
     // Удаляем флаг
-    localStorage.removeItem('isNewPageLoaded')
+    localStorage.setItem('isNewPageLoaded', 'false')
   } else {
     // Скрытие слоя маски на предыдущей странице
     $('.page-transition-overlay').css('display', 'none')
