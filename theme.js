@@ -7,18 +7,14 @@ window.addEventListener('load', () => {
   }, 600)
 })
 
-
 $(document).ready(function () {
-  // Проверяем флаг в LocalStorage
-  const isNewPageLoaded = localStorage.getItem('isNewPageLoaded')
-
-  if (isNewPageLoaded === 'true') {
-    // Удаляем флаг
-    localStorage.setItem('isNewPageLoaded', 'false')
-  } else {
-    // Скрытие слоя маски на предыдущей странице
-    $('.page-transition-overlay').css('display', 'none')
-  }
+  // Используем событие pageshow
+  $(window).on('pageshow', function (event) {
+    if (event.originalEvent.persisted) {
+      // Скрываем overlay при возврате на страницу из истории
+      $('.page-transition-overlay').css('display', 'none')
+    }
+  })
 
   $(document).on('click', 'a, .gobackbut', function (e) {
     e.preventDefault()
@@ -28,9 +24,6 @@ $(document).ready(function () {
     $('.page-transition-overlay').fadeIn(260, function () {
       // После показа overlay, переходим на новую страницу
       window.location.href = href
-
-      // Устанавливаем флаг, что новая страница загружена
-      localStorage.setItem('isNewPageLoaded', 'true')
     })
   })
 })
