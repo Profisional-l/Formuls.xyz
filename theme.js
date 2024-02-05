@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
     maska.remove()
   }, 200)
 })
-
+maska.style.display = 'none'
 $(document).ready(function () {
   // Используем событие pageshow
   $(window).on('pageshow', function (event) {

@@ -13,14 +13,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
-    <div class="mask">
-      <div class="loader"></div>
-    </div>
+  
     <style>
     /* Ваши стили CSS здесь */
-      .mask {
-        display: none;
-      }
+    
     .cardsfield {
       text-align: center;
 
@@ -73,6 +69,9 @@ width: 100%;
     }
 
 
+    .hide {
+opacity: 0;
+}
 
     .flashcard img {
       object-fit: contain;
@@ -130,7 +129,9 @@ width: 100%;
   </style>
 </head>
 <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');</style>
-
+<div class="maska">
+  <div class="loader"></div>
+</div>
 <script src="./theme.js"></script>
 
 <header >
@@ -1038,14 +1039,24 @@ width: 100%;
 </div>
 
 <script>
+
+let maska1 = document.querySelector('.maska')
+console.log(maska1)
+window.addEventListener('load', () => {
+  maska1.classList.add('hide')
+  setTimeout(() => {
+    maska1.remove()
+  }, 200)
+})
+
   let cards = document.querySelectorAll('.flashcard');
 
 
   function iflongtitle() {
       cards.forEach((card) => {
         let cardtitle = card.querySelector('.card-title');
-        if (cardtitle.innerText.length > 30) {
-          cardtitle.style.fontSize = '15px';
+        if (cardtitle.innerText.length > 60) {
+          cardtitle.style.fontSize = '17px';
           console.log('longtitles')
         }
       })
