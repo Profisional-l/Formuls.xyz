@@ -407,7 +407,18 @@ display: inline-block;
 		background-position: 0% 0%;
 	}
 }
-#buttogame , .opencards {
+@keyframes animQsa5 {
+	0% {
+		background-position: 100% 40%;
+	}
+	50% {
+		background-position: 100% 10%;
+	}
+	100% {
+		background-position: 100% 40%;
+	}
+}
+.buttogame , .opencards {
   position: absolute;
   left: 50%;
   margin-right: -50%;
@@ -428,9 +439,11 @@ display: inline-block;
 
 #buttogame:hover {
   border: solid 2px rgb(162, 0, 255);
-
 }
 
+.buttogame.podbor {
+  animation: animQsa5 30s infinite;
+}
 .but {
   width: 280px;
   letter-spacing: 1.7px;
