@@ -66,7 +66,7 @@ width: 100%;
       cursor: pointer;
       margin: 5px;
       padding: 10px;
-      border: 2px solid #343434;
+      /* border: 2px solid #343434; */
       border-radius: 5px;
       align-items: center;
       justify-content: center;
@@ -877,7 +877,7 @@ width: 100%;
     <div class="card-content"><img src="images/полнаямехэнергияпружмая.png" alt="" srcset=""></div>
   </div>
   <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Циклическая частота колебаний в электрическом колебательном контуре</div>
+    <div style="font-size: 18px;" class="card-title">Циклическая частота колебаний в электрическом колебательном контуре</div>
     <div class="card-content"><img src="images/циклчистотавконтуре.png" alt="" srcset=""></div>
   </div>
   <div class="flashcard" onclick="flipCard(this)">
@@ -1039,18 +1039,26 @@ width: 100%;
 
 <script>
   let cards = document.querySelectorAll('.flashcard');
+
+
+  function iflongtitle() {
+      cards.forEach((card) => {
+        let cardtitle = card.querySelector('.card-title');
+        if (cardtitle.innerText.length > 30) {
+          cardtitle.style.fontSize = '15px';
+          console.log('deded')
+        }
+      })
+    }
+    iflongtitle()
+    
   cards.forEach(function (card) {
     card.style.display ='none';
     });
   let correctCard = null;
   let correctCardTitleElement = document.getElementById('correctCardTitle');
-        cards.style.cursor = 'pointer'
-        cards.style.margin = '10px'
-        cards.style.height = '180px'
-        cards.style.display = 'flex'
-        cards.style.flexdirection = 'column'
-        cards.style.alignitems = 'center'
-        cards.style.justifycontent = 'center'
+        card.style.cursor = 'pointer'
+     
   function flipCard(card) {
     if (correctCard || card.classList.contains('correct') || card.classList.contains('incorrect')) return;
 
@@ -1121,7 +1129,7 @@ width: 100%;
   }
 
 
-
+  
 
     let textarea = document.querySelector('.parentexttogame');
     let buttonstart = document.getElementById('startbut');
