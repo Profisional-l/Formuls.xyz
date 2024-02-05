@@ -16,7 +16,7 @@ $(document).ready(function () {
     }
   })
 
-  $(document).on('click', 'a, .gobackbut, .buttogame', function (e) {
+  $(document).on('click', 'a:not([href^="https://t.me/jakesooly"]), .gobackbut, .buttogame', function (e) {
     e.preventDefault()
     var href = $(this).attr('href')
 
