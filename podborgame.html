@@ -62,7 +62,7 @@ width: 100%;
 
     .flashcard {
       height: 80px;
-      display: none;
+      display: flex;
       cursor: pointer;
       margin: 5px;
       padding: 10px;
@@ -1039,6 +1039,9 @@ width: 100%;
 
 <script>
   let cards = document.querySelectorAll('.flashcard');
+  cards.forEach(function (card) {
+    card.style.display ='none';
+    });
   let correctCard = null;
   let correctCardTitleElement = document.getElementById('correctCardTitle');
         cards.style.cursor = 'pointer'
