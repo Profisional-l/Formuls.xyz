@@ -930,6 +930,7 @@ openButton.addEventListener('click', function() {
     allCardsFlipped = false;
   } else {
     cards.forEach(function(card) {
+      card.classList.remove('flipped');
       card.classList.add('allflipped');
       card.style.backgroundColor = 'white';
       openButton.innerText = "Закрыть карточки";
