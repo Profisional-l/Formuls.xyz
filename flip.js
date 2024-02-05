@@ -73,7 +73,8 @@ if (
   document.location.pathname.includes('magnitgame.html') ||
   document.location.pathname.includes('opticagame.html') ||
   document.location.pathname.includes('atomgame.html') ||
-  document.location.pathname.includes('mktgame.html')
+  document.location.pathname.includes('mktgame.html') ||
+  document.location.pathname.includes('volnigame.html')
 ) {
   let but = document.querySelector('.but')
   // let maska = document.querySelector('.mask');
@@ -86,8 +87,10 @@ if (
   let numofclick = -1
   let numField = document.querySelector('.numofclick')
   let adcard = document.querySelector('.adcards')
+  let adparent = document.querySelector('.adparent')
+  adparent.href = 'https://seelk.by'
+  adcard.style.display = 'none'
   console.log(adcard)
-
   numField.style.display = 'none'
   but.addEventListener('click', function gotov() {
     numField.style.display = 'block'
@@ -119,7 +122,7 @@ if (
         cards[i].style.alignitems = 'center'
         cards[i].style.justifycontent = 'center'
 
-        if ((numofclick % 999 == 0) & (numofclick != 0)) {
+        if ((numofclick % 20 == 0) & (numofclick != 0)) {
           cards[i].style.display = 'none'
           but.disabled = true
           adcard.style.display = 'block'
