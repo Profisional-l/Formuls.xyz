@@ -1,81 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
-   </style>
+  </style>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1BFTX7VGPT"></script>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BFTX7VGPT"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+ 
 
-  gtag('config', 'G-1BFTX7VGPT');
-</script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-1BFTX7VGPT');
+  </script>
   <meta charset="UTF-8">
-  <meta name="theme-color" content="#252525"> 
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">  
+  <meta name="theme-color" content="#252525">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="shortcut icon" href="./images/formulslogo.png" type="image/x-icon" />
   <title>Formuls</title>
+</head>
+
+<body>
+  <div class="page-transition-overlay"></div>
+
   <div class="mask">
     <div class="loader"></div>
   </div>
-</head>
-<script src="./theme.js"></script>
-<header>
-  <h3 id="logo"><a href="./index.html">Formuls</a></h3>
-  <!-- Rounded switch -->
-  <div class="switche rparent">
-    <label class="switch">
-  <input id="checkboxswitcher" type="checkbox" onchange="handleChange(this.checked)">
-  <span class="slider round"></span>
-</label>
-  </div>
-  <div class="gobackbut">
-    <button onclick="history.go(-1)">
-      <img id="gobacksvg"  width="28px" src="./images/back-button-light.png" alt="">
-    </button>
-  </div>
-</header>
-<body>
+  <script src="./theme.js"></script>
+  <header>
+    <h3 id="logo"><a href="./index.html">Formuls</a></h3>
+    <!-- Rounded switch -->
+    <div class="switcherparent">
+      <label class="switch">
+        <input id="checkboxswitcher" type="checkbox" onchange="handleChange(this.checked)">
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <div class="gobackbut">
+      <button onclick="history.go(-1)">
+        <img id="gobacksvg" width="28px" src="./images/back-button-light.png" alt="">
+      </button>
+    </div>
+  </header>
+
   <div class="mainscreenhi">
-  <h2 class="mainscreenh2"><br>Искусственный интеллект на Formuls</h2> 
-  <!-- <h3>Physics - это проект для эффективного запоминания формул из курса Физики</h3> -->
-</div>
-<div style="margin-top: 40px;" class="textonmaincont">
+    <h2 class="mainscreenh2"><br>Искусственный интеллект на Formuls</h2>
+  </div>
+
+  <div style="margin-top: 40px;" class="textonmaincont">
     <div class="textonmain">
       <h3>Как работает режим проверки с ИИ?</h3>
       <p>
-        Режим проверки с использованием искусственного интеллекта представляет собой уникальную возможность для пользователей углубить свои знания по физике. Благодаря анализу времени ответа на карточки и темпа, <b>FormulsAI</b> создает персонализированный шаблон знаний каждого пользователя и предлагает карточки, которые помогут заполнить пробелы в знаниях. Этот подход позволяет ускорить процесс обучения и повысить эффективность запоминания материала. Искусственный интеллект работает в реальном времени, подстраиваясь под потребности каждого пользователя и создавая оптимальную последовательность карточек для быстрого достижения желаемого результата.
-    </p>
+        Режим проверки с использованием искусственного интеллекта представляет собой уникальную возможность для
+        пользователей углубить свои знания по физике. Благодаря анализу времени ответа на карточки и темпа,
+        <b>FormulsAI</b> создает персонализированный шаблон знаний каждого пользователя и предлагает карточки, которые
+        помогут заполнить пробелы в знаниях. Этот подход позволяет ускорить процесс обучения и повысить эффективность
+        запоминания материала. Искусственный интеллект работает в реальном времени, подстраиваясь под потребности
+        каждого пользователя и создавая оптимальную последовательность карточек для быстрого достижения желаемого
+        результата.
+      </p>
     </div>
-    </div>
-    <div style="margin-top: 40px;" class="buttogamecont"><a  href="./gamepage.html"><button id="buttogame" type="submit">Попробовать</button></a></div>
+  </div>
 
-
-
-
+  <div style="margin-top: 40px;" class="buttogamecont">
+    <a href="./gamepage.html">
+      <button id="buttogame" type="submit">Попробовать</button>
+    </a>
+  </div>
 
 </body>
+
 <footer>
   <div class="qwesttgcont">
-    <h4 class="qwesttg">Для Вопросов ↑ Предложений</h4>  
-    <a id="tglink" href="https://t.me/jakesooly"><img width="27px" id="tgicon" src="https://seelk.by/wp-content/uploads/2023/11/whitelogotg.png" alt="tg" srcset="">Telegram</a> 
-      
-    
-    <!-- <a href="https://t.me/jakesooly"><br><img width="27px" id="mailicon" src="https://seelk.by/wp-content/uploads/2023/11/mailicon.png" alt="mail" srcset=""></a>  -->
-   
-    
+    <h4 class="qwesttg">Для Вопросов ↑ Предложений</h4>
+    <a id="tglink" href="https://t.me/jakesooly"><img width="27px" id="tgicon"
+        src="https://seelk.by/wp-content/uploads/2023/11/whitelogotg.png" alt="tg" srcset="">Telegram</a>
   </div>
-  <h4  style="text-align: center; color: rgb(255, 255, 255); padding-top: 40px;">Formuls.xyz<br>
-  <a style="color: rgb(115, 115, 115);" href="https://seelk.by/privacy-policy/">Политика конфиденциальности</a> <br>
-  <h4 style="color: rgb(115, 115, 115); text-align: center;" > Создано командой  <a style="color: rgb(113, 43, 226);" href="https://seelk.by">Seelk.by</a></h4>
-</h4>
-
+  <h4 style="text-align: center; color: rgb(255, 255, 255); padding-top: 40px;">Formuls.xyz<br>
+    <a style="color: rgb(115, 115, 115);" href="https://seelk.by/privacy-policy/">Политика конфиденциальности</a> <br>
+    <h4 style="color: rgb(115, 115, 115); text-align: center;"> Создано командой <a style="color: rgb(113, 43, 226);"
+        href="https://seelk.by">Seelk.by</a></h4>
+  </h4>
 </footer>
-</html>
 
+</html>

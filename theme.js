@@ -16,7 +16,7 @@ $(document).ready(function () {
     }
   })
 
-  $(document).on('click', 'a, .gobackbut', function (e) {
+  $(document).on('click', 'a, .gobackbut, .buttogame', function (e) {
     e.preventDefault()
     var href = $(this).attr('href')
 
