@@ -418,7 +418,7 @@ display: inline-block;
 		background-position: 100% 40%;
 	}
 }
-.buttogame , .opencards {
+#buttogame , .opencards {
   position: absolute;
   left: 50%;
   margin-right: -50%;
@@ -441,8 +441,26 @@ display: inline-block;
   border: solid 2px rgb(162, 0, 255);
 }
 
-.buttogame.podbor {
+#podbor {
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 230px;
+  letter-spacing: 1.7px;
+  margin-top: 20px;
+  background-color: #2F2F2F;
+  background-image: url('https://seelk.by/wp-content/uploads/2023/10/form1background.webp');
+  color: #fff;
+  height: 60px;
+  border-radius: 9px;
+  border: solid 2px #707070;
+  font-size: 18px;
+  transition: border 0.5s;
   animation: animQsa5 30s infinite;
+}
+#podbor:hover {
+  border: solid 2px rgb(162, 0, 255);
 }
 .but {
   width: 280px;
