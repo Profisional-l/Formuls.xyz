@@ -1018,7 +1018,7 @@ width: 100%;
 <!-- Кнопка "Начать следующую стопку" -->
 
 <div class="butcont" >
-<button id="startbut" onclick="startNextSet()">Начать</button>
+<button  id="startbut" onclick="startNextSet()">Начать</button>
 
 </div>
 
@@ -1086,6 +1086,26 @@ width: 100%;
   }
 
   function startNextSet() {
+
+   
+  var elem = document.documentElement
+
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen()
+  } else if (elem.mozRequestFullScreen) {
+    /* Firefox */
+    elem.mozRequestFullScreen()
+  } else if (elem.webkitRequestFullscreen) {
+    /* Chrome, Safari and Opera */
+    elem.webkitRequestFullscreen()
+  } else if (elem.msRequestFullscreen) {
+    /* IE/Edge */
+    elem.msRequestFullscreen()
+  }
+
+
+
+
     let textarea = document.querySelector('.parentexttogame');
     let buttonstart = document.getElementById('startbut');
     buttonstart.innerText = 'Следующая стопка';
