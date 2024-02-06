@@ -1,5 +1,7 @@
 let cards = document.querySelectorAll('.flashcard')
 let flippedCard = null
+let gobackbut = document.getElementById('gobacksvg')
+gobackbut.style.display = 'none'
 
 function flipCard(card) {
   card.classList.toggle('flipped')
@@ -22,41 +24,43 @@ function flipCard(card) {
 }
 
 //--------------------------------------------------------------scrolltoup-------------------------------------------------
+var scrollToTopBtn = document.getElementById('scrollToTopBtn')
+if (scrollToTopBtn) {
+  document.addEventListener('DOMContentLoaded', function () {
+    var scrollToTopBtn = document.getElementById('scrollToTopBtn')
 
-document.addEventListener('DOMContentLoaded', function () {
-  var scrollToTopBtn = document.getElementById('scrollToTopBtn')
-
-  window.onscroll = function () {
-    scrollFunction()
-  }
-
-  function scrollFunction() {
-    if (
-      document.body.scrollTop > 150 ||
-      document.documentElement.scrollTop > 150
-    ) {
-      scrollToTopBtn.style.display = 'block'
-    } else {
-      scrollToTopBtn.style.display = 'none'
+    window.onscroll = function () {
+      scrollFunction()
     }
-  }
 
-  scrollToTopBtn.addEventListener('click', function () {
-    scrollToTop()
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 150 ||
+        document.documentElement.scrollTop > 150
+      ) {
+        scrollToTopBtn.style.display = 'block'
+      } else {
+        scrollToTopBtn.style.display = 'none'
+      }
+    }
+
+    scrollToTopBtn.addEventListener('click', function () {
+      scrollToTop()
+    })
+
+    function scrollToTop() {
+      // Получаем текущую прокрутку
+      var currentScroll =
+        document.documentElement.scrollTop || document.body.scrollTop
+
+      if (currentScroll > 0) {
+        // Если мы еще не находимся вверху, прокручиваем страницу вверх с использованием requestAnimationFrame
+        window.requestAnimationFrame(scrollToTop)
+        window.scrollTo(0, currentScroll - currentScroll / 16)
+      }
+    }
   })
-
-  function scrollToTop() {
-    // Получаем текущую прокрутку
-    var currentScroll =
-      document.documentElement.scrollTop || document.body.scrollTop
-
-    if (currentScroll > 0) {
-      // Если мы еще не находимся вверху, прокручиваем страницу вверх с использованием requestAnimationFrame
-      window.requestAnimationFrame(scrollToTop)
-      window.scrollTo(0, currentScroll - currentScroll / 16)
-    }
-  }
-})
+}
 
 //---------------------------------------------------------------game scripr--------------------------------------------------
 
@@ -80,8 +84,7 @@ if (
   // let maska = document.querySelector('.mask');
   // maska.style.display = 'flex';
   let categoryname = document.querySelector('.namecategoriesonit')
-  let gobackbut = document.getElementById('gobacksvg')
-  gobackbut.style.display = 'none'
+
   // let cardsfield = document.querySelector('.cardsfield');
   let texttogame = document.querySelector('.texttogame')
   let numofclick = -1

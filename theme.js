@@ -1,5 +1,5 @@
 let maska = document.querySelector('.mask')
-console.log(maska)
+console.log(maska, 'ede')
 window.addEventListener('load', () => {
   maska.classList.add('hide')
   setTimeout(() => {
@@ -16,16 +16,20 @@ $(document).ready(function () {
     }
   })
 
-  $(document).on('click', 'a:not([href^="https://t.me/jakesooly"]), .gobackbut, .buttogame', function (e) {
-    e.preventDefault()
-    var href = $(this).attr('href')
+  $(document).on(
+    'click',
+    'a:not([href^="https://t.me/jakesooly"]), .gobackbut, .buttogame',
+    function (e) {
+      e.preventDefault()
+      var href = $(this).attr('href')
 
-    // Показываем overlay
-    $('.page-transition-overlay').fadeIn(260, function () {
-      // После показа overlay, переходим на новую страницу
-      window.location.href = href
-    })
-  })
+      // Показываем overlay
+      $('.page-transition-overlay').fadeIn(260, function () {
+        // После показа overlay, переходим на новую страницу
+        window.location.href = href
+      })
+    },
+  )
 })
 
 document
