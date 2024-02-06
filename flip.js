@@ -88,7 +88,7 @@ if (
   let numField = document.querySelector('.numofclick')
   let adcard = document.querySelector('.adcards')
   let adparent = document.querySelector('.adparent')
-  adparent.href = 'https://seelk.by'
+  adparent.href = 'https://t.me/sneakers_surprise'
   adcard.style.display = 'none'
   console.log(adcard)
   numField.style.display = 'none'
@@ -122,7 +122,7 @@ if (
         cards[i].style.alignitems = 'center'
         cards[i].style.justifycontent = 'center'
 
-        if ((numofclick % 200 == 0) & (numofclick != 0)) {
+        if ((numofclick % 15 == 0) & (numofclick != 0)) {
           cards[i].style.display = 'none'
           but.disabled = true
           adcard.style.display = 'block'
