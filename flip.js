@@ -94,9 +94,9 @@ if (
   adparent.href =
     'https://www.instagram.com/surprise_sneakers?igsh=MzRlODBiNWFlZA=='
   adcard.style.display = 'none'
-  console.log(adcard)
+  // console.log(adcard)
   numField.style.display = 'none'
-  but.addEventListener('click', function gotov() {
+  but.addEventListener('click', function() {
     numField.style.display = 'block'
     numofclick++
     console.log(numofclick)
@@ -133,18 +133,6 @@ if (
           but.style.backgroundColor = 'gray'
           but.textContent = '3 секунды отдыха и рекламы (◕‿◕)'
           setTimeout(() => {
-            // cards[i] = cardi
-            // cardi.style.display = 'block'
-            // cardi.style.display = 'block'
-            // cardi.style.textalign = 'center'
-            // cardi.style.cursor = 'pointer'
-            // cardi.style.margin = '10px'
-            // cardi.style.height = '180px'
-            // cardi.style.display = 'flex'
-            // cardi.style.flexdirection = 'column'
-            // cardi.style.alignitems = 'center'
-            // cardi.style.justifycontent = 'center'
-            // adcard.style.display = 'none'
             but.textContent = 'Cледуюшая карточка'
             but.style.backgroundColor = '#252525'
             but.disabled = false
