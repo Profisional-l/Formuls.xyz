@@ -32,7 +32,7 @@ $(document).ready(function () {
 
   $(document).on(
     'click',
-    'a:not([href^="https://t.me/jakesooly"]):not([href^="https://www.instagram.com/surprise_sneakers?igsh=MzRlODBiNWFlZA=="]), .gobackbut, .buttogame',
+    'a:not([href^="https://t.me/jakesooly"]):not([href^="https://www.instagram.com/surprise_sneakers?igsh=MzRlODBiNWFlZA=="]):not([href^="./files/formuls.apk"]), .gobackbut, .buttogame',
     function (e) {
       e.preventDefault()
       var href = $(this).attr('href')
