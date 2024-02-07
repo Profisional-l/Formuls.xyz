@@ -130,7 +130,7 @@ if (
           but.disabled = true
           adcard.style.display = 'block'
           but.style.backgroundColor = 'gray'
-          but.textContent = '3 секунды рекламы'
+          but.textContent = '3 секунды рекламы)'
           setTimeout(() => {
             // cards[i] = cardi
             // cardi.style.display = 'block'
