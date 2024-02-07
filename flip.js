@@ -91,7 +91,7 @@ if (
   let numField = document.querySelector('.numofclick')
   let adcard = document.querySelector('.adcards')
   let adparent = document.querySelector('.adparent')
-  adparent.href = 'https://t.me/sneakers_surprise'
+  adparent.href = 'https://www.instagram.com/surprise_sneakers?igsh=MzRlODBiNWFlZA=='
   adcard.style.display = 'none'
   console.log(adcard)
   numField.style.display = 'none'
