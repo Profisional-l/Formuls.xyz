@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap'); 
+    </style>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1BFTX7VGPT"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1BFTX7VGPT');
+</script>
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#252525"> 
+  <!-- <link rel="manifest" href="./manifest.json"> -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="shortcut icon" href="./images/formulslogo.png" type="image/x-icon" />
+  <meta name="keywords" content="Физика, цт, цэ, егэ, огэ, экзамен, сдать, formuls, формулс, 100 баллов, 100цт">
+  <meta name="title" content="Formuls">
+  <meta name="description" content="Formuls - подготовка к экзамену (ЦТ | ЦЭ | ЕГЭ) по физике. Легко запоминай формулы и сдавай экзамен на 100 баллов!">
+  <title>Formuls - подготовка к экзамену (ЦТ | ЦЭ | ЕГЭ) по физике на 100 баллов!</title>
+  <div class="mask">
+    <div class="loader"></div>
+  </div>
+</head>
+<header>
+  <h3 id="logo"><a href="./index.html">Formuls</a></h3>
+  
+   
+  
+  <!-- Rounded switch -->
+
+  <div class="switche rparent">
+
+    <label class="switch">
+  <input id="checkboxswitcher" type="checkbox" onchange="handleChange(this.checked)">
+  <span class="slider round"></span>
+</label>
+  </div>
+
+</header>
+<body>
+  <div class="page-transition-overlay"></div>
+
+
+
+  <script src="./theme.js"></script>
+  <div id="scrollToTopBtn"><div id="backofupbut"><img width="33px" id="scrollupbut" src="./images/scrollup.png" alt=""></div></div>
+
+  <div style="text-align: start;" class="mainscreenhi">
+  <h2 style="text-align: center;" class="mainscreenh2"><br>Мобильное приложение <t id="gotosec">Formuls</t> </h2> 
+  <div class="textonmain">
+    <h3>На данный момент мы ведем активную разработку приложений для iOS/Android. Приложение для Android почти полностью  готово, но пока что не опубликовано в Play Market.</h3>
+        <h4>Однако хорошая новость - вы можете скачать APK и полностью погрузиться в изучение формул уже сейчас!</h4>
+  </div>
+ 
+  <br>
+  <div class="textonmain">
+     <h3><img src="/images/android (1).png" width="20px" alt="">  Android:</h3>
+  <div class="buttogamecont"><a download="formuls.apk"  href="./files/formuls.apk"><button id="buttogame" type="submit">Скачать APK</button></a></div>
+  <br>
+  <h5>PS: Так как вы скачиваете APK файл напрямую, защита Play Market может ругаться на установку.</h5>
+  <br>
+  </div>
+ 
+  <br>
+  <div class="textonmain">
+<h3><img src="/images/apple-logo (2).png" width="20px" alt="">  iOS:</h3>
+    <h4>Приложение для iOS можно будет установить только через App Store. Мы стараемся выпустить его как можно скорее)
+        <br> <br>
+        НО! Решение тоже есть! Нажми на кнопку поделиться <img src="/images/share.png" width="20px" alt=""> и "Добавить на главный экран". Вуаля, у вас почти полноценное приложение Formuls!
+    </h4>
+  <br>
+  </div>
+    
+  <br>  
+<!-- <button id="initialbut">Установить приложение</button> -->
+</div>
+
+<script>
+  let cards = document.querySelectorAll('.flashcard');
+
+  function flipCard(card) {
+    card.classList.toggle('flipped');
+    cards.forEach(function (element) {
+      if (element !== card && element.classList.contains('flipped')) {
+        element.classList.remove('flipped');
+      }
+    });
+  }
+</script>
+
+
+
+</body>
+
+<footer>
+  <div class="qwesttgcont">
+    <h4 class="qwesttg">Для Вопросов ↑ Предложений</h4>  
+    <a id="tglink" href="https://t.me/jakesooly"><img width="27px" id="tgicon" src="https://seelk.by/wp-content/uploads/2023/11/whitelogotg.png" alt="tg" srcset="">Telegram</a> 
+      
+    
+    <!-- <a href="https://t.me/jakesooly"><br><img width="27px" id="mailicon" src="https://seelk.by/wp-content/uploads/2023/11/mailicon.png" alt="mail" srcset=""></a>  -->
+   
+    
+  </div>
+  <h4  style="text-align: center; color: rgb(255, 255, 255); padding-top: 40px;">Formuls.xyz<br>
+  <a style="color: rgb(115, 115, 115);" href="https://seelk.by/privacy-policy/">Политика конфиденциальности</a> <br>
+  <h4 style="color: rgb(115, 115, 115); text-align: center;" > Создано командой  <a style="color: rgb(113, 43, 226);" href="https://seelk.by">Seelk.by</a></h4>
+</h4>
+
+</footer>
+</html>
+
+

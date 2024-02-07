@@ -924,6 +924,7 @@ header {
 .switch {
   right: 20%
 }
+
 /* .cardsfield {
   width: 86%;
   margin-left:11%;
@@ -1020,3 +1021,24 @@ header {
 
 }
 
+.godownload {
+  width: 100%;
+}
+.downloadbut {
+  display: inline-block;
+  width: 70px;
+  height: 70PX;
+  position: fixed;
+    padding: 0;
+    right: 70px;
+    top: -5px;
+    z-index: 999999999;
+    background-color: transparent;
+    border: none; 
+}
+
+@media (min-width: 1000px){
+.downloadbut {
+  right: 24%;
+}
+}

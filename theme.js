@@ -1,3 +1,17 @@
+document.addEventListener("DOMContentLoaded", function() {
+  var userAgent = navigator.userAgent.toLowerCase();
+  var isAndroid = userAgent.indexOf("formulsandroiduseragent") !== -1;
+
+  if (isAndroid) {
+      var godownloadElement = document.querySelector(".godownload");
+
+      if (godownloadElement) {
+          godownloadElement.style.display = "none";
+      }
+  }
+});
+
+
 let maska = document.querySelector('.mask')
 console.log(maska, 'ede')
 window.addEventListener('load', () => {
