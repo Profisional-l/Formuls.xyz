@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
     maska.remove()
   }, 200)
 })
-maska.style.display = 'none'
+// maska.style.display = 'none'
 $(document).ready(function () {
   // Используем событие pageshow
   $(window).on('pageshow', function (event) {
@@ -18,7 +18,7 @@ $(document).ready(function () {
 
   $(document).on(
     'click',
-    'a:not([href^="https://t.me/jakesooly"]), .gobackbut, .buttogame',
+    'a:not([href^="https://t.me/jakesooly"]):not([href^="https://www.instagram.com/surprise_sneakers?igsh=MzRlODBiNWFlZA=="]), .gobackbut, .buttogame',
     function (e) {
       e.preventDefault()
       var href = $(this).attr('href')

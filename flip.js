@@ -1,6 +1,6 @@
 let cards = document.querySelectorAll('.flashcard')
 let flippedCard = null
-let gobackbut = document.getElementById('gobacksvg')
+let gobackbut = document.querySelector('.gobackbut')
 gobackbut.style.display = 'none'
 
 function flipCard(card) {
@@ -91,7 +91,8 @@ if (
   let numField = document.querySelector('.numofclick')
   let adcard = document.querySelector('.adcards')
   let adparent = document.querySelector('.adparent')
-  adparent.href = 'https://www.instagram.com/surprise_sneakers?igsh=MzRlODBiNWFlZA=='
+  adparent.href =
+    'https://www.instagram.com/surprise_sneakers?igsh=MzRlODBiNWFlZA=='
   adcard.style.display = 'none'
   console.log(adcard)
   numField.style.display = 'none'
@@ -130,7 +131,7 @@ if (
           but.disabled = true
           adcard.style.display = 'block'
           but.style.backgroundColor = 'gray'
-          but.textContent = '3 секунды рекламы)'
+          but.textContent = '3 секунды отдыха и рекламы (◕‿◕)'
           setTimeout(() => {
             // cards[i] = cardi
             // cardi.style.display = 'block'

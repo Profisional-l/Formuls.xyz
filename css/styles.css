@@ -99,7 +99,7 @@ opacity: 0;
   position: fixed;
   margin-top: 5px;
   margin-left: 5px;
-  /* display: none; */
+  display: none;
 }
 .gobackbut button {
   background-color: transparent;
