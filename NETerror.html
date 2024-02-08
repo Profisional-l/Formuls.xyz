@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <title>Error Page</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #1f1f1f;
+        }
+
+        img {
+            width: 160px;
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            text-align: center;
+            color: #9b9b9b;
+        }
+        #reloadimg {
+            width: 40px;
+            margin-top: 7px;
+        }
+    </style>
+</head>
+<body>
+    <img src="/images/no-signal.png" alt="Error Image">
+    <p>Произошла ошибка при загрузке приложения. Пожалуйста, проверьте ваше подключение к интернету и попробуйте снова. <br><br> Режим запоминания доступен даже оффлайн!</p>
+<br>
+    <div class="buttogamecont"><button class="errorbut" onclick="loadCachedPage()">Режим запоминания</button></div>
+  <br>
+  <br>
+  <br>
+  <div  class="buttogamecont"> <button class="errorbut"  onclick="reloadPage()"><img id="reloadimg" src="./images/reload.png" alt=""></button></div>
+  <br>
+    
+    <script>
+        function loadCachedPage() {
+            // Перенаправить на онлайн-закэшированную страницу
+            window.location.href = "https://formuls.xyz/gamepage.html";
+        }
+    
+        function reloadPage() {
+            // Перезагрузить текущую страницу
+            location.reload();
+        }
+    </script></body>
+</html>
