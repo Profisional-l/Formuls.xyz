@@ -1042,22 +1042,3 @@ header {
   right: 24%;
 }
 }
-
-.errorbut {
-  position: absolute;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  width: 230px;
-  letter-spacing: 1.7px;
-  margin-top: 20px;
-  background-color: #2F2F2F;
-
-  color: #fff;
-  height: 60px;
-  border-radius: 9px;
-  border: solid 2px #707070;
-  font-size: 18px;
-  transition: border 0.5s;
-
-}

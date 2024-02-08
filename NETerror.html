@@ -34,15 +34,34 @@
             width: 40px;
             margin-top: 7px;
         }
+        
+.errorbut {
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 230px;
+  letter-spacing: 1.7px;
+  margin-top: 20px;
+  background-color: #2F2F2F;
+
+  color: #fff;
+  height: 60px;
+  border-radius: 9px;
+  border: solid 2px #707070;
+  font-size: 18px;
+  transition: border 0.5s;
+
+}
     </style>
 </head>
 <body>
     <img src="/images/no-signal.png" alt="Error Image">
-    <p>Произошла ошибка при загрузке приложения. Пожалуйста, проверьте ваше подключение к интернету и попробуйте снова. <br><br> Режим запоминания доступен даже оффлайн!</p>
+    <p>Произошла ошибка при загрузке приложения. Пожалуйста, проверьте ваше подключение к интернету и попробуйте снова. <br></p>
 <br>
-    <div class="buttogamecont"><button class="errorbut" onclick="loadCachedPage()">Режим запоминания</button></div>
+    <!-- <div class="buttogamecont"><button class="errorbut" onclick="loadCachedPage()">Режим запоминания</button></div>
   <br>
-  <br>
+  <br> -->
   <br>
   <div  class="buttogamecont"> <button class="errorbut"  onclick="reloadPage()"><img id="reloadimg" src="./images/reload.png" alt=""></button></div>
   <br>
