@@ -144,9 +144,6 @@ opacity: 0;
   </style>
 </head>
 <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');</style>
-<div class="maska">
-  <div class="loader"></div>
-</div>
 
 
 <header>
@@ -1058,14 +1055,6 @@ opacity: 0;
 
 <script>
 
-let maska1 = document.querySelector('.maska')
-console.log(maska1)
-window.addEventListener('load', () => {
-  maska1.classList.add('hide')
-  setTimeout(() => {
-    maska1.remove()
-  }, 200)
-})
 
   let cards = document.querySelectorAll('.flashcard');
   let cardsfield = document.querySelector('.cardsfield');
