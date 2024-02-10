@@ -1,33 +1,1041 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Animated Circle</title>
-</head>
-<body>
-  <div class="circle"></div>
   <style>
-    .circle {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 5px solid #3498db; /* Цвет границы */
-  border-top: 5px solid transparent; /* Сделаем верхнюю границу прозрачной */
-  animation: spin 2s linear infinite; /* Название анимации, продолжительность, тип и бесконечное повторение */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+   </style>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1BFTX7VGPT"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1BFTX7VGPT');
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/screenfull.js/5.0.0/screenfull.min.js"></script>
+
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#252525"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="shortcut icon" href="./images/formulslogo.png" type="image/x-icon" />
+  <meta name="title" content="Formuls - Все формулы по Физики">
+  <title>Formuls - Все формулы по Физики</title>
+  <div class="mask">
+    <div class="loader"></div>
+  </div>
+</head>
+<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');</style>
+<script src="./theme.js"></script>
+<header>
+  <h3 id="logo"><a href="https://formuls.xyz/">Formuls</a></h3>
+ 
+  
+  <!-- Rounded switch -->
+<label class="switch">
+  <input id="checkboxswitcher" type="checkbox" onchange="handleChange(this.checked)">
+  <span class="slider round"></span>
+
+</label>
+<div class="godownload">
+  <a href="./appdownload.html"><button class="downloadbut" type="submit"><img src="./images/downloads (1).png" width="25px" alt=""></button></a>
+</div>
+
+<style>
+     .flashcard img {
+    clip-path: inset(0 0 0 0%);
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-    border-top: 5px solid transparent;
+
+
+                
+</style>
+
+</header>
+<body>
+  <div class="page-transition-overlay"></div>
+
+  <div id="scrollToTopBtn"><div id="backofupbut"><img width="33px" id="scrollupbut" src="./images/scrollup.png" alt=""></div></div>
+  
+    <div class="mainscreenhi">
+      
+        <h2 class="mainscreenh2">Это страница со всеми формулами</h2> 
+        <h3>Для удобстава, вы можете открыть / закрыть все карточки сразу</h3>
+
+        
+      </div>
+    <div style="padding-bottom: 20px; " class="opencardscont"><button id="opencards" type="submit" style=" width: 230px; height: 60px;">Открыть карточки</button></div>
+    <div class="buttogamecont"><a  href="./gamepage.html"><button id="buttogame" type="submit">Режим запоминания</button></a></div>
+    <br><br><br><br>
+    <div  class="buttogamecont"><a  href="./podborgame.html"><button id="podbor" type="submit">Режим подбора <br> <img style="margin-top: 6px;" src="./images/Subtract.png" width="44px" alt="" srcset=""></button></a></div>
+    
+
+    <h2 class="namecategoriesonit">Кинематика</h2>    
+    <div class="cardsfield">
+    
+    <div class="flashcard">
+      <div class="card-title">Путь <br> (равномерное движение)</div>
+      <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/путь.png" alt="" srcset=""></div>
+    </div>
+    
+    <div class="flashcard">
+      <div class="card-title">Уравнение равномерного движения</div>
+      <div class="card-content"><img style=" clip-path: inset(0 0 0 19%);" width="200px" src="images/урравндвиж.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard">
+      <div class="card-title"><b>Ускорение</b> при равноускоренном движении</div>
+      <div class="card-content"><img style=" clip-path: inset(0 0 0 22%);" src="images/ускорение.png" alt=""></div>
+    </div>
+    <div class="flashcard">
+      <div class="card-title"><b>Скорость</b> при равноускоренном движении</div>
+      <div class="card-content"><img style=" clip-path: inset(0 0 0 20%);" src="images/скоростьравнускр.png" alt=""></div>
+    </div>
+    <div class="flashcard">
+      <div class="card-title"><b>Путь</b> при равноускоренном движении <b>(с временем)</b></div>
+      <div class="card-content"><img style=" clip-path: inset(0 0 0 20%);" src="images/путьравнускр.png" alt=""></div>
+    </div>
+    <div class="flashcard">
+      <div class="card-title"><b>Путь</b> при равноускоренном движении <b>(без времени)</b></div>
+      <div class="card-content"><img style=" clip-path: inset(0 0 0 20%);" src="images/путьравнускрбезвремени.png" alt=""></div>
+    </div>
+    <div class="flashcard">
+      <div class="card-title"><b>Уравнение </b>равноускоренного движения</div>
+      <div class="card-content"><img style=" clip-path: inset(0 0 0 10%);" src="images/уравнравнускрдвиж.png" alt=""></div>
+    </div>
+    
+    <h2 class="namepodcat">Движение по окружности</h2>
+    
+    <div class="flashcard">
+      <div class="card-title">Центростремит. ускорение</div>
+      <div class="card-content"><img style=" clip-path: inset(0 0 0 22%);" src="images/центстремитускр.png" alt=""></div>
+    </div>
+     <div class="flashcard">
+      <div class="card-title">Угловая скорость</div>
+      <div class="card-content"><img style=" clip-path: inset(0 0 0 17%);" src="images/углскорость.png" alt=""></div>
+    </div>
+    <div class="flashcard">
+      <div class="card-title">Линейная <b>скорость</b></div>
+      <div class="card-content"><img style=" margin-top: 60px; clip-path: inset(0 0 40px 10%);" height="120px" src="images/линейнаяскоростьпоокруж.png" alt="линейнаяскоростьпоокруж"></div>
+    </div>
+    <div class="flashcard">
+      <div class="card-title">Период обращения</div>
+      <div class="card-content"><img style=" clip-path: inset(0 0 0 20%);" src="images/periodob.png" alt=""></div>
+    </div>
+    
+    <h2 class="namepodcat">Движение тела брошенного под углом к горизонту</h2>
+    
+    
+    <div class="flashcard bigcards">
+      <div class="card-title">Скорость по оси <b>X</b> <br> <t style="font-size: 16px;">(Брошенное тело под углом)</t></div>
+      <div class="card-content bigformuls"><img style=" clip-path: inset(0 0 0 10%);" src="images/скоростьпоx.png" alt=""></div>
+    </div>
+    <div class="flashcard bigcards">
+      <div class="card-title">Скорость по оси <b>Y</b> <br> <t style="font-size: 16px;">(Брошенное тело под углом)</t></div>
+      <div class="card-content bigformuls"><img style=" clip-path: inset(0 0 0 10%);" src="images/скоростьпоy.png" alt=""></div>
+    </div>
+    <div class="flashcard bigcards">
+      <div class="card-title">Дальность броска тела</div>
+      <div class="card-content bigformuls"><img style=" clip-path: inset(0 0 0 17%);" src="images/дальность.png" alt=""></div>
+    </div>
+    <div class="flashcard bigcards">
+      <div class="card-title">Высота подъема тела</div>
+      <div class="card-content bigformuls"><img style=" clip-path: inset(0 0 0 10%);" src="images/высота.png" alt=""></div>
+    </div> 
+    <div class="flashcard bigcards">
+      <div class="card-title">Максимальная высота подъема тела</div>
+      <div class="card-content bigformuls"><img style=" clip-path: inset(0 0 0 31%);" src="images/максвысота.png" alt=""></div>
+    </div> 
+    <div class="flashcard bigcards">
+      <div class="card-title"><b>Кордината по X</b> <br><t style="font-size: 16px;">(Брошенное тело под углом)</t></div>
+      <div class="card-content bigformuls"><img style=" clip-path: inset(0 0 0 8%);" src="images/кординатапох.png" alt=""></div>
+    </div> 
+    <div class="flashcard bigcards">
+      <div class="card-title"><b>Кордината по Y</b> <br> <t style="font-size: 16px;">(Брошенное тело под углом)</t></div>
+      <div class="card-content bigformuls"><img style=" clip-path: inset(0 0 0 10%);" src="images/кординатапохy.png" alt=""></div>
+    </div> 
+    <div class="flashcard">
+      <div class="card-title"><b>Высота</b> <br><t style="font-size: 16px;">(тело, брошенного горизонтально)</t></div>
+      <div class="card-content bigformuls"><img style=" clip-path: inset(0 0 0 33%);" src="images/высотаброшгориз.png" alt=""></div>
+    </div>
+    
+    </div>
+<h2 class="namecategoriesonit">Динамика</h2>
+<div class="cardsfield">
+
+<div class="flashcard">
+  <div class="card-title">Масса однородного тела</div>
+  <div class="card-content"><img style=" clip-path: inset(0 0 0 40%);" src="images/масса.png" alt="" srcset=""></div>
+</div>
+<div class="flashcard">
+  <div class="card-title"><b>Второй <br></b>закон Ньютона</div>
+  <div class="card-content"><img style="margin-top: 100px; clip-path: inset(0 0 90px 40%);" src="images/2йзакон.png" alt=""></div>
+</div>
+<div class="flashcard">
+  <div class="card-title"><b>Третий <br></b> закон Ньютона</div>
+  <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/3йзакон.png" alt=""></div>
+</div>
+<div class="flashcard">
+  <div class="card-title"><b>Сила упругости</b> <br> Закон Гука</div>
+  <div class="card-content"><img style=" clip-path: inset(0 0 0 35%);" src="images/силаупругости.png" alt=""></div>
+</div>
+<div class="flashcard">
+  <div class="card-title">Сила трения покоя</b></div>
+  <div class="card-content"><img style=" margin-right: 20px; clip-path: inset(0 0 0 50%);" src="images/силатренияпокоя.png" alt=""></div>
+</div>
+<div class="flashcard">
+  <div class="card-title">Сила трения скольжения</div>
+  <div class="card-content"><img style=" clip-path: inset(0 40% 0 30%);" src="images/силатренияскольжения.png" alt=""></div>
+</div>
+<div class="flashcard">
+  <div class="card-title">Закон всемирного тяготения</div>
+  <div class="card-content"><img style=" clip-path: inset(0 0 50% 33%);" src="images/законвстяг.png" alt=""></div>
+</div>
+ <div class="flashcard">
+  <div class="card-title">Сила тяжести</div>
+  <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/силатяжести.png" alt=""></div>
+</div>
+<div class="flashcard">
+  <div class="card-title">Зависимость <b>g</b> от высоты над поверхностью</b></div>
+  <div class="card-content"><img style=" clip-path: inset(0 0 0 20%);" height="120px" src="images/зависускрсвпотвыстоты.png" alt="линейнаяскоростьпоокруж"></div>
+</div>
+<div class="flashcard">
+  <div class="card-title">Первая космическая скорость</div>
+  <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/1якосмическая.png" alt=""></div>
+</div>
+<h2 class="namecategoriesonit">Статика</h2>
+
+  <div class="flashcard bigcards">
+    <div class="card-title">Модуль равнодействующей <br> (с углом α)</b></div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 10%);" src="images/равнодействующаясила.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Момент силы</b></div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/моментсилы.png" alt=""></div>
+  </div>
+<h2 class="namecategoriesonit">Законы сохранения в механике | Работа и механическая энергия</h2>
+<div class="cardsfield">
+
+<div class="flashcard">
+  <div class="card-title">Импульс <b>тела</b></div>
+  <div class="card-content"><img style=" clip-path: inset(0 0 0 33%);" src="images/импульс.png" alt="" srcset=""></div>
+</div>
+<div class="flashcard">
+  <div class="card-title">Импульс <b>силы</b></div>
+  <div class="card-content"><img  style="clip-path: inset(0 43% 50% 20%);" src="images/импульссилы.png" alt=""></div>
+</div>
+<div class="flashcard">
+  <div class="card-title">Закон сохранения импульса</div>
+  <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/законсохраненияимпульса.png" alt=""></div>
+</div>
+<div class="flashcard">
+  <div class="card-title">Работа постоянной силы</div>
+  <div class="card-content"><img style=" clip-path: inset(0 0 0 20%);" src="images/работапостояннойсилы.png" alt=""></div>
+</div>
+<div class="flashcard">
+  <div class="card-title">Работа силы <b>тяжести</b></div>
+  <div class="card-content"><img style=" clip-path: inset(0 0 0 22%);" src="images/работасилытяжести.png" alt=""></div>
+</div>
+<div class="flashcard">
+  <div class="card-title">Работа силы <b>упругости</b></div>
+  <div class="card-content"><img style=" clip-path: inset(0 0 0 20%);" src="images/работасилыупругости.png" alt=""></div>
+</div>
+
+<div class="flashcard">
+  <div class="card-title">Работы силы <b>трения</b></div>
+  <div class="card-content"><img style=" clip-path: inset(0 0 0 20%);" src="images/работасилытрения.png" alt=""></div>
+</div>
+ <div class="flashcard">
+  <div class="card-title">Мощность мгновенная</div>
+  <div class="card-content"><img style=" clip-path: inset(0 0 0 20%);" src="images/мощностьмгн.png" alt=""></div>
+</div>
+<div class="flashcard">
+  <div class="card-title">Мощность (средняя)</b></div>
+  <div class="card-content"><img style=" clip-path: inset(0 0 0 40%);" height="120px" src="images/мощностьсред.png" alt="линейнаяскоростьпоокруж"></div>
+</div>
+<div class="flashcard">
+  <div class="card-title">КПД механизма</div>
+  <div class="card-content"><img style=" clip-path: inset(0 0 0 20%);" src="images/кпдмеханизма.png" alt=""></div>
+</div>
+<div class="flashcard">
+    <div class="card-title">Кинетическа энергия</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 32%);" src="images/кинетическаяэнергия.png" alt=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Теория о кинетической энергии</div>
+    <div class="card-content"><img style=" clip-path: inset(0 20% 50% 30%);" src="images/теорияокинет.png" alt=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Потенциальная энергия тела</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 34%);" src="images/потэнергия.png" alt=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Потенциальная энергия <br><t style="font-size: 13px;" >упругодефармированного тела</t></div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 40%);" src="images/потэнергупртел.png" alt=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Полная механическая энергия тела</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 40%);" src="images/полнаямехэнергия.png" alt=""></div>
+  </div>
+</div>
+<h2 class="namecategoriesonit">Жидкости и газы</h2>
+
+<div class="cardsfield">
+
+  <div class="flashcard" >
+    <div class="card-title">Давление</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 40%);" src="images/давление.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard" >
+      <div class="card-title">Соотношение сил в гидравлическом прессе</div>
+      <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/соотношсилгидрпрес.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" >
+      <div class="card-title">Гидростатическое давление</div>
+      <div class="card-content"><img style=" clip-path: inset(0 0 0 35%);" src="images/гидрстатдав.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" >
+      <div class="card-title">Полное давлениев любой точки жидкости</div>
+      <div class="card-content"><img style=" clip-path: inset(0 0 58% 30%);" src="images/полноедавление.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" >
+      <div class="card-title">Сила давление на дно сосуда</div>
+      <div class="card-content"><img style=" clip-path: inset(0 0 48% 30%);" src="images/силадав.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" >
+      <div class="card-title">Сила давление на стенки сосуда</div>
+      <div class="card-content"><img style=" clip-path: inset(0 28% 40% 30%);" src="images/силанастенки.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" >
+      <div class="card-title">Закон Архимеда</div>
+      <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/законарихимеда.png" alt="" srcset=""></div>
+    </div>
+    
+    <h2 class="namecategoriesonit">Молекулярная физика</h2>
+
+<div class="cardsfield">
+
+  <div class="flashcard">
+    <div class="card-title">Химическое количество вещества</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 10%);" src="images/химколич.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+      <div class="card-title">Масса одной молекулы вещества</div>
+      <div class="card-content"><img style=" clip-path: inset(0 0 0 23%);" src="images/массаодноймолек.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard">
+      <div style="font-size: 16px;" class="card-title">Основное уравнение молекулярно-кинетической теории (МКТ) идеального газа</div>
+      <div class="card-content"><img style=" clip-path: inset(0 0 0 10%);" src="images/оснмкт.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard">
+      <div class="card-title">Средняя квадратичная скорость молекул</div>
+      <div class="card-content"><img style=" clip-path: inset(0 0 0 10%);" src="images/средскмолек.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard">
+      <div style="font-size: 16px;" class="card-title">Средняя кинетическая энергия поступательного движения одной молекулы</div>
+      <div class="card-content"><img style=" clip-path: inset(0 0 0 22%);" src="images/средкинетэнергия.png" alt="" srcset=""></div>
+    </div>
+    <!-- <div class="flashcard">
+      <div class="card-title">Следствия из основного уравнения МКТ</div>
+      <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/следствияизмктос.png" alt="" srcset=""></div>
+    </div>   -->
+    <div class="flashcard">
+      <div class="card-title"><b>Уравнение состояния идеального газа </b><br> (уравнение Менделеева-Клайперона)</div>
+      <div class="card-content"><img style=" clip-path: inset(0 0 28% 0%);" src="images/уравнениеидеалгаза.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard">
+      <div class="card-title">Уравнение Клайперона</div>
+      <div class="card-content"><img style=" clip-path: inset(0 0 28% 0%);" src="images/уравнклайперона.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard">
+      <div class="card-title">Давление смеси газов (закон Дальтона)</div>
+      <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/давсмесигаз.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard">
+      <div class="card-title">Тепловое расширение жидкостей</div>
+      <div class="card-content"><img style=" clip-path: inset(0 0 0 20%);" src="images/тепловоерасширенижидкостей.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard">
+      <div class="card-title">3 формулы расширения твердых тел</div>
+      <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/тризаконарасширен.png" alt="" srcset=""></div>
+    </div>
+  
+
+</div>
+<h2 class="namecategoriesonit">Термодинамика</h2>
+
+<div class="cardsfield">
+
+<div class="flashcard">
+  <div class="card-title">Количество теплоты необходимое для нагревания тела</div>
+  <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/количтепл.png" alt="" srcset=""></div>
+</div>
+<div class="flashcard">
+    <div class="card-title">Теплоемкость через удельную теплоёмкость</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 19%);" src="images/теплоемкость.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div style="font-size: 16px;" class="card-title">Количество теплоты, которое при <b>парообразовании поглощается, а при конденсации выделяется</b></div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 40%);" src="images/количтеплконден.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div style="font-size: 16px;" class="card-title">Количество теплоты, которое при <b>при плавлении поглощается, а при кристаллизации выделяется</b></div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 40%);" src="images/количтеплкристал.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Количество теплоты, <b>при сгорании топлива</b></div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 40%);" src="images/количтеплтопли.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard bigcards">
+    <div class="card-title">Уравнение теплового баланса (ЗСЭ)</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/ЗСЭ.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Работа идеального газа</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0% 25% 10%);" src="images/работагаз.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Внутренняя энергия идеального одноатомного газа</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/внутэнергияадноатга.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Первый закон термодинамики (ЗСЭ)</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 20%);" src="images/первыйзаконЗСЭ.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard bigcards">
+    <div class="card-title">Относительная влажность</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 10%);" src="images/относвлажн.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard" >
+    <div class="card-title">Абсолютная влажность</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 22%);" src="images/абсолютвлажн.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">КПД тепловой машины</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 12%);" src="images/КПДтепловоймашины.png" alt="" srcset=""></div>
+  </div>
+  
+<h2 class="namecategoriesonit">Электростатика</h2>
+
+<div class="cardsfield">
+
+<div class="flashcard">
+  <div class="card-title">Электрический заряд</div>
+  <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/заряд.png" alt="" srcset=""></div>
+</div>
+<div class="flashcard">
+    <div class="card-title"><b>Закон Кулона </b><br>  <t style="font-size: 15px;">(сила электростатического взаимодействия двух электрических зарядов)</t> </div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 40% 20%);" style="padding: 20px 0 15px 0;" src="images/законкулона.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Напряжённость электрического поля</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/напряженность.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Принцип суперпозиции</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/принцсуперпоз.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div style="font-size: 16px;" class="card-title">Потенциальная энергия взаимодействия двух электрических зарядов</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 22%);" src="images/потэнергиязарядов.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Работа электрического поля</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 10%);" src="images/работаэлектрполя.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Потенциал электрического поля</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/потэнциалэлекполя.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Модуль напряжённости электрического поля  </div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 17%);" src="images/моднапряж.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Электроёмкость</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 40%);" src="images/электремкость.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Ёмкость конденсатора</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 40%);" src="images/электремкостьконденс.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Ёмкость плоского конденсатора</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 15%);" src="/images/емкостьплоскогоконденсатора.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Заряд конденсатора</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 25%);" src="images/зарядконденс.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Энергия конденсатора</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 18%);" src="images/энергияконденсатора.png" alt="" srcset=""></div>
+  </div>
+</div>
+
+<h2 class="namecategoriesonit">Электрический ток</h2>
+
+<div class="cardsfield">
+
+<div class="flashcard">
+  <div class="card-title">Сила тока</div>
+  <div class="card-content"><img style=" clip-path: inset(0 0 0 40%);" src="images/силатока.png" alt="" srcset=""></div>
+</div>
+<div class="flashcard">
+    <div class="card-title">Плотность тока</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 15%);" src="images/плотностьтока.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Сопротивление проводника</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/cопротивлениепроводника.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Сопротивление проводника <b>при температуре t</b> </div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 20%);" src="images/cопротивлениепроводникаприt.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Закон Ома</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 24%);" src="images/ЗаконОма.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">ЭДС<br> <t style="font-size: 16px;">(Электродвижущая сила источника тока)</t> </div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 20%);" src="images/эдс.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Закон Ома для полной цепи</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 12%);" src="images/ЗаконОмаполнцепь.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard bigcards">
+    <div class="card-title">Напряжение на клеммах источника</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 15%);" src="images/напряжениемнаклеммахисточника.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Сила тока короткого замыкания</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 40%);" src="images/силатокакоротзамык.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard bigcards">
+    <div class="card-title">Работа электрического тока <br> (закон Джоуля-Ленца)</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 10%);" src="images/законДжоуля-Ленца.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard bigcards">
+    <div class="card-title">Мощность электрического тока</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 10%);" src="images/Мощностьэлектрическоготока.png" alt="" srcset=""></div>
+  </div>
+  <h3 style="font-size: 25px;" class="namecategoriesonit">Последовательное соединение:</h3>
+
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Сила тока<br><t style="font-size: 16px;">(Последовательное соединение)</t></div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/силатокапоссоед.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Напряжение<br><t style="font-size: 16px;">(Последовательное соединение)</t></div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/напряжениепоссоед.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Сопротивление<br><t style="font-size: 16px;">(Последовательное соединение)</t></div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/сопрпоссоед.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Заряд конденсатора<br><t style="font-size: 16px;">(Последовательное соединение)</t></div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/зарядконденспоссоед.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Электрическая емкость<br><t style="font-size: 16px;">(Последовательное соединение)</t></div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/электремкостьпоссоед.png" alt="" srcset=""></div>
+  </div>
+
+  <h3 style="font-size: 25px;" class="namecategoriesonit">Параллельное соединение:</h3>
+
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Сила тока<br><t style="font-size: 16px;">(Параллельное соединение)</t></div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/силатокапрсоед.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Напряжение<br><t style="font-size: 16px;">(Параллельное соединение)</t></div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/напряжениепрсоед.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Сопротивление<br><t style="font-size: 16px;">(Параллельное соединение)</t></div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/сопрпрсоед.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Заряд конденсатора<br><t style="font-size: 16px;">(Параллельное соединение)</t></div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/зарядконденспрсоед.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard" onclick="flipCard(this)">
+    <div class="card-title">Электрическая емкость<br><t style="font-size: 16px;">(Параллельное соединение)</t></div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/электремкостьпрсоед.png" alt="" srcset=""></div>
+  </div>
+
+
+  <h2 class="namecategoriesonit">Энергобаланс замкнутой цепи</h2>
+  <div class="flashcard bigcards">
+    <div  class="card-title">Полезная мощность или мощность, выделяемая во внешней цепи</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 45%);" src="images/полезнаямощностьвнешнейцепи.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard bigcards">
+    <div  class="card-title">Полная мощность, развиваемая источником тока</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/полнмощтока.png" alt="" srcset=""></div>
+  </div>
+  <div  class="flashcard">
+    <div  class="card-title">КПД источника тока</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 10%);" src="images/кпдисточтока.png" alt="" srcset=""></div>
+  </div>
+  <h2 class="namecategoriesonit">Электролиз</h2>
+  <div  class="flashcard">
+    <div  class="card-title">Закон Фарадея</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/законфарадея.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard bigcards">
+    <div  class="card-title">Электрохимический эквивалент</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 30% 32%);" src="images/электрохимическимэквивалентом.png" alt="" srcset=""></div>
+  </div>
+
+    
+<h2 class="namecategoriesonit">Магнетизм</h2>
+<div class="cardsfield">
+
+<div class="flashcard">
+  <div class="card-title">Сила Ампера</div>
+  <div class="card-content"><img style=" clip-path: inset(0 0 0 20%);" src="images/СилаАмпера.png" alt="" srcset=""></div>
+</div>
+
+<div class="flashcard">
+    <div class="card-title">Момент сил действующих на рамку с током</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 20%);" src="images/моментсилыстоком.png" alt="" srcset=""></div>
+  </div>
+
+<div class="flashcard">
+  <div class="card-title">Сила Лоренца</div>
+  <div class="card-content"><img style=" clip-path: inset(0 0 0 20%);" src="images/СилаЛоренца.png" alt="" srcset=""></div>
+</div>
+
+<div class="flashcard">
+    <div class="card-title">Радиус траектории полета заряженной частицы в магнитном поле</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/Радиустраектполчастицы.png" alt="" srcset=""></div>
+  </div>
+
+<div class="flashcard">
+  <div class="card-title"><t style="font-size: 16px;">Модуль индукции B магнитного поля прямолинейного проводника с током<i><b>ㅤIㅤ</b></i>на расстоянии <i><b>R</b></i></t></div>
+  <div class="card-content"><img style=" clip-path: inset(0 0 0 60%);" src="images/МодульиндукцииBIR.png" alt="" srcset=""></div>
+</div>
+<div class="flashcard">
+    <div class="card-title">Концентрация витков на единицу длины катушки</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 24%);" src="images/концентрациявитков.png" alt="" srcset=""></div>
+  </div>
+<div class="flashcard">
+    <div class="card-title">Индукция поля в центре витка с током</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 70%);" src="images/ИндукцияполявценттокомсR.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Индукция магнитного поля на оси соленоида</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 40% 10%);" src="images/индукциянасолиноиде.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Магнитная проницаемость вещества</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/магнпроницвещ.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Магнитный поток</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 20%);" src="images/магнпотоком.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">ЭДС индукции</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 34%);" src="images/эдсиндукции.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">ЭДС индукции в движущемся проводннике</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 70%);" src="images/ИндукцияполявценттокомсR.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Максимальное значение ЭДС</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 40%);" src="images/максэдсинд.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">ЭДС самоиндукции</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 16%);" src="images/эдссамоинд.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Энергия катушки <br> (энергия магнитного поля внутри катушки)</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 10%);" src="images/энергмагполя.png" alt="" srcset=""></div>
+  </div>
+  
+</div>
+
+<h2 class="namecategoriesonit">Колебания</h2>
+<div class="cardsfield">
+    <h2 class="namepodcat">Механические колебания</h2>
+<div class="flashcard">
+  <div class="card-title">Уравнение гармонических колебаний с циклической частотой ω</b></div>
+  <div class="card-content"><img style=" clip-path: inset(0 0 0 10%);" src="images/уравнгарколеб.png" alt="" srcset=""></div>
+</div>
+<div class="flashcard">
+    <div class="card-title">Период колебаний</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/периодколеб.png" alt="" srcset=""></div>
+  </div>
+<div class="flashcard">
+    <div class="card-title">Частота колебаний</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 15%);" src="images/частотаколеб.png" alt="" srcset=""></div>
+  </div>
+<div class="flashcard">
+    <div class="card-title">Циклическая частота колебаний</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 20%);" src="images/циклчастотаколеб.png" alt="" srcset=""></div>
+  </div>
+<div class="flashcard">
+    <div class="card-title">Скорость при гармонических колебаниях</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 50% 12%);" src="images/скоростпригармонколеб.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Ускорение при гармонических колебаниях</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 51% 10%);" src="images/ускорпригармонколеб.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Циклическая частота колебаний <b>математического маятника</b></div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 32%);" src="images/циклчастотаматколеб.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Период колебаний математического маятника</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 10%);" src="images/периодматколеб.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Циклическая частота колебаний <b>пружинного маятника</b> </div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/циклчастотапружмая.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Период колебаний пружинного маятника</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 15%);" src="images/периодколебпружмая.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Энергия гармонических механических колебаний</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 20%);" src="images/энергиягарммехколеб.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard bigcards">
+    <div class="card-title">Полная механическая энергия пружинного маятника</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 10%);" src="images/полнаямехэнергияпружмая.png" alt="" srcset=""></div>
+  </div>
+  <h2 class="namepodcat">Электромагнитные колебания</h2>
+  <div class="flashcard">
+    <div class="card-title">Период гармонических колебаний в электрическом колебательном контуре</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 55% 30%);" src="images/периодколебвконтуре.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard bigcards">
+    <div class="card-title">Полная энергия колебательного контура</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 10%);" src="images/полнаямехэнергияпружмая.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Циклическая частота колебаний в электрическом колебательном контуре</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 15%);" src="images/циклчистотавконтуре.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Зависимость заряда на конденсаторе от времени при колебаниях в контуре</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/зависзаряданакондприколебвконт.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title"><t style="font-size: 17px;">Зависимость электрического тока протекающего через катушку индуктивности от времени при колебаниях в контуре</t></div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/зависэлектртокавконтуре.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Зависимость напряжения на конденсаторе от времени при колебаниях в контуре</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/зависнапряжвконтуре.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Действующее значение напряжения <br><t style="font-size: 17px;">(Электромагнитные колебания)</t> </div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 40%);" src="images/дейстзначнапряж.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Действующее значение силы тока <br><t style="font-size: 17px;">(Электромагнитные колебания)</t> </div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/дейстзначсилытока.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Амплитудное значение силы тока <br><t style="font-size: 17px;">(Электромагнитные колебания)</t> </div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/амплзначсилтока.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Амплитудное значение напряжения<br><t style="font-size: 17px;">(Электромагнитные колебания)</t> </div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/амплзначнапряж.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Действующее значение силы тока <br><t style="font-size: 17px;">(Электромагнитные колебания)</t> </div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/дейстзначсилытока.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard bigcards">
+    <div class="card-title">Мощность в цепи переменного тока <br><t style="font-size: 17px;">(Электромагнитные колебания)</t> </div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 10%);" src="images/мощностьвцепипеременноготока.png" alt="" srcset=""></div>
+  </div>
+  <h2 class="namepodcat">Трансформатор</h2>
+  <div class="flashcard">
+    <div class="card-title">Коэффициент трансформации</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/коэфтранс.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">Соотношение напряжения в трансформаторе</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/напряжвтранс.png" alt="" srcset=""></div>
+  </div>
+  <div class="flashcard">
+    <div class="card-title">КПД в неидеальном трансформаторе</div>
+    <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/кпдтранс.png" alt="" srcset=""></div>
+  </div>
+</div>
+<h2 class="namecategoriesonit">Оптика</h2>
+
+<div class="cardsfield">
+    <div class="flashcard">
+        <div class="card-title">Закон преломления света на границе двух прозрачных сред</div>
+        <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/законпреломления.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard">
+        <div class="card-title">Формула дифракционной решетки</div>
+        <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/формуладифреш.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard">
+        <div class="card-title">Формула тонкой линзы</div>
+        <div class="card-content"><img style=" clip-path: inset(0 0 0 13%);" src="images/формтонклинзы.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard">
+        <div class="card-title">Абсолютный показатель преломления среды</div>
+        <div class="card-content"><img style=" clip-path: inset(0 0 0 20%);" src="images/абсолпокпреломл.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard">
+        <div class="card-title">Оптическа сила тонкой линзы</div>
+        <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/силалинзы.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard">
+        <div class="card-title">Линейное увеличение линзы Γ</div>
+        <div class="card-content"><img style=" clip-path: inset(0 0 0 11%);" src="images/линувеллинзы.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard">
+        <div class="card-title">Предельный угол полного отражения α<sub>пр</sub></div>
+        <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/предуголотр.png" alt="" srcset=""></div>
+      </div>
+
+</div>
+<h2 class="namecategoriesonit">Атомная и ядерная физика</h2>
+<div class="cardsfield">
+    <div class="flashcard">
+        <div class="card-title">Энергия фотона</div>
+        <div class="card-content"><img style=" clip-path: inset(0 0 0 15%);" src="images/энергияфотона.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard">
+        <div class="card-title">Импульс фотона</div>
+        <div class="card-content"><img style=" clip-path: inset(0 0 0 10%);" src="images/импульсфотона.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard">
+        <div class="card-title">Формула Эйнштейна для внешнего фотоэффекта (ЗСЭ)</div>
+        <div class="card-content"><img style=" clip-path: inset(0 0 0 15%);" src="images/формэншт.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard">
+        <div class="card-title">Масса фотона</div>
+        <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/массафотона.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard">
+        <div class="card-title">Максимальная кинетическая энергия фотоэлектрона</div>
+        <div class="card-content"><img style=" clip-path: inset(0 0 40% 0%);" src="images/макскинетэнергэлектрона.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard">
+        <div class="card-title">Работа выхода <br><t style="font-size: 16px;">(Атомная физика)</t></div>
+        <div class="card-content"><img style=" clip-path: inset(0 0 0 23%);" src="images/работавыхода.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard">
+        <div class="card-title">Второй постулат Бора или правило частот (ЗСЭ)</div>
+        <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/бора.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard">
+        <div class="card-title">Формула Бальмера</div>
+        <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/формулабальмера.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard">
+        <div class="card-title">Условие квантования электронной орбиты</div>
+        <div class="card-content"><img style=" clip-path: inset(0 0 0 0%);" src="images/условиеквантования.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard">
+        <div class="card-title">Радиус n-й орбиты электрона в атоме водорода</div>
+        <div class="card-content"><img style=" clip-path: inset(0 0 0 17%);" src="images/радиуснорбиты.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard">
+        <div class="card-title">Энергия связи атомного ядра</div>
+        <div class="card-content"><img style=" clip-path: inset(0 0 0 28%);" src="images/энергиясвязиатомногоядра.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard">
+        <div class="card-title">Поглащенная доза ионизирующего излучения</div>
+        <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/поглдозаионизлуч.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard">
+        <div class="card-title">Мощность поглощенной дозы</div>
+        <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/мощностьпоглдозы.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard">
+        <div class="card-title">Экспозиционная доза</div>
+        <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/экспозиционнаядоза.png" alt="" srcset=""></div>
+      </div>
+      <div class="flashcard">
+        <div class="card-title">Эквивалентная доза</div>
+        <div class="card-content"><img style=" clip-path: inset(0 0 0 40%);" src="images/эквивалентнаядоза.png" alt="" srcset=""></div>
+      </div>
+
+</div>
+
+<div class="textonmaincont">
+  <div class="textonmain">
+    <h4>Нашёл ошибку, баг, что-то не работает или есть идея как улучшить Formuls?</h4>
+    <p>
+      Поддержка → <a style="color: aliceblue;" id="tglink1" href="https://t.me/jakesooly"><b>Telegram</b></a> 
+
+    </p>
+  </div>
+  </div> 
+
+
+
+</div>
+  
+
+</div>
+<!-- <script>
+  // Ждем 5 секунд перед началом прокрутки
+  setTimeout(function() {
+    // Прокручиваем страницу до конца с установленной скоростью
+    scrollToSmoothly(document.body.scrollHeight, 66000);
+  }, 3000); // 5000 миллисекунд = 5 секунд
+  
+  // Функция для плавной прокрутки страницы
+  function scrollToSmoothly(pos, duration) {
+    var start = window.scrollY,
+        difference = pos - start,
+        startTime = null;
+  
+    function scrollStep(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var progress = timestamp - startTime;
+      var perTick = difference / duration * progress;
+  
+      window.scrollTo(0, start + perTick);
+  
+      if (progress < duration) {
+        requestAnimationFrame(scrollStep);
+      }
+    }
+  
+    requestAnimationFrame(scrollStep);
   }
-  100% {
-    transform: rotate(360deg);
-    border-top: 5px solid #3498db; /* Цвет границы вернется, создавая эффект заполнения цветом */
+  
+  </script> -->
+
+  
+  
+  </div>
+<script>
+let openButton = document.getElementById('opencards');
+let cards = document.querySelectorAll('.flashcard');
+let flippedCard = null;
+let allCardsFlipped = false;
+
+openButton.addEventListener('click', function() {
+  if (allCardsFlipped) {
+    cards.forEach(function(card) {
+      card.classList.remove('allflipped');
+      card.style.backgroundColor = '#343434';
+      openButton.innerText = "Открыть карточки";
+
+    });
+    allCardsFlipped = false;
+  } else {
+    cards.forEach(function(card) {
+      card.classList.remove('flipped');
+      card.classList.add('allflipped');
+      card.style.backgroundColor = '#252525';
+      openButton.innerText = "Закрыть карточки";
+    });
+    allCardsFlipped = true;
+    flippedCard = null;
+    
   }
-}
-  </style>
+});
+
+cards.forEach(function(card) {
+      card.classList.remove('flipped');
+      card.classList.add('allflipped');
+})
+
+cards.forEach(function(card) {
+  card.addEventListener('click', function() {
+    if (allCardsFlipped) {
+      return;
+    }
+    
+    if (flippedCard && flippedCard !== card) {
+      flippedCard.classList.remove('flipped');
+      flippedCard.style.backgroundColor = '#343434';
+    }
+    
+    if (!card.classList.contains('flipped')) {
+      card.classList.add('flipped');
+      card.style.backgroundColor = '#252525';
+      flippedCard = card;
+    } else {
+      card.classList.remove('flipped');
+      card.style.backgroundColor = '#343434';
+      flippedCard = null;
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+      scrollToTopBtn.style.display = "block";
+    } else {
+      scrollToTopBtn.style.display = "none";
+    }
+  }
+
+  scrollToTopBtn.addEventListener("click", function () {
+    scrollToTop();
+  });
+
+  function scrollToTop() {
+    // Получаем текущую прокрутку
+    var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+    if (currentScroll > 0) {
+      // Если мы еще не находимся вверху, прокручиваем страницу вверх с использованием requestAnimationFrame
+      window.requestAnimationFrame(scrollToTop);
+      window.scrollTo(0, currentScroll - currentScroll / 11);
+    }
+  }
+});
+
+</script>
+<!-- <script src="./flip.js"></script> -->
+
+
 </body>
+<footer>
+  <div class="qwesttgcont">
+    <h4 class="qwesttg">Для Вопросов ↑ Предложений</h4>  
+    <a id="tglink" href="https://t.me/jakesooly"><img width="27px" id="tgicon" src="https://seelk.by/wp-content/uploads/2023/11/whitelogotg.png" alt="tg" srcset="">Telegram</a> 
+      
+    
+    <!-- <a href="https://t.me/jakesooly"><br><img width="27px" id="mailicon" src="https://seelk.by/wp-content/uploads/2023/11/mailicon.png" alt="mail" srcset=""></a>  -->
+   
+    
+  </div>
+  <h4  style="text-align: center; color: rgb(255, 255, 255); padding-top: 40px;">Formuls.xyz<br>
+  <a style="color: rgb(115, 115, 115);" href="https://seelk.by/privacy-policy/">Политика конфиденциальности</a> <br>
+  <h4 style="color: rgb(115, 115, 115); text-align: center;" > Создано командой  <a style="color: rgb(113, 43, 226);" href="https://seelk.by">Seelk.by</a></h4>
+</h4>
+<style>
+  .flashcard.allflipped .card-title {
+  color: #fff;
+}
+</style>
+</footer>
 </html>
+
