@@ -32,6 +32,7 @@
 * {
   -webkit-tap-highlight-color: transparent;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .numofclick {
@@ -484,7 +485,7 @@ body {
   background-color: #2f2f2f;
   background-image: url("https://seelk.by/wp-content/uploads/2023/10/form1background.webp");
   color: #fff;
-  height: 60px;
+  height: 65px;
   border-radius: 9px;
   border: solid 2px #707070;
   font-size: 18px;
