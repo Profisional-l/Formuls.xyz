@@ -601,7 +601,6 @@ body {
   color: #fff;
   border: solid 1px #ffffff00;
   border-radius: 7px;
-  backdrop-filter: blur(30px);
   cursor: pointer;
   transition: background-color 0.4s ease;
   letter-spacing: 1px;
@@ -635,7 +634,6 @@ body {
   background-color: #00000026;
   color: #fff;
   border-radius: 7px;
-  backdrop-filter: blur(34px);
   cursor: pointer;
   transition: background-color 0.4s ease;
   letter-spacing: 1px;
@@ -690,7 +688,6 @@ body {
   color: #fff;
   border: solid 1px #ffffff00;
   border-radius: 7px;
-  backdrop-filter: blur(30px);
   transition: background-color 0.4s ease;
   letter-spacing: 1px;
   text-align: left;
