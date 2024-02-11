@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
 :root {
   --var-body-bg: #252525;
   --var-header-bg: #5454546b;
@@ -27,7 +29,6 @@
   --var-gobackcolor: invert(100%) grayscale(100%);
   --var-circle-bg: #bebebe;
 }
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
 
 * {
   -webkit-tap-highlight-color: transparent;
