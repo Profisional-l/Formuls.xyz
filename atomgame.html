@@ -16,9 +16,11 @@
 </script>
   <meta charset="UTF-8">
   <meta name="theme-color" content="#252525"> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="shortcut icon" href="./images/formulslogo.png" type="image/x-icon" />
+  <title>TestMode</title>
   <div class="mask">
     <div class="loader"></div>
   </div>
@@ -44,7 +46,6 @@
 </header>
 <body>
   <div class="page-transition-overlay"></div>
-
   <div class="butcont" style="
   position: absolute;
     top: 80%;
@@ -56,9 +57,9 @@
   
       <button onclick="toggleFullScreen()" class="but" style="display: inline-block;">Начать</button>
     </div>
-<h2 style="font-size: 28px; " class="namecategoriesonit"><br>Проверка и закрепление знаний по теме "Атомная и ядерная физика"</h2>
+<h2 style="font-size: 28px; " class="namecategoriesonit"><br>Проверка и закрепление знаний по теме "Оптика"</h2>
 <div class="parentexttogame">
-    <p class="texttogame">В этом режиме вам будут попадаться случайны карточки с формулами из раздела <b>"Атомная и ядерная физика"</b>. Это отличный способ проверить себя и закрепить знания именно в этой теме. </p>
+    <p class="texttogame">В этом режиме вам будут попадаться случайны карточки с формулами из раздела <b>"Оптика"</b>. Это отличный способ проверить себя и закрепить знания именно в этой теме. </p>
 </div>
 
 <div class="cardsfield" style="
@@ -88,6 +89,7 @@ justify-content: center;
     }
 }
 </style>
+
 <a class="adparent" href="#">
   <div class="adparent">
   <div class="adcards">
@@ -95,71 +97,70 @@ justify-content: center;
 </div>
 </a>
 <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Энергия фотона</div>
-    <div class="card-content"><img src="images/энергияфотона.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Импульс фотона</div>
-    <div class="card-content"><img src="images/импульсфотона.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Формула Эйнштейна для внешнего фотоэффекта (ЗСЭ)</div>
-    <div class="card-content"><img src="images/формэншт.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Масса фотона</div>
-    <div class="card-content"><img src="images/массафотона.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Максимальная кинетическая энергия фотоэлектрона</div>
-    <div class="card-content"><img src="images/макскинетэнергэлектрона.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Работа выхода <br><t style="font-size: 16px;">(Атомная физика)</t></div>
-    <div class="card-content"><img src="images/работавыхода.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Второй постулат Бора или правило частот (ЗСЭ)</div>
-    <div class="card-content"><img src="images/бора.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Формула Бальмера</div>
-    <div class="card-content"><img src="images/формулабальмера.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Условие квантования электронной орбиты</div>
-    <div class="card-content"><img src="images/условиеквантования.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Радиус n-й орбиты электрона в атоме водорода</div>
-    <div class="card-content"><img src="images/радиуснорбиты.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Энергия связи атомного ядра</div>
-    <div class="card-content"><img src="images/энергиясвязиатомногоядра.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Условие квантования электронной орбиты</div>
-    <div class="card-content"><img src="images/условиеквантования.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Поглащенная доза ионизирующего излучения</div>
-    <div class="card-content"><img src="images/поглдозаионизлуч.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Мощность поглощенной дозы</div>
-    <div class="card-content"><img src="images/мощностьпоглдозы.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Экспозиционная доза</div>
-    <div class="card-content"><img src="images/экспозиционнаядоза.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Эквивалентная доза</div>
-    <div class="card-content"><img src="images/эквивалентнаядоза.png" alt="" srcset=""></div>
-  </div>
+  <div class="card-title">Энергия фотона</div>
+  <div class="card-content"><img src="images/энергияфотона.png" alt="" srcset=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title">Импульс фотона</div>
+  <div class="card-content"><img src="images/импульсфотона.png" alt="" srcset=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title">Формула Эйнштейна для внешнего фотоэффекта (ЗСЭ)</div>
+  <div class="card-content"><img src="images/формэншт.png" alt="" srcset=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title">Масса фотона</div>
+  <div class="card-content"><img src="images/массафотона.png" alt="" srcset=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title">Максимальная кинетическая энергия фотоэлектрона</div>
+  <div class="card-content"><img src="images/макскинетэнергэлектрона.png" alt="" srcset=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title">Работа выхода <br><t style="font-size: 16px;">(Атомная физика)</t></div>
+  <div class="card-content"><img src="images/работавыхода.png" alt="" srcset=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title">Второй постулат Бора или правило частот (ЗСЭ)</div>
+  <div class="card-content"><img src="images/бора.png" alt="" srcset=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title">Формула Бальмера</div>
+  <div class="card-content"><img src="images/формулабальмера.png" alt="" srcset=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title">Условие квантования электронной орбиты</div>
+  <div class="card-content"><img src="images/условиеквантования.png" alt="" srcset=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title">Радиус n-й орбиты электрона в атоме водорода</div>
+  <div class="card-content"><img src="images/радиуснорбиты.png" alt="" srcset=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title">Энергия связи атомного ядра</div>
+  <div class="card-content"><img src="images/энергиясвязиатомногоядра.png" alt="" srcset=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title">Условие квантования электронной орбиты</div>
+  <div class="card-content"><img src="images/условиеквантования.png" alt="" srcset=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title">Поглащенная доза ионизирующего излучения</div>
+  <div class="card-content"><img src="images/поглдозаионизлуч.png" alt="" srcset=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title">Мощность поглощенной дозы</div>
+  <div class="card-content"><img src="images/мощностьпоглдозы.png" alt="" srcset=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title">Экспозиционная доза</div>
+  <div class="card-content"><img src="images/экспозиционнаядоза.png" alt="" srcset=""></div>
+</div>
+<div class="flashcard" onclick="flipCard(this)">
+  <div class="card-title">Эквивалентная доза</div>
+  <div class="card-content"><img src="images/эквивалентнаядоза.png" alt="" srcset=""></div>
+</div>
 
-  
 
 </div>
 
