@@ -1,7 +1,5 @@
 let cards = document.querySelectorAll('.flashcard')
 let flippedCard = null
-let gobackbut = document.querySelector('.gobackbut')
-gobackbut.style.display = 'none'
 
 function flipCard(card) {
   card.classList.toggle('flipped')
@@ -82,6 +80,9 @@ if (
   document.location.pathname.includes('kolebaniagame.html')
 
 ) {
+  let gobackbut = document.querySelector('.gobackbut')
+  gobackbut.style.display = 'none'
+
   let but = document.querySelector('.but')
   // let maska = document.querySelector('.mask');
   // maska.style.display = 'flex';
