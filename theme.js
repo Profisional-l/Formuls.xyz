@@ -1,16 +1,15 @@
-document.addEventListener("DOMContentLoaded", function() {
-  var userAgent = navigator.userAgent.toLowerCase();
-  var isAndroid = userAgent.indexOf("formulsandroiduseragent") !== -1;
+document.addEventListener('DOMContentLoaded', function () {
+  var userAgent = navigator.userAgent.toLowerCase()
+  var isAndroid = userAgent.indexOf('formulsandroiduseragent') !== -1
 
   if (isAndroid) {
-      var godownloadElement = document.querySelector(".godownload");
+    var godownloadElement = document.querySelector('.godownload')
 
-      if (godownloadElement) {
-          godownloadElement.style.display = "none";
-      }
+    if (godownloadElement) {
+      godownloadElement.style.display = 'none'
+    }
   }
-});
-
+})
 
 let maska = document.querySelector('.mask')
 console.log(maska, 'ede')
@@ -77,7 +76,7 @@ window.onload = function () {
     switchElement.checked = true
   } else {
     document.body.removeAttribute('light')
-    switchElement.checked = false
+    // switchElement.checked = false
   }
 }
 const handleChange = (isChecked) => {
