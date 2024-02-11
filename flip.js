@@ -78,7 +78,9 @@ if (
   document.location.pathname.includes('opticagame.html') ||
   document.location.pathname.includes('atomgame.html') ||
   document.location.pathname.includes('mktgame.html') ||
-  document.location.pathname.includes('volnigame.html')
+  document.location.pathname.includes('volnigame.html') ||
+  document.location.pathname.includes('kolebaniagame.html')
+
 ) {
   let but = document.querySelector('.but')
   // let maska = document.querySelector('.mask');
