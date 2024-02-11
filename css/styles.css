@@ -576,11 +576,12 @@ body {
 }
 .rotated {
   display: inline-block;
-  position: fixed;
+  /* position: fixed; */
   transform: rotate(0deg);
   width: max-content;
-  top: 10px;
-  right: 20px;
+  /* top: 10px; */
+  /* right: 20px; */
+  display: none;
   z-index: 999;
   font-size: 11px;
 }
@@ -672,9 +673,9 @@ body {
   .category {
     min-height: 43px;
   }
-  .rotated {
+  /* .rotated {
     top: 21px;
-  }
+  } */
 }
 
 .menu-button-single {
