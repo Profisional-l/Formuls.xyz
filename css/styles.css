@@ -131,10 +131,10 @@
   /* transition: transform 0.5s; */
   margin: 10px;
   background-image: url("../images/sochinad.png");
-  background-size: contain;
+  background-size: cover;
   background-color: #ffffff;
   background-repeat: no-repeat;
-  width: 417px;
+  width: 400px;
   height: 300px;
   display: flex;
   flex-direction: column;
