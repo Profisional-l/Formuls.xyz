@@ -78,7 +78,6 @@ if (
   document.location.pathname.includes('mktgame.html') ||
   document.location.pathname.includes('volnigame.html') ||
   document.location.pathname.includes('kolebaniagame.html')
-
 ) {
   let gobackbut = document.querySelector('.gobackbut')
   gobackbut.style.display = 'none'
@@ -94,12 +93,11 @@ if (
   let numField = document.querySelector('.numofclick')
   let adcard = document.querySelector('.adcards')
   let adparent = document.querySelector('.adparent')
-  adparent.href =
-    'https://t.me/essay_by'
+  adparent.href = 'https://t.me/essay_by'
   adcard.style.display = 'none'
   // console.log(adcard)
   numField.style.display = 'none'
-  but.addEventListener('click', function() {
+  but.addEventListener('click', function () {
     numField.style.display = 'block'
     numofclick++
     console.log(numofclick)
