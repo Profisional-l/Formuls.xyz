@@ -130,11 +130,11 @@
   cursor: pointer;
   /* transition: transform 0.5s; */
   margin: 10px;
-  background-image: url("../images/sochinad.png");
+  background-image: url("../images/IMG_20240218_163722_495.JPG");
   background-size: cover;
   background-color: #ffffff;
   background-repeat: no-repeat;
-  width: 400px;
+  width: 300px;
   height: 300px;
   display: flex;
   flex-direction: column;
