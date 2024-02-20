@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1BFTX7VGPT"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1BFTX7VGPT');
+</script>
+  <meta charset="UTF-8">
+  <link rel="alternate" href="android-app://com.finetest.formuls/">
+  <meta name="theme-color" content="#252525"> 
+  <link rel="manifest" href="./manifest.json">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <include src="./forapple.html"></include>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+  <meta name="keywords" content="Физика, цт, цэ, егэ, огэ, экзамен, сдать, formuls, формулс, 100 баллов, 100цт">
+  <meta name="title" content="Formuls">
+  <meta name="description" content="Formuls - подготовка к экзамену (ЦТ | ЦЭ | ЕГЭ) по физике. Легко запоминай формулы и сдавай экзамен на 100 баллов!">
+  <title>Formuls - подготовка к экзамену (ЦТ | ЦЭ | ЕГЭ) по физике на 100 баллов!</title>
+  <div class="mask">
+    <div class="loader"></div>
+  </div>
+</head>
+<header>
+  <h3 id="logo"><a href="./mathindex.html">Formuls  <img src="./images/mathlogo.png" style="margin: 2px 0 0 4px; position: absolute;" width="44px" alt=""></a></h3>
+  
+   
+  
+  <!-- Rounded switch -->
+
+  <div class="switche rparent">
+
+    <label class="switch">
+  <input id="checkboxswitcher" type="checkbox" onchange="handleChange(this.checked)">
+  <span class="slider round"></span>
+</label>
+  </div>
+
+  <div class="godownload">
+    <a href="./appdownload.html"><button class="downloadbut" type="submit"><img src="./images/downloads (1).png" width="25px" alt=""></button></a>
+  </div>
+
+</header>
+<body>
+  <div class="page-transition-overlay"></div>
+
+
+
+  <script src="./theme.js"></script>
+  <div id="scrollToTopBtn"><div id="backofupbut"><img width="33px" id="scrollupbut" src="./images/scrollup.png" alt=""></div></div>
+
+  <div class="mainscreenhi">
+  <h2 class="mainscreenh2"><br>Добро пожаловать на <t id="gotosec">Formuls <img src="./images/mathlogoColored.png" id="mathlogoColored" width="44px" alt=""></t> </h2> 
+  <h3>Formuls Math - это раздел Formuls с формулами из курса Математики</h3>
+  <div class="buttogamecont"><a  href="./gamepage.html"><button id="buttogame" type="submit">Режим запоминания</button></a></div>
+  <br>
+  <div  class="buttogamecont"><a  href="./podborgame.html"><button id="podbor" type="submit">Режим подбора <br> <img  src="./images/Subtract.png" width="44px" alt="" srcset=""></button></a></div>
+  <br>
+</div>
+<div id="categoriesfield">
+    			
+			
+  <div class="menuMain">
+    
+    <h3 id="sortblockh3">Категории:</h3>
+    <ul class="categories">
+      <div class="butallformcont"  >
+              <a href="./allformuls.html"><button id="butallform" type="submit">Все формулы</button></a>
+
+      </div>
+        
+        <!-- <li class="category"><div class="nameC"> Механика <div class="rotated"><img src="./images/down.png" width="19px" alt="CaretDown"></div> </div>
+            <ul class="subcategories">
+
+                <li><a href="./kinimatica.html"> <button class="menu-button">Кинематика</button></li></a>
+                <li><a href="./dinamica.html"><button class="menu-button">Динамика | Законы Ньютона</button></li></a>
+                <li><a href="./zaksochrn.html"><button class="menu-button">Законы сохранения в механике | Работа и механическая энергия</button></li></a>
+                <li><a href="./gasewater.html"><button class="menu-button">Жидкости и газы</button></li></a>
+            </ul>
+        </li>
+        <li class="category"><div class="nameC">МКТ и Термодинамика<div class="rotated"><img src="./images/down.png" width="19px" alt="CaretDown"></div></div>
+            <ul class="subcategories">
+              <li><a href="./mkt.html"><button class="menu-button">Молекулярная физика</button></li></a>
+              <li><a href="./termodinamica.html"><button class="menu-button">Термодинамика</button></li></a>
+            </ul>
+        </li>
+      </li>
+      <li class="category"><div class="nameC">Токи <div class="rotated"><img src="./images/down.png" width="19px" alt="CaretDown"></div></div>
+          <ul class="subcategories">
+            <li><a href="./electrostat.html"> <button class="menu-button">Электростатика</button></li></a>
+            <li><a href="./elektrtok.html"><button class="menu-button">Законы постоянного тока</button></li></a>
+            <li><a href="./magnit.html"><button class="menu-button">Магнетизм</button></li></a>
+
+          </ul>
+      </li>
+      <li class="category"><div class="nameC">Колебания и Волны<div class="rotated"><img src="./images/down.png" width="19px" alt="CaretDown"></div></div>
+        <ul class="subcategories">
+          <li><a href="./kolebania.html"><button class="menu-button">Колебания</button></li></a>
+          <li><a href="./volni.html"><button class="menu-button">Волны</button></li></a>
+        </ul> -->
+        <li><a href="./optica.html"><button class="menu-button-single">Алгебра</button></li></a>
+        <li><a href="./atom.html"><button class="menu-button-single">Геометрия</button></li></a>
+
+
+    </ul>
+</div>
+
+<div class="textonmaincont">
+<div class="textonmain">
+  <h3>Как пользовать Formuls?</h3>
+  <p>
+    Способы работы с карточками: <br>
+    <br>
+    1. Просмотр: просто пролистывайте карточки, чтобы увидеть название формулы с одной стороны и саму формулу с другой стороны.<br>
+    <br>
+    2. Запоминание: посмотрите название формулы и попробуйте вспомнить соответствующую формулу без подсказок, далее нажмите на карточку и проверьте свой ответ. <br>
+    <br>
+    3. Пропись: посмотрите название формулы, и запишите соответствующую формулу на лист бумаги. Далее откройте карточку и проверьте вашу запись, если все правильно идем к следующей карточки, если же вы допустили ошибку, пропишите формулу 3 раза. <br>
+<br>
+    4. <a style="color: rgb(168, 76, 255);" href="./gamepage.html">Режим проверки:</a> в режиме проверки вам будут попадаться формулы со всех разделов. <b> В этом режиме наша нейросеть с ИИ будет анализировать время и продолжительность ответа на карточку, после создания небольшого шаблона ваших знаний она будет выдавать плохо усвоенные вами формулы в нужной последовательности, для быстрого достижения результата. Желаем успехов! </b> <br>
+    <br>
+    5. <a style="color: rgb(168, 76, 255);"  href="./podborgame.html">Режим подбора.</a> Перед вами стоит задача выбрать соответствующую формулу из 4х предложенных. На первый взгляд может показаться что это бесполезно, ведь вы видете всю формулу целиком, однако это не так, вы сами не замечаете, как ваш мозг зрительно запоминает формулу, когда вы концентрируете на ней свое внимание!
+  </p>
+</div>
+</div>  
+<div style="margin-top: 20px;" class="textonmaincont">
+  <div class="textonmain">
+    <h3>    Почему это работает    </h3>
+Когда мы читаем конспект или слушаем лекцию, мы пассивно потребляем информацию: какая-то часть знаний откладывается в памяти, а какая-то вылетает из головы. Чтобы лучше запомнить сведения, а главное, вовремя вытащить их из памяти, нужно подключить активное запоминание, как при ответе на вопрос.
+<br>
+<br>
+     Когда мы сами собираем ответ и генерируем его, мозг работает активнее. Поэтому всё, что мы проговорили и представили, запоминается лучше, чем то, что мы просто увидели и услышали.
+<br>
+<br>
+Этот принцип лежит в основе обучения при помощи карточек. Мы видим вопрос — одну сторону карточки с незнакомым словом или определением. После этого стараемся самостоятельно найти ответ и, если не справились, открываем обратную сторону и проверяем себя. По сути, каждый просмотр стопки карточек — это маленький личный экзамен, проверка знаний. Во время такого теста информация усваивается лучше, чем при простом чтении.
+
+Ещё один аргумент в пользу карточек: с ними легко повторять материал. Не надо таскать с собой учебники и конспекты, не надо часами перелистывать страницы. Методика помогает упорядочить информацию и освежать её в памяти небольшими порциями в удобное время.
+  </div>
+  </div>  
+  
+  
+
+
+<script>
+ 
+// let timer;
+// const gotosec = document.getElementById('gotosec');
+// console.log(buttogame);
+// gotosec.addEventListener('dblclick', function() {
+//     window.location.href='./secretowenph.html';
+// });
+// var isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+// console.log(isiOS);
+// if (isiOS) {
+//     var element = document.getElementById('gotosec');
+//     element.addEventListener('touchstart', function(e) {
+//         if (e.touches.length > 1) {
+//             window.location.href='./secretowenph.html';
+//         }
+//     });
+// }
+
+const categories = document.querySelectorAll(".category");
+const subcategories = document.querySelectorAll(".subcategories");
+const arrow = document.querySelectorAll(".rotated");
+
+categories.forEach((category, index) => {
+  subcategories[index].style.display = "none"; 
+  arrow[index].style.transform = "rotate(180deg)";
+  arrow[index].style.transition = "0.35s";
+
+  category.addEventListener("click", () => {
+    if (subcategories[index].style.display === "none") {
+      subcategories.forEach((sub, i) => {
+        sub.style.display = i === index ? "flex" : "none";
+        arrow[i].style.transform = i === index ? "rotate(0deg)" : "rotate(180deg)";
+      });
+
+      categories.forEach((cat) => cat.classList.remove("active"));
+      category.classList.add("active");
+    } else {
+      subcategories[index].style.display = "none";
+      category.classList.remove("active");
+      arrow[index].style.transform = "rotate(180deg)";
+    }
+  });
+});
+
+
+</script>
+</div>
+
+<script>
+  let cards = document.querySelectorAll('.flashcard');
+
+  function flipCard(card) {
+    card.classList.toggle('flipped');
+    cards.forEach(function (element) {
+      if (element !== card && element.classList.contains('flipped')) {
+        element.classList.remove('flipped');
+      }
+    });
+  }
+</script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./service-worker.js')
+      .then((registration) => {
+        console.log('Service Worker registered with scope:', registration.scope);
+      })
+      .catch((error) => {
+        console.error('Service Worker registration failed:', error);
+      });
+  }
+
+  // let installButton = document.querySelector("#initialbut");
+
+  // installButton.addEventListener('click', () => {
+  //   if (window.beforeinstallprompt) {
+  //     window.beforeinstallprompt.prompt();
+
+  //     window.beforeinstallprompt.userChoice.then((choiceResult) => {
+  //       if (choiceResult.outcome === 'accepted') {
+  //         console.log('Пользователь согласился на установку');
+  //       } else {
+  //         console.log('Пользователь отменил установку');
+  //       }
+  //     });
+  //   } else if (navigator.share) {
+  //     // Если нет beforeinstallprompt, но есть поддержка Web Share API (для браузеров, таких как Yandex)
+  //     navigator.share({
+  //       title: 'Название вашего приложения',
+  //       text: 'Описание вашего приложения',
+  //       url: window.location.href,
+  //     })
+  //       .then(() => console.log('Успешно поделено'))
+  //       .catch((error) => console.error('Ошибка при попытке поделиться:', error));
+  //   } else {
+  //     // Возможно, предоставить инструкции для ручного добавления на домашний экран
+  //     alert('Чтобы установить приложение, откройте меню браузера и выберите "Добавить на главный экран" или подобное.');
+  //   }
+  // });
+</script>
+
+
+</body>
+
+<footer>
+  <div class="qwesttgcont">
+    <h4 class="qwesttg">Для Вопросов ↑ Предложений</h4>  
+    <a id="tglink" href="https://t.me/jakesooly"><img width="27px" id="tgicon" src="https://seelk.by/wp-content/uploads/2023/11/whitelogotg.png" alt="tg" srcset="">Telegram</a> 
+      
+    
+    <!-- <a href="https://t.me/jakesooly"><br><img width="27px" id="mailicon" src="https://seelk.by/wp-content/uploads/2023/11/mailicon.png" alt="mail" srcset=""></a>  -->
+   
+    
+  </div>
+  <h4  style="text-align: center; color: rgb(255, 255, 255); padding-top: 40px;">Formuls.xyz<br>
+  <a style="color: rgb(115, 115, 115);" href="https://seelk.by/privacy-policy/">Политика конфиденциальности</a> <br>
+  <h4 style="color: rgb(115, 115, 115); text-align: center;" > Создано командой  <a style="color: rgb(113, 43, 226);" href="https://seelk.by">Seelk.by</a></h4>
+</h4>
+
+</footer>
+</html>
+
+

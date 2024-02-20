@@ -184,6 +184,19 @@
   background-image: var(--var-nameformul-bg);
   transition: 0.3s;
   animation: fadeIn 0.89s ease-in-out forwards;
+  justify-content: center;
+}
+
+@media (max-width: 460px) {
+  #gotosec {
+    margin-right: 44px;
+  }
+}
+
+#mathlogoColored {
+ position: absolute;
+  margin-top: 4px;
+  margin-left: 4px;
 }
 
 @keyframes fadeIn {
@@ -483,11 +496,11 @@ body {
   transform: translate(-50%, -50%);
   width: 230px;
   letter-spacing: 1.7px;
-  margin-top: 20px;
+  margin-top: 10px;
   background-color: #2f2f2f;
   background-image: url("https://seelk.by/wp-content/uploads/2023/10/form1background.webp");
   color: #fff;
-  height: 67px;
+  height: 60px;
   border-radius: 9px;
   border: solid 2px #707070;
   font-size: 18px;
