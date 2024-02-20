@@ -187,11 +187,7 @@
   justify-content: center;
 }
 
-@media (max-width: 460px) {
-  #gotosec {
-    margin-right: 44px;
-  }
-}
+
 
 #mathlogoColored {
  position: absolute;
