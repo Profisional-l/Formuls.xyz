@@ -283,7 +283,7 @@ opacity: 0;
 <div class="card-content"><img style=" clip-path: inset(0 0 0 40%);" src="images/масса.png" alt=""></div>
 </div>
 
-<div class="flashcard">
+<div class="flashcard" onclick="flipCard(this)">
   <div class="card-title"><b>Второй <br></b>закон Ньютона</div>
   <div class="card-content"><img style="clip-path: inset(0 0 65% 40%);" src="images/2йзакон.png" alt=""></div>
 </div>
@@ -313,10 +313,11 @@ opacity: 0;
 <div class="card-content"><img style=" clip-path: inset(0 0 50% 33%);" src="images/законвстяг.png" alt=""></div>
 </div>
 
+
 <div class="flashcard" onclick="flipCard(this)">
-<div class="card-title">Сила тяжести</div>
-<div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/силатяжести.png" alt=""></div>
-</div>
+  <div class="card-title">Сила тяжести</b></div>
+  <div class="card-content"><img style=" clip-path: inset(0 0 0 30%);" src="images/силатяжести.png" alt="линейнаяскоростьпоокруж"></div>
+  </div>
 
 <div class="flashcard" onclick="flipCard(this)">
 <div class="card-title">Зависимость <b>g</b> от высоты над поверхностью</b></div>
@@ -1206,7 +1207,7 @@ opacity: 0;
 
     let randomIndex = Math.floor(Math.random() * cards.length);
     let selectedCard = cards[randomIndex];
-    selectedCard.style.display = 'block';
+    selectedCard.style.display = 'flex';
     selectedCard.dataset.isCorrect = 'true';
     let otherCards = Array.from(cards).filter(function (card) {
       return card !== selectedCard;
@@ -1215,7 +1216,7 @@ opacity: 0;
     for (let i = 0; i < 3; i++) {
       randomIndex = Math.floor(Math.random() * otherCards.length);
       let incorrectCard = otherCards[randomIndex];
-      incorrectCard.style.display = 'block';
+      incorrectCard.style.display = 'flex';
       
       incorrectCard.dataset.isCorrect = 'false';
       otherCards.splice(randomIndex, 1);
