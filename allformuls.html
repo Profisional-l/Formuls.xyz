@@ -996,7 +996,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (currentScroll > 0) {
       // Если мы еще не находимся вверху, прокручиваем страницу вверх с использованием requestAnimationFrame
       window.requestAnimationFrame(scrollToTop);
-      window.scrollTo(0, currentScroll - currentScroll / 11);
+      window.scrollTo(0, currentScroll - currentScroll / 4);
     }
   }
 });
