@@ -1,48 +1,40 @@
-[
-  {
-    "relation": [
-      "delegate_permission/common.handle_all_urls"
-    ],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "com.finetest.formuls",
-      "sha256_cert_fingerprints": [
-        "82:55:07:A2:9D:D9:2D:27:CD:7C:EE:57:F1:13:99:6F:2A:30:75:F2:2B:01:0C:CC:25:66:48:53:CB:7E:4D:45",
-        "6B:88:8A:72:38:54:E7:4E:A9:C7:C5:EA:97:70:5D:92:8B:B8:42:96:12:68:FA:22:A0:5D:C2:70:9B:43:94:E1"
-      ]
-    }
-  },
-  {
-    "relation": [
-      "delegate_permission/common.get_login_creds"
-    ],
-    "target": {
-      "namespace": "web",
-      "site": "https://formuls.xyz"
-    }
-  },
-  {
-    "relation": [
-      "delegate_permission/common.get_login_creds"
-    ],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "com.finetest.formuls",
-      "sha256_cert_fingerprints": [
-        "82:55:07:A2:9D:D9:2D:27:CD:7C:EE:57:F1:13:99:6F:2A:30:75:F2:2B:01:0C:CC:25:66:48:53:CB:7E:4D:45"
-      ]
-    }
-  },
-  {
-    "relation": [
-      "delegate_permission/common.handle_all_urls"
-    ],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "com.finetest.formuls",
-      "sha256_cert_fingerprints": [
-        "6B:88:8A:72:38:54:E7:4E:A9:C7:C5:EA:97:70:5D:92:8B:B8:42:96:12:68:FA:22:A0:5D:C2:70:9B:43:94:E1"
-      ]
-    }
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.finetest.formuls",
+    "sha256_cert_fingerprints":
+    ["82:55:07:A2:9D:D9:2D:27:CD:7C:EE:57:F1:13:99:6F:2A:30:75:F2:2B:01:0C:CC:25:66:48:53:CB:7E:4D:45",
+    "6B:88:8A:72:38:54:E7:4E:A9:C7:C5:EA:97:70:5D:92:8B:B8:42:96:12:68:FA:22:A0:5D:C2:70:9B:43:94:E1"
+  ]
   }
-]
+},
+{
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target": {
+    "namespace": "web",
+    "site": "https://formuls.xyz"
+  }
+},
+{
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.finetest.formuls",
+    "sha256_cert_fingerprints":
+    ["82:55:07:A2:9D:D9:2D:27:CD:7C:EE:57:F1:13:99:6F:2A:30:75:F2:2B:01:0C:CC:25:66:48:53:CB:7E:4D:45"]
+  }
+},
+{
+      "relation": [
+        "delegate_permission/common.handle_all_urls"
+      ],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.finetest.formuls",
+        "sha256_cert_fingerprints": [
+          "6B:88:8A:72:38:54:E7:4E:A9:C7:C5:EA:97:70:5D:92:8B:B8:42:96:12:68:FA:22:A0:5D:C2:70:9B:43:94:E1"
+        ]
+      }
+    }
+  ]
