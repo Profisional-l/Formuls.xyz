@@ -1,5 +1,29 @@
-[
-    {
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.finetest.formuls",
+    "sha256_cert_fingerprints":
+    ["82:55:07:A2:9D:D9:2D:27:CD:7C:EE:57:F1:13:99:6F:2A:30:75:F2:2B:01:0C:CC:25:66:48:53:CB:7E:4D:45"]
+  }
+},
+{
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target": {
+    "namespace": "web",
+    "site": "https://formuls.xyz"
+  }
+},
+{
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.finetest.formuls",
+    "sha256_cert_fingerprints":
+    ["82:55:07:A2:9D:D9:2D:27:CD:7C:EE:57:F1:13:99:6F:2A:30:75:F2:2B:01:0C:CC:25:66:48:53:CB:7E:4D:45"]
+  }
+},
+{
       "relation": [
         "delegate_permission/common.handle_all_urls"
       ],
