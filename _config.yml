@@ -1,1 +1,1 @@
-inckude: [".well-known"]
+include: [".well-known"]
