@@ -1,0 +1,14 @@
+[
+    {
+      "relation": [
+        "delegate_permission/common.handle_all_urls"
+      ],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.finetest.formuls",
+        "sha256_cert_fingerprints": [
+          "6B:88:8A:72:38:54:E7:4E:A9:C7:C5:EA:97:70:5D:92:8B:B8:42:96:12:68:FA:22:A0:5D:C2:70:9B:43:94:E1"
+        ]
+      }
+    }
+  ]
