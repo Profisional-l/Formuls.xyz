@@ -474,7 +474,7 @@ body {
   letter-spacing: 1.7px;
   margin-top: 20px;
   background-color: #2f2f2f;
-  background-image: url("https://seelk.by/wp-content/uploads/2023/10/form1background.webp");
+  background-image: url("../images/glowedblurbg.png");
   color: #fff;
   height: 60px;
   border-radius: 9px;
@@ -497,7 +497,7 @@ body {
   letter-spacing: 1.7px;
   margin-top: 10px;
   background-color: #2f2f2f;
-  background-image: url("https://seelk.by/wp-content/uploads/2023/10/form1background.webp");
+  background-image: url("../images/glowedblurbg.png");
   color: #fff;
   height: 60px;
   border-radius: 9px;
@@ -834,7 +834,7 @@ input:checked + .slider:before {
 
 footer {
   width: 100%;
-  height: 300px;
+  height: 400px;
   background-color: var(--var-header-bg);
   margin-top: 150px;
 }
@@ -1019,4 +1019,43 @@ footer {
   .downloadbut {
     right: 24%;
   }
+}
+.buttoappfooter::after, #buttogame::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #2f2f2f;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+.buttoappfooter::before, #buttogame::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #c45dff, #603cff, #cda2ff, #4c00ff,
+    #8c00ff, #9437ff, #6200ff, #c45dff
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 1px);
+  height: calc(100% + 1px);
+  border-radius: 10px;
+  filter: blur(10px);
+  
+  animation: glowing 30s linear infinite;
+
+  transition: opacity .3s ease-in-out;
+  opacity: 1; 
+}
+
+@keyframes glowing {
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
 }

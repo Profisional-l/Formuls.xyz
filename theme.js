@@ -3,10 +3,11 @@ document.addEventListener('DOMContentLoaded', function () {
   var isAndroid = userAgent.indexOf('formulsandroiduseragent') !== -1
 
   if (isAndroid) {
-    var godownloadElement = document.querySelector('.godownload')
-
+    var godownloadElement = document.querySelector('.godownload');
+    var buttoappfooter = document.querySelector('.buttoappfooter');
     if (godownloadElement) {
-      godownloadElement.style.display = 'none'
+      godownloadElement.style.display = 'none';
+      buttoappfooter.style.display = 'none';
     }
   }
 })
