@@ -1,55 +1,111 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+
+<head>
     <meta charset="utf-8" />
     <title>untitled</title>
     <script defer src="//unpkg.com/mathlive"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-1BFTX7VGPT');
-</script>
-  <meta charset="UTF-8">
-  <link rel="alternate" href="android-app://com.finetest.formuls/">
-  <meta name="theme-color" content="#252525"> 
-  <link rel="manifest" href="./manifest.json">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <include src="./forapple.html"></include>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/styles.css">
-  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
-  <meta name="keywords" content="Физика, цт, цэ, егэ, огэ, экзамен, сдать, formuls, формулс, 100 баллов, 100цт">
-  <meta name="title" content="Formuls">
-  <meta name="description" content="Formuls - подготовка к экзамену (ЦТ | ЦЭ | ЕГЭ) по физике. Легко запоминай формулы и сдавай экзамен на 100 баллов!">
-  <title>Formuls - подготовка к экзамену (ЦТ | ЦЭ | ЕГЭ) по физике на 100 баллов!</title>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
-  </head>
-  <body>
+        gtag('js', new Date());
+
+        gtag('config', 'G-1BFTX7VGPT');
+    </script>
+    <meta charset="UTF-8">
+    <link rel="alternate" href="android-app://com.finetest.formuls/">
+    <meta name="theme-color" content="#252525">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <include src="./forapple.html"></include>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <meta name="keywords" content="Физика, цт, цэ, егэ, огэ, экзамен, сдать, formuls, формулс, 100 баллов, 100цт">
+    <meta name="title" content="Formuls">
+    <meta name="description" content="Formuls - подготовка к экзамену (ЦТ | ЦЭ | ЕГЭ) по физике. Легко запоминай формулы и сдавай экзамен на 100 баллов!">
+    <title>Formuls - подготовка к экзамену (ЦТ | ЦЭ | ЕГЭ) по физике на 100 баллов!</title>
+</head>
+
+<body>
     <header>
-      <h3 id="logo"><a href="./mathindex.html">Formuls  
-        <img src="./images/mathlogo.png" style="margin: 2px 0 0 4px; position: absolute;" width="44px" alt="">
-      </a></h3>
-      
-       
-      
-      <!-- Rounded switch -->
-    
-      <div class="switche rparent">
-    
-        <label class="switch">
-      <input id="checkboxswitcher" type="checkbox" onchange="handleChange(this.checked)">
-      <span class="slider round"></span>
-    </label>
-      </div>
-    
-      <div class="godownload">
-        <a href="./appdownload.html"><button class="downloadbut" type="submit"><img src="./images/downloads (1).png" width="25px" alt=""></button></a>
-      </div>
-    
+        <h3 id="logo"><a href="./mathindex.html">Formuls
+                <img src="./images/mathlogo.png" style="margin: 2px 0 0 4px; position: absolute;" width="44px" alt="">
+            </a></h3>
+
+        <div class="switcherparent">
+            <!-- Rounded switch -->
+            <label class="switch">
+                <input id="checkboxswitcher" type="checkbox" onchange="handleChange(this.checked)">
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+        <div class="godownload">
+            <a href="./appdownload.html"><button class="downloadbut" type="submit"><img src="./images/downloads (1).png" width="25px" alt=""></button></a>
+        </div>
+
     </header>
-    <math-field></math-field>
-  </body>
+
+    <math-field id="userInputField" placeholder="Ввод"></math-field>
+    <button onclick="sendData()">Отправить данные</button>
+    <div id="result" style="margin-top: 40px; font-size: 20px; overflow-x: auto;"></div>
+
+    <script>
+        async function sendData() {
+            try {
+                const userInputField = document.getElementById('userInputField');
+                if (!userInputField) {
+                    throw new Error('Элемент с id "userInputField" не найден.');
+                }
+
+                const userInput = userInputField.value;
+
+                // Выводим данные в консоль
+                console.log('Отправляемые данные:', userInput);
+
+                const response = await fetch('https://epsilon-math.ru/process_input/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ 'user_input': userInput }),
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    const resultElement = document.getElementById('result');
+
+                    if (!resultElement) {
+                        throw new Error('Элемент с id "result" не найден.');
+                    }
+
+                    if (result && typeof result.new_key !== 'undefined') {
+                        resultElement.innerHTML = result.new_key;
+                        MathJax.Hub.Queue(["Typeset", MathJax.Hub, resultElement]);
+                        console.log('Результат отображен на странице.');
+                    } else {
+                        console.error('Ответ от сервера не содержит ожидаемого свойства "new_key".', result);
+                    }
+                } else {
+                    console.error('Ошибка при отправке данных на сервер:', response.status);
+                }
+
+            } catch (error) {
+                console.error(error.message);
+            }
+        }
+
+        // Ваша функция handleChange()
+        function handleChange(checked) {
+            // Ваш код для обработки изменения состояния переключателя
+        }
+    </script>
+</body>
+
 </html>

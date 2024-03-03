@@ -1148,10 +1148,14 @@ input:checked + .PoM:before {
 
 math-field {
   margin-top: 200px;
-  width: 40%;
+  width: 90%;
+  margin-left: 10px;
 }
 body {
   --keyboard-zindex: 3000;
-  --keycap-height: 70px;
+  --keycap-height: 60px;
   --keyboard-padding-bottom: 10%
+}
+.ML__menu-toggle {
+  display: none;
 }
