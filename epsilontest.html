@@ -1,41 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GitHub Pages Site</title>
-</head>
-<body>
-  <h1>GitHub Pages Site</h1>
-  <form id="myForm">
-    <input type="text" id="userInput">
-    <button type="button" onclick="sendData()">Отправить</button>
-  </form>
-  <div id="result"></div>
-
-  <script>
-    async function sendData() {
-      try {
-        const userInput = document.getElementById('userInput').value;
-        const response = await fetch('https://epsilon-math.ru/process_input/', {
-          method: 'POST',
-          headers: {    
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ 'user_input': userInput }),
-        });
-
-        if (response.ok) {
-          const result = await response.json();
-          document.getElementById('result').innerText = result.new_key;
-        } else {
-          console.error('Ошибка при отправке данных на сервер:', response.status);
-        }
-
-      } catch (error) {
-        console.error(error.message);
-      }
-    }
-  </script>
-</body>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>untitled</title>
+    <script defer src="//unpkg.com/mathlive"></script>
+  </head>
+  <body>
+    <math-field></math-field>
+  </body>
 </html>

@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', function () {
   var isAndroid = userAgent.indexOf('formulsandroiduseragent') !== -1
 
   if (isAndroid) {
-    var godownloadElement = document.querySelector('.godownload');
-    var buttoappfooter = document.querySelector('.buttoappfooter');
+    var godownloadElement = document.querySelector('.godownload')
+    var buttoappfooter = document.querySelector('.buttoappfooter')
     if (godownloadElement) {
-      godownloadElement.style.display = 'none';
-      buttoappfooter.style.display = 'none';
+      godownloadElement.style.display = 'none'
+      buttoappfooter.style.display = 'none'
     }
   }
 })
@@ -94,3 +94,25 @@ const handleChange = (isChecked) => {
     //var switchElement = document.getElementById('checkboxswitcher');
   }
 }
+
+// var PoMswitch = document.querySelector('.PoM');
+// const beforeElement = window.getComputedStyle(PoMswitch, '::before');
+// PoMswitch.style.setProperty('--before-color', 'red');
+// console.log(PoMswitch)
+if (document.location.pathname.includes('mathindex.html')) {
+  document.documentElement.style.setProperty(
+    '--var-MoP-img',
+    'url("../images/mathlogo.png")',
+  )
+  var PoMswith = document.querySelector('.PoM')
+  PoMswith.classList.add('ifmathpage');
+  console.log(PoMswith.classList);
+}
+
+// if (document.location.pathname.includes('index.html')) {
+//   document.documentElement.style.setProperty(
+//     '--var-MoP-img',
+//     'url("../images/physlogo.png")',
+//   )
+//   console.log('rfjqg9j')
+// }

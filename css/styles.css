@@ -14,6 +14,8 @@
   --var-nameformul-bg: url("https://seelk.by/wp-content/uploads/2024/01/фильтр0.png");
   --var-circle-bg: #adadad;
   --var-switch-img: url("../images/moon.png");
+  --var-MoP-img: url("../images/physlogo.png");
+
 }
 
 [light] {
@@ -1004,11 +1006,11 @@ footer {
 }
 .downloadbut {
   display: inline-block;
-  width: 70px;
+  width: 25px;
   height: 70px;
   position: fixed;
   padding: 0;
-  right: 60px;
+  right: 80px;
   top: -7px;
   z-index: 999999999;
   background-color: transparent;
@@ -1017,7 +1019,7 @@ footer {
 
 @media (min-width: 1000px) {
   .downloadbut {
-    right: 24%;
+    right: 26%;
   }
 }
 .buttoappfooter::after, #buttogame::after {
@@ -1058,4 +1060,88 @@ footer {
   0% {background-position: 0 0;}
   50% {background-position: 400% 0;}
   100% {background-position: 0 0;}
+}
+
+
+
+/* The switch - the box around the slider */
+.physTOmathSwitchParent {
+  width: 100%;
+  height: 40px;
+  position: relative;
+}
+.physTOmathSwitch {
+  display: inline-block;
+  width: 120px;
+  height: 38px;
+  
+  padding: 0;
+  right: calc(50% - 60px);
+  left:  calc(50% - 60px);
+  top: 7px;
+  z-index: 999999999;
+}
+
+/* Hide default HTML checkbox */
+.PoM input {
+  display: none;
+}
+
+/* The slider */
+.PoM {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: calc(50% - 60px);
+  left:  calc(50% - 60px);
+  bottom: 0;
+  background-color: #444444;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: 120px;
+  height: 38px;
+}
+
+.PoM:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 60px;
+  left: 4px;
+  bottom: 4px;
+  /* background-color: var(--var-switchcircle); */
+  background-image: var(--var-MoP-img);
+  background-size: cover;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+
+
+}
+
+input:checked + .PoM {
+  background-color: #1a1a1a;
+}
+
+
+
+input:checked + .PoM:before {
+  -webkit-transform: translateX(52px);
+  -ms-transform: translateX(52px);
+  transform: translateX(52px);
+  background-color: red;
+}
+
+/* Rounded sliders */
+.PoM.roundPoM {
+  border-radius: 34px;
+}
+
+.PoM.roundPoM:before {
+  border-radius: 34px;
+}
+
+.ifmathpage:before {
+  -webkit-transform: translateX(52px);
+  -ms-transform: translateX(52px);
+  transform: translateX(52px);
 }
