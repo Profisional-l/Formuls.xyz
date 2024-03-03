@@ -1145,3 +1145,13 @@ input:checked + .PoM:before {
   -ms-transform: translateX(52px);
   transform: translateX(52px);
 }
+
+math-field {
+  margin-top: 200px;
+  width: 40%;
+}
+body {
+  --keyboard-zindex: 3000;
+  --keycap-height: 70px;
+  --keyboard-padding-bottom: 10%
+}
