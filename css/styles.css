@@ -1159,3 +1159,6 @@ body {
 .ML__menu-toggle {
   display: none;
 }
+#result {
+  color: var(--var-allcolor);
+}
