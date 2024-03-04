@@ -86,7 +86,7 @@
                     }
 
                  if (result && typeof result.new_key !== 'undefined') {
-                    resultElement.innerHTML = "$$" + result.new_key + "$$";
+                    resultElement.innerHTML = result.new_key;
                     MathJax.typeset();  // Добавлен вызов для обновления формул
                     console.log('Результат отображен на странице.');
                 } else {
