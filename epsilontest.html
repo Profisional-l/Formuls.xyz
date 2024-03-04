@@ -6,8 +6,6 @@
     <title>untitled</title>
     <script defer src="//unpkg.com/mathlive"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -39,7 +37,7 @@
         <h3 id="logo"><a href="./mathindex.html">Formuls
                 <img src="./images/mathlogo.png" style="margin: 2px 0 0 4px; position: absolute;" width="44px" alt="">
             </a></h3>
-<h2>$$34^3$$</h2>
+
         <div class="switcherparent">
             <!-- Rounded switch -->
             <label class="switch">
@@ -54,7 +52,7 @@
 
     </header>
 
-    $<math-field id="userInputField" placeholder="Ввод"></math-field>$
+    <math-field id="userInputField" placeholder="Ввод"></math-field>
     <button onclick="sendData()">Отправить данные</button>
     <div id="result" style="margin-top: 40px; font-size: 20px; overflow-x: auto;"></div>
 
@@ -87,13 +85,13 @@
                         throw new Error('Элемент с id "result" не найден.');
                     }
 
-                    if (result && typeof result.new_key !== 'undefined') {
-                        resultElement.innerHTML = "$$" + result.new_key + "$$";
-                        MathJax.typeset();  // Добавлен вызов для обновления формул
-                        console.log('Результат отображен на странице.');
-                    } else {
-                        console.error('Ответ от сервера не содержит ожидаемого свойства "new_key".', result);
-                    }
+                 if (result && typeof result.new_key !== 'undefined') {
+                    resultElement.innerHTML = "$$" + result.new_key + "$$";
+                    MathJax.typeset();  // Добавлен вызов для обновления формул
+                    console.log('Результат отображен на странице.');
+                } else {
+                    console.error('Ответ от сервера не содержит ожидаемого свойства "new_key".', result);
+                }
 
                 } else {
                     console.error('Ошибка при отправке данных на сервер:', response.status);
