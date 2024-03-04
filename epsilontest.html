@@ -89,11 +89,12 @@
 
                     if (result && typeof result.new_key !== 'undefined') {
                         resultElement.innerHTML = "$$" + result.new_key + "$$";
-                        MathJax.Hub.Queue(["Typeset", MathJax.Hub, resultElement]);
+                        MathJax.typeset();  // Добавлен вызов для обновления формул
                         console.log('Результат отображен на странице.');
                     } else {
                         console.error('Ответ от сервера не содержит ожидаемого свойства "new_key".', result);
                     }
+
                 } else {
                     console.error('Ошибка при отправке данных на сервер:', response.status);
                 }
