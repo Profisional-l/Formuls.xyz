@@ -89,13 +89,7 @@
 
                     if (result && typeof result.new_key !== 'undefined') {
                         resultElement.innerHTML = result.new_key;
-
-                        // Use MathLive to process MathJax in the result
-                        const mathField = MathLive.makeMathField(resultElement, {
-                            virtualKeyboardMode: 'manual',
-                        });
-                        mathField.$renderTo(resultElement);
-
+                        MathJax.Hub.Queue(["Typeset", MathJax.Hub, resultElement]);
                         console.log('Результат отображен на странице.');
                     } else {
                         console.error('Ответ от сервера не содержит ожидаемого свойства "new_key".', result);
@@ -117,4 +111,3 @@
 </body>
 
 </html>
-    
