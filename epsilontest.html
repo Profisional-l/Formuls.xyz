@@ -51,10 +51,23 @@
         </div>
 
     </header>
-
-    <math-field id="userInputField" placeholder="Ввод"></math-field>
-    <button onclick="sendData()">Отправить данные</button>
-    <div id="result" style="margin-top: 40px; font-size: 20px; overflow-x: auto;"></div>
+    <div class="mathfieldparent">
+            <math-field id="userInputField" placeholder="Ввод"></math-field>
+    </div>
+    <div class="butcont" style="
+    position: absolute;
+      top: 40%;
+      transform: translateY(-50%);
+      display: flex;
+    justify-content: center;
+    width: 100%;
+    ">
+        <button onclick="sendData()" class="but" style="display: inline-block;">Решить</button>
+      </div>
+      <div class="parentexttogame">
+        <p id="result" class="texttogame"></p>
+      </div>
+    <!-- <div id="result" style="margin-top: 40px; font-size: 20px; overflow-x: auto;"></div> -->
 
     <script>
         async function sendData() {

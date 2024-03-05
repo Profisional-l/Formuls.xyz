@@ -135,12 +135,12 @@
   cursor: pointer;
   /* transition: transform 0.5s; */
   margin: 10px;
-  background-image: url("../images/IMG_5835.PNG");
+  background-image: url("../images/kurssad.png");
   background-size: cover;
   background-color: #ffffff;
   background-repeat: no-repeat;
-  width: 350px;
-  height: 350px;
+  width: 400px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1146,10 +1146,23 @@ input:checked + .PoM:before {
   transform: translateX(52px);
 }
 
+.mathfieldparent {
+  width: 100%;
+  padding: 0 10px 0 10px;
+  align-items: center;
+  justify-content: center;
+}
+
 math-field {
   margin-top: 200px;
-  width: 90%;
-  margin-left: 10px;
+  width: 70%;
+      display: inline-block;
+    justify-content: center;
+  position: absolute;
+  border-radius: 10px;
+  transform: translateX(  15%);
+  height: 40px;
+
 }
 body {
   --keyboard-zindex: 3000;
@@ -1161,4 +1174,10 @@ body {
 }
 #result {
   color: var(--var-allcolor);
+}
+math-field::part(menu-toggle) {
+  display: none;
+}
+math-field::part(virtual-keyboard-toggle) {
+  display: none;
 }

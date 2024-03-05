@@ -93,7 +93,7 @@ if (
   let numField = document.querySelector('.numofclick')
   let adcard = document.querySelector('.adcards')
   let adparent = document.querySelector('.adparent')
-  adparent.href = 'https://is.gd/ltzu7W'
+  adparent.href = '###'
   adcard.style.display = 'none'
   // console.log(adcard)
   numField.style.display = 'none'
@@ -127,7 +127,7 @@ if (
         cards[i].style.alignitems = 'center'
         cards[i].style.justifycontent = 'center'
 
-        if ((numofclick % 12125 == 0) & (numofclick != 0)) {
+        if ((numofclick % 15 == 0) & (numofclick != 0)) {
           cards[i].style.display = 'none'
           but.disabled = true
           adcard.style.display = 'block'
