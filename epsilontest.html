@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>untitled</title>
+    <title>Formuls Calc</title>
     <script defer src="//unpkg.com/mathlive"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
@@ -30,6 +30,9 @@
     <meta name="title" content="Formuls">
     <meta name="description" content="Formuls - подготовка к экзамену (ЦТ | ЦЭ | ЕГЭ) по физике. Легко запоминай формулы и сдавай экзамен на 100 баллов!">
     <title>Formuls - подготовка к экзамену (ЦТ | ЦЭ | ЕГЭ) по физике на 100 баллов!</title>
+    <div class="mask">
+        <div class="loader"></div>
+      </div>
 </head>
 
 <body>
@@ -112,13 +115,11 @@
             }
         }
 
-        // Ваша функция handleChange()
-        function handleChange(checked) {
-            // Ваш код для обработки изменения состояния переключателя
-        }
+    
     </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
 </body>
-
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="./theme.js"></script>
 </html>
