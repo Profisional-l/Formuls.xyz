@@ -511,6 +511,23 @@ body {
 #podbor:hover {
   border: solid 2px rgb(162, 0, 255);
 }
+#buttocalc {
+  text-align: start;
+  padding-left: 20px;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  letter-spacing: 1.7px;
+  margin-top: 10px;
+  background-color: #2f2f2f;
+  background-image: url("../images/glowedblurbg.png");
+  color: #fff;
+  border-radius: 9px;
+  border: solid 1px #c4c4c4;
+  font-size: 18px;
+  transition: border 0.5s;
+  animation: animQsa5 10s infinite;
+}
 .but {
   width: 280px;
   letter-spacing: 1.7px;
