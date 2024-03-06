@@ -51,22 +51,45 @@
         </div>
 
     </header>
-    <div class="mathfieldparent">
-            <math-field id="userInputField" placeholder="Ввод"></math-field>
-    </div>
-    <div class="butcont" style="
+ 
+    <!-- <div class="butcont" style="
     position: absolute;
       top: 40%;
       transform: translateY(-50%);
-      display: flex;
     justify-content: center;
     width: 100%;
     ">
+      <div class="mathfieldparent">
+        <math-field id="userInputField" placeholder="Ввод"></math-field>
+</div>
+        <div class="parentoanswer">
+            <p id="result" class="texttogame"></p>
+          </div> <br>
+          <div class="butcont" style="
+          position: absolute;
+            top: 210%;
+            transform: translateY(-50%);
+         display: flex;
+          justify-content: center;
+          width: 100%;
+          ">
         <button onclick="sendData()" class="but" style="display: inline-block;">Решить</button>
       </div>
-      <div class="parentexttogame">
-        <p id="result" class="texttogame"></p>
-      </div>
+  </div> -->
+
+  
+  <div class="mainscreenhi">
+   
+    <br>
+    <div class="mathfieldparent">
+        <math-field id="userInputField" placeholder="Ввод"></math-field>
+</div>
+<br>
+<div id="result"></div>
+        <br>
+        <button onclick="sendData()" class="but" style="display: inline-block; max-width: 170px; height: 45px;">Решить</button>
+
+
     <!-- <div id="result" style="margin-top: 40px; font-size: 20px; overflow-x: auto;"></div> -->
 
     <script>
@@ -121,6 +144,7 @@
         }
     </script>
 </body>
+
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </html>

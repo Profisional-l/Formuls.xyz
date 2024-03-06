@@ -66,7 +66,7 @@ function toggleFullScreen() {
   }
 }
 
-window.onload = function () {
+window.onload = function themescript() {
   const savedTheme = localStorage.getItem('theme')
   const isSwitchOn = localStorage.getItem('theme1')
   console.log('is', isSwitchOn)
