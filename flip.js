@@ -127,7 +127,7 @@ if (
         cards[i].style.alignitems = 'center'
         cards[i].style.justifycontent = 'center'
 
-        if ((numofclick % 15 == 0) & (numofclick != 0)) {
+        if ((numofclick % 155 == 0) & (numofclick != 0)) {
           cards[i].style.display = 'none'
           but.disabled = true
           adcard.style.display = 'block'
