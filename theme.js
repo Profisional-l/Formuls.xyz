@@ -105,8 +105,8 @@ if (document.location.pathname.includes('mathindex.html')) {
     'url("../images/mathlogo.png")',
   )
   var PoMswith = document.querySelector('.PoM')
-  PoMswith.classList.add('ifmathpage');
-  console.log(PoMswith.classList);
+  PoMswith.classList.add('ifmathpage')
+  console.log(PoMswith.classList)
 }
 
 // if (document.location.pathname.includes('index.html')) {

@@ -30,12 +30,14 @@
     <meta name="title" content="Formuls">
     <meta name="description" content="Formuls - подготовка к экзамену (ЦТ | ЦЭ | ЕГЭ) по физике. Легко запоминай формулы и сдавай экзамен на 100 баллов!">
     <title>Formuls - подготовка к экзамену (ЦТ | ЦЭ | ЕГЭ) по физике на 100 баллов!</title>
-    <div class="mask">
-        <div class="loader"></div>
-      </div>
 </head>
-
+<div class="mask">
+    <div class="loader"></div>
+  </div>
 <body>
+    <div class="page-transition-overlay"></div>
+
+
     <header>
         <h3 id="logo"><a href="./mathindex.html">Formuls
                 <img src="./images/mathlogo.png" style="margin: 2px 0 0 4px; position: absolute;" width="44px" alt="">
@@ -48,6 +50,7 @@
                 <span class="slider round"></span>
             </label>
         </div>
+        <script src="./theme.js"></script>
 
         <div class="godownload">
             <a href="./appdownload.html"><button class="downloadbut" type="submit"><img src="./images/downloads (1).png" width="25px" alt=""></button></a>
@@ -62,7 +65,7 @@
         <math-field id="userInputField" placeholder="Ввод"></math-field>
 </div>
 <br>
-<div id="result"></div>
+<div id="result">укакуа</div>
         <br>
         <button onclick="sendData()" class="but" style="display: inline-block; max-width: 170px; height: 45px;">Решить</button>
 
@@ -121,5 +124,5 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
 </body>
-<script src="./theme.js"></script>
+
 </html>
