@@ -1197,6 +1197,7 @@ body {
   border-radius: 10px;
   margin-left:  5%;
   margin-right: 5%;
+  letter-spacing: 0.5px;
 }
 math-field::part(menu-toggle) {
   display: none;
