@@ -1208,10 +1208,12 @@ body {
   display: none;
 }
 #result {
-  overflow:auto;
+  overflow: auto;
   color: #fff;
   background-color: #333;
   padding: 10px;
+  position: absolute;
+  max-width: 90%;
   border-radius: 10px;
   margin-left:  5%;
   margin-right: 5%;
