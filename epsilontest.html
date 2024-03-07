@@ -67,7 +67,7 @@
 <br>
 <div id="result" style=" font-family: Arial, Helvetica, sans-serif;"><div style="color: #747474;">Ответ:</div><div class="calcloader"></div></div>
         <br>
-        <button onclick="sendData()" class="but" style="display: inline-block; max-width: 170px; height: 45px;">Решить</button>
+        <button onclick="sendData()" class="but calcstart" style="display: inline-block; max-width: 170px; height: 45px;">Решить</button>
 
 
     <!-- <div id="result" style="margin-top: 40px; font-size: 20px; overflow-x: auto;"></div> -->
@@ -76,6 +76,7 @@
         const calcloader = document.querySelector('.calcloader');
         calcloader.style.display = "none";
         const resultElement = document.getElementById('result');
+        const calcBut = document.querySelector('.but.calcstart');
         async function sendData() {
             try {
                 const userInputField = document.getElementById('userInputField');
@@ -86,6 +87,9 @@
                 const userInput = userInputField.value;
                 calcloader.style.display = "block";
                 resultElement.innerHTML = '<div class="calcloader"></div>';
+                calcBut.style.backgroundColor="#5a5a5a";
+                calcBut.style.color="#acacac";
+                calcBut.disabled = true;
 
                 // Выводим данные в консоль
                 console.log('Отправляемые данные:', userInput);
@@ -113,7 +117,7 @@
                         n.style.padding = "1px";
                         n.style.fontFamily = "sans-serif";
                         calcloader.style.display = "none";
-
+                        calcBut.disabled = false;
                     });
                     console.log('Результат отображен на странице.');
                 } else {
