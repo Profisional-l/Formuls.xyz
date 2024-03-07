@@ -1224,6 +1224,9 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+.MJX-TEX {
+  font-family: sans-serif;
+}
 #result {
   overflow: auto;
   color: #fff;
