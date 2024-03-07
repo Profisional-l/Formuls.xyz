@@ -65,7 +65,7 @@
         <math-field id="userInputField" placeholder="Ввод"></math-field>
 </div>
 <br>
-<div id="result" style=" font-family: Arial, Helvetica, sans-serif;"><div class="calcloader"></div></div>
+<div id="result" style=" font-family: Arial, Helvetica, sans-serif;"><div style="color: #747474;">Ответ:</div><div class="calcloader"></div></div>
         <br>
         <button onclick="sendData()" class="but" style="display: inline-block; max-width: 170px; height: 45px;">Решить</button>
 
@@ -74,6 +74,7 @@
 
     <script>
         const calcloader = document.querySelector('.calcloader');
+        calcloader.style.display = "none";
         const resultElement = document.getElementById('result');
         async function sendData() {
             try {
