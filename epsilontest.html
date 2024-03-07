@@ -104,7 +104,7 @@
                  if (result && typeof result.new_key !== 'undefined') {
                     resultElement.innerHTML = result.new_key;
                     MathJax.typeset();  // Добавлен вызов для обновления формул
-                    let numbers = document.querySelectorAll(".mjx-c");
+                    let numbers = document.querySelectorAll("mjx-c");
                     numbers.forEach(n => {
                         n.style.padding = "1px";
                     });
