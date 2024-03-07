@@ -1227,3 +1227,7 @@ math-field::part(menu-toggle) {
     display: none;
   }
 }
+
+.mjx-c {
+  padding: 1px;
+}
