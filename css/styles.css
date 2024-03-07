@@ -1268,5 +1268,4 @@ math-field::part(menu-toggle) {
   animation: loader 0.77s linear infinite;
   margin-left: auto;
   margin-right: auto;
-  display: none;
 }
