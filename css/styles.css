@@ -531,7 +531,7 @@ body {
      background-color: #494949c4;
    z-index: 9999999999;
    cursor: pointer;
-   background: url("../images/stjump.mp4") no-repeat;
+   background: url("../images/StLowJump.mp4") no-repeat;
    background-size: cover;
    overflow: hidden;
    
