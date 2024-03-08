@@ -1322,6 +1322,6 @@ color: #acacac;
 
 math-field:focus-within {
   outline: 1px solid var(--var-allcolor);
-  border-radius: px;
+  border-radius: 9px;
 }
 
