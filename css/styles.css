@@ -1319,3 +1319,9 @@ color: #acacac;
   margin-left: auto;
   margin-right: auto;
 }
+
+math-field:focus-within {
+  outline: 1px solid var(--var-allcolor);
+  border-radius: px;
+}
+
