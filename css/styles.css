@@ -539,7 +539,7 @@ body {
 
 
 #stjump {
-  filter: blur(5px);
+  filter: blur(3px);
   top: -93px;
   left: -70px;
   width: 300px;
