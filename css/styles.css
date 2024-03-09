@@ -539,7 +539,7 @@ body {
 
 
 #stjump {
-  filter: blur(3px);
+
   top: -93px;
   left: -70px;
   width: 300px;
@@ -570,6 +570,8 @@ body {
   animation: starsBG 12s linear infinite;
 
   transition: opacity .3s ease-in-out;
+
+  display: none;
 }
 @keyframes starsBG {
   0% {background-position: 0 0; opacity: 0;}
@@ -1406,4 +1408,18 @@ input:checked + .slider.mathSlider.round::before {
   background-color: #ffffff;
 }
 
-
+.madewithParent {
+  text-align: center;
+  top: 97%;
+  position: absolute; 
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+#madewith {
+  text-align: center;
+  color: #7c7c7c;
+}
+.madewithParent a {
+  color: #7c7c7c;
+}
