@@ -978,6 +978,10 @@ footer {
     right: 20%;
   }
 
+.switch.primotv {
+    right: 0;
+  }
+  
   /* .cardsfield {
   width: 86%;
   margin-left:11%;
@@ -1324,4 +1328,82 @@ math-field:focus-within {
   outline: 1px solid var(--var-allcolor);
   border-radius: 9px;
 }
+
+/* -----------------------------------math switchers--------------------- */
+.switchersCont {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.switch.math {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.MathSWParent {
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 4px;
+  right: 0;
+  background-color: #7c7c7c6b;
+  border-radius: 10px;
+  width: 45%;
+  max-width: 170px;
+}
+
+
+
+.switch.math.complex {
+  margin-left: 10px;
+}
+
+.switch.math.primotv {
+  margin-right: 10px;
+}
+
+.MathSWParent p {
+  background-color: #252525;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  justify-content: center;
+  width: 70%;
+  font-size: 10px; /* Начальный размер текста */
+ }
+
+@media (min-width: 340px) {
+  .MathSWParent p {
+    font-size: 15px;
+  }
+}
+
+.mathSlider {
+  background-color: #ffffff;
+}
+
+.slider.round.mathSlider::before {
+  background-color: #969696;
+  background-image: none;
+}
+
+input:checked + .slider.mathSlider.round {
+  background-color: #7221f3;
+}
+
+input:checked + .slider.mathSlider.round::before {
+  background-color: #ffffff;
+}
+
 
