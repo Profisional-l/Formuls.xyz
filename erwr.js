@@ -1,4 +1,3 @@
-mathVirtualKeyboard.show()
 mathVirtualKeyboard.layouts = [
   {
     label: '123',
