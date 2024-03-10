@@ -1096,10 +1096,10 @@ footer {
 
 @media (min-width: 1000px) {
   .downloadbut {
-    right: 26%;
+    right: 18.5%;
   }
   .tocalcbut {
-    right: 29%;
+    right: 22%;
   }
 }
 .buttoappfooter::after, #buttogame::after {
