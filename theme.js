@@ -5,9 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
   if (isAndroid) {
     var godownloadElement = document.querySelector('.godownload')
     var buttoappfooter = document.querySelector('.buttoappfooter')
+    var tocalcbut = document.querySelector('.tocalcbut')
     if (godownloadElement) {
       godownloadElement.style.display = 'none'
       buttoappfooter.style.display = 'none'
+      tocalcbut.style.right = "80px"
     }
   }
 })

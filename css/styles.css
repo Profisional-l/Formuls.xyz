@@ -514,7 +514,7 @@ body {
 #buttocalc {
   text-align: start;
   padding-left: 20px;
-  width: 200px;
+  width: 210px;
   height: 50px;
   border-radius: 10px;
   letter-spacing: 1.7px;
@@ -1078,22 +1078,28 @@ footer {
 .godownload {
   width: 100%;
 }
-.downloadbut {
+.downloadbut, .tocalcbut {
   display: inline-block;
   width: 25px;
   height: 70px;
   position: fixed;
   padding: 0;
-  right: 80px;
+  right: 81px;
   top: -7px;
   z-index: 999999999;
   background-color: transparent;
   border: none;
 }
+.tocalcbut {
+  right: 120px;
+}
 
 @media (min-width: 1000px) {
   .downloadbut {
     right: 26%;
+  }
+  .tocalcbut {
+    right: 29%;
   }
 }
 .buttoappfooter::after, #buttogame::after {
