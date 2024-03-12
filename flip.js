@@ -93,6 +93,10 @@ if (
   let numField = document.querySelector('.numofclick')
   let adcard = document.querySelector('.adcards')
   let adparent = document.querySelector('.adparent')
+
+  var img = new Image()
+  img.src = './images/kurssad.png'
+
   adparent.href = 'https://0101.best/'
   adcard.style.display = 'none'
   // console.log(adcard)
@@ -133,11 +137,11 @@ if (
           adcard.style.display = 'block'
           but.style.backgroundColor = 'gray'
           but.textContent = '3 секунды отдыха и рекламы (◕‿◕)'
+          numField.style.display = 'none'
           setTimeout(() => {
             but.textContent = 'Cледуюшая карточка'
             but.style.backgroundColor = '#252525'
             but.disabled = false
-
             function handleClick() {
               adcard.style.display = 'none'
               // Удалить обработчик события после первого выполнения

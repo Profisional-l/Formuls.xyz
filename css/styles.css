@@ -1113,6 +1113,11 @@ footer {
   top: 0;
   border-radius: 10px;
 }
+
+.hideNum {
+  opacity: 0;
+}
+
 .buttoappfooter::before, #buttogame::before {
   content: "";
   background: linear-gradient(
