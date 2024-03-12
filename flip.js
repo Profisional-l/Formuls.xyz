@@ -93,7 +93,7 @@ if (
   let numField = document.querySelector('.numofclick')
   let adcard = document.querySelector('.adcards')
   let adparent = document.querySelector('.adparent')
-  adparent.href = '###'
+  adparent.href = 'https://0101.best/'
   adcard.style.display = 'none'
   // console.log(adcard)
   numField.style.display = 'none'
