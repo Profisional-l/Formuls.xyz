@@ -1,3 +1,5 @@
+// mathVirtualKeyboard.show()
+
 mathVirtualKeyboard.layouts = [
   {
     label: '123',
@@ -93,7 +95,7 @@ mathVirtualKeyboard.layouts = [
             {
               latex: '\\pi',
               shift: '\\sin',
-              
+
               variants: [
                 '\\prod',
                 {
@@ -466,12 +468,16 @@ mathVirtualKeyboard.layouts = [
 
             {
               class: 'small hide-shift',
-              latex: '\\lim_{#?}',
-              shift: '\\lim_{x\\to\\infty}',
+              latex: '\\lim_{x\\to\\infty}',
+              shift: '\\lim_{#?}',
               variants: [
                 {
                   class: 'small',
                   latex: '\\liminf_{#?}',
+                },
+                {
+              class: 'separator',
+              width: 0.5,
                 },
                 {
                   class: 'small',
@@ -527,12 +533,9 @@ mathVirtualKeyboard.layouts = [
               ],
             },
             {
-                "latex": "\\log",
-                "shift": "\\log_{#0}",
-                "variants": [
-                    "\\log_{#0}",
-                    "\\log_{10}"
-                ]
+              latex: '\\log',
+              shift: '\\log_{#0}',
+              variants: ['\\log_{#0}', '\\log_{10}'],
             },
 
             {
@@ -606,10 +609,10 @@ mathVirtualKeyboard.layouts = [
               ],
             },
             {
-                latex: '\\sum_{#0}^{#0}',
-                class: 'small',
-                width: 2
-              },
+              latex: '\\sum_{#0}^{#0}',
+              class: 'small',
+              width: 2,
+            },
             {
               latex: '\\infty',
               width: 2,
@@ -704,7 +707,7 @@ mathVirtualKeyboard.layouts = [
                 '\\doteqdot',
               ],
             },
-           
+
             {
               class: 'action hide-shift',
               label:
