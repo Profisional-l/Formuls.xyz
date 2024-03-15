@@ -1270,8 +1270,17 @@ body {
   --keyboard-zindex: 3000;
   --keycap-height: 60px;
   --keyboard-padding-bottom: 1px;
-  --keycap-width: 40px
+  --keycap-min-width: 40px
 }
+@media (max-width: 550px) {
+  body {
+    --keycap-width: 40px
+  }
+}
+
+
+
+
 .ML__menu-toggle {
   display: none;
 }
