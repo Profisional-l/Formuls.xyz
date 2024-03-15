@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (godownloadElement) {
       godownloadElement.style.display = 'none'
       buttoappfooter.style.display = 'none'
-      tocalcbut.style.right = "80px"
+      tocalcbut.style.right = '80px'
     }
   }
 })
@@ -75,10 +75,12 @@ window.onload = function themescript() {
   console.log(savedTheme)
   if (savedTheme == 'light') {
     document.body.setAttribute('light', '')
+    document.body.setAttribute('theme', 'light')
     let switchElement = document.getElementById('checkboxswitcher')
     switchElement.checked = true
   } else {
     document.body.removeAttribute('light')
+    document.body.setAttribute('theme', 'dark')
     // switchElement.checked = false
   }
 }
@@ -87,11 +89,13 @@ const handleChange = (isChecked) => {
     localStorage.setItem('theme', 'light')
     localStorage.setItem('theme1', true)
     document.body.setAttribute('light', '')
+    document.body.setAttribute('theme', 'light')
     //var switchElement = document.getElementById('checkboxswitcher');
     localStorage.setItem('isON', 'true')
   } else {
     localStorage.removeItem('theme')
     document.body.removeAttribute('light')
+    document.body.setAttribute('theme', 'dark')
     localStorage.setItem('theme1', false)
     //var switchElement = document.getElementById('checkboxswitcher');
   }
