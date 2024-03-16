@@ -123,26 +123,28 @@ if (document.location.pathname.includes('mathindex.html')) {
 //   console.log('rfjqg9j')
 // }
 
-let LogoName = document.querySelector('.logo')
-let LogoIMG = document.querySelector('.logoIMG')
-console.log('rfreg')
 
-window.onscroll = function () {
-  scrollLOGO()
-}
 
-function scrollLOGO() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    LogoName.classList.remove('changeLOGOin')
-    LogoIMG.classList.remove('changeLOGOout')
+// let LogoName = document.querySelector('.logo')
+// let LogoIMG = document.querySelector('.logoIMG')
+// console.log('rfreg')
 
-    LogoName.classList.add('changeLOGOout')
-    LogoIMG.classList.add('changeLOGOin')
-  } else {
-    LogoName.classList.remove('changeLOGOout')
-    LogoIMG.classList.remove('changeLOGOin')
+// window.onscroll = function () {
+//   scrollLOGO()
+// }
 
-    LogoName.classList.add('changeLOGOin')
-    LogoIMG.classList.add('changeLOGOout')
-  }
-}
+// function scrollLOGO() {
+//   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+//     LogoName.classList.remove('changeLOGOin')
+//     LogoIMG.classList.remove('changeLOGOout')
+
+//     LogoName.classList.add('changeLOGOout')
+//     LogoIMG.classList.add('changeLOGOin')
+//   } else {
+//     LogoName.classList.remove('changeLOGOout')
+//     LogoIMG.classList.remove('changeLOGOin')
+
+//     LogoName.classList.add('changeLOGOin')
+//     LogoIMG.classList.add('changeLOGOout')
+//   }
+// }
