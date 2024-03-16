@@ -125,12 +125,7 @@ if (document.location.pathname.includes('mathindex.html')) {
 
 let LogoName = document.querySelector('.logo')
 let LogoIMG = document.querySelector('.logoIMG')
-
-if (document.body.scrollTop > 150) {
-  LogoName.style.display = 'none'
-  LogoIMG.style.display = 'block'
-  console.log('wefw')
-}
+console.log('rfreg')
 
 window.onscroll = function () {
   scrollLOGO()
