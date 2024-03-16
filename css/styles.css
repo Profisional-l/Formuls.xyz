@@ -161,23 +161,56 @@
 
 /* ---------------------------------------------------------------------------- */
 
-#logo {
+.logo {
   padding-left: 18px;
   font-size: 21px;
   font-family: "Inter", sans-serif;
   letter-spacing: 0.5px;
   margin-top: 13px;
+  opacity: 0;
+  animation: fadeIn 0.3s ease-in-out forwards;
 }
-#logo a::before {
+.logo a::before {
   color: #fff;
 }
-#logo a {
+.logo a {
   color: #fff;
   transition: color 0.3s;
 }
-#logo a:hover {
+.logo a:hover {
   color: #a0a0a0;
 }
+
+.logoIMG {
+  width: 35px;
+  position: fixed;
+  margin-top: 9px;
+  margin-left: 20px;
+  opacity: 0;
+}
+
+.changeLOGOout {
+  animation: fadeOut 0.3s ease-in-out forwards;
+  opacity: 1;
+}
+.changeLOGOin {
+  animation: fadeInlOGO 0.3s ease-in-out forwards;
+  opacity: 0;
+} 
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes fadeInlOGO {
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
+
 
 #gotosec {
   font-weight: 900;
@@ -1272,11 +1305,11 @@ body {
   --keyboard-padding-bottom: 1px;
   --keycap-min-width: 40px
 }
-@media (max-width: 550px) {
+/* @media (max-width: 550px) {
   body {
     --keycap-width: 40px
   }
-}
+} */
 
 
 

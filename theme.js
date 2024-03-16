@@ -122,3 +122,32 @@ if (document.location.pathname.includes('mathindex.html')) {
 //   )
 //   console.log('rfjqg9j')
 // }
+
+let LogoName = document.querySelector('.logo')
+let LogoIMG = document.querySelector('.logoIMG')
+
+if (document.body.scrollTop > 150) {
+  LogoName.style.display = 'none'
+  LogoIMG.style.display = 'block'
+  console.log('wefw')
+}
+
+window.onscroll = function () {
+  scrollLOGO()
+}
+
+function scrollLOGO() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    LogoName.classList.remove('changeLOGOin')
+    LogoIMG.classList.remove('changeLOGOout')
+
+    LogoName.classList.add('changeLOGOout')
+    LogoIMG.classList.add('changeLOGOin')
+  } else {
+    LogoName.classList.remove('changeLOGOout')
+    LogoIMG.classList.remove('changeLOGOin')
+
+    LogoName.classList.add('changeLOGOin')
+    LogoIMG.classList.add('changeLOGOout')
+  }
+}
