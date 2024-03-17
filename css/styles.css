@@ -187,8 +187,7 @@
   margin-top: 9px;
   margin-left: 20px;
   opacity: 0;
-  
-  display: none;
+
 }
 
 .changeLOGOout {
@@ -203,13 +202,11 @@
 @keyframes fadeOut {
   100% {
     opacity: 0;
-    display: none;
   }
 }
 @keyframes fadeInlOGO {
   100% {
     opacity: 1;
-    display: block;
   }
 }
 

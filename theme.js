@@ -125,26 +125,66 @@ if (document.location.pathname.includes('mathindex.html')) {
 //   console.log('rfjqg9j')
 // }
 
-// let LogoName = document.querySelector('.logo')
-// let LogoIMG = document.querySelector('.logoIMG')
-// console.log('rfreg')
+document.addEventListener('DOMContentLoaded', function () {
+  let LogoName = document.querySelector('.logo')
+  let LogoIMG = document.querySelector('.logoIMG')
+  let scrolled = false
+  let scrollToTopBtn = document.getElementById('scrollToTopBtn')
 
-// window.onscroll = function () {
-//   scrollLOGO()
-// }
+  window.onscroll = function () {
+    scrollFunction()
+    scrollLOGO()
+  }
 
-// function scrollLOGO() {
-//   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-//     LogoName.classList.remove('changeLOGOin')
-//     LogoIMG.classList.remove('changeLOGOout')
+  function scrollLOGO() {
+    if (
+      document.body.scrollTop >= 70 ||
+      document.documentElement.scrollTop >= 70
+    ) {
+      if (!scrolled) {
+        LogoName.classList.remove('changeLOGOin')
+        LogoIMG.classList.remove('changeLOGOout')
+        LogoName.classList.add('changeLOGOout')
+        LogoIMG.classList.add('changeLOGOin')
+        scrolled = true
+      }
+    } else {
+      if (scrolled) {
+        LogoName.classList.remove('changeLOGOout')
+        LogoIMG.classList.remove('changeLOGOin')
+        LogoName.classList.add('changeLOGOin')
+        LogoIMG.classList.add('changeLOGOout')
+        scrolled = false
+      }
+    }
+  }
 
-//     LogoName.classList.add('changeLOGOout')
-//     LogoIMG.classList.add('changeLOGOin')
-//   } else {
-//     LogoName.classList.remove('changeLOGOout')
-//     LogoIMG.classList.remove('changeLOGOin')
 
-//     LogoName.classList.add('changeLOGOin')
-//     LogoIMG.classList.add('changeLOGOout')
-//   }
-// }
+  if (scrollToTopBtn) {
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 150 ||
+        document.documentElement.scrollTop > 150
+      ) {
+        scrollToTopBtn.style.display = 'block'
+      } else {
+        scrollToTopBtn.style.display = 'none'
+      }
+    }
+    scrollToTopBtn.addEventListener('click', function () {
+      scrollToTop()
+    })
+  
+  }
+
+
+  function scrollToTop() {
+    var currentScroll =
+      document.documentElement.scrollTop || document.body.scrollTop
+
+    if (currentScroll > 0) {
+      window.requestAnimationFrame(scrollToTop)
+      window.scrollTo(0, currentScroll - currentScroll / 16)
+    }
+  }
+})
