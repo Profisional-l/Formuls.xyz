@@ -7,9 +7,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var buttoappfooter = document.querySelector('.buttoappfooter')
     var tocalcbut = document.querySelector('.tocalcbut')
     if (godownloadElement) {
+      tocalcbut.style.right = '81px'
       godownloadElement.style.display = 'none'
-      buttoappfooter.style.display = 'none'
-      tocalcbut.style.right = '80px'
+      if (buttoappfooter) {
+        buttoappfooter.style.display = 'none'
+      }
     }
   }
 })
