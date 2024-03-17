@@ -6,8 +6,10 @@ document.addEventListener('DOMContentLoaded', function () {
     var godownloadElement = document.querySelector('.godownload')
     var buttoappfooter = document.querySelector('.buttoappfooter')
     var tocalcbut = document.querySelector('.tocalcbut')
-    if (godownloadElement) {
+    if(tocalcbut) {
       tocalcbut.style.right = '81px'
+    }
+    if (godownloadElement) {
       godownloadElement.style.display = 'none'
       if (buttoappfooter) {
         buttoappfooter.style.display = 'none'
