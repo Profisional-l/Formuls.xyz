@@ -1119,11 +1119,13 @@ footer {
   height: 70px;
   position: fixed;
   padding: 0;
-  right: 81px;
   top: -7px;
   z-index: 999999999;
   background-color: transparent;
   border: none;
+}
+.downloadbut {
+  right: 81px;
 }
 .tocalcbut {
   right: 120px;

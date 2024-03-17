@@ -123,8 +123,6 @@ if (document.location.pathname.includes('mathindex.html')) {
 //   console.log('rfjqg9j')
 // }
 
-
-
 // let LogoName = document.querySelector('.logo')
 // let LogoIMG = document.querySelector('.logoIMG')
 // console.log('rfreg')
