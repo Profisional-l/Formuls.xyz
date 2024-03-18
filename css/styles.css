@@ -7,7 +7,7 @@
   --var-but-bg: #343434;
   --var-switch-color: #ffffff;
   --var-logo-c: #fff;
-  --var-switchback: #000000;
+  --var-switchback: #0e0e0e;
   --var-switchcircle: #fff;
   --var-gobackcolor: invert(0%) grayscale(0%);
   --var-goupcolor: invert(70%) grayscale(0%);
@@ -841,7 +841,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #000000;
+  background-color: var(--var-switchback);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
