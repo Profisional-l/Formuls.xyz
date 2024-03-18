@@ -39,7 +39,6 @@
   </div>
 <body>
     <div class="page-transition-overlay"></div>
-    <script src="./theme.js"></script>
 
 
     <header>
@@ -209,6 +208,16 @@
 
     
     </script>
-
+    
+    <script src="./theme.js"></script>
+    <script>
+        let LogoName = document.querySelector('.logo')
+        let LogoIMG = document.querySelector('.logoIMG')
+        function changeLogoType() {
+          LogoName.classList.add('changeLOGOout')
+          LogoIMG.classList.add('changeLOGOin')
+        }
+        changeLogoType()
+    </script>
 </body>
 </html>
