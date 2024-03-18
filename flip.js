@@ -51,6 +51,7 @@ if (
   }
   changeLogoType()
   // -------------------------------------------------------------------
+
   let gobackbut = document.querySelector('.gobackbut')
   gobackbut.style.display = 'none'
 
@@ -73,7 +74,13 @@ if (
   adcard.style.display = 'none'
   // console.log(adcard)
   numField.style.display = 'none'
+
   but.addEventListener('click', function () {
+    cards.forEach(function (element) {
+      element.classList.remove('flipped')
+      element.style.backgroundColor = '#343434'
+    })
+
     numField.style.display = 'block'
     numofclick++
     console.log(numofclick)
