@@ -402,15 +402,16 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 4px;
+
 }
 ::-webkit-scrollbar-track {
-  background-color: #2f2f2f;
+  background-color: var(--var-header-bg);
 }
 ::-webkit-scrollbar-thumb {
   background-color: #b7b7b7;
   border-radius: 19px;
-  border: 3px solid #2f2f2f;
+  border: 1px solid var(--var-header-bg);
 }
 
 .namecategoriesonit {
