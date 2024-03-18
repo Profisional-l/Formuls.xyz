@@ -42,6 +42,15 @@ if (
   document.location.pathname.includes('volnigame.html') ||
   document.location.pathname.includes('kolebaniagame.html')
 ) {
+  // ----------------------------------------logochange--------------------
+  let LogoName = document.querySelector('.logo')
+  let LogoIMG = document.querySelector('.logoIMG')
+  function changeLogoType() {
+    LogoName.classList.add('changeLOGOout')
+    LogoIMG.classList.add('changeLOGOin')
+  }
+  changeLogoType()
+  // -------------------------------------------------------------------
   let gobackbut = document.querySelector('.gobackbut')
   gobackbut.style.display = 'none'
 

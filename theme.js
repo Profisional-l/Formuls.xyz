@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var godownloadElement = document.querySelector('.godownload')
     var buttoappfooter = document.querySelector('.buttoappfooter')
     var tocalcbut = document.querySelector('.tocalcbut')
+
     if (tocalcbut) {
       tocalcbut.style.right = '81px'
     }
@@ -76,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 })
+
 
 let maska = document.querySelector('.mask')
 console.log(maska, 'ede')
