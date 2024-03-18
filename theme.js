@@ -99,7 +99,7 @@ $(document).ready(function () {
 
   $(document).on(
     'click',
-    'a:not([href^="https://t.me/jakesooly"]):not([href^="https://0101.best/"]):not([href^="https://play.google.com/store/apps/details?id=com.finetest.formuls"]), .gobackbut, .buttogame',
+    'a:not([href^="https://t.me/anttany"]):not([href^="https://t.me/jakesooly"]):not([href^="https://0101.best/"]):not([href^="https://play.google.com/store/apps/details?id=com.finetest.formuls"]), .gobackbut, .buttogame',
     function (e) {
       e.preventDefault()
       var href = $(this).attr('href')
