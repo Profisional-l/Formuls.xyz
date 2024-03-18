@@ -1306,11 +1306,11 @@ body {
   --keyboard-padding-bottom: 1px;
   --keycap-min-width: 40px
 }
-/* @media (max-width: 550px) {
+@media (max-width: 550px) {
   body {
-    --keycap-width: 40px
+    --keycap-width: 45px
   }
-} */
+}
 
 
 
