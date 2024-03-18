@@ -191,11 +191,11 @@
 }
 
 .changeLOGOout {
-  animation: fadeOut 0.3s ease-in-out forwards;
+  animation: fadeOut 0.13s ease-in-out forwards;
   opacity: 1;
 }
 .changeLOGOin {
-  animation: fadeInlOGO 0.3s ease-in-out forwards;
+  animation: fadeInlOGO 0.13s ease-in-out forwards;
   opacity: 0;
 } 
 

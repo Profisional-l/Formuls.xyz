@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     if (godownloadElement) {
       godownloadElement.style.display = 'none'
-    if (buttoappfooter) {
+      if (buttoappfooter) {
         buttoappfooter.style.display = 'none'
       }
     }
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (currentScroll > 0) {
       window.requestAnimationFrame(scrollToTop)
-      window.scrollTo(0, currentScroll - currentScroll / 16)
+      window.scrollTo(0, currentScroll - currentScroll / 5)
     }
   }
 })
@@ -185,4 +185,3 @@ if (document.location.pathname.includes('mathindex.html')) {
 //   )
 //   console.log('rfjqg9j')
 // }
-
