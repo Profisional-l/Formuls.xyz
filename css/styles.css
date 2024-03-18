@@ -25,7 +25,7 @@
   --var-but-bg: #343434;
   --var-switch-color: #222222;
   --var-logo-c: #000;
-  --var-switchback: #fff;
+  --var-switchback: #e1e1e1;
   --var-switchcircle: #000000;
   --var-goupcolor: invert(40%) grayscale(0%);
   --var-nameformul-bg: url("https://seelk.by/wp-content/uploads/2024/01/фильтр.png");
@@ -182,9 +182,9 @@
 }
 
 .logoIMG {
-  width: 35px;
+  width: 30px;
   position: fixed;
-  margin-top: 9px;
+  margin-top: 11px;
   margin-left: 20px;
   opacity: 0;
 
@@ -655,7 +655,6 @@ body {
   margin-right: auto;
   font-size: 19px;
   color: #fff;
-  text-align: justify;
   max-width: 300px;
   background-color: var(--var-but-bg);
   padding: 15px;
