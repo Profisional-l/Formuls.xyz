@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let LogoName = document.querySelector('.logo')
     let LogoIMG = document.querySelector('.logoIMG')
     function changeLogoType() {
-    LogoName.classList.add('changeLOGOout')
-    LogoIMG.classList.add('changeLOGOin')
+      LogoName.classList.add('changeLOGOout')
+      LogoIMG.classList.add('changeLOGOin')
     }
     changeLogoType()
     if (tocalcbut) {
@@ -84,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 })
 
-
 let maska = document.querySelector('.mask')
 console.log(maska, 'ede')
 window.addEventListener('load', () => {
@@ -138,37 +137,29 @@ function toggleFullScreen() {
     elem.msRequestFullscreen()
   }
 }
-
 window.onload = function themescript() {
   const savedTheme = localStorage.getItem('theme')
-  const isSwitchOn = localStorage.getItem('theme1')
-  console.log('is', isSwitchOn)
-  console.log(savedTheme)
-  if (savedTheme == 'light') {
+  const switchElement = document.getElementById('checkboxswitcher')
+
+  if (savedTheme === 'light') {
     document.body.setAttribute('light', '')
-    document.body.setAttribute('theme', 'light')
-    let switchElement = document.getElementById('checkboxswitcher')
     switchElement.checked = true
   } else {
     document.body.removeAttribute('light')
-    document.body.setAttribute('theme', 'dark')
-    // switchElement.checked = false
+    switchElement.checked = false
   }
 }
+
 const handleChange = (isChecked) => {
+  const switchElement = document.getElementById('checkboxswitcher')
   if (isChecked) {
-    localStorage.setItem('theme', 'light')
-    localStorage.setItem('theme1', true)
     document.body.setAttribute('light', '')
-    document.body.setAttribute('theme', 'light')
-    //var switchElement = document.getElementById('checkboxswitcher');
-    localStorage.setItem('isON', 'true')
+    switchElement.checked = true
+    localStorage.setItem('theme', 'light')
   } else {
-    localStorage.removeItem('theme')
     document.body.removeAttribute('light')
-    document.body.setAttribute('theme', 'dark')
-    localStorage.setItem('theme1', false)
-    //var switchElement = document.getElementById('checkboxswitcher');
+    switchElement.checked = false
+    localStorage.setItem('theme', '')
   }
 }
 
