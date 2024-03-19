@@ -140,7 +140,7 @@ function toggleFullScreen() {
 window.onload = function themescript() {
   const savedTheme = localStorage.getItem('theme')
   const switchElement = document.getElementById('checkboxswitcher')
-
+  switchElement.checked = false
   if (savedTheme === 'light') {
     document.body.setAttribute('light', '')
     switchElement.checked = true
@@ -151,14 +151,11 @@ window.onload = function themescript() {
 }
 
 const handleChange = (isChecked) => {
-  const switchElement = document.getElementById('checkboxswitcher')
   if (isChecked) {
     document.body.setAttribute('light', '')
-    switchElement.checked = true
     localStorage.setItem('theme', 'light')
   } else {
     document.body.removeAttribute('light')
-    switchElement.checked = false
     localStorage.setItem('theme', '')
   }
 }
