@@ -124,7 +124,7 @@ mathVirtualKeyboard.layouts = [
                 {
                   latex: '\\le',
                   label: '≤',
-                }
+                },
               ],
               class: 'hide-shift',
               shift: {
@@ -139,7 +139,7 @@ mathVirtualKeyboard.layouts = [
                 {
                   latex: '\\ge',
                   label: '≥',
-                }
+                },
               ],
               class: 'hide-shift',
               shift: {
@@ -225,6 +225,7 @@ mathVirtualKeyboard.layouts = [
                 '\\langle',
                 '\\lfloor',
                 '\\lceil',
+                '|{#?}|',
                 {
                   latex: '\\lbrace',
                   key: '{',
@@ -247,6 +248,7 @@ mathVirtualKeyboard.layouts = [
                 '\\rangle',
                 '\\rfloor',
                 '\\rceil',
+                '|{#?}|',
                 {
                   latex: '\\rbrace',
                   key: ']',
@@ -488,8 +490,8 @@ mathVirtualKeyboard.layouts = [
                   latex: '\\liminf_{#?}',
                 },
                 {
-              class: 'separator',
-              width: 0.5,
+                  class: 'separator',
+                  width: 0.5,
                 },
                 {
                   class: 'small',
