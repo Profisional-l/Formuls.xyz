@@ -812,6 +812,11 @@ body {
   font-size: 16px;
 }
 
+.menu-button-single:hover {
+  border: solid 1px #ffffff40;
+  transition: 0.4s;
+}
+
 /* ---------------------------------------------------------------------switch--------------------------------- */
 
 /* The switch - the box around the slider */
