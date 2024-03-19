@@ -138,25 +138,25 @@ function toggleFullScreen() {
   }
 }
 window.onload = function themescript() {
-  const savedTheme = localStorage.getItem('theme')
+  const isLightTheme = localStorage.getItem('theme') === 'true'
   const switchElement = document.getElementById('checkboxswitcher')
-  switchElement.checked = false
-  if (savedTheme === 'light') {
+
+  switchElement.checked = isLightTheme
+
+  if (isLightTheme) {
     document.body.setAttribute('light', '')
-    switchElement.checked = true
   } else {
     document.body.removeAttribute('light')
-    switchElement.checked = false
   }
 }
 
 const handleChange = (isChecked) => {
+  localStorage.setItem('theme', isChecked)
+
   if (isChecked) {
     document.body.setAttribute('light', '')
-    localStorage.setItem('theme', 'light')
   } else {
     document.body.removeAttribute('light')
-    localStorage.setItem('theme', '')
   }
 }
 
