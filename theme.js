@@ -6,7 +6,13 @@ document.addEventListener('DOMContentLoaded', function () {
     var godownloadElement = document.querySelector('.godownload')
     var buttoappfooter = document.querySelector('.buttoappfooter')
     var tocalcbut = document.querySelector('.tocalcbut')
-
+    let LogoName = document.querySelector('.logo')
+    let LogoIMG = document.querySelector('.logoIMG')
+    function changeLogoType() {
+    LogoName.classList.add('changeLOGOout')
+    LogoIMG.classList.add('changeLOGOin')
+    }
+    changeLogoType()
     if (tocalcbut) {
       tocalcbut.style.right = '81px'
     }
