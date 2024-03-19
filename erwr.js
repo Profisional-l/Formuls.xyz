@@ -120,6 +120,12 @@ mathVirtualKeyboard.layouts = [
             {
               label: '<',
               latex: '<',
+              variants: [
+                {
+                  latex: '\\le',
+                  label: '≤',
+                }
+              ],
               class: 'hide-shift',
               shift: {
                 latex: '\\le',
@@ -129,6 +135,12 @@ mathVirtualKeyboard.layouts = [
             {
               label: '>',
               latex: '>',
+              variants: [
+                {
+                  latex: '\\ge',
+                  label: '≥',
+                }
+              ],
               class: 'hide-shift',
               shift: {
                 latex: '\\ge',
