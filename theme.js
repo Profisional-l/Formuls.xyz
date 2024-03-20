@@ -1,4 +1,39 @@
+const handleChange = (isChecked) => {
+  localStorage.setItem('theme', isChecked)
+
+  if (isChecked) {
+    document.body.setAttribute('light', '')
+    if (document.location.pathname.includes('formulsCALC.html')) {
+      document.body.setAttribute('theme', 'light')
+    }
+  } else {
+    document.body.removeAttribute('light')
+    if (document.location.pathname.includes('formulsCALC.html')) {
+      document.body.setAttribute('theme', 'dark')
+    }
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
+  const isLightTheme = localStorage.getItem('theme') === 'true'
+  const switchElement = document.getElementById('checkboxswitcher')
+  console.log(isLightTheme)
+  switchElement.checked = isLightTheme
+
+  if (isLightTheme) {
+    document.body.setAttribute('light', '')
+  } else {
+    document.body.removeAttribute('light')
+  }
+
+  setTimeout(function () {
+    if (isLightTheme) {
+      switchElement.checked = true
+    } else {
+      switchElement.checked = false
+    }
+  }, 100)
+
   var userAgent = navigator.userAgent.toLowerCase()
   var isAndroid = userAgent.indexOf('formulsandroiduseragent') !== -1
 
@@ -135,28 +170,6 @@ function toggleFullScreen() {
   } else if (elem.msRequestFullscreen) {
     /* IE/Edge */
     elem.msRequestFullscreen()
-  }
-}
-window.onload = function themescript() {
-  const isLightTheme = localStorage.getItem('theme') === 'true'
-  const switchElement = document.getElementById('checkboxswitcher')
-
-  switchElement.checked = isLightTheme
-
-  if (isLightTheme) {
-    document.body.setAttribute('light', '')
-  } else {
-    document.body.removeAttribute('light')
-  }
-}
-
-const handleChange = (isChecked) => {
-  localStorage.setItem('theme', isChecked)
-
-  if (isChecked) {
-    document.body.setAttribute('light', '')
-  } else {
-    document.body.removeAttribute('light')
   }
 }
 
