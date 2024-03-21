@@ -1,8 +1,8 @@
-window.addEventListener('pageshow', function(event) {
+window.addEventListener('pageshow', function (event) {
   if (event.persisted) {
-    window.location.reload();
+    window.location.reload()
   }
-});
+})
 
 const handleChange = (isChecked) => {
   localStorage.setItem('theme', isChecked)
@@ -49,6 +49,10 @@ document.addEventListener('DOMContentLoaded', function () {
     var tocalcbut = document.querySelector('.tocalcbut')
     let LogoName = document.querySelector('.logo')
     let LogoIMG = document.querySelector('.logoIMG')
+    var linktoHOWwork = document.getElementById('linkTOhow')
+    if (linktoHOWwork) {
+      linktoHOWwork.style.display = 'none'
+    }
     function changeLogoType() {
       LogoName.classList.add('changeLOGOout')
       LogoIMG.classList.add('changeLOGOin')
@@ -125,6 +129,16 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 })
 
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth',
+    })
+  })
+})
+
 let maska = document.querySelector('.mask')
 console.log(maska, 'ede')
 window.addEventListener('load', () => {
@@ -145,7 +159,7 @@ $(document).ready(function () {
 
   $(document).on(
     'click',
-    'a:not([href^="https://t.me/anttany"]):not([href^="https://t.me/jakesooly"]):not([href^="https://0101.best/"]):not([href^="https://play.google.com/store/apps/details?id=com.finetest.formuls"]), .gobackbut, .buttogame',
+    'a:not([href^="#maintext"]):not([href^="https://t.me/anttany"]):not([href^="https://t.me/jakesooly"]):not([href^="https://0101.best/"]):not([href^="https://play.google.com/store/apps/details?id=com.finetest.formuls"]), .gobackbut, .buttogame',
     function (e) {
       e.preventDefault()
       var href = $(this).attr('href')

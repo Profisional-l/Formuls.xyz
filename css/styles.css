@@ -268,6 +268,37 @@ body {
 .card-content {
   font-size: 20px;
 }
+
+.arowparent {
+  padding: 0 50% 0 50%;
+}
+
+.arrowdown img {
+    filter: var(--var-gobackcolor);
+  width: 21px;
+}
+.arrowdown {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  animation: arroowUpDown 1.9s infinite;
+}
+@keyframes arroowUpDown {
+  0% {
+    margin-top: -13px;
+  }
+  50% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -13px;
+  }
+}
+
+#linkTOhow {
+  color: rgb(174, 112, 255);
+}
+
 .cardsfield {
   top: 50%;
   justify-content: center;
@@ -564,14 +595,18 @@ body {
      background-color: #494949c4;
    z-index: 9999999999;
    cursor: pointer;
-   background: url("../images/StLowJump.mp4") no-repeat;
-   background-size: cover;
+   /* background: url("../images/StLowJump.mp4") no-repeat; */
+  
+   /* background: linear-gradient(90deg, rgba(127,30,255,1) 0%, rgba(78,30,135,1) 44%, rgba(115,0,255,1) 100%); */
+  background-image: url("../images/фильтр.png");
+   background-size: 400%;
    overflow: hidden;
 }
 
 
 
 #stjump {
+  display: none;
 
   top: -93px;
   left: -70px;
