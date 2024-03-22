@@ -43,6 +43,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var userAgent = navigator.userAgent.toLowerCase()
   var isAndroid = userAgent.indexOf('formulsandroiduseragent') !== -1
 
+  // var isAndroid = true
+
   if (isAndroid) {
     var godownloadElement = document.querySelector('.godownload')
     var buttoappfooter = document.querySelector('.buttoappfooter')
