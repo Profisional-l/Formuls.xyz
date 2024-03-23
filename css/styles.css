@@ -270,17 +270,19 @@ body {
 }
 
 .arowparent {
-  padding: 0 50% 0 50%;
+  width: 100%;
 }
 
 .arrowdown img {
     filter: var(--var-gobackcolor);
   width: 21px;
+
+
 }
 .arrowdown {
   position: absolute;
-  margin-left: auto;
-  margin-right: auto;
+  left: 50%;
+  transform: translateX(-50%);
   animation: arroowUpDown 1.9s infinite;
 }
 @keyframes arroowUpDown {
@@ -288,7 +290,7 @@ body {
     margin-top: -13px;
   }
   50% {
-    margin-top: 0px;
+    margin-top: 4px;
   }
   100% {
     margin-top: -13px;
