@@ -1596,11 +1596,15 @@ input:checked + .slider.mathSlider.round::before {
   background-position: 70%;
 }
 .item_5 {
-  flex-basis: 40%;
+  font-size: 17px;
+  flex-basis: 50%;
   background-image: url("../images/BG_kolebania.png");
   background-size: auto;
   background-repeat: no-repeat;
   background-position: 70%;
+}
+.item_5 img {
+  margin-top: -10px;
 }
 .item_6 {
   background-image: url("../images/BG_optics.png");
