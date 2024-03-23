@@ -101,6 +101,52 @@
         <h3><br>Выбирай категорию и начинай! <br><br> <div class="arowparent"><div class="arrowdown"><img src="./images/down.png" alt=""></div></div></h3>
         <!-- <button id="initialbut">Установить приложение</button> -->
     </div>
+
+    <div class="BGforItems"></div>
+
+    <div class="dopItems forItem2">
+      <div class="categoryParent"> 
+        <a href="./kinimatica.html" class="items item_2_1"><img src="./images/icon_kinematica.png" alt=""> <br> Кинематика</a>
+        <a href="./dinamica.html" class="items item_2_2">Динамика | Законы Ньютона</a>
+        <a href="./zaksochrn.html" class="items item_2_3">Законы сохранения в механике | Работа и механическая энергия</a>
+        <a href="./gasewater.html" class="items item_2_4">Жидкости и газы</a>
+      </div>
+    </div>
+    <div class="dopItems forItem3">
+      <div class="categoryParent"> 
+        <a href="./mkt.html" class="items item_3_1">Молекулярная физика</a>
+        <a href="./termodinamica.html" class="items item_3_2">Термодинамика</a>
+      </div>
+    </div>
+    <div class="dopItems forItem4">
+      <div class="categoryParent"> 
+        <a href="./mkt.html" class="items item_4_1">Электростатика</a>
+        <a href="./elektrtok.html" class="items item_4_2">Законы постоянного тока</a>
+        <a href="./magnit.html" class="items item_4_3">Магнетизм</a>
+      </div>
+    </div>
+    <div class="dopItems forItem5">
+      <div class="categoryParent"> 
+        <a href="./kolebania.html" class="items item_5_1">Колебания</a>
+        <a href="./volni.html" class="items item_5_2">Волны</a>
+      </div>
+    </div>
+  
+  
+  
+    <div class="categoryParent"> 
+      
+      <a href="./allformuls.html" class="items item_1"><img src="./images/icon_all.png" alt=""> <br> Все формулы</a>
+      <div class="items item_2"><img src="./images/icon_mechanics.png" alt=""> <br>Механика</div>
+      <div class="items item_3"><img src="./images/icon_mkt.png" alt=""> <br>МКТ</div>
+      <div class="items item_4"><img src="./images/icon_toki.png" alt=""> <br>Токи</div>
+      <div class="items item_5"><img src="./images/icon_kolebania.png" alt=""> <br>Колебания и Волны</div>
+      <a href="./optica.html" class="items item_6"><img src="./images/icon_optics.png" alt=""> <br>Оптика</a>
+      <a href="./atom.html" class="items item_7"><img src="./images/icon_atomic.png" alt=""> <br>Атомная физика</a>
+  
+      
+    </div>
+    
     <div id="categoriesfield">
 
         <div class="menuMain">
@@ -190,6 +236,60 @@
         </div>
 
         <script>
+
+            
+
+let butToItem2 = document.querySelector(".item_2");
+  let butToItem3 = document.querySelector(".item_3");
+  let butToItem4 = document.querySelector(".item_4");
+  let butToItem5 = document.querySelector(".item_5");
+
+  let PodItem2 = document.querySelector(".forItem2");
+  let PodItem3 = document.querySelector(".forItem3");
+  let PodItem4 = document.querySelector(".forItem4");
+  let PodItem5 = document.querySelector(".forItem5");
+
+  let BG = document.querySelector(".BGforItems");
+// Объявляем массивы для кнопок и подэлементов
+let buttons = [];
+let podItems = [];
+
+// Заполняем массивы кнопками и подэлементами
+for (let i = 2; i <= 5; i++) {
+  buttons.push(document.querySelector(`.item_${i}`));
+  podItems.push(document.querySelector(`.forItem${i}`));
+}
+
+// Функция для добавления/удаления классов и обработчиков событий
+function toggleClassesAndEvents(index) {
+  podItems[index].classList.remove('BGfadeOut');
+  BG.classList.remove('BGfadeOut');
+  podItems[index].classList.add('BGfadeIn');
+  BG.classList.add('BGfadeIn');
+
+  function removeClassesAndEvents() {
+    podItems[index].classList.remove('BGfadeIn');
+    BG.classList.remove('BGfadeIn');
+    podItems[index].classList.add('BGfadeOut');
+    BG.classList.add('BGfadeOut');
+  }
+
+  podItems[index].addEventListener('click', removeClassesAndEvents);
+  BG.addEventListener('click', removeClassesAndEvents);
+}
+
+// Добавляем обработчики событий для каждой кнопки
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener('click', () => {
+    // Вызываем функцию для соответствующего подэлемента
+    toggleClassesAndEvents(i);
+  });
+}
+
+
+
+
+
             // let timer;
             // const gotosec = document.getElementById('gotosec');
             // console.log(buttogame);
@@ -206,32 +306,34 @@
             //         }
             //     });
             // }
+
+            // -------------------------------------------------------------
             
-            const categories = document.querySelectorAll(".category");
-            const subcategories = document.querySelectorAll(".subcategories");
-            const arrow = document.querySelectorAll(".rotated");
+            // const categories = document.querySelectorAll(".category");
+            // const subcategories = document.querySelectorAll(".subcategories");
+            // const arrow = document.querySelectorAll(".rotated");
             
-            categories.forEach((category, index) => {
-              subcategories[index].style.display = "none"; 
-              arrow[index].style.transform = "rotate(180deg)";
-              arrow[index].style.transition = "0.35s";
+            // categories.forEach((category, index) => {
+            //   subcategories[index].style.display = "none"; 
+            //   arrow[index].style.transform = "rotate(180deg)";
+            //   arrow[index].style.transition = "0.35s";
             
-              category.addEventListener("click", () => {
-                if (subcategories[index].style.display === "none") {
-                  subcategories.forEach((sub, i) => {
-                    sub.style.display = i === index ? "flex" : "none";
-                    arrow[i].style.transform = i === index ? "rotate(0deg)" : "rotate(180deg)";
-                  });
+            //   category.addEventListener("click", () => {
+            //     if (subcategories[index].style.display === "none") {
+            //       subcategories.forEach((sub, i) => {
+            //         sub.style.display = i === index ? "flex" : "none";
+            //         arrow[i].style.transform = i === index ? "rotate(0deg)" : "rotate(180deg)";
+            //       });
             
-                  categories.forEach((cat) => cat.classList.remove("active"));
-                  category.classList.add("active");
-                } else {
-                  subcategories[index].style.display = "none";
-                  category.classList.remove("active");
-                  arrow[index].style.transform = "rotate(180deg)";
-                }
-              });
-            });
+            //       categories.forEach((cat) => cat.classList.remove("active"));
+            //       category.classList.add("active");
+            //     } else {
+            //       subcategories[index].style.display = "none";
+            //       category.classList.remove("active");
+            //       arrow[index].style.transform = "rotate(180deg)";
+            //     }
+            //   });
+            // });
         </script>
     </div>
 
