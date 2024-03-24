@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // var isAndroid = true
 
-  if (isAndroid || window.matchMedia('(display-mode: standalone)').matches) {
+  if (isAndroid || window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
     var godownloadElement = document.querySelector('.godownload')
     var buttoappfooter = document.querySelector('.buttoappfooter')
     var tocalcbut = document.querySelector('.tocalcbut')
