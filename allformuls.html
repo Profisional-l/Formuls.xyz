@@ -931,12 +931,14 @@ let flippedCard = null;
 let allCardsFlipped = false;
 
 openButton.addEventListener('click', function() {
+
   if (allCardsFlipped) {
     cards.forEach(function(card) {
       card.classList.remove('allflipped');
       card.style.backgroundColor = '#343434';
       openButton.innerText = "Открыть карточки";
-
+      openButton.style.background = "#343434";
+      openButton.style.color = "#FFF";
     });
     allCardsFlipped = false;
   } else {
@@ -945,6 +947,9 @@ openButton.addEventListener('click', function() {
       card.classList.add('allflipped');
       card.style.backgroundColor = 'white';
       openButton.innerText = "Закрыть карточки";
+      openButton.style.background = "#fff";
+      openButton.style.color = "#000";
+
     });
     allCardsFlipped = true;
     flippedCard = null;

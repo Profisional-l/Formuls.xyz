@@ -494,6 +494,9 @@ body {
   transform: rotateX(180deg);
 }
 
+.flippedIT {
+  transform: rotateX(180deg);
+}
 /* ------------------- */
 
 /* .bigformuls {
@@ -976,7 +979,7 @@ input:checked + .slider:before {
   border: solid 2px #ffffff;
   border: none;
   transition: border 0.1s;
-  transition: color 2s;
+  transition: color .4s;
 }
 
 footer {
