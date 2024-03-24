@@ -108,6 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
     LogoName.classList.add('changeLOGOout')
     LogoIMG.classList.add('changeLOGOin')
   }
+  
 
   if (scrollToTopBtn) {
     function scrollFunction() {
