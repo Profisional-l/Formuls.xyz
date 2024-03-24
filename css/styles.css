@@ -545,7 +545,7 @@ body {
   background-image: url("../images/glowedblurbg.png");
   color: #fff;
   height: 60px;
-  border-radius: 9px;
+  border-radius: 22px;
   border: solid 2px #707070;
   animation: animQsa4 70s infinite;
   font-size: 18px;
@@ -568,7 +568,7 @@ body {
   background-image: url("../images/glowedblurbg.png");
   color: #fff;
   height: 60px;
-  border-radius: 9px;
+  border-radius: 22px;
   border: solid 2px #707070;
   font-size: 18px;
   transition: border 0.5s;
@@ -582,12 +582,11 @@ body {
   padding-left: 20px;
   width: 210px;
   height: 50px;
-  border-radius: 10px;
+  border-radius: 22px;
   letter-spacing: 1.7px;
-  margin-top: 10px;
+  margin-top: -10px;
   /* background-image: url("../images/glowedblurbg.png"); */
   color: #ffffff;
-  border-radius: 9px;
   border: solid 1px #c4c4c4;
   font-size: 18px;
   transition: border 0.5s;
@@ -969,7 +968,7 @@ input:checked + .slider:before {
   height: 44px;
   padding: 0;
   margin-top: -26px;
-  border-radius: 7px;
+  border-radius: 22px;
   font-size: 18px;
   font-weight: 500;
   background-color: #343434;
@@ -1190,7 +1189,7 @@ footer {
   background-color: #2f2f2f;
   left: 0;
   top: 0;
-  border-radius: 10px;
+  border-radius: 22px;
 }
 
 .hideNum {
@@ -1211,7 +1210,7 @@ footer {
   z-index: -1;
   width: calc(100% + 1px);
   height: calc(100% + 1px);
-  border-radius: 10px;
+  border-radius: 22px;
   filter: blur(10px);
   
   animation: glowing 30s linear infinite;
