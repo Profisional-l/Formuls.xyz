@@ -1571,35 +1571,35 @@ input:checked + .slider.mathSlider.round::before {
 .item_1 {
   flex-basis: 100%;
   background-image: url("../images/BG_all.png");
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: 110%;
 }
 .item_2 {
   flex-basis: 30%;
   background-image: url("../images/BG_mechanics.png");
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: 70%;
 }
 .item_3 {
   flex-basis: 30%;
   background-image: url("../images/BG_mkt.png");
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: 70%;
 }
 .item_4 {
   background-image: url("../images/BG_toki.png");
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: 70%;
+  background-position: 100%;
 }
 .item_5 {
   font-size: 17px;
   flex-basis: 50%;
   background-image: url("../images/BG_kolebania.png");
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: 70%;
 }
@@ -1608,13 +1608,13 @@ input:checked + .slider.mathSlider.round::before {
 }
 .item_6 {
   background-image: url("../images/BG_optics.png");
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: 70%;
 }
 .item_7 {
   background-image: url("../images/BG_atomics.png");
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: 70%;
 }

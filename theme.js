@@ -179,20 +179,7 @@ document
   .querySelector("meta[name='apple-mobile-web-app-status-bar-style']")
   .setAttribute('content', '#252525')
 function toggleFullScreen() {
-  var elem = document.documentElement
-
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen()
-  } else if (elem.mozRequestFullScreen) {
-    /* Firefox */
-    elem.mozRequestFullScreen()
-  } else if (elem.webkitRequestFullscreen) {
-    /* Chrome, Safari and Opera */
-    elem.webkitRequestFullscreen()
-  } else if (elem.msRequestFullscreen) {
-    /* IE/Edge */
-    elem.msRequestFullscreen()
-  }
+  console.log('w4rf4')
 }
 
 // var PoMswitch = document.querySelector('.PoM');
