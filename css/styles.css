@@ -1593,7 +1593,7 @@ input:checked + .slider.mathSlider.round::before {
   background-image: url("../images/BG_toki.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 100%;
+  background-position: 90%;
 }
 .item_5 {
   font-size: 17px;
