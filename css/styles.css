@@ -663,7 +663,7 @@ body {
   background-color: #2f2f2f;
   color: #fff;
   height: 60px;
-  border-radius: 13px;
+  border-radius: 22px;
   border: solid 2px #707070;
   font-size: 18px;
   transition: border 0.5s;
@@ -699,7 +699,7 @@ body {
   max-width: 300px;
   background-color: var(--var-but-bg);
   padding: 15px;
-  border-radius: 13px;
+  border-radius: 22px;
 }
 
 /* @media (max-width: 590px){
@@ -1108,7 +1108,7 @@ footer {
   background-color: #2f2f2f;
   color: #fff;
   height: 60px;
-  border-radius: 13px;
+  border-radius: 22px;
   border: solid 2px #707070;
   font-size: 18px;
   transition: border 0.5s;

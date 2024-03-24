@@ -183,37 +183,29 @@ window.addEventListener('load', () => {
 })
 // maska.style.display = 'none'
 $(document).ready(function () {
-  // Показываем overlay с задержкой
-  function showOverlayWithDelay() {
-    setTimeout(function () {
-      $('.page-transition-overlay').fadeIn(260);
-    }, 10);
-  }
+  // Используем событие pageshow
+  $(window).on('pageshow', function (event) {
+    if (event.originalEvent.persisted) {
+      // Скрываем overlay при возврате на страницу из истории
+      $('.page-transition-overlay').css('display', 'none')
+    }
+  })
 
-  // Скрываем overlay
-  function hideOverlay() {
-    $('.page-transition-overlay').fadeOut(260);
-  }
+  $(document).on(
+    'click',
+    'a:not([href^="#maintext"]):not([href^="https://t.me/anttany"]):not([href^="https://t.me/jakesooly"]):not([href^="https://0101.best/"]):not([href^="https://play.google.com/store/apps/details?id=com.finetest.formuls"]), .gobackbut, .buttogame',
+    function (e) {
+      e.preventDefault()
+      var href = $(this).attr('href')
 
-  // Обработчик клика на ссылки
-  $(document).on('click', 'a:not([href^="#"]):not([target="_blank"])', function (e) {
-    e.preventDefault();
-    var href = $(this).attr('href');
-    showOverlayWithDelay();
-    setTimeout(function () {
-      window.location.href = href;
-    }, 260); // Задержка для завершения анимации
-  });
-
-  // Обработчик события popstate
-  window.addEventListener('popstate', function (event) {
-    showOverlayWithDelay(); // Показываем overlay при нажатии кнопки назад
-    setTimeout(function () {
-      hideOverlay();
-    }, 260); // Задержка для завершения анимации
-  });
-});
-
+      // Показываем overlay
+      $('.page-transition-overlay').fadeIn(260, function () {
+        // После показа overlay, переходим на новую страницу
+        window.location.href = href
+      })
+    },
+  )
+})
 
 document
   .querySelector("meta[name='apple-mobile-web-app-status-bar-style']")
