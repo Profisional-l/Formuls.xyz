@@ -104,6 +104,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  if (document.location.pathname.includes('game')) {
+    LogoName.classList.add('changeLOGOout')
+    LogoIMG.classList.add('changeLOGOin')
+  }
+
   if (scrollToTopBtn) {
     function scrollFunction() {
       if (
