@@ -45,13 +45,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // var isAndroid = true
 
-  if (isAndroid || window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
+  if (
+    isAndroid ||
+    window.matchMedia('(display-mode: standalone)').matches ||
+    window.navigator.standalone === true
+  ) {
     var godownloadElement = document.querySelector('.godownload')
     var buttoappfooter = document.querySelector('.buttoappfooter')
     var tocalcbut = document.querySelector('.tocalcbut')
     let LogoName = document.querySelector('.logo')
     let LogoIMG = document.querySelector('.logoIMG')
     var linktoHOWwork = document.getElementById('linkTOhow')
+    let mainscreenh2 = document.querySelector('.mainscreenh2')
+    let mainscreenhiH3 = document.querySelector('.mainscreenhi h3')
+    let categoriesfield = document.getElementById('categoriesfield')
+    let footer = document.querySelector('footer')
+    let maintextHI = document.querySelectorAll('.textonmain')
+    let selectIT = document.getElementById('selectIT')
+    if (mainscreenh2) {
+      mainscreenh2.style.display = 'none'
+      mainscreenhiH3.style.display = 'none'
+      footer.style.display = 'none'
+      maintextHI.forEach(function (e) {
+        e.style.display = 'none'
+      })
+    }
+    if (categoriesfield) {
+      categoriesfield.style.display = 'none'
+      selectIT.style.display = 'none'
+    }
+
     if (linktoHOWwork) {
       linktoHOWwork.style.display = 'none'
     }
@@ -108,7 +131,6 @@ document.addEventListener('DOMContentLoaded', function () {
     LogoName.classList.add('changeLOGOout')
     LogoIMG.classList.add('changeLOGOin')
   }
-
 
   if (scrollToTopBtn) {
     function scrollFunction() {
