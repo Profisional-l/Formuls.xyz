@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var userAgent = navigator.userAgent.toLowerCase()
   var isAndroid = userAgent.indexOf('formulsandroiduseragent') !== -1
 
-  // var isAndroid = true
+  var isAndroid = true
 
   if (
     isAndroid ||
@@ -62,17 +62,25 @@ document.addEventListener('DOMContentLoaded', function () {
     let footer = document.querySelector('footer')
     let maintextHI = document.querySelectorAll('.textonmain')
     let selectIT = document.getElementById('selectIT')
-    if (mainscreenh2) {
-      mainscreenh2.style.display = 'none'
-      mainscreenhiH3.style.display = 'none'
-      footer.style.display = 'none'
-      maintextHI.forEach(function (e) {
-        e.style.display = 'none'
-      })
-    }
-    if (categoriesfield) {
-      categoriesfield.style.display = 'none'
-      selectIT.style.display = 'none'
+
+    if (
+      document.location.pathname.includes('index.html') ||
+      document.location.pathname == 'https://formuls.xyz/' ||
+      document.location.pathname == 'https://formuls.xyz' ||
+      document.location.pathname == 'formuls.xyz'
+    ) {
+      if (mainscreenh2) {
+        mainscreenh2.style.display = 'none'
+        mainscreenhiH3.style.display = 'none'
+        footer.style.display = 'none'
+        maintextHI.forEach(function (e) {
+          e.style.display = 'none'
+        })
+      }
+      if (categoriesfield) {
+        categoriesfield.style.display = 'none'
+        selectIT.style.display = 'none'
+      }
     }
 
     if (linktoHOWwork) {
