@@ -1541,7 +1541,7 @@ input:checked + .slider.mathSlider.round::before {
 }
 .categoryParent {
   z-index: 1;
-  margin-top: 45px;
+  margin-top: 10px;
   max-width: 360px;
   height: 100%;
   display: flex;
