@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // var isAndroid = true
 
-  if (isAndroid) {
+  if (isAndroid || window.matchMedia('(display-mode: standalone)').matches) {
     var godownloadElement = document.querySelector('.godownload')
     var buttoappfooter = document.querySelector('.buttoappfooter')
     var tocalcbut = document.querySelector('.tocalcbut')
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
     LogoName.classList.add('changeLOGOout')
     LogoIMG.classList.add('changeLOGOin')
   }
-  
+
 
   if (scrollToTopBtn) {
     function scrollFunction() {
