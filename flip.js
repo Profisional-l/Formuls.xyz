@@ -43,13 +43,13 @@ if (
   document.location.pathname.includes('kolebaniagame.html')
 ) {
   // ----------------------------------------logochange--------------------
-  let LogoName = document.querySelector('.logo')
-  let LogoIMG = document.querySelector('.logoIMG')
-  function changeLogoType() {
-    LogoName.classList.add('changeLOGOout')
-    LogoIMG.classList.add('changeLOGOin')
-  }
-  changeLogoType()
+  // let LogoName = document.querySelector('.logo')
+  // let LogoIMG = document.querySelector('.logoIMG')
+  // function changeLogoType() {
+  //   LogoName.classList.add('changeLOGOout')
+  //   LogoIMG.classList.add('changeLOGOin')
+  // }
+  // changeLogoType()
   // -------------------------------------------------------------------
 
   let gobackbut = document.querySelector('.gobackbut')
@@ -76,10 +76,10 @@ if (
   numField.style.display = 'none'
 
   but.addEventListener('click', function () {
-    // cards.forEach(function (element) {
-    //   element.classList.remove('flipped')
-    //   element.style.backgroundColor = '#343434'
-    // })
+    cards.forEach(function (element) {
+      element.classList.remove('flipped')
+      element.style.backgroundColor = '#343434'
+    })
 
     numField.style.display = 'block'
     numofclick++
