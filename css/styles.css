@@ -1461,7 +1461,7 @@ math-field:focus-within {
   margin: 4px;
   right: 0;
   background-color: #7c7c7c6b;
-  border-radius: 10px;
+  border-radius: 22px;
   width: 45%;
   max-width: 170px;
 }
@@ -1480,10 +1480,10 @@ math-field:focus-within {
   background-color: #252525;
   color: #fff;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 22px;
   margin: 10px;
   justify-content: center;
-  width: 70%;
+  width: 74%;
   font-size: 10px; /* Начальный размер текста */
  }
 
