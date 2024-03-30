@@ -70,7 +70,7 @@ if (
   var img = new Image()
   img.src = './images/kurssad.png'
 
-  adparent.href = 'https://0101.best/'
+  adparent.href = 'https://is.gd/qPembH'
   adcard.style.display = 'none'
   // console.log(adcard)
   numField.style.display = 'none'
