@@ -253,7 +253,7 @@ header {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: Inter, sans-serif;
   display: flex;
   flex-wrap: wrap;
   background-color: var(--var-body-bg);
@@ -1395,7 +1395,7 @@ body {
   /* margin-left:  5%;
   margin-right: 5%; */
   letter-spacing: 1.5px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, Helvetica, sans-serif;
 
 }
 math-field::part(menu-toggle) {
