@@ -132,6 +132,32 @@
         var isStepsToF = false;
         var isGraphToF = false;
 
+        // Определение функции formatMathJax
+        function formatMathJax(elementId, mathExpression) { 
+            const element = document.getElementById(elementId); 
+            if (!element) { 
+                console.error(`Элемент с id "${elementId}" не найден.`); 
+                return; 
+            } 
+ 
+            // Разбиваем строку на подстроки по тегу </br> 
+            const expressions = mathExpression.split('</br>'); 
+ 
+            // Форматируем каждую подстроку отдельно 
+            let formattedExpression = ''; 
+            expressions.forEach(expression => { 
+                const replacedExpression = expression.replace(/Производная/g, 'Производнаяㅤ').replace(/graph/g, ''); 
+                 
+                formattedExpression += `$$${replacedExpression}$$<br>`; 
+            }); 
+ 
+            // Устанавливаем HTML содержимое элемента 
+            element.innerHTML = formattedExpression; 
+ 
+            // Перерисовываем элемент с использованием MathJax 
+            MathJax.typeset([element]); 
+        }
+
         function isPrimotv() {
         isPrimotvToF = !isPrimotvToF;
         // const userInputField = document.getElementById('userInputField');
