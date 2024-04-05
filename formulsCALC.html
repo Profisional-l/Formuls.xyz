@@ -17,9 +17,9 @@
 
         gtag('config', 'G-1BFTX7VGPT');
     </script>
-      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
+     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+ 
     <meta charset="UTF-8">
     <link rel="alternate" href="android-app://com.finetest.formuls/">
     <meta name="theme-color" content="#252525">
@@ -93,6 +93,22 @@
         </label>
         <br>
         </div>
+        <!-- <div class="MathSWParent">
+            <p>Ход решения</p>
+        <label class="switch math hodreshen">
+            <input id="checkboxswitcher" type="checkbox" onchange="isHodreshen()">
+            <span class="slider mathSlider round "></span>
+        </label>
+        <br>
+        </div>
+        <div class="MathSWParent">
+            <p>График</p>
+        <label class="switch math graph">
+            <input id="checkboxswitcher" type="checkbox" onchange="isGraph()">
+            <span class="slider mathSlider round "></span>
+        </label>
+        <br>
+        </div> -->
         <div class="madewithParent">
             <t id="madewith">Made with <a href="https://t.me/anttany">Markovka</a> </t>
        </div>
@@ -113,6 +129,8 @@
 
         var isPrimotvToF = false;
         var isComplexToF = false;
+        var isStepsToF = false;
+        var isGraphToF = false;
 
         function isPrimotv() {
         isPrimotvToF = !isPrimotvToF;
@@ -131,7 +149,13 @@
         //     sendData()
         // }
         }
+        // function isHodreshen() {
+        // isStepsToF = !isStepsToF;
+        // }
 
+        // function isGraph() {
+        // isGraphToF = !isGraphToF;
+        // }
 
         async function sendData() {
             try {
@@ -181,7 +205,8 @@
 
                  if (result && typeof result.new_key !== 'undefined') {
                     resultElement.innerHTML = result.new_key;
-                    MathJax.typeset();  // Добавлен вызов для обновления формул
+                    formatMathJax('result', result.new_key);
+                    MathJax.typeset([element]);
                     let numbers = document.querySelectorAll("mjx-c");
                     numbers.forEach(n => {
                         n.style.padding = "1px";
