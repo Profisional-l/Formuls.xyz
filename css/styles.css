@@ -1693,3 +1693,6 @@ input:checked + .slider.mathSlider.round::before {
 }
 
 
+button {
+    font-family: Inter, sans-serif;
+}
