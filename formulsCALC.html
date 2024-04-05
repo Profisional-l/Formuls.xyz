@@ -205,7 +205,7 @@
 
                  if (result && typeof result.new_key !== 'undefined') {
                     resultElement.innerHTML = result.new_key;
-                    MathJax.typeset([element]);
+                    MathJax.typeset([resultElement]);
                     let numbers = document.querySelectorAll("mjx-c");
                     numbers.forEach(n => {
                         n.style.padding = "1px";
