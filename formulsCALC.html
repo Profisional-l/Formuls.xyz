@@ -231,13 +231,13 @@
 
                  if (result && typeof result.new_key !== 'undefined') {
                     formatMathJax('result', result.new_key);
-                    let numbers = document.querySelectorAll("mjx-c");
-                    numbers.forEach(n => {
-                        n.style.padding = "1px";
-                        // n.style.fontFamily = "sans-serif";
-                        calcloader.style.display = "none";
+                    // let numbers = document.querySelectorAll("mjx-c");
+                    // numbers.forEach(n => {
+                    //     n.style.padding = "1px";
+                    //     // n.style.fontFamily = "sans-serif";
+                    //     calcloader.style.display = "none";
                         
-                    });
+                    // });
                     console.log('Результат отображен на странице.');
                         calcBut.style.backgroundColor="#2f2f2f";
                         calcBut.style.color="#ffffff";
