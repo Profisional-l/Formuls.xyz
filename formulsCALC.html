@@ -204,7 +204,7 @@
                     }
 
                  if (result && typeof result.new_key !== 'undefined') {
-                    resultElement.innerHTML = result.new_key;
+                    formatMathJax('result', result.new_key);
                     let numbers = document.querySelectorAll("mjx-c");
                     numbers.forEach(n => {
                         n.style.padding = "1px";
@@ -227,7 +227,6 @@
             } catch (error) {
                 console.error(error.message);
             }
-            MathJax.typeset([resultElement]);
         }
 
     
