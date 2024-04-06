@@ -1700,3 +1700,19 @@ input:checked + .slider.mathSlider.round::before {
 button {
     font-family: Inter, sans-serif;
 }
+
+#resultgraph {
+  overflow: auto;
+  color: #fff;
+  background-color: #333;
+  padding: 10px;
+  max-height: 400px;
+  /* position: absolute; */
+  /* max-width: 90%; */
+  border-radius: 10px;
+  /* margin-left:  5%;
+  margin-right: 5%; */
+  letter-spacing: 1.5px;
+  font-family: Inter, Helvetica, sans-serif;
+
+}

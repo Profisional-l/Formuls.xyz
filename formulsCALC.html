@@ -70,7 +70,7 @@
 </div>
 <br>
 <div id="result" style=" font-family: Arial, Helvetica, sans-serif;"><div style="color: #747474;">Ответ:</div><div class="calcloader"></div></div>
-<div id="result graph" style=" font-family: Arial, Helvetica, sans-serif;"><div style="color: #747474;">График:</div><div class="calcloader"></div></div>
+<div id="resultgraph" style=" font-family: Arial, Helvetica, sans-serif;"><div style="color: #747474;">График:</div><div class="calcloader"></div></div>
 
         <br>
         <button onclick="sendData()" class="but calcstart" style="display: inline-block; max-width: 170px; height: 45px;">Решить</button>
@@ -236,7 +236,7 @@
         if (response.ok) {
             const result = await response.json();
             if (isGraphToF === true && result.new_key.includes('graph')) {
-                const resultGraphElement = document.getElementById('result graph');
+                const resultGraphElement = document.getElementById('resultgraph');
                 const timestamp = new Date().getTime(); // Уникальный параметр для обновления изображения
                 resultGraphElement.innerHTML = `<img src='https://epsilon-math.ru/graph.png?${timestamp}'>`;
             }
