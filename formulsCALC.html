@@ -239,7 +239,8 @@
                 if (response.ok) {
                     const result = await response.json();
                     if (isGraphToF === true) {
-                            const resultGraphElement = document.querySelector('.result.graph');
+                            const resultGraphElement = document.getElementById('result graph');
+                            console.log(resultGraphElement)
                             resultGraphElement.innerHTML =  "<img src='https://epsilon-math.ru/graph.png'>";
                     }
                     // const resultGraph = await responseIMG.json();
