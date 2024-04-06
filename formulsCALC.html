@@ -148,7 +148,7 @@
             // Форматируем каждую подстроку отдельно 
             let formattedExpression = ''; 
             expressions.forEach(expression => { 
-                const replacedExpression = expression.replace(/Производная/g, 'Производнаяㅤ').replace(/graph/g, ''); 
+                const replacedExpression = expression.replace(/Производная/g, 'Производнаяㅤ'); 
                  
                 formattedExpression += `$$${replacedExpression}$$<br>`; 
             }); 
@@ -228,13 +228,13 @@
                     body: JSON.stringify({ 'user_input': userInput}),
                 });
 
-                // const responseIMG = await fetch('https://epsilon-math.ru/get_image', {
-                //     method: 'POST',
-                //     headers: {
-                //         'Content-Type': 'application/json',
-                //     },
-                //     body: JSON.stringify({ 'user_input': userInput}),
-                // });
+                const responseIMG = await fetch('https://epsilon-math.ru/graph.png', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ 'user_input': userInput}),
+                });
 
                 if (response.ok) {
                     const result = await response.json();
