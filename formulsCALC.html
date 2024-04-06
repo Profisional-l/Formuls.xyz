@@ -238,7 +238,7 @@
 
                 if (response.ok) {
                     const result = await response.json();
-                    if (isGraphToF === true) {
+                    if (isGraphToF === true && result.new_key.includes('graph')) {
                             const resultGraphElement = document.getElementById('result graph');
                             console.log(resultGraphElement)
                             resultGraphElement.innerHTML =  "<img src='https://epsilon-math.ru/graph.png'>";
