@@ -241,6 +241,7 @@
 header {
   background-color: var(--var-header-bg);
   backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
   position: fixed;
   width: 100%;
   padding: 0;
@@ -248,9 +249,7 @@ header {
   height: 52px;
   z-index: 99999999;
 }
-header {
-  -webkit-backdrop-filter: blur(20px);
-}
+
 
 body {
   font-family: Inter, sans-serif;
@@ -984,7 +983,7 @@ input:checked + .slider:before {
 
 footer {
   width: 100%;
-  height: 400px;
+  height: 500px;
   background-color: var(--var-header-bg);
   margin-top: 150px;
 }
@@ -1000,7 +999,12 @@ footer {
   font-size: 15px;
   align-items: center;
 }
-
+.qwesttgcont img {
+  padding-top: 40px;
+}
+.qwesttgcont.inst img {
+  padding-top: 40px;
+}
 .qwesttg {
   margin-left: auto;
   margin-right: auto;
