@@ -70,6 +70,8 @@
 </div>
 <br>
 <div id="result" style=" font-family: Arial, Helvetica, sans-serif;"><div style="color: #747474;">Ответ:</div><div class="calcloader"></div></div>
+<div id="result graph" style=" font-family: Arial, Helvetica, sans-serif;"><div style="color: #747474;">График:</div><div class="calcloader"></div></div>
+
         <br>
         <button onclick="sendData()" class="but calcstart" style="display: inline-block; max-width: 170px; height: 45px;">Решить</button>
     <br><br>
@@ -200,6 +202,7 @@
                     if (isStepsToF === true) {
                         userInput = userInput + " stepbystep";
                     }
+                    
                 }
                 WhoChacked()
 
@@ -225,8 +228,21 @@
                     body: JSON.stringify({ 'user_input': userInput}),
                 });
 
+                const responseIMG = await fetch('https://epsilon-math.ru/get_image', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ 'user_input': userInput}),
+                });
+
                 if (response.ok) {
                     const result = await response.json();
+                    if (isGraphToF === true) {
+                            const resultGraphElement = document.querySelector('.result.graph');
+                            resultGraphElement.innerHTML = await responseIMG.json();
+                    }
+                    // const resultGraph = await responseIMG.json();
                     
                     if (!resultElement) {
                         throw new Error('Элемент с id "result" не найден.');
