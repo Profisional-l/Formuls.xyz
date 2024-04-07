@@ -71,7 +71,7 @@
 </div>
 <br>
 <div id="result" style=" font-family: Arial, Helvetica, sans-serif;"><div style="color: #747474;">Ответ:</div><div class="calcloader"></div></div>
-<div id="resultgraph" style=" font-family: Arial, Helvetica, sans-serif;"><div style="color: #747474;"><img src="https://epsilon-math.ru/graph.png" alt="" srcset=""></div><div class="calcloader forgraphe"></div></div>
+<div id="resultgraph" style=" font-family: Arial, Helvetica, sans-serif;"><div style="color: #747474;"></div><div class="calcloader forgraphe"></div></div>
 
         <br>
         <div class="calcButCont">
@@ -136,6 +136,7 @@
   let setingsBut = document.querySelector('.calcSettings')
   let switchCont = document.querySelector('.mainParentSwith')      
   let BG = document.querySelector(".BGforItems");
+  let mjxcontainer = document.querySelector("mjx-container")
   switchCont.classList.add('BGfadeOut');
 
   setingsBut.addEventListener('click', function() {
@@ -144,8 +145,9 @@
         switchCont.classList.add('BGfadeIn');
         BG.classList.add('BGfadeIn');
         setTimeout(function() {
-            userInputFieldOut.style.zIndex = "-1"}, 
-        10);
+            userInputFieldOut.style.zIndex = "-1"
+            mjxcontainer.style.opacity= '-1'
+        }, 10);
        
         function removeClassesAndEvents() {
           switchCont.classList.remove('BGfadeIn');
@@ -153,8 +155,9 @@
           switchCont.classList.add('BGfadeOut');
           BG.classList.add('BGfadeOut');
           setTimeout(function() {
-            userInputFieldOut.style.zIndex = "1"}, 
-        300);
+            userInputFieldOut.style.zIndex = "1"
+            mjxcontainer.style.opacity= '-1'
+        }, 300);
        
         }
     
