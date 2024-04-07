@@ -1564,7 +1564,7 @@ input:checked + .slider.mathSlider.round::before {
 .madewithParent {
   text-align: center;
   position: fixed;
-  top: 96%;
+  top: 97%;
   width: 100%;
   font-size: 14px;
   margin: 0;
