@@ -245,6 +245,7 @@
                 const timestamp = new Date().getTime(); // Уникальный параметр для обновления изображения
                 resultGraphElement.innerHTML = `<img src='https://epsilon-math.ru/graph.png?${timestamp}'>`;
             }
+            result.new_key.replace("graph", "");
                     // const resultGraph = await responseIMG.json();
                     
                     if (!resultElement) {
