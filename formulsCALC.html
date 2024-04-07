@@ -324,7 +324,7 @@
                     resultGraphElement.innerHTML = `<img src='https://epsilon-math.ru/graph.png?${timestamp}'>`;
                 }
                         // const resultGraph = await responseIMG.json();
-                        resultElement.style.height = "";
+                        resultElement.style.height = "fit-content";
                         if (!resultElement) {
                             throw new Error('Элемент с id "result" не найден.');
                         }
