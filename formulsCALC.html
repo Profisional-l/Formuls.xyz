@@ -70,7 +70,7 @@
 </div>
 <br>
 <div id="result" style=" font-family: Arial, Helvetica, sans-serif;"><div style="color: #747474;">Ответ:</div><div class="calcloader"></div></div>
-<div id="resultgraph" style=" font-family: Arial, Helvetica, sans-serif;"><div style="color: #747474;">График:</div><div class="calcloader"></div></div>
+<div id="resultgraph" style=" font-family: Arial, Helvetica, sans-serif;"><div style="color: #747474;"></div><div class="calcloader forgraphe"></div></div>
 
         <br>
         <button onclick="sendData()" class="but calcstart" style="display: inline-block; max-width: 170px; height: 45px;">Решить</button>
@@ -111,9 +111,9 @@
         </label>
         <br>
         </div>
-        <div class="madewithParent">
+        <!-- <div class="madewithParent">
             <t id="madewith">Made with <a href="https://t.me/anttany">Markovka</a> </t>
-       </div>
+       </div> -->
       
     </div>
     
@@ -125,7 +125,9 @@
     <script>
         
         const calcloader = document.querySelector('.calcloader');
+        const calcloaderForgraphe = document.querySelector('.calcloader.forgraphe');
         calcloader.style.display = "none";
+        calcloaderForgraphe.style.display = "none";
         const resultElement = document.getElementById('result');
         const calcBut = document.querySelector('.but.calcstart');
 
