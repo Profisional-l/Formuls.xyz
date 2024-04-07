@@ -156,8 +156,8 @@
             }); 
  
             // Устанавливаем HTML содержимое элемента 
-            element.innerHTML = formattedExpression; 
- 
+            // element.innerHTML = formattedExpression; 
+            return formattedExpression;
             // Перерисовываем элемент с использованием MathJax 
             MathJax.typeset([element]); 
         }
@@ -244,7 +244,6 @@
                 const timestamp = new Date().getTime(); // Уникальный параметр для обновления изображения
                 resultGraphElement.innerHTML = `<img src='https://epsilon-math.ru/graph.png?${timestamp}'>`;
             }
-            result.new_key.replace("graph", "");
                     // const resultGraph = await responseIMG.json();
                     
                     if (!resultElement) {
@@ -253,6 +252,8 @@
 
                  if (result && typeof result.new_key !== 'undefined') {
                     formatMathJax('result', result.new_key);
+                    formattedExpression.replace("graph", "");
+                    result.innerHTML = formattedExpression;
                     // let numbers = document.querySelectorAll("mjx-c");
                     // numbers.forEach(n => {
                     //     n.style.padding = "1px";
