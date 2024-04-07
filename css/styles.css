@@ -1436,6 +1436,13 @@ math-field:focus-within {
 }
 
 /* -----------------------------------math switchers--------------------- */
+.mainParentSwith {
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  top: 30%;
+  left: 0;
+}
 .switchersCont {
   margin-top: -40px;
   display: flex;
