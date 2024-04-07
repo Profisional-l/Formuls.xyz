@@ -1330,7 +1330,9 @@ input:checked + .PoM:before {
   justify-content: center;
   display: flex;
 }
-
+#userInputField {
+  width: 100%;
+}
 .textanswer {
   width: 75%;
   margin-left: auto;
@@ -1392,7 +1394,7 @@ body {
   color: #fff;
   background-color: #333;
   padding: 10px;
-
+  height: 35px;
   position: relative;
   /* max-width: 90%; */
   border-radius: 16px;
@@ -1474,6 +1476,43 @@ math-field:focus-within {
   width: 45%;
   max-width: 170px;
 }
+
+.slider-container {
+  width: 100%;
+  max-width: 330px;
+
+  text-align: center;
+  color: #fff;
+  background-color: #ffffff6b;
+  margin-top: 5px;
+  border-radius: 22px;
+  padding: 10px;
+}
+.znakoxtxt {
+  padding: 10px;
+  background-color: #252525;
+  border-radius: 22px;
+  font-size: 13px;
+}
+.znakoxRange {
+  margin-top: 10px;
+  width: 60%;
+}
+.znakoxRange {
+  height: 10px;
+  border-radius: 5px;
+  outline: none;
+}
+
+.znakoxRange::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #7221f3;
+  box-shadow: 0 0 2px 0 black;
+}
+
 .MJX-TEX {
   font-family: MJXZERO, MJXTEX;
 }
@@ -1500,7 +1539,7 @@ math-field:focus-within {
  }
 
 @media (min-width: 340px) {
-  .MathSWParent p {
+  .MathSWParent p, .znakoxtxt {
     font-size: 15px;
   }
 }
@@ -1524,12 +1563,12 @@ input:checked + .slider.mathSlider.round::before {
 
 .madewithParent {
   text-align: center;
-  top: 97.5%;
-  position: absolute; 
-  margin-left: auto;
-  margin-right: auto;
+  position: fixed;
+  top: 96%;
   width: 100%;
   font-size: 14px;
+  margin: 0;
+  z-index: -1;
 }
 #madewith {
   text-align: center;
@@ -1743,7 +1782,6 @@ button {
   margin-right: auto;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 0 15px 0 15px;
 }
 .calcbut {
   font-size: 18px;
@@ -1754,7 +1792,6 @@ button {
   color: #fff;
   border: 1px solid #ccc;
   border-radius: 23px;
-  margin: 4px;
   text-align: center;
   flex-grow: 1;
   
@@ -1763,11 +1800,15 @@ button {
   height: 43px;
   flex-basis: 5%;
   width: 30px;
+  margin-left: 2px;
 }
 .calcSettings img {
   margin-top: 8px;
 }
 .calcstart {
     flex-basis: 50%;
+    margin-right: 2px;
 }
+
+
 
