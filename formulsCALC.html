@@ -137,31 +137,6 @@
         var isStepsToF = false;
         var isGraphToF = false;
 
-        // Определение функции formatMathJax
-        function formatMathJax(elementId, mathExpression) { 
-            const element = document.getElementById(elementId); 
-            if (!element) { 
-                console.error(`Элемент с id "${elementId}" не найден.`); 
-                return; 
-            } 
- 
-            // Разбиваем строку на подстроки по тегу </br> 
-            const expressions = mathExpression.split('</br>'); 
- 
-            // Форматируем каждую подстроку отдельно 
-            let formattedExpression = ''; 
-            expressions.forEach(expression => { 
-                const replacedExpression = expression.replace(/Производная/g, 'Производнаяㅤ'); 
-                 
-                formattedExpression += `$$${replacedExpression}$$<br>`; 
-            }); 
- 
-            // Устанавливаем HTML содержимое элемента 
-            // element.innerHTML = formattedExpression; 
-            return formattedExpression;
-            // Перерисовываем элемент с использованием MathJax 
-            MathJax.typeset([element]); 
-        }
 
         function isPrimotv() {
         isPrimotvToF = !isPrimotvToF;
@@ -251,17 +226,32 @@
                     }
 
                  if (result && typeof result.new_key !== 'undefined') {
-                    formatMathJax('result', result.new_key);
-                    const formattedExpression = formatMathJax(mathExpression);
-                    formattedExpression.replace("graph", "");
-                    result.innerHTML = formattedExpression;
-                    // let numbers = document.querySelectorAll("mjx-c");
-                    // numbers.forEach(n => {
-                    //     n.style.padding = "1px";
-                    //     // n.style.fontFamily = "sans-serif";
-                    //     calcloader.style.display = "none";
-                        
-                    // });
+                     // Определение функции formatMathJax
+                     function formatMathJax(elementId, mathExpression) { 
+                         const element = document.getElementById(elementId); 
+                         if (!element) { 
+                             console.error(`Элемент с id "${elementId}" не найден.`); 
+                             return; 
+                         } 
+                     
+                         // Разбиваем строку на подстроки по тегу </br> 
+                         const expressions = mathExpression.split('</br>'); 
+                     
+                         // Форматируем каждую подстроку отдельно 
+                         let formattedExpression = ''; 
+                         expressions.forEach(expression => { 
+                             const replacedExpression = expression.replace(/Производная/g, 'Производнаяㅤ').replace(/graph/g, ''); 
+
+                             formattedExpression += `$$${replacedExpression}$$<br>`; 
+                         }); 
+                     
+                         // Устанавливаем HTML содержимое элемента 
+                         element.innerHTML = formattedExpression; 
+                         // Перерисовываем элемент с использованием MathJax 
+                         MathJax.typeset([element]); 
+                     }
+                     formatMathJax('result', result.new_key);
+
                     console.log('Результат отображен на странице.');
                         calcBut.style.backgroundColor="#2f2f2f";
                         calcBut.style.color="#ffffff";
