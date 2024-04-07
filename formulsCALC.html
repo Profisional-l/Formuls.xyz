@@ -252,6 +252,7 @@
 
                  if (result && typeof result.new_key !== 'undefined') {
                     formatMathJax('result', result.new_key);
+                    const formattedExpression = formatMathJax(mathExpression);
                     formattedExpression.replace("graph", "");
                     result.innerHTML = formattedExpression;
                     // let numbers = document.querySelectorAll("mjx-c");
