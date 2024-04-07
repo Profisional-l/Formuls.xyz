@@ -75,7 +75,7 @@
 
         <br>
         <div class="calcButCont">
-                <button class="calcbut calcstart" onclick="sendData()"  >Решить</button>
+                <button class="calcbut calcstart" onclick="sendData()">Решить</button>
                 <div    class="calcbut calcSettings"><img src="./images/icon_mechanics.png" width="27px" alt=""></div>
 
         </div>
@@ -145,15 +145,17 @@
         BG.classList.add('BGfadeIn');
         setTimeout(function() {
             userInputFieldOut.style.zIndex = "-1"}, 
-        150);
+        10);
        
         function removeClassesAndEvents() {
           switchCont.classList.remove('BGfadeIn');
           BG.classList.remove('BGfadeIn');
           switchCont.classList.add('BGfadeOut');
           BG.classList.add('BGfadeOut');
-          userInputFieldOut.style.opacity = "1"
-
+          setTimeout(function() {
+            userInputFieldOut.style.zIndex = "1"}, 
+        300);
+       
         }
     
         BG.addEventListener('click', removeClassesAndEvents);
