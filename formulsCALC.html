@@ -39,6 +39,7 @@
   </div>
 <body>
     <div class="page-transition-overlay"></div>
+    <div class="BGforItems inCalc"></div>
 
 
     <header>
@@ -73,9 +74,15 @@
 <div id="resultgraph" style=" font-family: Arial, Helvetica, sans-serif;"><div style="color: #747474;"></div><div class="calcloader forgraphe"></div></div>
 
         <br>
-        <button onclick="sendData()" class="but calcstart" style="display: inline-block; max-width: 170px; height: 45px;">Решить</button>
+        <div class="calcButCont">
+                <button class="calcbut calcstart" onclick="sendData()"  >Решить</button>
+                <div    class="calcbut calcSettings"><img src="./images/icon_mechanics.png" width="27px" alt=""></div>
+
+        </div>
+       
     <br><br>
-    <div class="switchersCont">
+<div class="mainParentSwith">
+<div class="switchersCont">
        
         <div class="MathSWParent">
             <p>Вычислять <br> ответ</p>
@@ -117,9 +124,47 @@
       
     </div>
     
+</div>
+    
     <!-- <div id="result" style="margin-top: 40px; font-size: 20px; overflow-x: auto;"></div> -->
     <script src="./erwr.js" type="module">
  
+    </script>
+
+    <script>
+  let userInputFieldOut = document.getElementById('userInputField');
+  let setingsBut = document.querySelector('.calcSettings')
+  let switchCont = document.querySelector('.mainParentSwith')      
+  let BG = document.querySelector(".BGforItems");
+  switchCont.classList.add('BGfadeOut');
+
+  setingsBut.addEventListener('click', function() {
+        switchCont.classList.remove('BGfadeOut');
+        BG.classList.remove('BGfadeOut');
+        switchCont.classList.add('BGfadeIn');
+        BG.classList.add('BGfadeIn');
+        setTimeout(function() {
+            userInputFieldOut.style.zIndex = "-1"}, 
+        150);
+       
+        function removeClassesAndEvents() {
+          switchCont.classList.remove('BGfadeIn');
+          BG.classList.remove('BGfadeIn');
+          switchCont.classList.add('BGfadeOut');
+          BG.classList.add('BGfadeOut');
+          userInputFieldOut.style.opacity = "1"
+
+        }
+    
+        BG.addEventListener('click', removeClassesAndEvents);
+  })
+
+// Функция для добавления/удаления классов и обработчиков событий
+function toggleClassesAndEvents(index) {
+  
+}
+
+
     </script>
         
     <script>

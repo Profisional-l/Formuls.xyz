@@ -1437,7 +1437,7 @@ math-field:focus-within {
 
 /* -----------------------------------math switchers--------------------- */
 .switchersCont {
-  width: 100%;
+  margin-top: -40px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -1462,7 +1462,7 @@ math-field:focus-within {
   justify-content: center;
   margin: 4px;
   right: 0;
-  background-color: #7c7c7c6b;
+  background-color: #ffffff6b;
   border-radius: 22px;
   width: 45%;
   max-width: 170px;
@@ -1541,6 +1541,9 @@ input:checked + .slider.mathSlider.round::before {
   background-color: #24242481;
   backdrop-filter: blur(20px);
   display: none;
+}
+.BGforItems.inCalc {
+  z-index: 0;
 }
 
 .dopItems {
@@ -1724,3 +1727,40 @@ button {
 #resultgraph::-webkit-scrollbar {
   display: none;
 }
+
+.calcButCont {
+  z-index: 1;
+  max-width: 360px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 15px 0 15px;
+}
+.calcbut {
+  font-size: 18px;
+  height: 45px;
+  flex-grow: 1;
+  width: fit-content;
+  background-color: #343434;
+  color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 23px;
+  margin: 4px;
+  text-align: center;
+  flex-grow: 1;
+  
+}
+.calcSettings {
+  height: 43px;
+  flex-basis: 5%;
+  width: 30px;
+}
+.calcSettings img {
+  margin-top: 8px;
+}
+.calcstart {
+    flex-basis: 50%;
+}
+
