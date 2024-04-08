@@ -7,8 +7,6 @@ self.addEventListener('install', (event) => {
         './index.html',
         './css/styles.css',
         './images',
-        './flip.js',
-        './theme.js',
         './appdownload.html',
         './formulsCALC.html',
         './gamepage.html',
