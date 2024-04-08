@@ -279,7 +279,7 @@ self.addEventListener('install', (event) => {
         './images/энергияконденсатора.png',
         './images/энергиясвязиатомногоядра.png',
         './images/энергияфотона.png',
-        './images/энергмагполя.png',
+        './images/энергмагполя.png'
       ]);
     })
   );
