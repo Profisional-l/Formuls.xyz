@@ -6,6 +6,7 @@ self.addEventListener('install', (event) => {
         '/',
         './index.html',
         './css/styles.css',
+        './images/',
         './appdownload.html',
         './formulsCALC.html',
         './gamepage.html',
