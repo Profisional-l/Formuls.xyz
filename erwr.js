@@ -1,4 +1,4 @@
-// mathVirtualKeyboard.show()
+mathVirtualKeyboard.show()
 
 mathVirtualKeyboard.layouts = [
   {
