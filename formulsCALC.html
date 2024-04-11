@@ -265,7 +265,7 @@
             function isGraph() {
             isGraphToF = !isGraphToF;
             }
-    
+            
             async function sendData() {
                 try {
                     const userInputField = document.getElementById('userInputField');
@@ -283,8 +283,8 @@
                         }
                         if (isStepsToF === true) {
                             userInput = userInput + " stepbystep";
-                        }
-                        
+                        }          
+                        userInput = userInput.replace("^{}", '');
                     }
                     WhoChacked()
                     
@@ -301,7 +301,7 @@
                     console.log('Отправляемые данные:', userInput);
                     console.log("isPrimotvToF: " + isPrimotvToF);
                     console.log("isComplexToF: " + isComplexToF);
-    
+
                  // const responseIMG = await fetch('https://epsilon-math.ru/graph.png', {
                     //     method: 'POST',
                     //     headers: {

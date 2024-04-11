@@ -547,9 +547,9 @@ mathVirtualKeyboard.layouts = [
               ],
             },
             {
-              latex: '\\log',
+              latex: '\\log_{#?}',
               shift: '\\log_{#0}',
-              variants: ['\\log_{#0}', '\\log_{10}'],
+              variants: ['\\log_{10}'],
             },
 
             {
