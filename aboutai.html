@@ -1,105 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-1BFTX7VGPT"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-<head>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
-  </style>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BFTX7VGPT"></script>
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
- 
+    <script>
+      window.dataLayer = window.dataLayer || []
 
-  <script>
-    window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+      gtag('config', 'G-1BFTX7VGPT')
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#252525" />
+    <include src="./forapple.html"></include>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="./images/formulslogo.png"
+      type="image/x-icon"
+    />
+    <title>Formuls</title>
+  </head>
 
-    gtag('config', 'G-1BFTX7VGPT');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="theme-color" content="#252525">
-  <include src="./forapple.html"></include>
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/styles.css">
-  <link rel="shortcut icon" href="./images/formulslogo.png" type="image/x-icon" />
-  <title>Formuls</title>
-</head>
+  <body>
+    <div class="page-transition-overlay"></div>
 
-<body>
-  <div class="page-transition-overlay"></div>
-
-  <div class="mask">
-    <div class="loader"></div>
-  </div>
-  <script src="./theme.js"></script>
-  <header>
-    <a href="https://formuls.xyz/"><img class="logoIMG" src="./images/monologo.png" alt=""></a>
-    <h3 class="logo"><a href="https://formuls.xyz/">Formuls</a></h3>
-    <img src="./images/sun.png" style="display: none;" alt="">
-     
-    <!-- Rounded switch -->
-    <div class="switcherparent">
-      <label class="switch">
-        <input id="checkboxswitcher" type="checkbox" onchange="handleChange(this.checked)">
-        <span class="slider round"></span>
-      </label>
+    <div class="mask">
+      <div class="loader"></div>
     </div>
-    <div class="gobackbut">
-      <button onclick="history.go(-1)">
-        <img id="gobacksvg" width="28px" src="./images/back-button-light.png" alt="">
-      </button>
+    <script src="./theme.js"></script>
+    <header>
+      <a href="https://formuls.xyz/">
+        <img class="logoIMG" src="./images/monologo.png" alt="" />
+      </a>
+      <h3 class="logo"><a href="https://formuls.xyz/">Formuls</a></h3>
+      <img src="./images/sun.png" style="display: none;" alt="" />
+
+      <!-- Rounded switch -->
+      <div class="switcherparent">
+        <label class="switch">
+          <input
+            id="checkboxswitcher"
+            type="checkbox"
+            onchange="handleChange(this.checked)"
+          />
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="gobackbut">
+        <button onclick="history.go(-1)">
+          <img
+            id="gobacksvg"
+            width="28px"
+            src="./images/back-button-light.png"
+            alt=""
+          />
+        </button>
+      </div>
+      <div class="godownload">
+        <a href="./appdownload.html">
+          <button class="downloadbut" type="submit">
+            <img src="./images/downloads (1).png" width="25px" alt="" />
+          </button>
+        </a>
+      </div>
+      <div class="goCalc">
+        <a href="./formulsCALC.html">
+          <button class="tocalcbut" type="submit">
+            <img src="./images/calculator(1).png" width="26px" alt="" />
+          </button>
+        </a>
+      </div>
+    </header>
+
+    <div class="mainscreenhi">
+      <h2 class="mainscreenh2">
+        <br />
+        Искусственный интеллект на Formuls
+      </h2>
     </div>
-    <div class="godownload">
-      <a href="./appdownload.html"><button class="downloadbut" type="submit"><img src="./images/downloads (1).png" width="25px" alt=""></button></a>
+
+    <div style="margin-top: 40px;" class="textonmaincont">
+      <div class="textonmain">
+        <h3>Как работает режим проверки с ИИ?</h3>
+        <p>
+          Режим проверки с использованием искусственного интеллекта представляет
+          собой уникальную возможность для пользователей углубить свои знания по
+          физике. Благодаря анализу времени ответа на карточки и темпа,
+          <b>FormulsAI</b>
+          создает персонализированный шаблон знаний каждого пользователя и
+          предлагает карточки, которые помогут заполнить пробелы в знаниях. Этот
+          подход позволяет ускорить процесс обучения и повысить эффективность
+          запоминания материала. Искусственный интеллект работает в реальном
+          времени, подстраиваясь под потребности каждого пользователя и создавая
+          оптимальную последовательность карточек для быстрого достижения
+          желаемого результата.
+        </p>
+      </div>
     </div>
-    <div class="goCalc">
-      <a href="./formulsCALC.html"><button class="tocalcbut" type="submit"><img src="./images/calculator(1).png" width="26px" alt=""></button></a>
+
+    <div style="margin-top: 40px;" class="buttogamecont">
+      <a href="./gamepage.html">
+        <button id="buttogame" type="submit">Попробовать</button>
+      </a>
     </div>
-  </header>
+  </body>
 
-  <div class="mainscreenhi">
-    <h2 class="mainscreenh2"><br>Искусственный интеллект на Formuls</h2>
-  </div>
-
-  <div style="margin-top: 40px;" class="textonmaincont">
-    <div class="textonmain">
-      <h3>Как работает режим проверки с ИИ?</h3>
-      <p>
-        Режим проверки с использованием искусственного интеллекта представляет собой уникальную возможность для
-        пользователей углубить свои знания по физике. Благодаря анализу времени ответа на карточки и темпа,
-        <b>FormulsAI</b> создает персонализированный шаблон знаний каждого пользователя и предлагает карточки, которые
-        помогут заполнить пробелы в знаниях. Этот подход позволяет ускорить процесс обучения и повысить эффективность
-        запоминания материала. Искусственный интеллект работает в реальном времени, подстраиваясь под потребности
-        каждого пользователя и создавая оптимальную последовательность карточек для быстрого достижения желаемого
-        результата.
-      </p>
+  <footer>
+    <div class="qwesttgcont">
+      <h4 class="qwesttg">Для Вопросов ↑ Предложений</h4>
+      <a id="tglink" href="https://t.me/jakesooly">
+        <img
+          width="27px"
+          id="tgicon"
+          src="https://seelk.by/wp-content/uploads/2023/11/whitelogotg.png"
+          alt="tg"
+          srcset=""
+        />
+        Telegram
+      </a>
     </div>
-  </div>
-
-  <div style="margin-top: 40px;" class="buttogamecont">
-    <a href="./gamepage.html">
-      <button id="buttogame" type="submit">Попробовать</button>
-    </a>
-  </div>
-
-</body>
-
-<footer>
-  <div class="qwesttgcont">
-    <h4 class="qwesttg">Для Вопросов ↑ Предложений</h4>
-    <a id="tglink" href="https://t.me/jakesooly"><img width="27px" id="tgicon"
-        src="https://seelk.by/wp-content/uploads/2023/11/whitelogotg.png" alt="tg" srcset="">Telegram</a>
-  </div>
-  <h4 style="text-align: center; color: rgb(255, 255, 255); padding-top: 40px;">Formuls.xyz<br>
-    <a style="color: rgb(115, 115, 115);" href="https://seelk.by/privacy-policy/">Политика конфиденциальности</a> <br>
-    <h4 style="color: rgb(115, 115, 115); text-align: center;"> Создано командой <a style="color: rgb(113, 43, 226);"
-        href="https://seelk.by">Seelk.by</a></h4>
-  </h4>
-</footer>
-
+    <h4
+      style="text-align: center; color: rgb(255, 255, 255); padding-top: 40px;"
+    >
+      Formuls.xyz
+      <br />
+      <a
+        style="color: rgb(115, 115, 115);"
+        href="https://seelk.by/privacy-policy/"
+      >
+        Политика конфиденциальности
+      </a>
+      <br />
+      <h4 style="color: rgb(115, 115, 115); text-align: center;">
+        Создано командой
+        <a style="color: rgb(113, 43, 226);" href="https://seelk.by">
+          Seelk.by
+        </a>
+      </h4>
+    </h4>
+  </footer>
 </html>

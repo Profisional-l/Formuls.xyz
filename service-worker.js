@@ -285,11 +285,35 @@ self.addEventListener('install', (event) => {
 });
 
 
-
 self.addEventListener('fetch', (event) => {
   event.respondWith(
-    caches.match(event.request).then((response) => {
-      return response || fetch(event.request);
-    })
+    caches.match(event.request)
+      .then((response) => {
+        // Если ресурс найден в кэше, возвращаем его
+        if (response) {
+          return response;
+        }
+
+        // Если ресурс не найден в кэше, выполняем сетевой запрос
+        return fetch(event.request)
+          .then((fetchResponse) => {
+            // Проверяем, что получен корректный ответ
+            if (!fetchResponse || fetchResponse.status !== 200 || fetchResponse.type !== 'basic') {
+              return fetchResponse;
+            }
+
+            // Клонируем полученный ответ, чтобы его можно было использовать и в браузере, и в кэше
+            const responseToCache = fetchResponse.clone();
+
+            // Открываем кэш и кладем в него ответ
+            caches.open(CACHE_NAME)
+              .then((cache) => {
+                cache.put(event.request, responseToCache);
+              });
+
+            // Возвращаем ответ для использования в браузере
+            return fetchResponse;
+          });
+      })
   );
 });

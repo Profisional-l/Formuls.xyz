@@ -1,97 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-1BFTX7VGPT"
+    ></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-1BFTX7VGPT')
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#252525" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <include src="./forapple.html"></include>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="./images/formulslogo.png"
+      type="image/x-icon"
+    />
+    <title>Жидкости и газы</title>
+    <div class="mask">
+      <div class="loader"></div>
+    </div>
+  </head>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
-   </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1BFTX7VGPT"></script>
+  </style>
+  <header>
+    <a href="https://formuls.xyz/">
+      <img class="logoIMG" src="./images/monologo.png" alt="" />
+    </a>
+    <h3 class="logo"><a href="https://formuls.xyz/">Formuls</a></h3>
+    <img src="./images/sun.png" style="display: none;" alt="" />
+    <!-- Rounded switch -->
+    <label class="switch">
+      <input
+        id="checkboxswitcher"
+        type="checkbox"
+        onchange="handleChange(this.checked)"
+      />
+      <span class="slider round"></span>
+    </label>
+    <div class="godownload">
+      <a href="./appdownload.html">
+        <button class="downloadbut" type="submit">
+          <img src="./images/downloads (1).png" width="25px" alt="" />
+        </button>
+      </a>
+    </div>
+    <div class="goCalc">
+      <a href="./formulsCALC.html">
+        <button class="tocalcbut" type="submit">
+          <img src="./images/calculator(1).png" width="26px" alt="" />
+        </button>
+      </a>
+    </div>
+  </header>
+  <body>
+    <div class="page-transition-overlay"></div>
 
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <div id="scrollToTopBtn">
+      <div id="backofupbut">
+        <img width="33px" id="scrollupbut" src="./images/scrollup.png" alt="" />
+      </div>
+    </div>
 
-  gtag('config', 'G-1BFTX7VGPT');
-</script>
-  <meta charset="UTF-8">
-  <meta name="theme-color" content="#252525"> 
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <include src="./forapple.html"></include>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/styles.css">
-  <link rel="shortcut icon" href="./images/formulslogo.png" type="image/x-icon" />
-  <title>Жидкости и газы</title>
-  <div class="mask">
-    <div class="loader"></div>
-  </div>
-</head>
-<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');</style>
-<header>
-  <a href="https://formuls.xyz/"><img class="logoIMG" src="./images/monologo.png" alt=""></a>
-  <h3 class="logo"><a href="https://formuls.xyz/">Formuls</a></h3>
-  <img src="./images/sun.png" style="display: none;" alt="">
-     <!-- Rounded switch -->
-<label class="switch">
-  <input id="checkboxswitcher" type="checkbox" onchange="handleChange(this.checked)">
-  <span class="slider round"></span>
-</label>
-<div class="godownload">
-  <a href="./appdownload.html"><button class="downloadbut" type="submit"><img src="./images/downloads (1).png" width="25px" alt=""></button></a>
-</div>
-<div class="goCalc">
-  <a href="./formulsCALC.html"><button class="tocalcbut" type="submit"><img src="./images/calculator(1).png" width="26px" alt=""></button></a>
-</div>
-</header>
-<body>
-  <div class="page-transition-overlay"></div>
+    <h2 class="namecategoriesonit">Жидкости и газы</h2>
+    <div class="buttogamecont">
+      <a href="./gasewatergame.html">
+        <button id="buttogame" type="submit">Режим запоминания</button>
+      </a>
+    </div>
 
-  <div id="scrollToTopBtn"><div id="backofupbut"><img width="33px" id="scrollupbut" src="./images/scrollup.png" alt=""></div></div>
+    <div class="cardsfield">
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Давление</div>
+        <div class="card-content">
+          <img src="images/давление.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Соотношение сил в гидравлическом прессе</div>
+        <div class="card-content">
+          <img src="images/соотношсилгидрпрес.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Гидростатическое давление</div>
+        <div class="card-content">
+          <img src="images/гидрстатдав.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Полное давлениев любой точки жидкости</div>
+        <div class="card-content">
+          <img src="images/полноедавление.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Сила давление на дно сосуда</div>
+        <div class="card-content">
+          <img src="images/силадав.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Сила давление на стенки сосуда</div>
+        <div class="card-content">
+          <img src="images/силанастенки.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Закон Архимеда</div>
+        <div class="card-content">
+          <img src="images/законарихимеда.png" alt="" srcset="" />
+        </div>
+      </div>
+    </div>
 
-<h2 class="namecategoriesonit">Жидкости и газы</h2>
-<div class="buttogamecont"><a  href="./gasewatergame.html"><button id="buttogame" type="submit">Режим запоминания</button></a></div>
+    <script src="./flip.js"></script>
 
-<div class="cardsfield">
-
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Давление</div>
-  <div class="card-content"><img src="images/давление.png" alt="" srcset=""></div>
-</div>
-<div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Соотношение сил в гидравлическом прессе</div>
-    <div class="card-content"><img src="images/соотношсилгидрпрес.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Гидростатическое давление</div>
-    <div class="card-content"><img src="images/гидрстатдав.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Полное давлениев любой точки жидкости</div>
-    <div class="card-content"><img src="images/полноедавление.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Сила давление на дно сосуда</div>
-    <div class="card-content"><img src="images/силадав.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Сила давление на стенки сосуда</div>
-    <div class="card-content"><img src="images/силанастенки.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Закон Архимеда</div>
-    <div class="card-content"><img src="images/законарихимеда.png" alt="" srcset=""></div>
-  </div>
-
-
-</div>
-
-<script src="./flip.js">
-  
-</script>
-
-<script src="./theme.js"></script>
-
-</body>
+    <script src="./theme.js"></script>
+  </body>
 </html>
-

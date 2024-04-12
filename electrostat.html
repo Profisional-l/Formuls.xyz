@@ -1,118 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-1BFTX7VGPT"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-1BFTX7VGPT')
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#252525" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <include src="./forapple.html"></include>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="./images/formulslogo.png"
+      type="image/x-icon"
+    />
+    <title>Электростатика</title>
+    <div class="mask">
+      <div class="loader"></div>
+    </div>
+  </head>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
-   </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1BFTX7VGPT"></script>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  </style>
+  <header>
+    <a href="https://formuls.xyz/">
+      <img class="logoIMG" src="./images/monologo.png" alt="" />
+    </a>
+    <h3 class="logo"><a href="https://formuls.xyz/">Formuls</a></h3>
+    <img src="./images/sun.png" style="display: none;" alt="" />
+    <!-- Rounded switch -->
+    <label class="switch">
+      <input
+        id="checkboxswitcher"
+        type="checkbox"
+        onchange="handleChange(this.checked)"
+      />
+      <span class="slider round"></span>
+    </label>
+    <div class="godownload">
+      <a href="./appdownload.html">
+        <button class="downloadbut" type="submit">
+          <img src="./images/downloads (1).png" width="25px" alt="" />
+        </button>
+      </a>
+    </div>
+    <div class="goCalc">
+      <a href="./formulsCALC.html">
+        <button class="tocalcbut" type="submit">
+          <img src="./images/calculator(1).png" width="26px" alt="" />
+        </button>
+      </a>
+    </div>
+  </header>
+  <body>
+    <div class="page-transition-overlay"></div>
 
-  gtag('config', 'G-1BFTX7VGPT');
-</script>
-  <meta charset="UTF-8">
-  <meta name="theme-color" content="#252525"> 
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <include src="./forapple.html"></include>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/styles.css">
-  <link rel="shortcut icon" href="./images/formulslogo.png" type="image/x-icon" />
-  <title>Электростатика</title>
-  <div class="mask">
-    <div class="loader"></div>
-  </div>
-</head>
-<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');</style>
-<header>
-  <a href="https://formuls.xyz/"><img class="logoIMG" src="./images/monologo.png" alt=""></a>
-  <h3 class="logo"><a href="https://formuls.xyz/">Formuls</a></h3>
-  <img src="./images/sun.png" style="display: none;" alt="">
-     <!-- Rounded switch -->
-<label class="switch">
-  <input id="checkboxswitcher" type="checkbox" onchange="handleChange(this.checked)">
-  <span class="slider round"></span>
-</label>
-<div class="godownload">
-  <a href="./appdownload.html"><button class="downloadbut" type="submit"><img src="./images/downloads (1).png" width="25px" alt=""></button></a>
-</div>
-<div class="goCalc">
-  <a href="./formulsCALC.html"><button class="tocalcbut" type="submit"><img src="./images/calculator(1).png" width="26px" alt=""></button></a>
-</div>
-</header>
-<body>
-  <div class="page-transition-overlay"></div>
+    <div id="scrollToTopBtn">
+      <div id="backofupbut">
+        <img width="33px" id="scrollupbut" src="./images/scrollup.png" alt="" />
+      </div>
+    </div>
 
-  <div id="scrollToTopBtn"><div id="backofupbut"><img width="33px" id="scrollupbut" src="./images/scrollup.png" alt=""></div></div>
+    <h2 class="namecategoriesonit">Электростатика</h2>
+    <div class="buttogamecont">
+      <a href="./electrostatgame.html">
+        <button id="buttogame" type="submit">Режим запоминания</button>
+      </a>
+    </div>
 
-<h2 class="namecategoriesonit">Электростатика</h2>
-<div class="buttogamecont"><a  href="./electrostatgame.html"><button id="buttogame" type="submit">Режим запоминания</button></a></div>
+    <div class="cardsfield">
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Электрический заряд</div>
+        <div class="card-content">
+          <img src="images/заряд.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div style="font-size: 17px;" class="card-title">
+          <b>Закон Кулона</b>
+          <br />
+          <t style="font-size: 15px;">
+            (сила электростатического взаимодействия двух электрических зарядов)
+          </t>
+        </div>
+        <div class="card-content">
+          <img
+            style="padding: 20px 0 15px 0;"
+            src="images/законкулона.png"
+            alt=""
+            srcset=""
+          />
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Напряжённость электрического поля</div>
+        <div class="card-content">
+          <img src="images/напряженность.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Принцип суперпозиции</div>
+        <div class="card-content">
+          <img src="images/принцсуперпоз.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div style="font-size: 16px;" class="card-title">
+          Потенциальная энергия взаимодействия двух электрических зарядов
+        </div>
+        <div class="card-content">
+          <img src="images/потэнергиязарядов.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Работа электрического поля</div>
+        <div class="card-content">
+          <img src="images/работаэлектрполя.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Потенциал электрического поля</div>
+        <div class="card-content">
+          <img src="images/потэнциалэлекполя.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Модуль напряжённости электрического поля</div>
+        <div class="card-content">
+          <img src="images/моднапряж.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Электроёмкость</div>
+        <div class="card-content">
+          <img src="images/электремкость.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Ёмкость конденсатора</div>
+        <div class="card-content">
+          <img src="images/электремкостьконденс.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="flashcard bigcards" onclick="flipCard(this)">
+        <div class="card-title">Ёмкость плоского конденсатора</div>
+        <div class="card-content">
+          <img src="images/емкостьплоскогоконденсатора.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Заряд конденсатора</div>
+        <div class="card-content">
+          <img src="images/зарядконденс.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="flashcard bigcards" onclick="flipCard(this)">
+        <div class="card-title">Энергия конденсатора</div>
+        <div class="card-content">
+          <img src="images/энергияконденсатора.png" alt="" srcset="" />
+        </div>
+      </div>
+    </div>
 
-<div class="cardsfield">
+    <script src="./flip.js"></script>
 
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Электрический заряд</div>
-  <div class="card-content"><img src="images/заряд.png" alt="" srcset=""></div>
-</div>
-<div class="flashcard" onclick="flipCard(this)">
-    <div style="font-size: 17px;" class="card-title"><b>Закон Кулона </b><br>  <t style="font-size: 15px;">(сила электростатического взаимодействия двух электрических зарядов)</t> </div>
-    <div class="card-content"><img style="padding: 20px 0 15px 0;" src="images/законкулона.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Напряжённость электрического поля</div>
-    <div class="card-content"><img src="images/напряженность.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Принцип суперпозиции</div>
-    <div class="card-content"><img src="images/принцсуперпоз.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div style="font-size: 16px;" class="card-title">Потенциальная энергия взаимодействия двух электрических зарядов</div>
-    <div class="card-content"><img src="images/потэнергиязарядов.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Работа электрического поля</div>
-    <div class="card-content"><img src="images/работаэлектрполя.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Потенциал электрического поля</div>
-    <div class="card-content"><img src="images/потэнциалэлекполя.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Модуль напряжённости электрического поля  </div>
-    <div class="card-content"><img src="images/моднапряж.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Электроёмкость</div>
-    <div class="card-content"><img src="images/электремкость.png" alt="" srcset=""></div>
-  </div>
-  <div  class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Ёмкость конденсатора</div>
-    <div class="card-content"><img src="images/электремкостьконденс.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard bigcards" onclick="flipCard(this)">
-    <div class="card-title">Ёмкость плоского конденсатора</div>
-    <div class="card-content"><img src="images/емкостьплоскогоконденсатора.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Заряд конденсатора</div>
-    <div class="card-content"><img src="images/зарядконденс.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard bigcards" onclick="flipCard(this)">
-    <div class="card-title">Энергия конденсатора</div>
-    <div class="card-content"><img src="images/энергияконденсатора.png" alt="" srcset=""></div>
-  </div>
-</div>
-
-<script src="./flip.js">
-  
-</script>
-
-<script src="./theme.js"></script>
-
-</body>
+    <script src="./theme.js"></script>
+  </body>
 </html>
-
