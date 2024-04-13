@@ -1,9 +1,6 @@
-// service-worker.js
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open('my-cache').then((cache) => {
-      return cache.addAll([
-        '/',
+const CACHE_NAME = 'my-app-cache-v1';
+const urlsToCache = [
+  '/',
         './index.html',
         './css/styles.css',
         './theme.js',
@@ -279,33 +276,64 @@ self.addEventListener('install', (event) => {
         './images/энергиясвязиатомногоядра.png',
         './images/энергияфотона.png',
         './images/энергмагполя.png'
-      ]);
-    })
+];
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => {
+        return Promise.all(urlsToCache.map((url) => {
+          return fetch(url).then((response) => {
+            if (!response.ok) {
+              throw new Error(`Failed to load ${url}: ${response.statusText}`);
+            }
+            return cache.put(url, response);
+          });
+        }));
+      })
+      .catch((error) => {
+        console.error('Install error:', error);
+      })
   );
 });
 
+self.addEventListener('fetch', (event) => {
+  event.respondWith((async () => {
+    const preloadResponse = await event.preloadResponse;
+    if (preloadResponse) {
+      return preloadResponse;
+    }
 
-self.addEventListener("fetch", (event) => {
-  // Let the browser do its default thing
-  // for non-GET requests.
-  if (event.request.method !== "GET") return;
+    const response = await caches.match(event.request);
+    if (response) {
+      return response;
+    }
 
-  // Prevent the default, and handle the request ourselves.
-  event.respondWith(
-    (async () => {
-      // Try to get the response from a cache.
-      const cache = await caches.open("my-cache");
-      const cachedResponse = await cache.match(event.request);
+    const fetchResponse = await fetch(event.request);
+    if (!fetchResponse || fetchResponse.status !== 200 || fetchResponse.type !== 'basic') {
+      return fetchResponse;
+    }
 
-      if (cachedResponse) {
-        // If we found a match in the cache, return it, but also
-        // update the entry in the cache in the background.
-        cache.add(event.request);
-        return cachedResponse;
-      }
+    const responseToCache = fetchResponse.clone();
+    caches.open(CACHE_NAME)
+      .then((cache) => {
+        cache.put(event.request, responseToCache);
+      });
 
-      // If we didn't find a match in the cache, use the network.
-      return fetch(event.request);
-    })()
+    return fetchResponse;
+  })());
+});
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((keyList) => {
+      return Promise.all(keyList.map((key) => {
+        if (key !== CACHE_NAME) {
+          return caches.delete(key);
+        }
+      }));
+    })
   );
+
+  event.waitUntil(self.registration.navigationPreload.enable());
 });
