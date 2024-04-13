@@ -1845,7 +1845,7 @@ input:checked+.slider.mathSlider.round::before {
 .BGfadeOut {
   animation: BgFadeOut1 .33s ease-in-out forwards;
   opacity: 1;
-  display: flex;
+  display: none;
 }
 
 @keyframes BgFadeIn1 {
