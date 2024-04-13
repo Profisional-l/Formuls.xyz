@@ -285,35 +285,27 @@ self.addEventListener('install', (event) => {
 });
 
 
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
+  // Let the browser do its default thing
+  // for non-GET requests.
+  if (event.request.method !== "GET") return;
+
+  // Prevent the default, and handle the request ourselves.
   event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        // Если ресурс найден в кэше, возвращаем его
-        if (response) {
-          return response;
-        }
+    (async () => {
+      // Try to get the response from a cache.
+      const cache = await caches.open("my-cache");
+      const cachedResponse = await cache.match(event.request);
 
-        // Если ресурс не найден в кэше, выполняем сетевой запрос
-        return fetch(event.request)
-          .then((fetchResponse) => {
-            // Проверяем, что получен корректный ответ
-            if (!fetchResponse || fetchResponse.status !== 200 || fetchResponse.type !== 'basic') {
-              return fetchResponse;
-            }
+      if (cachedResponse) {
+        // If we found a match in the cache, return it, but also
+        // update the entry in the cache in the background.
+        cache.add(event.request);
+        return cachedResponse;
+      }
 
-            // Клонируем полученный ответ, чтобы его можно было использовать и в браузере, и в кэше
-            const responseToCache = fetchResponse.clone();
-
-            // Открываем кэш и кладем в него ответ
-            caches.open(CACHE_NAME)
-              .then((cache) => {
-                cache.put(event.request, responseToCache);
-              });
-
-            // Возвращаем ответ для использования в браузере
-            return fetchResponse;
-          });
-      })
+      // If we didn't find a match in the cache, use the network.
+      return fetch(event.request);
+    })()
   );
 });
