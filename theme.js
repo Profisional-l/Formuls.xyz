@@ -103,10 +103,12 @@ document.addEventListener('DOMContentLoaded', function () {
   let scrolled = false
   let scrollToTopBtn = document.getElementById('scrollToTopBtn')
 
-  window.onscroll = function () {
-    scrollFunction()
-    scrollLOGO()
-  }
+  if (!document.location.pathname.includes('formulsCALC.html')) {
+        window.onscroll = function () {
+          scrollFunction()
+          scrollLOGO()
+        }
+    }
 
   function scrollLOGO() {
     if (

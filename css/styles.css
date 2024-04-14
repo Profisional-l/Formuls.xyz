@@ -1423,6 +1423,9 @@ input:checked+.PoM:before {
 
 #userInputField {
   width: 100%;
+  min-height: 57px;
+  font-size: 20px;
+  padding-top: 10px;
 }
 
 .textanswer {
@@ -1488,7 +1491,7 @@ body {
   color: #fff;
   background-color: #333;
   padding: 10px;
-  height: 35px;
+  height: 55px;
   position: relative;
   /* max-width: 90%; */
   border-radius: 16px;
@@ -1526,6 +1529,11 @@ math-field::part(menu-toggle) {
   animation: loader 0.77s linear infinite;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 10px;
+}
+
+.answerTitle {
+  margin-top: 18px;
 }
 
 math-field:focus-within {
@@ -1931,6 +1939,8 @@ button {
   flex-basis: 5%;
   width: 30px;
   margin-left: 2px;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
 }
 
 .calcSettings img {
@@ -1940,4 +1950,6 @@ button {
 .calcstart {
   flex-basis: 50%;
   margin-right: 2px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
