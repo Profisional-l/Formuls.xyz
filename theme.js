@@ -23,7 +23,7 @@ const handleChange = (isChecked) => {
 document.addEventListener('DOMContentLoaded', function () {
   const isLightTheme = localStorage.getItem('theme') === 'true'
   const switchElement = document.getElementById('checkboxswitcher')
-  console.log(isLightTheme)
+  console.log("isLightTheme -", isLightTheme)
   switchElement.checked = isLightTheme
 
   if (isLightTheme) {
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var tocalcbut = document.querySelector('.tocalcbut')
     let LogoName = document.querySelector('.logo')
     let LogoIMG = document.querySelector('.logoIMG')
-    var linktoHOWwork = document.getElementById('linkTOhow')
+    var linktoHOWwork = document.querySelector('.linkFromMain')
     let mainscreenh2 = document.querySelector('.mainscreenh2')
     let mainscreenhiH3 = document.querySelector('.mainscreenhi h3')
     let categoriesfield = document.getElementById('categoriesfield')
@@ -176,7 +176,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 })
 
 let maska = document.querySelector('.mask')
-console.log(maska, 'ede')
 window.addEventListener('load', () => {
   maska.classList.add('hide')
   setTimeout(() => {

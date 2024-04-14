@@ -11,7 +11,7 @@
   --var-switchcircle: #fff;
   --var-gobackcolor: invert(0%) grayscale(0%);
   --var-goupcolor: invert(70%) grayscale(0%);
-  --var-nameformul-bg: url("https://seelk.by/wp-content/uploads/2024/01/фильтр0.png");
+  --var-nameformul-bg: url("../images/фильтр0.png");
   --var-circle-bg: #adadad;
   --var-switch-img: url("../images/moon.png");
   --var-MoP-img: url("../images/physlogo.png");
@@ -28,7 +28,7 @@
   --var-switchback: #e1e1e1;
   --var-switchcircle: #000000;
   --var-goupcolor: invert(40%) grayscale(0%);
-  --var-nameformul-bg: url("https://seelk.by/wp-content/uploads/2024/01/фильтр.png");
+  --var-nameformul-bg: url("../images/фильтр.png");
   --var-gobackcolor: invert(100%) grayscale(100%);
   --var-circle-bg: #bebebe;
   --var-switch-img: url("../images/sun.png");
@@ -310,6 +310,7 @@ body {
 
 #linkTOhow {
   color: rgb(174, 112, 255);
+  text-decoration:underline;
 }
 
 .cardsfield {
