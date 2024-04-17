@@ -285,20 +285,25 @@ const initCache = () => {
     console.log(error)
   });
 };
-
 const tryNetwork = (req, timeout) => {
-    console.log(req)
+  console.log(req);
   return new Promise((resolve, reject) => {
     const timeoutId = setTimeout(reject, timeout);
-    fetch(req).then((res) => {
-      clearTimeout(timeoutId);
-      const responseClone = res.clone();
-      caches.open(CacheKey).then((cache) => {
-        cache.put(req, responseClone)
+    fetch(req)
+      .then((res) => {
+        clearTimeout(timeoutId);
+        const responseClone = res.clone();
+        // Проверяем метод запроса
+        if (req.method === "GET") {
+          // Сохраняем только GET-запросы в кэше
+          caches.open(CacheKey).then((cache) => {
+            cache.put(req, responseClone);
+          });
+        }
+        resolve(res);
+        // Reject also if network fetch rejects.
       })
-      resolve(res);
-      // Reject also if network fetch rejects.
-    }, reject);
+      .catch(reject);
   });
 };
 
