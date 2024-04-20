@@ -1,9 +1,6 @@
-const CacheKey = "cache-v1";
-
-const initCache = () => {
-  return caches.open(CacheKey).then((cache) => {
-    return cache.addAll([
-      '/',
+const CACHE_NAME = 'my-site-cache-v2';
+const urlsToCache = [
+  '/',
         './index.html',
         './css/styles.css',
         './theme.js',
@@ -280,61 +277,96 @@ const initCache = () => {
         './images/энергияфотона.png',
         './images/индуктивностьсоленоида.png',
         './images/энергмагполя.png'
-  ]);
-  }, (error) => {
-    console.log(error)
-  });
-};
-const tryNetwork = (req, timeout) => {
-  // console.log(req);
-  return new Promise((resolve, reject) => {
-    const timeoutId = setTimeout(reject, timeout);
-    fetch(req)
-      .then((res) => {
-        clearTimeout(timeoutId);
-        const responseClone = res.clone();
-        // Проверяем метод запроса
-        if (req.method === "GET") {
-          // Сохраняем только GET-запросы в кэше
-          caches.open(CacheKey).then((cache) => {
-            cache.put(req, responseClone);
-          });
-        }
-        resolve(res);
-        // Reject also if network fetch rejects.
+];
+
+self.addEventListener('install', function(event) {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(function(cache) {
+        console.log('Opened cache');
+        return cache.addAll(urlsToCache);
       })
-      .catch(reject);
-  });
-};
-
-const getFromCache = (req) => {
-  console.log('network is off so getting from cache...')
-  return caches.open(CacheKey).then((cache) => {
-    return cache.match(req).then((result) => {
-      return result || Promise.reject("no-match");
-    });
-  });
-};
-
-self.addEventListener("install", (e) => {
-  console.log("Installed");
-  e.waitUntil(initCache());
+  );
 });
 
-self.addEventListener('activate', (e) => {
-  e.waitUntil(
-    caches.keys().then((keyList) => {
-      return Promise.all(keyList.map((key) => {
-        if (key !== CacheKey) {
-          return caches.delete(key);
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request)
+      .then(function(response) {
+        if (response) {
+          return response;
         }
-      }));
+
+        return fetch(event.request)
+          .then(function(response) {
+            if (!response || response.status !== 200 || response.type !== 'basic') {
+              return response;
+            }
+
+            var responseToCache = response.clone();
+
+            caches.open(CACHE_NAME)
+              .then(function(cache) {
+                cache.put(event.request, responseToCache);
+              });
+
+            return response;
+          });
+      })
+  );
+});
+
+self.addEventListener('activate', function(event) {
+  var cacheWhitelist = [CACHE_NAME];
+
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          if (cacheWhitelist.indexOf(cacheName) === -1) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
     })
   );
 });
 
-self.addEventListener("fetch", (e) => {
-  console.log("Try network and store result or get data from cache");
-  // Try network and if it fails, go for the cached copy.
-  e.respondWith(tryNetwork(e.request, 400).catch(() => getFromCache(e.request)));
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.open(CACHE_NAME).then(function(cache) {
+      return fetch(event.request).then(function(response) {
+        cache.put(event.request, response.clone());
+        return response;
+      }).catch(function() {
+        return cache.match(event.request);
+      });
+    })
+  );
+});
+
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.open(CACHE_NAME).then(function(cache) {
+      return fetch(event.request).then(function(response) {
+        cache.put(event.request, response.clone());
+        return response;
+      }).catch(function() {
+        return cache.match(event.request);
+      });
+    })
+  );
+});
+
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.open(CACHE_NAME).then(function(cache) {
+      return fetch(event.request).then(function(response) {
+        cache.put(event.request, response.clone());
+        return response;
+      }).catch(function() {
+        return cache.match(event.request);
+      });
+    })
+  );
 });
