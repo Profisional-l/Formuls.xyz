@@ -175,8 +175,8 @@
   font-size: 22px;
   letter-spacing: 0.5px;
   margin-top: 13px;
-  /* opacity: 0; */
-  animation: fadeIn 0.3s ease-in-out forwards;
+  opacity: 0;
+  animation: fadeIn 0.33s ease-in-out forwards;
 }
 
 .logo a::before {
