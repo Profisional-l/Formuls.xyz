@@ -4,7 +4,17 @@ window.addEventListener('pageshow', function (event) {
   }
 })
 
-  // -----------------------------------------------theme-------------------------------------------------
+// // Выбираем все элементы с классом 'FAKElogo'
+// var fakelogoList = document.querySelectorAll('.FAKElogo');
+
+// // Проходим по каждому элементу и устанавливаем содержимое
+// fakelogoList.forEach(function(element) {
+//   element.innerHTML = "<img class='FAKElogoIMG' src='./images/monologo.png'>";
+// });
+
+// // Проверяем измененные элементы
+
+// -----------------------------------------------theme-------------------------------------------------
 
 const handleChange = (isChecked) => {
   localStorage.setItem('theme', isChecked)
@@ -47,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var userAgent = navigator.userAgent.toLowerCase()
   var isAndroid = userAgent.indexOf('formulsandroiduseragent') !== -1
 
-  // var isAndroid = true
+  var isAndroid = true
 
   if (
     isAndroid ||
@@ -127,7 +137,13 @@ document.addEventListener('DOMContentLoaded', function () {
   ) {
     window.onscroll = function () {
       scrollFunction()
-      scrollLOGO()
+      if (
+        !isAndroid &&
+        !window.matchMedia('(display-mode: standalone)').matches &&
+        !window.navigator.standalone === true
+      ) {
+        scrollLOGO()
+      }
     }
   }
 
