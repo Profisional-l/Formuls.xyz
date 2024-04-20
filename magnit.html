@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
-   </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1BFTX7VGPT"></script>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-1BFTX7VGPT');
-</script>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BFTX7VGPT"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-1BFTX7VGPT');
+  </script>
   <meta charset="UTF-8">
-  <meta name="theme-color" content="#252525"> 
+  <meta name="theme-color" content="#252525">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <include src="./forapple.html"></include>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,111 +24,128 @@
   <link rel="shortcut icon" href="./images/formulslogo.png" type="image/x-icon" />
   <title>Магнетизм</title>
   <div class="mask">
+    <div class="FakeHeader">
+      <h3 class="FAKElogo"><a href="./">Formuls</a></h3>
+    </div>
+    <a href="./formulsCALC.html"><button class="FakeCalc" type="submit"><img src="./images/calculator(1).png" width="26px" alt=""></button></a>
     <div class="loader"></div>
   </div>
 </head>
-<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');</style>
 <header>
-  <a href="https://formuls.xyz/"><img class="logoIMG" src="./images/monologo.png" alt=""></a>
-  <h3 class="logo"><a href="https://formuls.xyz/">Formuls</a></h3>
+  <a href="./"><img class="logoIMG" src="./images/monologo.png" alt=""></a>
+  <h3 class="logo"><a href="./">Formuls</a></h3>
   <img src="./images/sun.png" style="display: none;" alt="">
-     <!-- Rounded switch -->
-<label class="switch">
-  <input id="checkboxswitcher" type="checkbox" onchange="handleChange(this.checked)">
-  <span class="slider round"></span>
-</label>
-<div class="godownload">
-  <a href="./appdownload.html"><button class="downloadbut" type="submit"><img src="./images/downloads (1).png" width="25px" alt=""></button></a>
-</div>
-<div class="goCalc">
-  <a href="./formulsCALC.html"><button class="tocalcbut" type="submit"><img src="./images/calculator(1).png" width="26px" alt=""></button></a>
-</div>
+  <!-- Rounded switch -->
+  <label class="switch">
+    <input id="checkboxswitcher" type="checkbox" onchange="handleChange(this.checked)">
+    <span class="slider round"></span>
+  </label>
+  <div class="godownload">
+    <a href="./appdownload.html"><button class="downloadbut" type="submit"><img src="./images/downloads (1).png"
+          width="25px" alt=""></button></a>
+  </div>
+  <div class="goCalc">
+    <a href="./formulsCALC.html"><button class="tocalcbut" type="submit"><img src="./images/calculator(1).png"
+          width="26px" alt=""></button></a>
+  </div>
 </header>
+
 <body>
-  <div class="page-transition-overlay"></div>
-
-  <div id="scrollToTopBtn"><div id="backofupbut"><img width="33px" id="scrollupbut" src="./images/scrollup.png" alt=""></div></div>
-
-<h2 class="namecategoriesonit">Магнетизм</h2>
-<div class="buttogamecont"><a  href="./magnitgame.html"><button id="buttogame" type="submit">Режим запоминания</button></a></div>
-
-<div class="cardsfield">
-
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Сила Ампера</div>
-  <div class="card-content"><img src="images/СилаАмпера.png" alt="" srcset=""></div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Момент сил действующих на рамку с током</div>
-    <div class="card-content"><img src="images/моментсилыстоком.png" alt="" srcset=""></div>
-  </div>
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Сила Лоренца</div>
-  <div class="card-content"><img src="images/СилаЛоренца.png" alt="" srcset=""></div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Радиус траектории полета заряженной частицы в магнитном поле</div>
-    <div class="card-content"><img src="images/Радиустраектполчастицы.png" alt="" srcset=""></div>
+  <div class="page-transition-overlay">
+    <div class="FakeHeader">
+      <h3 class="FAKElogo"><a href="./">Formuls</a></h3>
+    </div>
+    <a href="./formulsCALC.html"><button class="FakeCalc" type="submit"><img src="./images/calculator(1).png" width="26px" alt=""></button></a>
   </div>
 
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title"><t style="font-size: 16px;">Модуль индукции B магнитного поля прямолинейного проводника с током<i><b>ㅤIㅤ</b></i>на расстоянии <i><b>R</b></i></t></div>
-  <div class="card-content"><img src="images/МодульиндукцииBIR.png" alt="" srcset=""></div>
-</div>
-<div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Концентрация витков на единицу длины катушки</div>
-    <div class="card-content"><img src="images/концентрациявитков.png" alt="" srcset=""></div>
+  <div id="scrollToTopBtn">
+    <div id="backofupbut"><img width="33px" id="scrollupbut" src="./images/scrollup.png" alt=""></div>
   </div>
-<div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Индукция поля в центре витка с током радиусом R</div>
-    <div class="card-content"><img src="images/ИндукцияполявценттокомсR.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Индукция магнитного поля на оси соленоида</div>
-    <div class="card-content"><img src="images/индукциянасолиноиде.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Магнитная проницаемость вещества</div>
-    <div class="card-content"><img src="images/магнпроницвещ.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Магнитный потокок <br> (Φ через площадь S контура)</div>
-    <div class="card-content"><img src="images/магнпотоком.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">ЭДС индукции</div>
-    <div class="card-content"><img src="images/эдсиндукции.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">ЭДС индукции в движущемся проводннике</div>
-    <div class="card-content"><img src="images/эдсиндукциидвиж.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Максимальное значение ЭДС</div>
-    <div class="card-content"><img src="images/максэдсинд.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">ЭДС самоиндукции</div>
-    <div class="card-content"><img src="images/эдссамоинд.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Энергия катушки <br> (энергия магнитного поля внутри катушки)</div>
-    <div class="card-content"><img src="images/энергмагполя.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Индуктивность соленоида</div>
-    <div class="card-content"><img src="images/индуктивностьсоленоида.png" alt="" srcset=""></div>
-  </div>
-</div>
 
-<script src="./flip.js">
-  
-</script>
-<script src="./theme.js"></script>
+  <h2 class="namecategoriesonit">Магнетизм</h2>
+  <div class="buttogamecont"><a href="./magnitgame.html"><button id="buttogame" type="submit">Режим
+        запоминания</button></a></div>
+
+  <div class="cardsfield">
+
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Сила Ампера</div>
+      <div class="card-content"><img src="images/СилаАмпера.png" alt="" srcset=""></div>
+    </div>
+
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Момент сил действующих на рамку с током</div>
+      <div class="card-content"><img src="images/моментсилыстоком.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Сила Лоренца</div>
+      <div class="card-content"><img src="images/СилаЛоренца.png" alt="" srcset=""></div>
+    </div>
+
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Радиус траектории полета заряженной частицы в магнитном поле</div>
+      <div class="card-content"><img src="images/Радиустраектполчастицы.png" alt="" srcset=""></div>
+    </div>
+
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">
+        <t style="font-size: 16px;">Модуль индукции B магнитного поля прямолинейного проводника с
+          током<i><b>ㅤIㅤ</b></i>на расстоянии <i><b>R</b></i></t>
+      </div>
+      <div class="card-content"><img src="images/МодульиндукцииBIR.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Концентрация витков на единицу длины катушки</div>
+      <div class="card-content"><img src="images/концентрациявитков.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Индукция поля в центре витка с током радиусом R</div>
+      <div class="card-content"><img src="images/ИндукцияполявценттокомсR.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Индукция магнитного поля на оси соленоида</div>
+      <div class="card-content"><img src="images/индукциянасолиноиде.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Магнитная проницаемость вещества</div>
+      <div class="card-content"><img src="images/магнпроницвещ.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Магнитный потокок <br> (Φ через площадь S контура)</div>
+      <div class="card-content"><img src="images/магнпотоком.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">ЭДС индукции</div>
+      <div class="card-content"><img src="images/эдсиндукции.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">ЭДС индукции в движущемся проводннике</div>
+      <div class="card-content"><img src="images/эдсиндукциидвиж.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Максимальное значение ЭДС</div>
+      <div class="card-content"><img src="images/максэдсинд.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">ЭДС самоиндукции</div>
+      <div class="card-content"><img src="images/эдссамоинд.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Энергия катушки <br> (энергия магнитного поля внутри катушки)</div>
+      <div class="card-content"><img src="images/энергмагполя.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Индуктивность соленоида</div>
+      <div class="card-content"><img src="images/индуктивностьсоленоида.png" alt="" srcset=""></div>
+    </div>
+  </div>
+
+  <script src="./flip.js">
+
+  </script>
+  <script src="./theme.js"></script>
 
 
 </body>
-</html>
 
+</html>

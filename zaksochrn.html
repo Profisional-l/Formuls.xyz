@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
-   </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1BFTX7VGPT"></script>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-1BFTX7VGPT');
-</script>
+<head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BFTX7VGPT"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-1BFTX7VGPT');
+  </script>
   <meta charset="UTF-8">
-  <meta name="theme-color" content="#252525"> 
+  <meta name="theme-color" content="#252525">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <include src="./forapple.html"></include>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,118 +25,136 @@
   <link rel="shortcut icon" href="./images/formulslogo.png" type="image/x-icon" />
   <title>Законы сохранения в механике</title>
   <div class="mask">
+    <div class="FakeHeader">
+      <h3 class="FAKElogo"><a href="./">Formuls</a></h3>
+    </div>
+    <a href="./formulsCALC.html"><button class="FakeCalc" type="submit"><img src="./images/calculator(1).png"
+          width="26px" alt=""></button></a>
     <div class="loader"></div>
   </div>
 </head>
-<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');</style>
 <header>
-  <a href="https://formuls.xyz/"><img class="logoIMG" src="./images/monologo.png" alt=""></a>
-  <h3 class="logo"><a href="https://formuls.xyz/">Formuls</a></h3>
+  <a href="./"><img class="logoIMG" src="./images/monologo.png" alt=""></a>
+  <h3 class="logo"><a href="./">Formuls</a></h3>
   <img src="./images/sun.png" style="display: none;" alt="">
-     <!-- Rounded switch -->
-<label class="switch">
-  <input id="checkboxswitcher" type="checkbox" onchange="handleChange(this.checked)">
-  <span class="slider round"></span>
-</label>
-<div class="godownload">
-  <a href="./appdownload.html"><button class="downloadbut" type="submit"><img src="./images/downloads (1).png" width="25px" alt=""></button></a>
-</div>
-<div class="goCalc">
-  <a href="./formulsCALC.html"><button class="tocalcbut" type="submit"><img src="./images/calculator(1).png" width="26px" alt=""></button></a>
-</div>
+  <!-- Rounded switch -->
+  <label class="switch">
+    <input id="checkboxswitcher" type="checkbox" onchange="handleChange(this.checked)">
+    <span class="slider round"></span>
+  </label>
+  <div class="godownload">
+    <a href="./appdownload.html"><button class="downloadbut" type="submit"><img src="./images/downloads (1).png"
+          width="25px" alt=""></button></a>
+  </div>
+  <div class="goCalc">
+    <a href="./formulsCALC.html"><button class="tocalcbut" type="submit"><img src="./images/calculator(1).png"
+          width="26px" alt=""></button></a>
+  </div>
 </header>
+
 <body>
-  <div class="page-transition-overlay"></div>
-
-  <div id="scrollToTopBtn"><div id="backofupbut"><img width="33px" id="scrollupbut" src="./images/scrollup.png" alt=""></div></div>
-
-<h2 class="namecategoriesonit">Законы сохранения в механике | Работа и механическая энергия</h2>
-<div class="buttogamecont"><a  href="./zaksochrngame.html"><button id="buttogame" type="submit">Режим запоминания</button></a></div>
-
-<div class="cardsfield">
-
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Импульс <b>тела</b></div>
-  <div class="card-content"><img src="images/импульс.png" alt="" srcset=""></div>
-</div>
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Импульс <b>силы</b></div>
-  <div class="card-content"><img src="images/импульссилы.png" alt=""></div>
-</div>
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Закон сохранения импульса</div>
-  <div class="card-content"><img src="images/законсохраненияимпульса.png" alt=""></div>
-</div>
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Работа постоянной силы</div>
-  <div class="card-content"><img src="images/работапостояннойсилы.png" alt=""></div>
-</div>
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Работа силы <b>тяжести</b></div>
-  <div class="card-content"><img src="images/работасилытяжести.png" alt=""></div>
-</div>
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Работа силы <b>упругости</b></div>
-  <div class="card-content"><img src="images/работасилыупругости.png" alt=""></div>
-</div>
-
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Работы силы <b>трения</b></div>
-  <div class="card-content"><img src="images/работасилытрения.png" alt=""></div>
-</div>
- <div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Мощность мгновенная</div>
-  <div class="card-content"><img src="images/мощностьмгн.png" alt=""></div>
-</div>
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">Мощность (средняя)</b></div>
-  <div class="card-content"><img height="120px" src="images/мощностьсред.png" alt="линейнаяскоростьпоокруж"></div>
-</div>
-<div class="flashcard" onclick="flipCard(this)">
-  <div class="card-title">КПД механизма</div>
-  <div class="card-content"><img src="images/кпдмеханизма.png" alt=""></div>
-</div>
-<div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Кинетическа энергия</div>
-    <div class="card-content"><img src="images/кинетическаяэнергия.png" alt=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Теория о кинетической энергии</div>
-    <div class="card-content"><img src="images/теорияокинет.png" alt=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Потенциальная энергия тела</div>
-    <div class="card-content"><img src="images/потэнергия.png" alt=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Потенциальная энергия <br><t style="font-size: 13px;" >упругодефармированного тела</t></div>
-    <div class="card-content"><img src="images/потэнергупртел.png" alt=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Полная механическая энергия тела</div>
-    <div class="card-content"><img src="images/полнаямехэнергия.png" alt=""></div>
-  </div>
-</div>
-
-<h2 class="namecategoriesonit">Статика</h2>
-<div class="cardsfield">
-
-  <div class="flashcard bigcards" onclick="flipCard(this)">
-    <div class="card-title">Модуль равнодействующей <br> (с углом α)</b></div>
-    <div class="card-content"><img src="images/равнодействующаясила.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Момент силы</b></div>
-    <div class="card-content"><img src="images/моментсилы.png" alt=""></div>
+  <div class="page-transition-overlay">
+    <div class="FakeHeader">
+      <h3 class="FAKElogo"><a href="./">Formuls</a></h3>
+    </div>
+    <a href="./formulsCALC.html"><button class="FakeCalc" type="submit"><img src="./images/calculator(1).png"
+          width="26px" alt=""></button></a>
   </div>
 
-</div>
+  <div id="scrollToTopBtn">
+    <div id="backofupbut"><img width="33px" id="scrollupbut" src="./images/scrollup.png" alt=""></div>
+  </div>
+
+  <h2 class="namecategoriesonit">Законы сохранения в механике | Работа и механическая энергия</h2>
+  <div class="buttogamecont"><a href="./zaksochrngame.html"><button id="buttogame" type="submit">Режим
+        запоминания</button></a></div>
+
+  <div class="cardsfield">
+
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Импульс <b>тела</b></div>
+      <div class="card-content"><img src="images/импульс.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Импульс <b>силы</b></div>
+      <div class="card-content"><img src="images/импульссилы.png" alt=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Закон сохранения импульса</div>
+      <div class="card-content"><img src="images/законсохраненияимпульса.png" alt=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Работа постоянной силы</div>
+      <div class="card-content"><img src="images/работапостояннойсилы.png" alt=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Работа силы <b>тяжести</b></div>
+      <div class="card-content"><img src="images/работасилытяжести.png" alt=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Работа силы <b>упругости</b></div>
+      <div class="card-content"><img src="images/работасилыупругости.png" alt=""></div>
+    </div>
+
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Работы силы <b>трения</b></div>
+      <div class="card-content"><img src="images/работасилытрения.png" alt=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Мощность мгновенная</div>
+      <div class="card-content"><img src="images/мощностьмгн.png" alt=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Мощность (средняя)</b></div>
+      <div class="card-content"><img height="120px" src="images/мощностьсред.png" alt="линейнаяскоростьпоокруж"></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">КПД механизма</div>
+      <div class="card-content"><img src="images/кпдмеханизма.png" alt=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Кинетическа энергия</div>
+      <div class="card-content"><img src="images/кинетическаяэнергия.png" alt=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Теория о кинетической энергии</div>
+      <div class="card-content"><img src="images/теорияокинет.png" alt=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Потенциальная энергия тела</div>
+      <div class="card-content"><img src="images/потэнергия.png" alt=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Потенциальная энергия <br>
+        <t style="font-size: 13px;">упругодефармированного тела</t>
+      </div>
+      <div class="card-content"><img src="images/потэнергупртел.png" alt=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Полная механическая энергия тела</div>
+      <div class="card-content"><img src="images/полнаямехэнергия.png" alt=""></div>
+    </div>
+  </div>
+
+  <h2 class="namecategoriesonit">Статика</h2>
+  <div class="cardsfield">
+
+    <div class="flashcard bigcards" onclick="flipCard(this)">
+      <div class="card-title">Модуль равнодействующей <br> (с углом α)</b></div>
+      <div class="card-content"><img src="images/равнодействующаясила.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Момент силы</b></div>
+      <div class="card-content"><img src="images/моментсилы.png" alt=""></div>
+    </div>
+
+  </div>
 
 
-<script src="./flip.js"></script>
+  <script src="./flip.js"></script>
 
-<script src="./theme.js"></script>
+  <script src="./theme.js"></script>
 
 </body>
-</html>
 
+</html>

@@ -286,7 +286,7 @@ const initCache = () => {
   });
 };
 const tryNetwork = (req, timeout) => {
-  console.log(req);
+  // console.log(req);
   return new Promise((resolve, reject) => {
     const timeoutId = setTimeout(reject, timeout);
     fetch(req)

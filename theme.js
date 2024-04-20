@@ -4,6 +4,8 @@ window.addEventListener('pageshow', function (event) {
   }
 })
 
+  // -----------------------------------------------theme-------------------------------------------------
+
 const handleChange = (isChecked) => {
   localStorage.setItem('theme', isChecked)
 
@@ -23,7 +25,7 @@ const handleChange = (isChecked) => {
 document.addEventListener('DOMContentLoaded', function () {
   const isLightTheme = localStorage.getItem('theme') === 'true'
   const switchElement = document.getElementById('checkboxswitcher')
-  console.log("isLightTheme -", isLightTheme)
+  console.log('isLightTheme -', isLightTheme)
   switchElement.checked = isLightTheme
 
   if (isLightTheme) {
@@ -39,6 +41,8 @@ document.addEventListener('DOMContentLoaded', function () {
       switchElement.checked = false
     }
   }, 100)
+
+  // -----------------------------------------------^^theme^^-------------------------------------------------
 
   var userAgent = navigator.userAgent.toLowerCase()
   var isAndroid = userAgent.indexOf('formulsandroiduseragent') !== -1
@@ -62,13 +66,27 @@ document.addEventListener('DOMContentLoaded', function () {
     let footer = document.querySelector('footer')
     let maintextHI = document.querySelectorAll('.textonmain')
     let selectIT = document.getElementById('selectIT')
+    let switcherTheme = document.querySelector('.switch')
+
+    if (
+      document.location.pathname === 'https://formuls.xyz/' ||
+      document.location.pathname === '/' ||
+      document.location.pathname === 'https://formuls.xyz'
+    ) {
+      switcherTheme.style.marginTop = '55px'
+    } else {
+      switcherTheme.style.display = 'none'
+    }
 
     if (
       mainscreenh2 &&
-      !document.location.pathname.includes('allformuls.html')
+      !document.location.pathname.includes('allformuls.html') &&
+      !document.location.pathname.includes('aboutai.html')
     ) {
       mainscreenh2.style.display = 'none'
-      mainscreenhiH3.style.display = 'none'
+      if (mainscreenhiH3) {
+        mainscreenhiH3.style.display = 'none'
+      }
       footer.style.display = 'none'
       maintextHI.forEach(function (e) {
         e.style.display = 'none'
@@ -88,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     changeLogoType()
     if (tocalcbut) {
-      tocalcbut.style.right = '81px'
+      tocalcbut.style.right = '20px'
     }
     if (godownloadElement) {
       godownloadElement.style.display = 'none'
@@ -103,12 +121,15 @@ document.addEventListener('DOMContentLoaded', function () {
   let scrolled = false
   let scrollToTopBtn = document.getElementById('scrollToTopBtn')
 
-  if (!document.location.pathname.includes('formulsCALC.html')) {
-        window.onscroll = function () {
-          scrollFunction()
-          scrollLOGO()
-        }
+  if (
+    !document.location.pathname.includes('formulsCALC.html') &&
+    !document.location.pathname.includes('aboutai.html')
+  ) {
+    window.onscroll = function () {
+      scrollFunction()
+      scrollLOGO()
     }
+  }
 
   function scrollLOGO() {
     if (

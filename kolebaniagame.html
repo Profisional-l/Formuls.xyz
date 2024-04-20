@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
-   </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1BFTX7VGPT"></script>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-1BFTX7VGPT');
-</script>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BFTX7VGPT"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-1BFTX7VGPT');
+  </script>
   <meta charset="UTF-8">
-  <meta name="theme-color" content="#252525"> 
+  <meta name="theme-color" content="#252525">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <include src="./forapple.html"></include>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,33 +24,47 @@
   <link rel="shortcut icon" href="./images/formulslogo.png" type="image/x-icon" />
   <title>Запоминание формул по теме "Колебания"</title>
   <div class="mask">
+    <div class="FakeHeader">
+      <h3 class="FAKElogo"><a href="./">Formuls</a></h3>
+    </div>
+    <a href="./formulsCALC.html"><button class="FakeCalc" type="submit"><img src="./images/calculator(1).png"
+          width="26px" alt=""></button></a>
+
     <div class="loader"></div>
   </div>
 </head>
-<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');</style>
 <header>
-  <a href="https://formuls.xyz/"><img class="logoIMG" src="./images/monologo.png" alt=""></a>
-  <h3 class="logo"><a href="https://formuls.xyz/">Formuls</a></h3>
+  <a href="./"><img class="logoIMG" src="./images/monologo.png" alt=""></a>
+  <h3 class="logo"><a href="./">Formuls</a></h3>
   <img src="./images/sun.png" style="display: none;" alt="">
-     <!-- Rounded switch -->
-<label class="switch">
-  <input id="checkboxswitcher" type="checkbox" onchange="handleChange(this.checked)">
-  <span class="slider round"></span>
-</label>
-<div class="gobackbut">
-  <button onclick="history.go(-1)">
-    <img id="gobacksvg"  width="28px" src="./images/back-button-light.png" alt="">
-  </button>
-</div>
-<div class="godownload">
-  <a href="./appdownload.html"><button class="downloadbut" type="submit"><img src="./images/downloads (1).png" width="25px" alt=""></button></a>
-</div>
-<div class="goCalc">
-  <a href="./formulsCALC.html"><button class="tocalcbut" type="submit"><img src="./images/calculator(1).png" width="26px" alt=""></button></a>
-</div>
+  <!-- Rounded switch -->
+  <label class="switch">
+    <input id="checkboxswitcher" type="checkbox" onchange="handleChange(this.checked)">
+    <span class="slider round"></span>
+  </label>
+  <div class="gobackbut">
+    <button onclick="history.go(-1)">
+      <img id="gobacksvg" width="28px" src="./images/back-button-light.png" alt="">
+    </button>
+  </div>
+  <div class="godownload">
+    <a href="./appdownload.html"><button class="downloadbut" type="submit"><img src="./images/downloads (1).png"
+          width="25px" alt=""></button></a>
+  </div>
+  <div class="goCalc">
+    <a href="./formulsCALC.html"><button class="tocalcbut" type="submit"><img src="./images/calculator(1).png"
+          width="26px" alt=""></button></a>
+  </div>
 </header>
+
 <body>
-  <div class="page-transition-overlay"></div>
+  <div class="page-transition-overlay">
+    <div class="FakeHeader">
+      <h3 class="FAKElogo"><a href="./">Formuls</a></h3>
+    </div>
+    <a href="./formulsCALC.html"><button class="FakeCalc" type="submit"><img src="./images/calculator(1).png"
+          width="26px" alt=""></button></a>
+  </div>
   <div class="butcont" style="
   position: absolute;
     top: 80%;
@@ -58,66 +73,68 @@
   justify-content: center;
   width: 100%;
   ">
-  
-      <button onclick="toggleFullScreen()" class="but" style="display: inline-block;">Начать</button>
-    </div>
-<h2 style="font-size: 28px; " class="namecategoriesonit"><br>Проверка и закрепление знаний по теме "Колебания"</h2>
-<div class="parentexttogame">
-    <p class="texttogame">В этом режиме вам будут попадаться случайны карточки с формулами из раздела <b>"Колебания"</b>. Это отличный способ проверить себя и закрепить знания именно в этой теме. </p>
-</div>
 
-<div class="cardsfield" style="
+    <button onclick="toggleFullScreen()" class="but" style="display: inline-block;">Начать</button>
+  </div>
+  <h2 style="font-size: 28px; " class="namecategoriesonit"><br>Проверка и закрепление знаний по теме "Колебания"</h2>
+  <div class="parentexttogame">
+    <p class="texttogame">В этом режиме вам будут попадаться случайны карточки с формулами из раздела
+      <b>"Колебания"</b>. Это отличный способ проверить себя и закрепить знания именно в этой теме. </p>
+  </div>
+
+  <div class="cardsfield" style="
 position: absolute;
 top: 45%;
   transform: translateY(-50%);
   display: flex;
 justify-content: center;
 ">
- <div class="numofclick">00</div>
+    <div class="numofclick">00</div>
 
-<style>
-    /* .flashcard {
+    <style>
+      /* .flashcard {
         height: 1700px;
     } */
-    /* .flashcard img {
+      /* .flashcard img {
         max-height: 95px;
     } */
-    .flashcard {
+      .flashcard {
         position: relative;
         width: 30%;
 
-    }
-    @media (max-width: 610px){
-      .flashcard {
-        width: 100%;
-    }
-}
-</style>
+      }
 
-<a class="adparent" href="#">
-  <div class="adparent">
-  <div class="adcards">
-  </div>
-</div>
-</a>
+      @media (max-width: 610px) {
+        .flashcard {
+          width: 100%;
+        }
+      }
+    </style>
 
-<div class="flashcard" onclick="flipCard(this)">
-    <div class="card-title">Уравнение гармонических колебаний с циклической частотой ω</b></div>
-    <div class="card-content"><img src="images/уравнгарколеб.png" alt="" srcset=""></div>
-  </div>
-  <div class="flashcard" onclick="flipCard(this)">
+    <a class="adparent" href="#">
+      <div class="adparent">
+        <div class="adcards">
+        </div>
+      </div>
+    </a>
+
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-title">Уравнение гармонических колебаний с циклической частотой ω</b></div>
+      <div class="card-content"><img src="images/уравнгарколеб.png" alt="" srcset=""></div>
+    </div>
+    <div class="flashcard" onclick="flipCard(this)">
       <div class="card-title">Период колебаний</div>
       <div class="card-content"><img src="images/периодколеб.png" alt="" srcset=""></div>
     </div>
-  <div class="flashcard" onclick="flipCard(this)">
+    <div class="flashcard" onclick="flipCard(this)">
       <div class="card-title">Частота колебаний</div>
       <div class="card-content"><img src="images/частотаколеб.png" alt="" srcset=""></div>
     </div>
-  <div class="flashcard" onclick="flipCard(this)">
+    <div class="flashcard" onclick="flipCard(this)">
       <div class="card-title">Циклическая частота колебаний</div>
       <div class="card-content"><img src="images/циклчастотаколеб.png" alt="" srcset=""></div>
     </div>
-  <div class="flashcard" onclick="flipCard(this)">
+    <div class="flashcard" onclick="flipCard(this)">
       <div class="card-title">Скорость при гармонических колебаниях</div>
       <div class="card-content"><img src="images/скоростпригармонколеб.png" alt="" srcset=""></div>
     </div>
@@ -166,7 +183,10 @@ justify-content: center;
       <div class="card-content"><img src="images/зависзаряданакондприколебвконт.png" alt="" srcset=""></div>
     </div>
     <div class="flashcard" onclick="flipCard(this)">
-      <div class="card-title"><t style="font-size: 17px;">Зависимость электрического тока протекающего через катушку индуктивности от времени при колебаниях в контуре</t></div>
+      <div class="card-title">
+        <t style="font-size: 17px;">Зависимость электрического тока протекающего через катушку индуктивности от времени
+          при колебаниях в контуре</t>
+      </div>
       <div class="card-content"><img src="images/зависэлектртокавконтуре.png" alt="" srcset=""></div>
     </div>
     <div class="flashcard" onclick="flipCard(this)">
@@ -174,27 +194,39 @@ justify-content: center;
       <div class="card-content"><img src="images/зависнапряжвконтуре.png" alt="" srcset=""></div>
     </div>
     <div class="flashcard" onclick="flipCard(this)">
-      <div class="card-title">Действующее значение напряжения <br><t style="font-size: 17px;">(Электромагнитные колебания)</t> </div>
+      <div class="card-title">Действующее значение напряжения <br>
+        <t style="font-size: 17px;">(Электромагнитные колебания)</t>
+      </div>
       <div class="card-content"><img src="images/дейстзначнапряж.png" alt="" srcset=""></div>
     </div>
     <div class="flashcard" onclick="flipCard(this)">
-      <div class="card-title">Действующее значение силы тока <br><t style="font-size: 17px;">(Электромагнитные колебания)</t> </div>
+      <div class="card-title">Действующее значение силы тока <br>
+        <t style="font-size: 17px;">(Электромагнитные колебания)</t>
+      </div>
       <div class="card-content"><img src="images/дейстзначсилытока.png" alt="" srcset=""></div>
     </div>
     <div class="flashcard" onclick="flipCard(this)">
-      <div class="card-title">Амплитудное значение силы тока <br><t style="font-size: 17px;">(Электромагнитные колебания)</t> </div>
+      <div class="card-title">Амплитудное значение силы тока <br>
+        <t style="font-size: 17px;">(Электромагнитные колебания)</t>
+      </div>
       <div class="card-content"><img src="images/амплзначсилтока.png" alt="" srcset=""></div>
     </div>
     <div class="flashcard" onclick="flipCard(this)">
-      <div class="card-title">Амплитудное значение напряжения<br><t style="font-size: 17px;">(Электромагнитные колебания)</t> </div>
+      <div class="card-title">Амплитудное значение напряжения<br>
+        <t style="font-size: 17px;">(Электромагнитные колебания)</t>
+      </div>
       <div class="card-content"><img src="images/амплзначнапряж.png" alt="" srcset=""></div>
     </div>
     <div class="flashcard" onclick="flipCard(this)">
-      <div class="card-title">Действующее значение силы тока <br><t style="font-size: 17px;">(Электромагнитные колебания)</t> </div>
+      <div class="card-title">Действующее значение силы тока <br>
+        <t style="font-size: 17px;">(Электромагнитные колебания)</t>
+      </div>
       <div class="card-content"><img src="images/дейстзначсилытока.png" alt="" srcset=""></div>
     </div>
     <div class="flashcard bigcards" onclick="flipCard(this)">
-      <div class="card-title">Мощность в цепи переменного тока <br><t style="font-size: 17px;">(Электромагнитные колебания)</t> </div>
+      <div class="card-title">Мощность в цепи переменного тока <br>
+        <t style="font-size: 17px;">(Электромагнитные колебания)</t>
+      </div>
       <div class="card-content"><img src="images/мощностьвцепипеременноготока.png" alt="" srcset=""></div>
     </div>
     <div class="flashcard" onclick="flipCard(this)">
@@ -209,33 +241,37 @@ justify-content: center;
       <div class="card-title">КПД в неидеальном трансформаторе</div>
       <div class="card-content"><img src="images/кпдтранс.png" alt="" srcset=""></div>
     </div>
-</div>
+  </div>
 
-<style>
+  <style>
     .flashcard {
-        display: none;
+      display: none;
     }
+
     .butcont {
-        margin-left: auto;
-        margin-right: auto;
-       
+      margin-left: auto;
+      margin-right: auto;
+
     }
+
     .but {
-        width: 260px;
-        
-     
+      width: 260px;
+
+
     }
-    @media (max-width: 560px){
+
+    @media (max-width: 560px) {
       .flashcard {
         width: 100%;
       }
     }
-    .cardsfield {
-        align-items: center;
-    }
-</style>
 
-<!-- <script>
+    .cardsfield {
+      align-items: center;
+    }
+  </style>
+
+  <!-- <script>
     let cardsgame = document.querySelectorAll('.flashcard');
     document.querySelector('.but').addEventListener('click', function() {
     var randomNumber = Math.floor(Math.random() * cardsgame.length);
@@ -250,23 +286,21 @@ justify-content: center;
 });
 </script> -->
 
-<script src="./flip.js">
+  <script src="./flip.js">
     //   let cards = document.querySelectorAll('.flashcard');
-      
-//      function flipCard(card) {
-//     card.classList.toggle('flipped');
-//     cards.forEach(function (element) {
-//       if (element !== card && element.classList.contains('flipped')) {
-//         element.classList.remove('flipped');
-//       }
-//     });
-//   }
-  
-</script>
 
-<script src="./theme.js"></script>
+    //      function flipCard(card) {
+    //     card.classList.toggle('flipped');
+    //     cards.forEach(function (element) {
+    //       if (element !== card && element.classList.contains('flipped')) {
+    //         element.classList.remove('flipped');
+    //       }
+    //     });
+    //   }
+  </script>
+
+  <script src="./theme.js"></script>
 
 </body>
 
 </html>
-
