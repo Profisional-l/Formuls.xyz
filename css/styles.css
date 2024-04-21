@@ -1334,6 +1334,12 @@ footer {
   .tocalcbut {
     right: 29%;
   }
+  .FakeCalc {
+    right: 21.9%;
+  }
+  .FAKElogoIMG {
+    left: 11.7%;
+  }
 }
 
 .buttoappfooter::after,
