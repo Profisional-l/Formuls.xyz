@@ -1,3 +1,17 @@
+// SIMPLEservice-worker.js
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open('my-cache').then((cache) => {
+      return cache.addAll([
+        '/',
+        './index.html',
+        './css/styles.css'
+      ]);
+    })
+  );
+});
+
+
 // const CACHE_NAME = 'my-site-cache-v2';
 // const urlsToCache = [
 //   '/',
