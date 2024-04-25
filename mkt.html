@@ -1,130 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-1BFTX7VGPT"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-<head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1BFTX7VGPT"></script>
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'G-1BFTX7VGPT');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="theme-color" content="#252525">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <include src="./forapple.html"></include>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/styles.css">
-  <link rel="shortcut icon" href="./images/formulslogo.png" type="image/x-icon" />
-  <title>Молекулярная физика</title>
-  <div class="mask">
-    <div class="FakeHeader">
-      <h3 class="FAKElogo"><a href="./"><img class="FAKElogoIMG" src="./images/monologo.png" alt=""></a></h3>
+      gtag("config", "G-1BFTX7VGPT");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#252525" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <include src="./forapple.html"></include>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="./images/formulslogo.png"
+      type="image/x-icon"
+    />
+    <title>Молекулярная физика</title>
+    <div class="mask">
+      <div class="FakeHeader">
+        <h3 class="FAKElogo">
+          <a href="./"
+            ><img class="FAKElogoIMG" src="./images/monologo.png" alt=""
+          /></a>
+        </h3>
+      </div>
+      <a href="./formulsCALC.html"
+        ><button class="FakeCalc" type="submit">
+          <img src="./images/calculator(1).png" width="26px" alt="" /></button
+      ></a>
+      <div class="loader"></div>
     </div>
-    <a href="./formulsCALC.html"><button class="FakeCalc" type="submit"><img src="./images/calculator(1).png"
-          width="26px" alt=""></button></a>
-    <div class="loader"></div>
-  </div>
-</head>
-<header>
-  <a href="./"><img class="logoIMG" src="./images/monologo.png" alt=""></a>
-  <h3 class="logo"><a href="./">Formuls</a></h3>
-  <img src="./images/sun.png" style="display: none;" alt="">
-  <!-- Rounded switch -->
-  <label class="switch">
-    <input id="checkboxswitcher" type="checkbox" onchange="handleChange(this.checked)">
-    <span class="slider round"></span>
-  </label>
-  <div class="godownload">
-    <a href="./appdownload.html"><button class="downloadbut" type="submit"><img src="./images/downloads (1).png"
-          width="25px" alt=""></button></a>
-  </div>
-  <div class="goCalc">
-    <a href="./formulsCALC.html"><button class="tocalcbut" type="submit"><img src="./images/calculator(1).png"
-          width="26px" alt=""></button></a>
-  </div>
-</header>
+  </head>
+  <header>
+    <a href="./"><img class="logoIMG" src="./images/monologo.png" alt="" /></a>
+    <h3 class="logo"><a href="./">Formuls</a></h3>
+    <img src="./images/sun.png" style="display: none" alt="" />
+    <!-- Rounded switch -->
+    <label class="switch">
+      <input
+        id="checkboxswitcher"
+        type="checkbox"
+        onchange="handleChange(this.checked)"
+      />
+      <span class="slider round"></span>
+    </label>
+    <div class="godownload">
+      <a href="./appdownload.html"
+        ><button class="downloadbut" type="submit">
+          <img src="./images/downloads (1).png" width="25px" alt="" /></button
+      ></a>
+    </div>
+    <div class="goCalc">
+      <a href="./formulsCALC.html"
+        ><button class="tocalcbut" type="submit">
+          <img src="./images/calculator(1).png" width="26px" alt="" /></button
+      ></a>
+    </div>
+  </header>
 
-<body>
-  <div class="page-transition-overlay">
-    <div class="FakeHeader">
-      <h3 class="FAKElogo"><a href="./"><img class="FAKElogoIMG" src="./images/monologo.png" alt=""></a></h3>
+  <body>
+    <div class="page-transition-overlay">
+      <div class="FakeHeader">
+        <h3 class="FAKElogo">
+          <a href="./"
+            ><img class="FAKElogoIMG" src="./images/monologo.png" alt=""
+          /></a>
+        </h3>
+      </div>
+      <a href="./formulsCALC.html"
+        ><button class="FakeCalc" type="submit">
+          <img src="./images/calculator(1).png" width="26px" alt="" /></button
+      ></a>
     </div>
-    <a href="./formulsCALC.html"><button class="FakeCalc" type="submit"><img src="./images/calculator(1).png"
-          width="26px" alt=""></button></a>
-  </div>
 
-  <div id="scrollToTopBtn">
-    <div id="backofupbut"><img width="33px" id="scrollupbut" src="./images/scrollup.png" alt=""></div>
-  </div>
+    <div id="scrollToTopBtn">
+      <div id="backofupbut">
+        <img width="33px" id="scrollupbut" src="./images/scrollup.png" alt="" />
+      </div>
+    </div>
 
-  <h2 class="namecategoriesonit">Молекулярная физика</h2>
-  <div class="buttogamecont"><a href="./mktgame.html"><button id="buttogame" type="submit">Режим
-        запоминания</button></a></div>
+    <h2 class="namecategoriesonit">Молекулярная физика</h2>
+    <div class="buttogamecont">
+      <a href="./mktgame.html"
+        ><button id="buttogame" type="submit">Режим запоминания</button></a
+      >
+    </div>
 
-  <div class="cardsfield">
-
-    <div class="flashcard" onclick="flipCard(this)">
-      <div class="card-title">Химическое количество вещества</div>
-      <div class="card-content"><img src="images/химколич.png" alt="" srcset=""></div>
-    </div>
-    <div class="flashcard" onclick="flipCard(this)">
-      <div class="card-title">Масса одной молекулы вещества</div>
-      <div class="card-content"><img src="images/массаодноймолек.png" alt="" srcset=""></div>
-    </div>
-    <div class="flashcard" onclick="flipCard(this)">
-      <div style="font-size: 16px;" class="card-title">Основное уравнение молекулярно-кинетической теории (МКТ)
-        идеального газа</div>
-      <div class="card-content"><img src="images/оснмкт.png" alt="" srcset=""></div>
-    </div>
-    <div class="flashcard" onclick="flipCard(this)">
-      <div class="card-title">Средняя квадратичная скорость молекул</div>
-      <div class="card-content"><img src="images/средскмолек.png" alt="" srcset=""></div>
-    </div>
-    <div class="flashcard" onclick="flipCard(this)">
-      <div style="font-size: 16px;" class="card-title">Средняя кинетическая энергия поступательного движения одной
-        молекулы</div>
-      <div class="card-content"><img src="images/средкинетэнергия.png" alt="" srcset=""></div>
-    </div>
-    <!-- <div class="flashcard" onclick="flipCard(this)">
+    <div class="cardsfield">
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Химическое количество вещества</div>
+        <div class="card-content">
+          <img src="images/химколич.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Масса одной молекулы вещества</div>
+        <div class="card-content">
+          <img src="images/массаодноймолек.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div style="font-size: 16px" class="card-title">
+          Основное уравнение молекулярно-кинетической теории (МКТ) идеального
+          газа
+        </div>
+        <div class="card-content">
+          <img src="images/оснмкт.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Средняя квадратичная скорость молекул</div>
+        <div class="card-content">
+          <img src="images/средскмолек.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div style="font-size: 16px" class="card-title">
+          Средняя кинетическая энергия поступательного движения одной молекулы
+        </div>
+        <div class="card-content">
+          <img src="images/средкинетэнергия.png" alt="" srcset="" />
+        </div>
+      </div>
+      <!-- <div class="flashcard" onclick="flipCard(this)">
     <div class="card-title">Следствия из основного уравнения МКТ</div>
     <div class="card-content"><img src="images/следствияизмктос.png" alt="" srcset=""></div>
   </div>   -->
-    <div class="flashcard" onclick="flipCard(this)">
-      <div class="card-title"><b>Уравнение состояния идеального газа </b><br> (уравнение Менделеева-Клайперона)</div>
-      <div class="card-content"><img src="images/уравнениеидеалгаза.png" alt="" srcset=""></div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">
+          <b>Уравнение состояния идеального газа </b><br />
+          (уравнение Менделеева-Клайперона)
+        </div>
+        <div class="card-content">
+          <img src="images/уравнениеидеалгаза.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Уравнение Клайперона</div>
+        <div class="card-content">
+          <img src="images/уравнклайперона.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Давление смеси газов (закон Дальтона)</div>
+        <div class="card-content">
+          <img src="images/давсмесигаз.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">Тепловое расширение жидкостей</div>
+        <div class="card-content">
+          <img src="images/тепловоерасширенижидкостей.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="flashcard" onclick="flipCard(this)">
+        <div class="card-title">3 формулы расширения твердых тел</div>
+        <div class="card-content">
+          <img src="images/тризаконарасширен.png" alt="" srcset="" />
+        </div>
+      </div>
     </div>
-    <div class="flashcard" onclick="flipCard(this)">
-      <div class="card-title">Уравнение Клайперона</div>
-      <div class="card-content"><img src="images/уравнклайперона.png" alt="" srcset=""></div>
-    </div>
-    <div class="flashcard" onclick="flipCard(this)">
-      <div class="card-title">Давление смеси газов (закон Дальтона)</div>
-      <div class="card-content"><img src="images/давсмесигаз.png" alt="" srcset=""></div>
-    </div>
-    <div class="flashcard" onclick="flipCard(this)">
-      <div class="card-title">Тепловое расширение жидкостей</div>
-      <div class="card-content"><img src="images/тепловоерасширенижидкостей.png" alt="" srcset=""></div>
-    </div>
-    <div class="flashcard" onclick="flipCard(this)">
-      <div class="card-title">3 формулы расширения твердых тел</div>
-      <div class="card-content"><img src="images/тризаконарасширен.png" alt="" srcset=""></div>
-    </div>
 
-  </div>
+    <script src="./flip.js"></script>
 
-  <script src="./flip.js">
-
-  </script>
-
-  <script src="./theme.js"></script>
-
-</body>
-
+    <script src="./theme.js"></script>
+  </body>
 </html>
