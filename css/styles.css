@@ -1891,16 +1891,39 @@ input:checked+.slider.mathSlider.round::before {
   flex-basis: 100%;
 }
 
+.dopItems img {
+  width: 40px;
+ margin-left: 6px;
+}
+
+
 .item_2_1 {
   background-image: url("../images/BG_kinemat.png");
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: 100%;
 }
 
-.item_2_1 img {
-  width: 40px;
-  margin-left: 6px;
+.item_2_2 {
+  background-image: url("../images/BG_dynamica.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100%;
+}
+.item_2_3 {
+  background-image: url("../images/BG_zaksochrn.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100%;
+}
+.item_2_4 {
+  background-image: url("../images/BG_watergas.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100%;
+}
+.item_2_3 img {
+  width: 30px;
 }
 
 .items a {
