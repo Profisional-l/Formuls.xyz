@@ -142,12 +142,12 @@
   cursor: pointer;
   /* transition: transform 0.5s; */
   margin: 10px;
-  background-image: url("../images/kurssad.png");
+  background-image: url("../images/rusad.jpg");
   background-size: cover;
   background-color: #ffffff;
   background-repeat: no-repeat;
   width: 350px;
-  height: 350px;
+  height: 455px;
   display: flex;
   flex-direction: column;
   align-items: center;
