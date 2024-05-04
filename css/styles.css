@@ -1946,13 +1946,13 @@ input:checked+.slider.mathSlider.round::before {
 }
 
 .BGfadeIn {
-  animation: BgFadeIn1 .33s ease-in-out forwards;
+  animation: BgFadeIn1 .23s ease-in-out forwards;
   opacity: 0;
   display: flex;
 }
 
 .BGfadeOut {
-  animation: BgFadeOut1 .33s ease-in-out forwards;
+  animation: BgFadeOut1 .23s ease-in-out forwards;
   opacity: 1;
   display: none;
 }
