@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let maintextHI = document.querySelectorAll(".textonmain");
     let selectIT = document.getElementById("selectIT");
     let switcherTheme = document.querySelector(".switch");
-    
+
     if (
       document.location.pathname === "https://formuls.xyz/" ||
       document.location.pathname === "/" ||
