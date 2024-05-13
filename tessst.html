@@ -1,257 +1,251 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <div class="BGforItems"></div>
-
-  <div class="dopItems forItem2">
-    <div class="categoryParent"> 
-      <a href="./kinimatica.html" class="items item_2_1">Кинематика</a>
-      <a href="./dinamica.html" class="items item_2_2">Динамика | Законы Ньютона</a>
-      <a href="./zaksochrn.html" class="items item_2_3">Законы сохранения в механике | Работа и механическая энергия</a>
-      <a href="./gasewater.html" class="items item_2_4">Жидкости и газы</a>
-    </div>
-  </div>
-  <div class="dopItems forItem3">
-    <div class="categoryParent"> 
-      <a href="./mkt.html" class="items item_3_1">Молекулярная физика</a>
-      <a href="./termodinamica.html" class="items item_3_2">Термодинамика</a>
-    </div>
-  </div>
-  <div class="dopItems forItem4">
-    <div class="categoryParent"> 
-      <a href="./mkt.html" class="items item_4_1">Электростатика</a>
-      <a href="./elektrtok.html" class="items item_4_2">Законы постоянного тока</a>
-      <a href="./magnit.html" class="items item_4_3">Магнетизм</a>
-    </div>
-  </div>
-  <div class="dopItems forItem5">
-    <div class="categoryParent"> 
-      <a href="./kolebania.html" class="items item_5_1">Колебания</a>
-      <a href="./volni.html" class="items item_5_2">Волны</a>
-    </div>
-  </div>
-
-
-
-  <div class="categoryParent"> 
-    
-    <a href="./allformuls.html" class="items item_1">Все формулы</a>
-    <div class="items item_2">Механика</div>
-    <div class="items item_3">МКТ</div>
-    <div class="items item_4">Токи</div>
-    <div class="items item_5">Колебания</div>
-    <a href="./optica.html" class="items item_6">Оптика</a>
-    <a href="./atom.html" class="items item_7">Атомная физика</a>
-
-    
-  </div>
-  
-</body>
-<style>
-    body {
-    padding: 0;
-    margin: 0;
-  }
-  .BGforItems {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  z-index: 2;
-  background-color: #34343421;
-  backdrop-filter: blur(33px);
-  display: none;
-}
-
-.dopItems {
-  display: none;
-}
-.categoryParent {
-  z-index: 1;
-  margin-top: 45px;
-  max-width: 400px;
-  height: 100%;
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.items {
-  padding: 20px;
-  font-size: 19px;
-  height: 45px;
-  flex-grow: 1;
-  width: fit-content;
-  background-color: #343434;
-  color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 23px;
-  margin: 4px;
-  text-align: start;
-  flex-grow: 1;
-}
-.item_1 {
-  flex-basis: 100%;
-}
-.item_2 {
-  flex-basis: 30%;
-}
-.item_3 {
-  flex-basis: 30%;
-}
-.item_5 {
-  flex-basis: 40%;
-}
-
-.items a {
-  width: 100%;
-  height: 100%;
-}
-
-.dopItems {
-  top: 15%;
-  width: 100%;
-  z-index: 2;
-  left: 50%;
-  transform: translateX(-50%);
-  position: fixed;
-  display: none;
-}
-
-.BGfadeIn {
-  animation: BgFadeIn1 .33s ease-in-out forwards;
-  opacity: 0;
-  display: flex;
-}
-.BGfadeOut {
-  animation: BgFadeOut1 .33s ease-in-out forwards;
-  opacity: 1;
-  display: flex;
-}
-
-@keyframes BgFadeIn1 {
-  0% {
-    opacity: 0;
-    display: block;
-  }
-  100% {
-    opacity: 1;
-    display: block;
-  }
-}
-
-@keyframes BgFadeOut1 {
-  0% {
-    opacity: 1;
-    display: block;
-  }
-  100% {
-    opacity: 0;
-    display: none;
-  }
-}
-
-</style>
-<script>
-  let butToItem2 = document.querySelector(".item_2");
-  let butToItem3 = document.querySelector(".item_3");
-  let butToItem4 = document.querySelector(".item_4");
-  let butToItem5 = document.querySelector(".item_5");
-
-  let PodItem2 = document.querySelector(".forItem2");
-  let PodItem3 = document.querySelector(".forItem3");
-  let PodItem4 = document.querySelector(".forItem4");
-  let PodItem5 = document.querySelector(".forItem5");
-
-  let BG = document.querySelector(".BGforItems");
-
-  butToItem2.addEventListener('click', function() {
-    PodItem2.classList.remove('BGfadeOut')
-    BG.classList.remove('BGfadeOut')
-    PodItem2.classList.add('BGfadeIn')
-    BG.classList.add('BGfadeIn')
-
-    PodItem2.addEventListener('click', function() {
-      PodItem2.classList.remove('BGfadeIn')
-      BG.classList.remove('BGfadeIn')
-      PodItem2.classList.add('BGfadeOut')
-    BG.classList.add('BGfadeOut')
-    });
-    BG.addEventListener('click', function() {
-      PodItem2.classList.remove('BGfadeIn')
-      BG.classList.remove('BGfadeIn')
-      PodItem2.classList.add('BGfadeOut')
-    BG.classList.add('BGfadeOut')
-    });
-  });
-
-  butToItem3.addEventListener('click', function() {
-    PodItem3.classList.remove('BGfadeOut')
-    BG.classList.remove('BGfadeOut')
-    PodItem3.classList.add('BGfadeIn')
-    BG.classList.add('BGfadeIn')
-
-    PodItem3.addEventListener('click', function() {
-      PodItem3.classList.remove('BGfadeIn')
-      BG.classList.remove('BGfadeIn')
-      PodItem3.classList.add('BGfadeOut')
-    BG.classList.add('BGfadeOut')
-    });
-    BG.addEventListener('click', function() {
-      PodItem3.classList.remove('BGfadeIn')
-      BG.classList.remove('BGfadeIn')
-      PodItem3.classList.add('BGfadeOut')
-    BG.classList.add('BGfadeOut')
-    });
-  });
-
-  butToItem4.addEventListener('click', function() {
-    PodItem4.classList.remove('BGfadeOut')
-    BG.classList.remove('BGfadeOut')
-    PodItem4.classList.add('BGfadeIn')
-    BG.classList.add('BGfadeIn')
-
-    PodItem4.addEventListener('click', function() {
-      PodItem4.classList.remove('BGfadeIn')
-      BG.classList.remove('BGfadeIn')
-      PodItem4.classList.add('BGfadeOut')
-    BG.classList.add('BGfadeOut')
-    });
-    BG.addEventListener('click', function() {
-      PodItem4.classList.remove('BGfadeIn')
-      BG.classList.remove('BGfadeIn')
-      PodItem4.classList.add('BGfadeOut')
-    BG.classList.add('BGfadeOut')
-    });
-  });
-
-  butToItem5.addEventListener('click', function() {
-    PodItem5.classList.remove('BGfadeOut')
-    BG.classList.remove('BGfadeOut')
-    PodItem5.classList.add('BGfadeIn')
-    BG.classList.add('BGfadeIn')
-
-    PodItem5.addEventListener('click', function() {
-      PodItem5.classList.remove('BGfadeIn')
-      BG.classList.remove('BGfadeIn')
-      PodItem5.classList.add('BGfadeOut')
-    BG.classList.add('BGfadeOut')
-    });
-    BG.addEventListener('click', function() {
-      PodItem5.classList.remove('BGfadeIn')
-      BG.classList.remove('BGfadeIn')
-      PodItem5.classList.add('BGfadeOut')
-    BG.classList.add('BGfadeOut')
-    });
-  });
-
-
-
-</script>
-</html>
+'./images/1якосмическая.png',
+'./images/2йзакон.png',
+'./images/3йзакон.png',
+'./images/848qu4tg3uqgt8y43thf4.png',
+'./images/android (1).png',
+'./images/apple-logo (2).png',
+'./images/back-button-light.png',
+'./images/back-button.svg',
+'./images/BG_all.png',
+'./images/BG_atomics.png',
+'./images/BG_dynamica.png',
+'./images/BG_kinemat.png',
+'./images/BG_kolebania.png',
+'./images/BG_mechanics.png',
+'./images/BG_mkt.png',
+'./images/BG_optics.png',
+'./images/BG_toki.png',
+'./images/BG_watergas.png',
+'./images/BG_zaksochrn.png',
+'./images/calculator(1).png',
+'./images/cопротивлениепроводника.png',
+'./images/cопротивлениепроводникаприt.png',
+'./images/down.png',
+'./images/downloads (1).png',
+'./images/formulslogo.png',
+'./images/formulslogopng.png',
+'./images/glowedblurbg.png',
+'./images/google-play.png',
+'./images/Group7.png',
+'./images/holder212.png',
+'./images/icon_all.png',
+'./images/icon_atomic.png',
+'./images/icon_dynamica.png',
+'./images/icon_kinematica.png',
+'./images/icon_kolebania.png',
+'./images/icon_mechanics.png',
+'./images/icon_mkt.png',
+'./images/icon_optics.png',
+'./images/icon_toki.png',
+'./images/icon_watergas.png',
+'./images/icon_zaksohrn.png',
+'./images/IMG_20240218_163722_495.JPG',
+'./images/IMG_5835.PNG',
+'./images/info.png',
+'./images/inst-icon.png',
+'./images/kurssad.png',
+'./images/loadingLOGO.gif',
+'./images/mathlogo.png',
+'./images/mathlogoColored.png',
+'./images/maximize.png',
+'./images/monologo.png',
+'./images/moon.png',
+'./images/no-signal.png',
+'./images/periodob.png',
+'./images/physlogo.png',
+'./images/reload.png',
+'./images/rusad.jpg',
+'./images/scrolluo.png',
+'./images/scrollup.png',
+'./images/seelkphlogo.png',
+'./images/share.png',
+'./images/sneakersADD1.png',
+'./images/sochinad.png',
+'./images/stjump.mp4',
+'./images/StLowJump.mp4',
+'./images/Subtract.png',
+'./images/sun.png',
+'./images/whitelogotg.png',
+'./images/абсолпокпреломл.png',
+'./images/абсолютвлажн.png',
+'./images/амплзначнапряж.png',
+'./images/амплзначсилтока.png',
+'./images/бора.png',
+'./images/внутэнергияадноатга.png',
+'./images/высота.png',
+'./images/высотаброшгориз.png',
+'./images/гидрстатдав.png',
+'./images/давление.png',
+'./images/давсмесигаз.png',
+'./images/дальность.png',
+'./images/дейстзначнапряж.png',
+'./images/дейстзначсилытока.png',
+'./images/длинаволны.png',
+'./images/емкостьплоскогоконденсатора.png',
+'./images/зависзаряданакондприколебвконт.png',
+'./images/зависнапряжвконтуре.png',
+'./images/зависускрсвпотвыстоты.png',
+'./images/зависэлектртокавконтуре.png',
+'./images/законарихимеда.png',
+'./images/законвстяг.png',
+'./images/законДжоуля-Ленца.png',
+'./images/законкулона.png',
+'./images/ЗаконОма.png',
+'./images/ЗаконОмаполнцепь.png',
+'./images/законпреломления.png',
+'./images/законсохраненияимпульса.png',
+'./images/законфарадея.png',
+'./images/заряд.png',
+'./images/зарядконденс.png',
+'./images/зарядконденспоссоед.png',
+'./images/зарядконденспрсоед.png',
+'./images/ЗСЭ.png',
+'./images/импульс.png',
+'./images/импульссилы.png',
+'./images/импульсфотона.png',
+'./images/индуктивностькатушки.png',
+'./images/индуктивностьсоленоида.png',
+'./images/индукциянасолиноиде.png',
+'./images/ИндукцияполявценттокомсR.png',
+'./images/кинетическаяэнергия.png',
+'./images/количтепл.png',
+'./images/количтеплконден.png',
+'./images/количтеплкристал.png',
+'./images/количтеплтопли.png',
+'./images/концентрациявитков.png',
+'./images/кординатапох.png',
+'./images/кординатапохy.png',
+'./images/кофповерхнат.png',
+'./images/коэфтранс.png',
+'./images/кпдисточтока.png',
+'./images/кпдмеханизма.png',
+'./images/КПДтепловоймашины.png',
+'./images/кпдтранс.png',
+'./images/линейнаяскоростьпоокруж.png',
+'./images/линувеллинзы.png',
+'./images/магнпотоком.png',
+'./images/магнпроницвещ.png',
+'./images/максвысота.png',
+'./images/макскинетэнергэлектрона.png',
+'./images/максэдсинд.png',
+'./images/масса.png',
+'./images/массаодноймолек.png',
+'./images/массафотона.png',
+'./images/моднапряж.png',
+'./images/МодульиндукцииBIR.png',
+'./images/моментсилы.png',
+'./images/моментсилыстоком.png',
+'./images/мощностьвцепипеременноготока.png',
+'./images/мощностьмгн.png',
+'./images/мощностьпоглдозы.png',
+'./images/мощностьсред.png',
+'./images/Мощностьэлектрическоготока.png',
+'./images/напряжвтранс.png',
+'./images/напряжениемнаклеммахисточника.png',
+'./images/напряжениепоссоед.png',
+'./images/напряжениепрсоед.png',
+'./images/напряженность.png',
+'./images/оснмкт.png',
+'./images/относвлажн.png',
+'./images/первыйзаконЗСЭ.png',
+'./images/периодколеб.png',
+'./images/периодколебвконтуре.png',
+'./images/периодколебпружмая.png',
+'./images/периодматколеб.png',
+'./images/плотностьтока.png',
+'./images/поглдозаионизлуч.png',
+'./images/полезнаямощностьвнешнейцепи.png',
+'./images/полнаямехэнергия.png',
+'./images/полнаямехэнергияпружмая.png',
+'./images/полнаяэнергияколебконтура.png',
+'./images/полнмощтока.png',
+'./images/полноедавление.png',
+'./images/потэнергия.png',
+'./images/потэнергиязарядов.png',
+'./images/потэнергупртел.png',
+'./images/потэнциалэлекполя.png',
+'./images/предуголотр.png',
+'./images/принцсуперпоз.png',
+'./images/путь.png',
+'./images/путьfull.png',
+'./images/путьравнускр.png',
+'./images/путьравнускрбезвремени.png',
+'./images/работавыхода.png',
+'./images/работагаз.png',
+'./images/работапостояннойсилы.png',
+'./images/работасилытрения.png',
+'./images/работасилытяжести.png',
+'./images/работасилыупругости.png',
+'./images/работаэлектрполя.png',
+'./images/равнодействующаясила.png',
+'./images/равномерноедвижение.png',
+'./images/радиуснорбиты.png',
+'./images/Радиустраектполчастицы.png',
+'./images/разностьфаз.png',
+'./images/связьскоростиволны.png',
+'./images/СилаАмпера.png',
+'./images/силадав.png',
+'./images/силалинзы.png',
+'./images/СилаЛоренца.png',
+'./images/силанастенки.png',
+'./images/силатока.png',
+'./images/силатокакоротзамык.png',
+'./images/силатокапоссоед.png',
+'./images/силатокапрсоед.png',
+'./images/силатренияпокоя.png',
+'./images/силатренияскольжения.png',
+'./images/силатяжести.png',
+'./images/силаупругости.png',
+'./images/скоростпригармонколеб.png',
+'./images/скоростьволны.png',
+'./images/скоростьпоx.png',
+'./images/скоростьпоy.png',
+'./images/скоростьравнускр.png',
+'./images/следствияизмктос.png',
+'./images/соотношсилгидрпрес.png',
+'./images/сопрпоссоед.png',
+'./images/сопрпрсоед.png',
+'./images/средкинетэнергия.png',
+'./images/средскмолек.png',
+'./images/теорияокинет.png',
+'./images/тепловоерасширенижидкостей.png',
+'./images/теплоемкость.png',
+'./images/тризаконарасширен.png',
+'./images/углскорость.png',
+'./images/уравнгарколеб.png',
+'./images/уравнениеидеалгаза.png',
+'./images/уравнклайперона.png',
+'./images/уравнравнускрдвиж.png',
+'./images/урравндвиж.png',
+'./images/ускорение.png',
+'./images/ускорпригармонколеб.png',
+'./images/условиеквантования.png',
+'./images/фильтр.png',
+'./images/фильтр0.png',
+'./images/формтонклинзы.png',
+'./images/формулабальмера.png',
+'./images/формуладифреш.png',
+'./images/формэншт.png',
+'./images/химколич.png',
+'./images/центстремитускр.png',
+'./images/циклчастотаколеб.png',
+'./images/циклчастотаматколеб.png',
+'./images/циклчастотапружмая.png',
+'./images/циклчистотавконтуре.png',
+'./images/частотаколеб.png',
+'./images/эдс.png',
+'./images/эдсиндукции.png',
+'./images/эдсиндукциидвиж.png',
+'./images/эдссамоинд.png',
+'./images/эквивалентнаядоза.png',
+'./images/экспозиционнаядоза.png',
+'./images/электремкость.png',
+'./images/электремкостьконденс.png',
+'./images/электремкостьпоссоед.png',
+'./images/электремкостьпрсоед.png',
+'./images/электрохимическимэквивалентом.png',
+'./images/энергиягарммехколеб.png',
+'./images/энергияконденсатора.png',
+'./images/энергиясвязиатомногоядра.png',
+'./images/энергияфотона.png',
+'./images/энергмагполя.png'

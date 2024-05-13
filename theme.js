@@ -52,6 +52,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }, 100);
 
+  var fakeheaders = document.querySelectorAll(".FakeHeader");
+  var fakeTocalcs = document.querySelectorAll(".FakeCalc");
+  fakeheaders.forEach(function (element) {
+    element.style.display = "block";
+  });
+  fakeTocalcs.forEach(function (element) {
+    element.style.display = "inline-block";
+  });
+
   // -----------------------------------------------^^theme^^-------------------------------------------------
 
   var userAgent = navigator.userAgent.toLowerCase();
@@ -131,8 +140,8 @@ document.addEventListener("DOMContentLoaded", function () {
     !window.matchMedia("(display-mode: standalone)").matches &&
     !window.navigator.standalone === true
   ) {
-    var fakeheaders = document.querySelectorAll(".FakeHeader");
-    var fakeTocalcs = document.querySelectorAll(".FakeCalc");
+    // var fakeheaders = document.querySelectorAll(".FakeHeader");
+    // var fakeTocalcs = document.querySelectorAll(".FakeCalc");
     fakeheaders.forEach(function (element) {
       element.style.display = "none";
     });

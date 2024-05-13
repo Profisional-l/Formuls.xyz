@@ -61,12 +61,31 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--var-body-bg);
   z-index: 9999999999999999;
   display: none;
   justify-content: center;
   align-items: center;
+  animation: blurBGloade .26s ease-in-out forwards;
 }
+
+@keyframes blurBGloade {
+  0% {
+    backdrop-filter: blur(0px);
+    background-color: #47474700;
+
+  }
+  80% {
+    backdrop-filter: blur(20px);
+    background-color: #47474780;
+
+  }
+  100% {
+    backdrop-filter: blur(40px);
+    background-color: #474747;
+
+  }
+}
+
 .CONTanimatedLoadLogo {
   position: fixed;
   top: 0;
@@ -81,7 +100,7 @@
 .maska {
   width: 100%;
   height: 100%;
-  background-color: var(--var-body-bg);
+  background-color: #474747;
   position: fixed;
   top: 0;
   z-index: 9999999999999;
@@ -105,7 +124,7 @@
 .animatedLoadLogo {
   height: 55px;
   width: 55px;
-  opacity: 0.77;
+  opacity: 0.61;
 }
 
 @keyframes loader {
@@ -287,6 +306,8 @@ header {
 }
 
 .FakeHeader {
+  display: none;
+
   background-color: #303030;
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
@@ -1323,7 +1344,7 @@ footer {
 }
 
 .FakeCalc {
-  display: inline-block;
+  display: none;
   width: 25px;
   height: 70px;
   position: fixed;
