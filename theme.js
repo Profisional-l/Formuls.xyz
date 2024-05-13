@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let maintextHI = document.querySelectorAll(".textonmain");
     let selectIT = document.getElementById("selectIT");
     let switcherTheme = document.querySelector(".switch");
-
+    
     if (
       document.location.pathname === "https://formuls.xyz/" ||
       document.location.pathname === "/" ||
@@ -135,20 +135,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  if (
-    !isAndroid &&
-    !window.matchMedia("(display-mode: standalone)").matches &&
-    !window.navigator.standalone === true
-  ) {
-    // var fakeheaders = document.querySelectorAll(".FakeHeader");
-    // var fakeTocalcs = document.querySelectorAll(".FakeCalc");
-    fakeheaders.forEach(function (element) {
-      element.style.display = "none";
-    });
-    fakeTocalcs.forEach(function (element) {
-      element.style.display = "none";
-    });
-  }
+  // if (
+  //   !isAndroid &&
+  //   !window.matchMedia("(display-mode: standalone)").matches &&
+  //   !window.navigator.standalone === true
+  // ) {
+  //   // var fakeheaders = document.querySelectorAll(".FakeHeader");
+  //   // var fakeTocalcs = document.querySelectorAll(".FakeCalc");
+  //   fakeheaders.forEach(function (element) {
+  //     element.style.display = "none";
+  //   });
+  //   fakeTocalcs.forEach(function (element) {
+  //     element.style.display = "none";
+  //   });
+  // }
 
   let LogoName = document.querySelector(".logo");
   let LogoIMG = document.querySelector(".logoIMG");

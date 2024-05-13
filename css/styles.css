@@ -320,9 +320,10 @@ header {
 
 @media (min-width: 1000px) {
   .FakeHeader, .FakeCalc {
-    display: none;
+    opacity: 0;
   }
 }
+
 
 .FAKElogo {
   padding-left: 18px;
