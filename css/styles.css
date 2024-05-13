@@ -546,6 +546,12 @@ h3 {
   margin: 0;
 }
 
+@media (min-width: 1000px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 4px;
 
