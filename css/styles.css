@@ -212,7 +212,7 @@
   letter-spacing: 0.5px;
   margin-top: 13px;
   opacity: 0;
-  animation: fadeIn 0.33s ease-in-out forwards;
+  animation: fadeIn .66s ease-in-out forwards;
 }
 
 .logo a::before {
