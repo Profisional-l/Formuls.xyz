@@ -15,7 +15,9 @@ window.addEventListener("pageshow", function (event) {
 // // Проверяем измененные элементы
 
 // -----------------------------------------------theme-------------------------------------------------
-
+let LogoName = document.querySelector(".logo");
+let LogoIMG = document.querySelector(".logoIMG");
+LogoName.style.display = "block"
 const handleChange = (isChecked) => {
   localStorage.setItem("theme", isChecked);
 
@@ -66,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var userAgent = navigator.userAgent.toLowerCase();
   var isAndroid = userAgent.indexOf("formulsandroiduseragent") !== -1;
 
-  // var isAndroid = true
+  var isAndroid = true
 
   if (
     isAndroid ||
@@ -150,8 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //   });
   // }
 
-  let LogoName = document.querySelector(".logo");
-  let LogoIMG = document.querySelector(".logoIMG");
+
   let scrolled = false;
   let scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
