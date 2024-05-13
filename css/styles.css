@@ -306,8 +306,6 @@ header {
 }
 
 .FakeHeader {
-  display: none;
-
   background-color: #303030;
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
@@ -318,6 +316,12 @@ header {
   top: 0px;
   height: 52px;
   z-index: 99999999999999;
+}
+
+@media (min-width: 1000px) {
+  .FakeHeader, .FakeCalc {
+    display: none;
+  }
 }
 
 .FAKElogo {
@@ -1350,7 +1354,6 @@ footer {
 }
 
 .FakeCalc {
-  display: none;
   width: 25px;
   height: 70px;
   position: fixed;
