@@ -71,16 +71,19 @@
 @keyframes blurBGloade {
   0% {
     backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
     background-color: #47474700;
 
   }
   80% {
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     background-color: #47474780;
 
   }
   100% {
     backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
     background-color: #474747;
 
   }
@@ -1826,6 +1829,7 @@ input:checked+.slider.mathSlider.round::before {
   z-index: 2;
   background-color: #24242481;
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   display: none;
 }
 
@@ -1836,6 +1840,7 @@ input:checked+.slider.mathSlider.round::before {
 .dopItems {
   display: none;
   margin-top: 100px;
+  
 }
 
 .categoryParent {
@@ -1849,6 +1854,11 @@ input:checked+.slider.mathSlider.round::before {
   justify-content: center;
   flex-wrap: wrap;
   padding: 0 15px 0 15px;
+}
+
+.ParentForDopItems {
+  width: 100%;
+  height: fit-content;
 }
 
 .items {
@@ -1986,8 +1996,9 @@ input:checked+.slider.mathSlider.round::before {
 }
 
 .dopItems {
-  top: 15%;
+  top: 10%;
   width: 100%;
+  max-width: 400px;
   z-index: 2;
   left: 50%;
   transform: translateX(-50%);

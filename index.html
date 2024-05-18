@@ -134,8 +134,8 @@
   </div>
 
   <div class="BGforItems"></div>
-
-  <div class="dopItems forItem2">
+<div class="ParentForDopItems">
+   <div class="dopItems forItem2">
     <div class="categoryParent">
       <a href="./kinimatica.html" class="items item_2_1"><img src="./images/icon_kinematica.png" alt=""> <br>
         Кинематика</a>
@@ -163,6 +163,8 @@
       <a href="./volni.html" class="items item_5_2">Волны</a>
     </div>
   </div> -->
+</div>
+ 
 
 
 
@@ -293,12 +295,12 @@
       let butToItem2 = document.querySelector(".item_2");
       let butToItem3 = document.querySelector(".item_3");
       let butToItem4 = document.querySelector(".item_4");
-      let butToItem5 = document.querySelector(".item_5");
+      // let butToItem5 = document.querySelector(".item_5");
 
       let PodItem2 = document.querySelector(".forItem2");
       let PodItem3 = document.querySelector(".forItem3");
       let PodItem4 = document.querySelector(".forItem4");
-      let PodItem5 = document.querySelector(".forItem5");
+      // let PodItem5 = document.querySelector(".forItem5");
 
       let BG = document.querySelector(".BGforItems");
       // Объявляем массивы для кнопок и подэлементов
@@ -306,7 +308,7 @@
       let podItems = [];
 
       // Заполняем массивы кнопками и подэлементами
-      for (let i = 2; i <= 5; i++) {
+      for (let i = 2; i <= 4; i++) {
         buttons.push(document.querySelector(`.item_${i}`));
         podItems.push(document.querySelector(`.forItem${i}`));
       }
@@ -325,7 +327,7 @@
           BG.classList.add('BGfadeOut');
         }
 
-        podItems[index].addEventListener('click', removeClassesAndEvents);
+        // podItems[index].addEventListener('click', removeClassesAndEvents);
         BG.addEventListener('click', removeClassesAndEvents);
       }
 
