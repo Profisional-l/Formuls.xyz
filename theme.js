@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       switcherTheme.style.display = "none";
     }
-
+    footer.style.display = "none";
     if (
       mainscreenh2 &&
       !document.location.pathname.includes("allformuls.html") &&
@@ -108,7 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
       if (mainscreenhiH3) {
         mainscreenhiH3.style.display = "none";
       }
-      footer.style.display = "none";
       maintextHI.forEach(function (e) {
         e.style.display = "none";
       });

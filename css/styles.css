@@ -1059,7 +1059,9 @@ h3 {
   left: 0;
   right: 0;
   bottom: 0;
+  /* background-image: url("../images/фильтр0.png"); */
   background-color: #000000;
+  background-size: 500%;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -1080,6 +1082,9 @@ h3 {
 
 input:checked+.slider {
   background-color: #ffffff;
+  /* background-image: url("../images/фильтр0.png");
+  background-size: 600%;
+  background-position: 12% 20%; */
 }
 
 input:focus+.slider {
@@ -2114,4 +2119,32 @@ button {
   margin-right: 2px;
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
+}
+
+
+.qrcodeCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#QRtoGooglePlay {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+@media (max-width: 1000px) {
+  .qrcodeCont {
+    display: none;
+  }
+}
+
+.answercont {
+  padding: 5px;
 }

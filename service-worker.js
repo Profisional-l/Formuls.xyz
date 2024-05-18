@@ -335,7 +335,9 @@ self.addEventListener('fetch', function(event) {
         }
       } else {
         // Если метод не GET, просто выполним запрос в сеть
+        if (navigator.onLine) {
         return fetch(event.request);
+        }
       }
     })
   );
