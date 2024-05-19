@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var userAgent = navigator.userAgent.toLowerCase();
   var isAndroid = userAgent.indexOf("formulsandroiduseragent") !== -1;
 
-  // var isAndroid = true
+  var isAndroid = true
 
   if (
     isAndroid ||
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       switcherTheme.style.display = "none";
     }
-    footer.style.display = "none";
+    if(footer) {footer.style.display = "none";}
     if (
       mainscreenh2 &&
       !document.location.pathname.includes("allformuls.html") &&
@@ -194,10 +194,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  if (document.location.pathname.includes("game")) {
-    LogoName.classList.add("changeLOGOout");
-    LogoIMG.classList.add("changeLOGOin");
-  }
+  // if (document.location.pathname.includes("game")) {
+  //   LogoName.classList.add("changeLOGOout");
+  //   LogoIMG.classList.add("changeLOGOin");
+  // }
 
   if (scrollToTopBtn) {
     function scrollFunction() {
