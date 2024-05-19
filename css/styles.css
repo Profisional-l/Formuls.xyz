@@ -1675,7 +1675,15 @@ math-field:focus-within {
   outline: 1px solid var(--var-allcolor);
   border-radius: 9px;
 }
-
+.ACTIONcalcbut.hide-shift {
+  background-color: #c37aff36;
+}
+.ACTIONcalcbut.hide-shift.delall {
+  background-color: #CD0030;
+}
+.shift.bottom {
+  background-color: #c37aff36;
+}
 /* -----------------------------------math switchers--------------------- */
 .mainParentSwith {
   margin: 0;
@@ -1720,7 +1728,7 @@ math-field:focus-within {
 .slider-container {
   width: 100%;
   max-width: 330px;
-
+  margin: 10px;
   text-align: center;
   color: #fff;
   background-color: #ffffff6b;

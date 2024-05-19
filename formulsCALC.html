@@ -186,8 +186,9 @@
         <script>
             const primotvSwitch = document.querySelector('.switch.math.primotv');
             const sliderContainer = document.querySelector('.slider-container');
-            primotvSwitch.querySelector('input').checked = true;
-            var isPrimotvToF = true;
+            sliderContainer.style.display = "none";
+            // primotvSwitch.querySelector('input').checked = true;
+            var isPrimotvToF = false;
             function isPrimotv() {
                 isPrimotvToF = !isPrimotvToF;
             }

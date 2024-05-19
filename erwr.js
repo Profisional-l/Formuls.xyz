@@ -33,11 +33,11 @@ mathVirtualKeyboard.layouts = [
                 },
               ],
             },
-            {
-              latex: 'n',
-              shift: 'a',
-              variants: ['i', 'j', 'p', 'k', 'a', 'u'],
-            },
+            // {
+            //   latex: 'n',
+            //   shift: 'a',
+            //   variants: ['i', 'j', 'p', 'k', 'a', 'u'],
+            // },
             {
               class: 'separator',
               width: 0.5,
@@ -48,6 +48,7 @@ mathVirtualKeyboard.layouts = [
               label: '7',
               shift: '#@^7',
               class: 'hide-shift',
+              width: 1.5
             },
             {
               variants: '8',
@@ -55,6 +56,7 @@ mathVirtualKeyboard.layouts = [
               label: '8',
               shift: '#@^8',
               class: 'hide-shift',
+              width: 1.5
             },
             {
               variants: '9',
@@ -62,6 +64,11 @@ mathVirtualKeyboard.layouts = [
               label: '9',
               shift: '#@^9',
               class: 'hide-shift',
+              width: 1.5
+            },
+            {
+              class: 'separator',
+              width: 0.5,
             },
             {
               class: 'big-op hide-shift',
@@ -72,105 +79,6 @@ mathVirtualKeyboard.layouts = [
               variants: ['/', '\\div', '\\%', '\\oslash'],
               latex: '\\frac{#@}{#?}',
               label: '&divide;',
-            },
-            {
-              class: 'separator',
-              width: 0.5,
-            },
-            {
-              latex: '\\exponentialE',
-              shift: '\\ln',
-              variants: [
-                '\\exp',
-                '\\times 10^{#?}',
-                '\\ln',
-                '\\log_{10}',
-                '\\log',
-              ],
-            },
-            {
-              latex: '\\imaginaryI',
-              variants: ['\\Re', '\\Im', '\\imaginaryJ', '\\Vert #0 \\Vert'],
-            },
-            {
-              latex: '\\pi',
-              shift: '\\sin',
-
-              variants: [
-                '\\prod',
-                {
-                  latex: '\\theta',
-                  aside: 'theta',
-                },
-                {
-                  latex: '\\rho',
-                  aside: 'rho',
-                },
-                {
-                  latex: '\\tau',
-                  aside: 'tau',
-                },
-                '\\sin',
-                '\\cos',
-                '\\tan',
-              ],
-            },
-          ],
-          [
-            {
-              label: '<',
-              latex: '<',
-              variants: [
-                {
-                  latex: '\\le',
-                  label: '≤',
-                },
-              ],
-              class: 'hide-shift',
-              shift: {
-                latex: '\\le',
-                label: '≤',
-              },
-            },
-            {
-              label: '>',
-              latex: '>',
-              variants: [
-                {
-                  latex: '\\ge',
-                  label: '≥',
-                },
-              ],
-              class: 'hide-shift',
-              shift: {
-                latex: '\\ge',
-                label: '≥',
-              },
-            },
-            {
-              class: 'separator',
-              width: 0.5,
-            },
-            {
-              variants: '4',
-              latex: '4',
-              label: '4',
-              shift: '#@^4',
-              class: 'hide-shift',
-            },
-            {
-              variants: '5',
-              latex: '5',
-              label: '5',
-              shift: '#@^5',
-              class: 'hide-shift',
-            },
-            {
-              variants: '6',
-              latex: '6',
-              label: '6',
-              shift: '#@^6',
-              class: 'hide-shift',
             },
             {
               variants: [
@@ -188,9 +96,118 @@ mathVirtualKeyboard.layouts = [
               },
               class: 'big-op hide-shift',
             },
+           
+            {
+              variants: ['\\pm', '\\ominus'],
+              latex: '-',
+              label: '&#x2212;',
+              shift: '\\pm',
+              class: 'big-op hide-shift',
+            },
+            
+            {
+              variants: [
+                {
+                  latex: '\\sum_{#0}^{#0}',
+                  class: 'small',
+                },
+                '\\oplus',
+              ],
+              latex: '+',
+              label: '+',
+              class: 'big-op hide-shift',
+              shift: {
+                latex: '\\sum',
+                insert: '\\sum',
+                class: 'small',
+              },
+            },
+          ],
+          [
+            // {
+            //   label: '<',
+            //   latex: '<',
+            //   variants: [
+            //     {
+            //       latex: '\\le',
+            //       label: '≤',
+            //     },
+            //   ],
+            //   class: 'hide-shift',
+            //   shift: {
+            //     latex: '\\le',
+            //     label: '≤',
+            //   },
+            // },
+            {
+              label: '>',
+              latex: '>',
+              variants: [
+                {
+                  label: '>',
+                  latex: '>'},
+                {
+                  latex: '\\ge',
+                  label: '≥',
+                },
+                {
+                  label: '<',
+                  latex: '<'},
+                {
+                        latex: '\\le',
+                        label: '≤',
+                },
+                
+              ],
+              class: 'hide-shift',
+              shift: {
+                latex: '\\ge',
+                label: '≥',
+              },
+            },
             {
               class: 'separator',
               width: 0.5,
+            },
+            {
+              variants: '4',
+              latex: '4',
+              label: '4',
+              shift: '#@^4',
+              class: 'hide-shift',
+              width: 1.5
+            },
+            {
+              variants: '5',
+              latex: '5',
+              label: '5',
+              shift: '#@^5',
+              class: 'hide-shift',
+              width: 1.5
+            },
+            {
+              variants: '6',
+              latex: '6',
+              label: '6',
+              shift: '#@^6',
+              class: 'hide-shift',
+              width: 1.5
+            },
+            
+            {
+              class: 'separator',
+              width: 0.5,
+            },
+            {
+              latex: '\\exponentialE',
+              shift: '\\ln',
+              variants: [
+                '\\exp',
+                '\\times 10^{#?}',
+                '\\ln',
+                '\\log_{10}',
+                '\\log',
+              ],
             },
             {
               class: 'hide-shift',
@@ -217,61 +234,66 @@ mathVirtualKeyboard.layouts = [
           ],
           [
             {
+              key: '(',
+              label: '( )',
+              shift: {
+                label: '[ ]',
+                key: '[',
+              },
               variants: [
                 {
                   latex: '\\lbrack',
                   key: '[',
                 },
-                '\\langle',
-                '\\lfloor',
-                '\\lceil',
+                // '\\langle',
+                // '\\lfloor',
+                // '\\lceil',
                 '|{#?}|',
                 {
                   latex: '\\lbrace',
                   key: '{',
                 },
               ],
-              key: '(',
-              label: '(',
-              shift: {
-                label: '[',
-                key: '[',
-              },
-              class: 'hide-shift',
-            },
-            {
-              variants: [
-                {
-                  latex: '\\rbrack',
-                  key: ']',
-                },
-                '\\rangle',
-                '\\rfloor',
-                '\\rceil',
-                '|{#?}|',
-                {
-                  latex: '\\rbrace',
-                  key: ']',
-                },
-              ],
-              key: ')',
-              label: ')',
-              shift: {
-                label: ']',
-                latex: '\\rbrack',
-              },
-              class: 'hide-shift',
+              class: 'hide-shift'
             },
             {
               class: 'separator',
               width: 0.5,
             },
+            // {
+            //   variants: [
+            //     {
+            //       latex: '\\rbrack',
+            //       key: ']',
+            //     },
+            //     '\\rangle',
+            //     '\\rfloor',
+            //     '\\rceil',
+            //     '|{#?}|',
+            //     {
+            //       latex: '\\rbrace',
+            //       key: ']',
+            //     },
+            //   ],
+            //   key: ')',
+            //   label: ')',
+            //   shift: {
+            //     label: ']',
+            //     latex: '\\rbrack',
+            //   },
+            //   class: 'hide-shift',
+            // },
+            // {
+            //   class: 'separator',
+            //   width: 0.5,
+            // },
             {
               variants: '1',
               latex: '1',
               label: '1',
               shift: '#@^{-1}',
               class: 'hide-shift',
+              width: 1.5
             },
             {
               variants: '2',
@@ -279,6 +301,7 @@ mathVirtualKeyboard.layouts = [
               label: '2',
               shift: '#@^2',
               class: 'hide-shift',
+              width: 1.5
             },
             {
               variants: '3',
@@ -286,35 +309,55 @@ mathVirtualKeyboard.layouts = [
               label: '3',
               shift: '#@^3',
               class: 'hide-shift',
+              width: 1.5
             },
-            {
-              variants: ['\\pm', '\\ominus'],
-              latex: '-',
-              label: '&#x2212;',
-              shift: '\\pm',
-              class: 'big-op hide-shift',
-            },
+           
             {
               class: 'separator',
               width: 0.5,
             },
             {
+              latex: '\\imaginaryI',
+              variants: ['\\Re', '\\Im', '\\imaginaryJ', '\\Vert #0 \\Vert'],
+            },
+           
+            {
               latex: '\\int_{#?}^{#?}',
               class: 'small hide-shift',
               shift: '\\int',
             },
+           
             {
-              latex: '\\sum_{#0}^{#0}',
-              class: 'small',
+              latex: '\\pi',
+              shift: '\\sin',
+
+              variants: [
+                '\\prod',
+                {
+                  latex: '\\theta',
+                  aside: 'theta',
+                },
+                {
+                  latex: '\\rho',
+                  aside: 'rho',
+                },
+                {
+                  latex: '\\tau',
+                  aside: 'tau',
+                },
+                '\\sin',
+                '\\cos',
+                '\\tan',
+              ],
             },
             {
-              class: 'action bottom right hide-shift',
+              class: 'ACTIONcalcbut hide-shift',
               width: 1,
               command: ['performWithFeedback', 'deleteBackward'],
               label:
                 '<svg class=svg-glyph><use xlink:href=#svg-delete-backward /></svg>',
               shift: {
-                class: 'action warning',
+                class: 'ACTIONcalcbut hide-shift delall',
                 label:
                   '<svg class=svg-glyph><use xlink:href=#svg-trash /></svg>',
                 command: 'deleteAll',
@@ -322,15 +365,16 @@ mathVirtualKeyboard.layouts = [
             },
           ],
           [
+            
+            // {
+            //   class: 'separator',
+            //   width: 0.5,
+            // },
             {
-              class: 'shift bottom left',
-              width: 2,
+              class: 'shift bottom',
+              width: 1.5,
               label:
                 '<span class=caps-lock-indicator></span><svg class=svg-glyph><use xlink:href=#svg-shift /></svg>',
-            },
-            {
-              class: 'separator',
-              width: 0.5,
             },
             {
               variants: '0',
@@ -338,12 +382,13 @@ mathVirtualKeyboard.layouts = [
               label: '0',
               shift: '\\infty',
               class: 'hide-shift',
+              width: 2
             },
             {
               variants: '.',
               command: ['performWithFeedback', 'insertDecimalSeparator'],
               shift: ',',
-              class: 'big-op hide-shift',
+              class: 'hide-shift',
               label: '.',
             },
             {
@@ -364,30 +409,14 @@ mathVirtualKeyboard.layouts = [
                 latex: '\\ne',
               },
               class: 'big-op hide-shift',
+              width: 1.5,
             },
+            // {
+            //   class: 'separator',
+            //   width: 0.5,
+            // },
             {
-              variants: [
-                {
-                  latex: '\\sum_{#0}^{#0}',
-                  class: 'small',
-                },
-                '\\oplus',
-              ],
-              latex: '+',
-              label: '+',
-              class: 'big-op hide-shift',
-              shift: {
-                latex: '\\sum',
-                insert: '\\sum',
-                class: 'small',
-              },
-            },
-            {
-              class: 'separator',
-              width: 0.5,
-            },
-            {
-              class: 'action hide-shift',
+              class: 'ACTIONcalcbut hide-shift',
               label:
                 '<svg class=svg-glyph><use xlink:href=#svg-arrow-left /></svg>',
               command: ['performWithFeedback', 'moveToPreviousChar'],
@@ -396,9 +425,10 @@ mathVirtualKeyboard.layouts = [
                   '<svg class=svg-glyph><use xlink:href=#svg-angle-double-left /></svg>',
                 command: ['performWithFeedback', 'extendSelectionBackward'],
               },
+              width: 1.5,
             },
             {
-              class: 'action hide-shift',
+              class: 'ACTIONcalcbut hide-shift',
               label:
                 '<svg class=svg-glyph><use xlink:href=#svg-arrow-right /></svg>',
               command: ['performWithFeedback', 'moveToNextChar'],
@@ -407,19 +437,20 @@ mathVirtualKeyboard.layouts = [
                   '<svg class=svg-glyph><use xlink:href=#svg-angle-double-right /></svg>',
                 command: ['performWithFeedback', 'extendSelectionForward'],
               },
+              width: 1.5,
             },
-            {
-              class: 'action hide-shift',
-              command: ['performWithFeedback', 'commit'],
-              shift: {
-                label:
-                  '<svg class=svg-glyph><use xlink:href=#circle-plus /></svg>',
-                command: ['performWithFeedback', 'addRowAfter'],
-              },
-              width: 1,
-              label:
-                '<svg class=svg-glyph><use xlink:href=#svg-commit /></svg>',
-            },
+            // {
+            //   class: 'action hide-shift',
+            //   command: ['performWithFeedback', 'commit'],
+            //   shift: {
+            //     label:
+            //       '<svg class=svg-glyph><use xlink:href=#circle-plus /></svg>',
+            //     command: ['performWithFeedback', 'addRowAfter'],
+            //   },
+            //   width: 1,
+            //   label:
+            //     '<svg class=svg-glyph><use xlink:href=#svg-commit /></svg>',
+            // },
           ],
         ],
         id: 'ML__layer_co7q1',
