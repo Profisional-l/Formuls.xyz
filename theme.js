@@ -40,11 +40,14 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("isLightTheme -", isLightTheme);
   switchElement.checked = isLightTheme;
 
-  if (isLightTheme) {
+  if (isLightTheme === true) {
     document.body.setAttribute("light", "");
+    document.body.setAttribute("theme", "light");
   } else {
     document.body.removeAttribute("light");
+    document.body.setAttribute("theme", "dark");
   }
+ 
 
   setTimeout(function () {
     if (isLightTheme) {

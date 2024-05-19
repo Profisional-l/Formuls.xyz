@@ -199,17 +199,6 @@ mathVirtualKeyboard.layouts = [
               width: 0.5,
             },
             {
-              latex: '\\exponentialE',
-              shift: '\\ln',
-              variants: [
-                '\\exp',
-                '\\times 10^{#?}',
-                '\\ln',
-                '\\log_{10}',
-                '\\log',
-              ],
-            },
-            {
               class: 'hide-shift',
               latex: '#@^2}',
               shift: '#@^{\\prime}}',
@@ -230,6 +219,11 @@ mathVirtualKeyboard.layouts = [
               shift: {
                 latex: '\\sqrt[#0]{#?}}',
               },
+            },
+            {
+              latex: '\\int_{#?}^{#?}',
+              class: 'small hide-shift',
+              shift: '\\int',
             },
           ],
           [
@@ -322,9 +316,15 @@ mathVirtualKeyboard.layouts = [
             },
            
             {
-              latex: '\\int_{#?}^{#?}',
-              class: 'small hide-shift',
-              shift: '\\int',
+              latex: '\\exponentialE',
+              shift: '\\ln',
+              variants: [
+                '\\exp',
+                '\\times 10^{#?}',
+                '\\ln',
+                '\\log_{10}',
+                '\\log',
+              ],
             },
            
             {
