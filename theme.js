@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var userAgent = navigator.userAgent.toLowerCase();
   var isAndroid = userAgent.indexOf("formulsandroiduseragent") !== -1;
 
-  var isAndroid = true
+  // var isAndroid = true
 
   if (
     isAndroid ||
