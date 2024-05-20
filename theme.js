@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.removeAttribute("light");
     document.body.setAttribute("theme", "dark");
   }
- 
+
 
   setTimeout(function () {
     if (isLightTheme) {
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       switcherTheme.style.display = "none";
     }
-    if(footer) {footer.style.display = "none";}
+    if (footer) { footer.style.display = "none"; }
     if (
       mainscreenh2 &&
       !document.location.pathname.includes("allformuls.html") &&
@@ -227,6 +227,9 @@ document.addEventListener("DOMContentLoaded", function () {
       window.scrollTo(0, currentScroll - currentScroll / 5);
     }
   }
+
+
+
 });
 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {

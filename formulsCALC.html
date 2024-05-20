@@ -32,7 +32,8 @@
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <meta name="keywords" content="Физика, цт, цэ, егэ, огэ, экзамен, сдать, formuls, формулс, 100 баллов, 100цт">
     <meta name="title" content="Formuls">
-    <meta name="description" content="Formuls - подготовка к экзамену (ЦТ | ЦЭ | ЕГЭ) по физике. Легко запоминай формулы и сдавай экзамен на 100 баллов!">
+    <meta name="description"
+        content="Formuls - подготовка к экзамену (ЦТ | ЦЭ | ЕГЭ) по физике. Легко запоминай формулы и сдавай экзамен на 100 баллов!">
     <title>Formuls - подготовка к экзамену (ЦТ | ЦЭ | ЕГЭ) по физике на 100 баллов!</title>
 </head>
 <div class="mask">
@@ -40,7 +41,8 @@
         <h3 class="FAKElogo"><a href="./"><img class="FAKElogoIMG" src="./images/monologo.png" alt=""></a></h3>
     </div>
     <!-- <div class="loader"></div> -->
-    <div class="CONTanimatedLoadLogo"><img class="animatedLoadLogo" src="./images/loadingLOGO.gif" alt="" srcset=""></div>
+    <div class="CONTanimatedLoadLogo"><img class="animatedLoadLogo" src="./images/loadingLOGO.gif" alt="" srcset="">
+    </div>
 </div>
 
 <body>
@@ -48,12 +50,13 @@
         <div class="FakeHeader">
             <h3 class="FAKElogo"><a href="./"><img class="FAKElogoIMG" src="./images/monologo.png" alt=""></a></h3>
         </div>
-        <div class="CONTanimatedLoadLogo"><img class="animatedLoadLogo" src="./images/loadingLOGO.gif" alt="" srcset=""></div>
+        <div class="CONTanimatedLoadLogo"><img class="animatedLoadLogo" src="./images/loadingLOGO.gif" alt="" srcset="">
+        </div>
     </div>
     <div class="BGforItems inCalc"></div>
     <div class="madewithParent">
         <t id="madewith">Calculated by <a href="https://t.me/anttany">Markovka</a> </t>
-   </div>
+    </div>
 
     <header>
         <a href="./"><img class="logoIMG" src="./images/monologo.png" alt=""></a>
@@ -72,7 +75,8 @@
         </div>
 
         <div class="godownload">
-            <a href="./appdownload.html"><button class="downloadbut" type="submit"><img src="./images/downloads (1).png" width="25px" alt=""></button></a>
+            <a href="./appdownload.html"><button class="downloadbut" type="submit"><img src="./images/downloads (1).png"
+                        width="25px" alt=""></button></a>
         </div>
 
     </header>
@@ -107,44 +111,46 @@
                 <div class="MathSWParent">
                     <p>Вычислять <br> ответ</p>
                     <label class="switch math primotv">
-            <input id="checkboxswitcher" type="checkbox" onchange="isPrimotv()">
-            <span class="slider mathSlider round "></span>
-        </label>
+                        <input id="checkboxswitcher" type="checkbox" onchange="isPrimotv()">
+                        <span class="slider mathSlider round "></span>
+                    </label>
                     <br>
                 </div>
 
                 <div class="MathSWParent">
                     <p>Комплекные <br> числа</p>
                     <label class="switch math complex">
-            <input id="checkboxswitcher" type="checkbox" onchange="isComplex()">
-            <span class="slider mathSlider complex round "></span>
-        </label>
+                        <input id="checkboxswitcher" type="checkbox" onchange="isComplex()">
+                        <span class="slider mathSlider complex round "></span>
+                    </label>
                     <br>
                 </div>
                 <div class="MathSWParent">
                     <p>Ход решения</p>
                     <label class="switch math hodreshen">
-            <input id="checkboxswitcher" type="checkbox" onchange="isHodreshen()">
-            <span class="slider mathSlider round "></span>
-        </label>
+                        <input id="checkboxswitcher" type="checkbox" onchange="isHodreshen()">
+                        <span class="slider mathSlider round "></span>
+                    </label>
                     <br>
                 </div>
                 <div class="MathSWParent">
                     <p>График</p>
                     <label class="switch math graph">
-            <input id="checkboxswitcher" type="checkbox" onchange="isGraph()">
-            <span class="slider mathSlider round "></span>
-        </label>
+                        <input id="checkboxswitcher" type="checkbox" onchange="isGraph()">
+                        <span class="slider mathSlider round "></span>
+                    </label>
                     <br>
                 </div>
                 <div class="slider-container">
-                    <div class="znakoxtxt"><label for="slider">Знаков после запятой: <t id="sliderValue">5</t></label></div> <br>
-                    <input class="styled-slider slider-progress"type="range" id="slider" name="slider" min="1" max="3" step="1" value="1" oninput="updateSliderValue()">
+                    <div class="znakoxtxt"><label for="slider">Знаков после запятой: <t id="sliderValue">5</t></label>
+                    </div> <br>
+                    <input class="styled-slider slider-progress" type="range" id="slider" name="slider" min="1" max="3"
+                        step="1" value="1" oninput="updateSliderValue()">
                     <script src="range-input.js"></script>
 
                 </div>
-            
-            
+
+
             </div>
 
         </div>
@@ -157,29 +163,29 @@
         <script>
             let howznakIs = "5";
             function updateSliderValue() {
-              var slider = document.getElementById("slider");
-              var value = slider.value;
-              var displayValue;
-          
-              switch(value) {
-                case "1":
-                  displayValue = 5;
-                  howznakIs = "5";
-                  break;
-                case "2":
-                  displayValue = 10;
-                  howznakIs = "10";
-                  break;
-                case "3":
-                  displayValue = 100;
-                  howznakIs = "100";
-                  break;
-                default:
-                  displayValue = "Unknown";
-                  break;
-              }
-          
-              document.getElementById("sliderValue").innerHTML =  displayValue;
+                var slider = document.getElementById("slider");
+                var value = slider.value;
+                var displayValue;
+
+                switch (value) {
+                    case "1":
+                        displayValue = 5;
+                        howznakIs = "5";
+                        break;
+                    case "2":
+                        displayValue = 10;
+                        howznakIs = "10";
+                        break;
+                    case "3":
+                        displayValue = 100;
+                        howznakIs = "100";
+                        break;
+                    default:
+                        displayValue = "Unknown";
+                        break;
+                }
+
+                document.getElementById("sliderValue").innerHTML = displayValue;
             }
         </script>
 
@@ -188,53 +194,77 @@
             const sliderContainer = document.querySelector('.slider-container');
             sliderContainer.style.display = "none";
             // primotvSwitch.querySelector('input').checked = true;
+
             var isPrimotvToF = false;
             function isPrimotv() {
                 isPrimotvToF = !isPrimotvToF;
+                if (isPrimotvToF === true) {
+                    localStorage.setItem("SAVEisPrimotv", true);
+                }
+                if (isPrimotvToF === false) {
+                    localStorage.setItem("SAVEisPrimotv", false);
+                }
+                console.log(localStorage.SAVEisPrimotv)
+            }
+
+            function isSliderOn() {
+                if (isPrimotvToF == true) {
+                    sliderContainer.style.display = 'block';
+                }
+                if (isPrimotvToF == false) {
+                    sliderContainer.style.display = 'none';
+
+                }
             }
             primotvSwitch.addEventListener('change', () => {
-            if(isPrimotvToF == true) {
-                sliderContainer.style.display = 'block';
-            } 
-            if (isPrimotvToF == false) {
-                sliderContainer.style.display = 'none';
-        
-            }
-        
-        });
-          let userInputFieldOut = document.getElementById('userInputField');
-          let setingsBut = document.querySelector('.calcSettings')
-          let switchCont = document.querySelector('.mainParentSwith')      
-          let BG = document.querySelector(".BGforItems");
-          const resultOut = document.getElementById('result');
-          let mjxcontainer = document.querySelector(".MathJax.CtxtMenu_Attached_0")
-          switchCont.classList.add('BGfadeOut');
-        
-          setingsBut.addEventListener('click', function() {
+                isSliderOn()
+            });
+
+            document.addEventListener("DOMContentLoaded", function () {
+                // console.log(localStorage.SAVEisPrimotv);
+                if (localStorage.SAVEisPrimotv === 'true') {
+                    primotvSwitch.querySelector('input').checked = true;
+                    isPrimotvToF = true
+                } else {
+                    primotvSwitch.querySelector('input').checked = false;
+                    isPrimotvToF = false
+                }
+                isSliderOn()
+            })
+
+            let userInputFieldOut = document.getElementById('userInputField');
+            let setingsBut = document.querySelector('.calcSettings')
+            let switchCont = document.querySelector('.mainParentSwith')
+            let BG = document.querySelector(".BGforItems");
+            const resultOut = document.getElementById('result');
+            let mjxcontainer = document.querySelector(".MathJax.CtxtMenu_Attached_0")
+            switchCont.classList.add('BGfadeOut');
+
+            setingsBut.addEventListener('click', function () {
                 switchCont.classList.remove('BGfadeOut');
                 BG.classList.remove('BGfadeOut');
                 switchCont.classList.add('BGfadeIn');
                 BG.classList.add('BGfadeIn');
-                setTimeout(function() {
+                setTimeout(function () {
                     userInputFieldOut.style.zIndex = "-1"
                     resultOut.style.zIndex = '-1'
                 }, 10);
-               
+
                 function removeClassesAndEvents() {
-                  switchCont.classList.remove('BGfadeIn');
-                  BG.classList.remove('BGfadeIn');
-                  switchCont.classList.add('BGfadeOut');
-                  BG.classList.add('BGfadeOut');
-                  setTimeout(function() {
-                    userInputFieldOut.style.zIndex = "1"
-                    resultOut.style.zIndex = '1'
-                }, 300);
-               
+                    switchCont.classList.remove('BGfadeIn');
+                    BG.classList.remove('BGfadeIn');
+                    switchCont.classList.add('BGfadeOut');
+                    BG.classList.add('BGfadeOut');
+                    setTimeout(function () {
+                        userInputFieldOut.style.zIndex = "1"
+                        resultOut.style.zIndex = '1'
+                    }, 300);
+
                 }
-            
+
                 BG.addEventListener('click', removeClassesAndEvents);
-          })
-        
+            })
+
         </script>
 
         <script>
@@ -245,28 +275,28 @@
             const resultElement = document.getElementById('result');
             const resultGraphElement = document.getElementById('resultgraph');
             const calcBut = document.querySelector('.calcbut.calcstart');
-    
+
             var isComplexToF = false;
             var isStepsToF = false;
             var isGraphToF = false;
-    
-    
+
+
             function isComplex() {
-            isComplexToF = !isComplexToF;
-            // const userInputField = document.getElementById('userInputField');
-            // var userInput = userInputField.value;
-            // if (userInput != "") {
-            //     sendData()
-            // }
+                isComplexToF = !isComplexToF;
+                // const userInputField = document.getElementById('userInputField');
+                // var userInput = userInputField.value;
+                // if (userInput != "") {
+                //     sendData()
+                // }
             }
             function isHodreshen() {
-            isStepsToF = !isStepsToF;
+                isStepsToF = !isStepsToF;
             }
-    
+
             function isGraph() {
-            isGraphToF = !isGraphToF;
+                isGraphToF = !isGraphToF;
             }
-            
+
             async function sendData() {
                 try {
                     const userInputField = document.getElementById('userInputField');
@@ -284,26 +314,26 @@
                         }
                         if (isStepsToF === true) {
                             userInput = userInput + " stepbystep";
-                        }          
+                        }
                         userInput = userInput.replace("^{}", '');
                     }
                     WhoChacked()
-                    
+
                     resultGraphElement.innerHTML = ``;
-    
-                    
+
+
                     calcloader.style.display = "block";
                     resultElement.innerHTML = '<div class="calcloader"></div>';
-                    calcBut.style.backgroundColor="#5a5a5a";
-                    calcBut.style.color="#acacac";
+                    calcBut.style.backgroundColor = "#5a5a5a";
+                    calcBut.style.color = "#acacac";
                     calcBut.disabled = true;
-    
+
                     // Выводим данные в консоль
                     console.log('Отправляемые данные:', userInput);
                     console.log("isPrimotvToF: " + isPrimotvToF);
                     console.log("isComplexToF: " + isComplexToF);
 
-                 // const responseIMG = await fetch('https://epsilon-math.ru/graph.png', {
+                    // const responseIMG = await fetch('https://epsilon-math.ru/graph.png', {
                     //     method: 'POST',
                     //     headers: {
                     //         'Content-Type': 'application/json',
@@ -311,64 +341,64 @@
                     //     body: JSON.stringify({ 'user_input': userInput}),
                     // });
                     const response = await fetch('https://epsilon-math.ru/process_input/', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ 'user_input': userInput }),
-            });
-    
-            if (response.ok) {
-                const result = await response.json();
-                if (isGraphToF === true && result.new_key.includes('graph')) {
-                    const timestamp = new Date().getTime(); // Уникальный параметр для обновления изображения
-                    resultGraphElement.innerHTML = `<img src='https://epsilon-math.ru/graph.png?${timestamp}'>`;
-                }
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ 'user_input': userInput }),
+                    });
+
+                    if (response.ok) {
+                        const result = await response.json();
+                        if (isGraphToF === true && result.new_key.includes('graph')) {
+                            const timestamp = new Date().getTime(); // Уникальный параметр для обновления изображения
+                            resultGraphElement.innerHTML = `<img src='https://epsilon-math.ru/graph.png?${timestamp}'>`;
+                        }
                         // const resultGraph = await responseIMG.json();
                         resultElement.style.height = "fit-content";
                         if (!resultElement) {
                             throw new Error('Элемент с id "result" не найден.');
                         }
-                        
-                     if (result && typeof result.new_key !== 'undefined') {
-                         // Определение функции formatMathJax
-                         function formatMathJax(elementId, mathExpression) { 
-                             const element = document.getElementById(elementId); 
-                             if (!element) { 
-                                 console.error(`Элемент с id "${elementId}" не найден.`); 
-                                 return; 
-                             } 
-                         
-                             // Разбиваем строку на подстроки по тегу </br> 
-                             const expressions = mathExpression.split('</br>'); 
-                         
-                             // Форматируем каждую подстроку отдельно 
-                             let formattedExpression = ''; 
-                             expressions.forEach(expression => { 
-                                 const replacedExpression = expression.replace(/Производная/g, 'Производнаяㅤ').replace(/graph/g, ''); 
-    
-                                 formattedExpression += `$$${replacedExpression}$$<br>`; 
-                             }); 
-                         
-                             // Устанавливаем HTML содержимое элемента 
-                             element.innerHTML = formattedExpression; 
-                             // Перерисовываем элемент с использованием MathJax 
-                             MathJax.typeset([element]); 
-                         }
-                         formatMathJax('result', result.new_key);
-    
-                        console.log('Результат отображен на странице.');
-                            calcBut.style.backgroundColor="#2f2f2f";
-                            calcBut.style.color="#ffffff";
+
+                        if (result && typeof result.new_key !== 'undefined') {
+                            // Определение функции formatMathJax
+                            function formatMathJax(elementId, mathExpression) {
+                                const element = document.getElementById(elementId);
+                                if (!element) {
+                                    console.error(`Элемент с id "${elementId}" не найден.`);
+                                    return;
+                                }
+
+                                // Разбиваем строку на подстроки по тегу </br> 
+                                const expressions = mathExpression.split('</br>');
+
+                                // Форматируем каждую подстроку отдельно 
+                                let formattedExpression = '';
+                                expressions.forEach(expression => {
+                                    const replacedExpression = expression.replace(/Производная/g, 'Производнаяㅤ').replace(/graph/g, '');
+
+                                    formattedExpression += `$$${replacedExpression}$$<br>`;
+                                });
+
+                                // Устанавливаем HTML содержимое элемента 
+                                element.innerHTML = formattedExpression;
+                                // Перерисовываем элемент с использованием MathJax 
+                                MathJax.typeset([element]);
+                            }
+                            formatMathJax('result', result.new_key);
+
+                            console.log('Результат отображен на странице.');
+                            calcBut.style.backgroundColor = "#2f2f2f";
+                            calcBut.style.color = "#ffffff";
                             calcBut.disabled = false;
-                    } else {
-                        console.error('Ответ от сервера не содержит ожидаемого свойства "new_key".', result);
-                    }
-    
+                        } else {
+                            console.error('Ответ от сервера не содержит ожидаемого свойства "new_key".', result);
+                        }
+
                     } else {
                         console.error('Ошибка при отправке данных на сервер:', response.status);
                     }
-    
+
                 } catch (error) {
                     console.error(error.message);
                 }
@@ -387,8 +417,8 @@
         </script> -->
         <style>
             .MJX-TEX {
-        font-family: MJXZERO, MJXTEX;
-    }
+                font-family: MJXZERO, MJXTEX;
+            }
         </style>
 </body>
 
