@@ -72,9 +72,10 @@ document.addEventListener("DOMContentLoaded", function () {
   var isAndroid = userAgent.indexOf("formulsandroiduseragent") !== -1;
 
   // var isAndroid = true
-
+  
   if (
     isAndroid ||
+    userAgent.includes('telegram') ||
     window.matchMedia("(display-mode: standalone)").matches ||
     window.navigator.standalone === true
   ) {
