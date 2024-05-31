@@ -164,6 +164,10 @@ document.addEventListener("DOMContentLoaded", function () {
     !document.location.pathname.includes("aboutai.html")
   ) {
     window.onscroll = function () {
+      if(openAllBut) {
+        fixBut();
+      }
+     
       scrollFunction();
       if (
         !isAndroid &&
@@ -202,6 +206,21 @@ document.addEventListener("DOMContentLoaded", function () {
   //   LogoName.classList.add("changeLOGOout");
   //   LogoIMG.classList.add("changeLOGOin");
   // }
+
+  let openAllBut = document.querySelector('.opencards');
+  if(openAllBut) {
+    function fixBut() {
+      if (document.documentElement.scrollTop > 190) {
+        openButton.classList.add('fixededBut');
+      } else {
+        openButton.classList.remove('fixededBut');
+      }
+     }
+  }
+  if(openAllBut) {
+    fixBut();
+  }
+  
 
   if (scrollToTopBtn) {
     function scrollFunction() {

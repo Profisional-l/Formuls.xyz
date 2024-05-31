@@ -72,18 +72,18 @@
     <div id="backofupbut"><img width="33px" id="scrollupbut" src="./images/scrollup.png" alt=""></div>
   </div>
 
-  <div class="mainscreenhi">
+  <div class="mainscreenhi onOtherPage">
 
     <h2 class="mainscreenh2">Это страница со всеми формулами</h2>
-    <h3>Для удобстава, вы можете открыть / закрыть все карточки сразу</h3>
+    <h3 >Для удобстава, вы можете открыть / закрыть все карточки сразу</h3>
 
 
   </div>
-  <div style="padding-bottom: 20px; " class="opencardscont"><button id="opencards" type="submit"
-      style=" width: 230px; height: 60px;">Открыть карточки</button></div>
+  <div style="padding-bottom: 20px; " class="opencardscont"><button class="opencards" type="submit"
+      >Открыть карточки</button></div>
   <div class="buttogamecont"><a href="./gamepage.html"><button id="buttogame" type="submit">Режим
         запоминания</button></a></div>
-  <br><br><br><br><br>
+  <br><br><br><br>
   <div class="buttogamecont"><a href="./podborgame.html"><button id="podbor" type="submit">Режим подбора <br> <img
           style="margin-top: 6px;" src="./images/Subtract.png" width="44px" alt="" srcset=""></button></a></div>
 
@@ -1026,10 +1026,12 @@
 
     </div>
     <script>
-      let openButton = document.getElementById('opencards');
+      let openButton = document.querySelector('.opencards');
       let cards = document.querySelectorAll('.flashcard');
       let flippedCard = null;
       let allCardsFlipped = false;
+
+        
 
       openButton.addEventListener('click', function () {
 
@@ -1040,6 +1042,8 @@
             openButton.innerText = "Открыть карточки";
             openButton.style.background = "#343434";
             openButton.style.color = "#FFF";
+            openButton.style.borderColor = "#e1e1e1";
+
           });
           allCardsFlipped = false;
         } else {
@@ -1050,6 +1054,7 @@
             openButton.innerText = "Закрыть карточки";
             openButton.style.background = "#fff";
             openButton.style.color = "#000";
+            openButton.style.borderColor = "#000";
 
           });
           allCardsFlipped = true;
@@ -1085,6 +1090,7 @@
 
         window.onscroll = function () {
           scrollFunction();
+          fixBut()
         };
 
         function scrollFunction() {
