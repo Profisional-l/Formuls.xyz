@@ -208,8 +208,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // }
 
   let openAllBut = document.querySelector('.opencards');
-  const buttonPosition = openAllBut.offsetTop;
   if(openAllBut) {
+    const buttonPosition = openAllBut.offsetTop;
     function fixBut() {
       if (document.documentElement.scrollTop > (buttonPosition - 63)) {
       openAllBut.classList.add('fixededBut');
