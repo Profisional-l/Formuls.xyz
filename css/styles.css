@@ -1154,6 +1154,7 @@ input:checked+.slider:before {
 }
 
 .opencards {
+  position: absolute;
   width: 230px;
   height: 60px;
   padding: 0;
@@ -1171,9 +1172,6 @@ input:checked+.slider:before {
 }
 .fixededBut {
   position: fixed;
-  /* margin-left: 50%;
-  margin-right: 50%;
-  transform: translateX(-50%);*/
   top: 95px;
 }
 

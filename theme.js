@@ -208,13 +208,14 @@ document.addEventListener("DOMContentLoaded", function () {
   // }
 
   let openAllBut = document.querySelector('.opencards');
+  const buttonPosition = openAllBut.offsetTop;
   if(openAllBut) {
     function fixBut() {
-      if (document.documentElement.scrollTop > 190) {
-        openButton.classList.add('fixededBut');
-      } else {
-        openButton.classList.remove('fixededBut');
-      }
+      if (document.documentElement.scrollTop > (buttonPosition - 63)) {
+      openAllBut.classList.add('fixededBut');
+    } else {
+      openAllBut.classList.remove('fixededBut');
+    }
      }
   }
   if(openAllBut) {
