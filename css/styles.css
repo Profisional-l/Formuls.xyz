@@ -1171,8 +1171,25 @@ input:checked+.slider:before {
   transition: color .4s;
 }
 .fixededBut {
-  position: fixed;
-  top: 95px;
+  animation: fadeOutIn 0.7s ease-in-out forwards;
+}
+
+@keyframes fadeOutIn {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    position: fixed;
+    top: 95px;
+
+  }
 }
 
 
