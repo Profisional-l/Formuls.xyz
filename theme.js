@@ -35,10 +35,10 @@ const handleChange = (isChecked) => {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  var whatUserAgent = document.getElementById("checkUserAgent");
-  if (whatUserAgent) {
-    whatUserAgent.innerHTML = navigator.userAgent
-  }
+  // var whatUserAgent = document.getElementById("checkUserAgent");
+  // if (whatUserAgent) {
+  //   whatUserAgent.innerHTML = navigator.userAgent
+  // }
 
   const isLightTheme = localStorage.getItem("theme") === "true";
   const switchElement = document.getElementById("checkboxswitcher");
