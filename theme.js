@@ -213,19 +213,24 @@ document.addEventListener("DOMContentLoaded", function () {
   // }
 
   let openAllBut = document.querySelector('.opencards');
-  if(openAllBut) {
+  if (openAllBut) {
     const buttonPosition = openAllBut.offsetTop;
+  
     function fixBut() {
-      if (document.documentElement.scrollTop > (buttonPosition - 63)) {
-      openAllBut.classList.add('fixededBut');
-    } else {
-      openAllBut.classList.remove('fixededBut');
+      if (window.scrollY > (buttonPosition - 72)) {
+        openAllBut.classList.add('fixededBut');
+      } else {
+        openAllBut.classList.remove('fixededBut');
+      }
     }
-     }
-  }
-  if(openAllBut) {
+  
+    // Вызов функции при загрузке страницы
     fixBut();
+  
+    // Обработчик события скролла
+    window.addEventListener('scroll', fixBut);
   }
+  
   
 
   if (scrollToTopBtn) {
